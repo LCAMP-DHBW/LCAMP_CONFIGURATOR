@@ -1,0 +1,8 @@
+# Power shell script
+scriptV1.ps1
+
+# Other Files Type
+*.sln
+*.suo
+*.cache
+*.log

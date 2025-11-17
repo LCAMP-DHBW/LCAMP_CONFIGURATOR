@@ -1,0 +1,22 @@
+{
+	"Description": "Code for Arduino to control IMU",
+	
+	
+
+	"Assembly": {
+		"Type": "AuxControler",
+		"Name": "ESP 32",
+		"Components": [
+			
+			{
+				"idCode": "RC-34-2321.5",
+				"Name": "Contoller PCB",
+				"Number": 1,
+				"Data3D": "IMUpcb.stl",
+				"Type": "pcb",
+				"description": "Esp 32 Controller Board"
+			}
+			
+		]
+	}
+}

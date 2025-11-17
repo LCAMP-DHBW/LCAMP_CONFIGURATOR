@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<robot name="LCAMP_Mobile_Robot">
+  <link name="centerFrame">
+    <collision>
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+</robot>
