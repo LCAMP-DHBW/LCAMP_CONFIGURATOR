@@ -1,9 +1,10 @@
 {
-  "BasePath": "D:\\Users\\kdRupp\\Source\\Repos\\LCAMP",
-  "TemplatePath": "D:\\Users\\kdRupp\\Source\\Repos\\LCAMP\\Templates",
-  "DataPath": "D:\\Users\\kdRupp\\Source\\Repos\\LCAMP\\Daten",
-  "OutputPath": "D:\\Users\\kdRupp\\Source\\Repos\\LCAMP\\Output",
-  "WebURL": null,
+  "BasePath": "D:\\Users\\kdRupp\\Source\\Repos\\LCAMP-DHBW\\",
+  "TemplatePath": "D:\\Users\\kdRupp\\Source\\Repos\\LCAMP-DHBW\\Templates",
+  "DataPath": "D:\\Users\\kdRupp\\Source\\Repos\\LCAMP-DHBW\\Daten",
+  "OutputPath": "D:\\Users\\kdRupp\\Source\\Repos\\LCAMP-DHBW\\Output",
+  "WebURL": "http://localhost:7070",
+  "WebRestart": false,
   "Data": {
     "ExcelFileInfo": "LCAMP_Library\\01_PRODUCT\\20240826 Technical Specification - Clearing House - V02.xlsx"
   }
