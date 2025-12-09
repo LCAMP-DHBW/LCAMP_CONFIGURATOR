@@ -1,0 +1,103 @@
+{
+    "Properties": {},
+    "ProcessSteps": [
+        {
+            "Name": "Preparation",
+            "Description": "Set up workstation and provide parts",
+            "Status": 0,
+            "Progress": 0,
+            "EstimatedDuration": "00:02:00",
+            "ElapsedTime": "00:00:00",
+            "StationName": "Station 1",
+            "ReworkCount": 0,
+            "IsReworkStep": false
+        },
+        {
+            "Name": "Basic assembly",
+            "Description": "Assemble the base frame and basic components",
+            "Status": 0,
+            "EstimatedDuration": "00:08:00",
+            "ElapsedTime": "00:00:00",
+            "StationName": "Station 2",
+            "IsReworkStep": false
+        },
+        {
+            "Name": "Install components",
+            "Description": "Install and mechanical components",
+            "Status": 0,
+            "EstimatedDuration": "00:12:00",
+            "ElapsedTime": "00:00:00",
+            "StationName": "Station 3",
+            "IsReworkStep": false
+        },
+        {
+            "Name": "Calibration",
+            "Description": "Calibrate the system and set parameters",
+            "Status": 0,
+            "Progress": 0,
+            "EstimatedDuration": "00:04:00",
+            "ElapsedTime": "00:00:00",
+            "StationName": "Station 5",
+            "ReworkCount": 0,
+            "IsReworkStep": false
+        },
+        {
+            "Name": "End of Line inspection",
+            "Description": "Perform functional tests and quality checks",
+            "Status": 0,
+            "Progress": 0,
+            "EstimatedDuration": "00:03:00",
+            "ElapsedTime": "00:00:00",
+            "StationName": "Station 6",
+            "DecisionPoint": {
+                "Question": "Quality inspection passed?",
+                "Options": [
+                    {
+                        "Text": "Passed, move on",
+                        "NextStepIndex": -1,
+                        "NextStepStatus": 1,
+                        "IsRework": false
+                    },
+                    {
+                        "Text": "Rework from Components",
+                        "NextStepIndex": 2,
+                        "NextStepStatus": 6,
+                        "IsRework": true
+                    },
+                    {
+                        "Text": "Rework from Cabling",
+                        "NextStepIndex": 3,
+                        "NextStepStatus": 6,
+                        "IsRework": true
+                    },
+                    {
+                        "Text": "Error, stop",
+                        "NextStepIndex": -1,
+                        "NextStepStatus": 3,
+                        "IsRework": false
+                    }
+                ]
+            },
+            "ReworkCount": 0,
+            "IsReworkStep": false
+        },
+        {
+            "Name": "Packaging",
+            "Description": "Pack the product and prepare it for shipping",
+            "Status": 0,
+            "Progress": 0,
+            "EstimatedDuration": "00:02:00",
+            "ElapsedTime": "00:00:00",
+            "StationName": "Station 7",
+            "ReworkCount": 0,
+            "IsReworkStep": false
+        }
+    ],
+    "CurrentStepIndex": -1,
+    "Name": "Regular-Wheel",
+    "Id": 0,
+    "Type": "Assembly",
+    "Reference": "ASM-005",
+    "ComponentType": "ProcessSequence",
+    "Components": []
+}

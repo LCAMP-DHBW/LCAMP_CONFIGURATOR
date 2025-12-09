@@ -6,3 +6,7 @@ scriptV1.ps1
 *.suo
 *.cache
 *.log
+*.csproj
+*.user
+*.cs
+*.resx

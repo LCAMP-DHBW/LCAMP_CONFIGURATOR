@@ -1,0 +1,139 @@
+{
+	"Description":"Code for Arduino to control Stepper Motor",
+	"ArduinoCode": {
+	"libraris":[
+		"// Benötigte Dateien für den Stepper-Drive"
+	],	
+	"headers":[
+		"// Benötigte HeaerDateie für den Stepper-Drive"
+	],
+	"variables":[
+	 "{x_pos}",
+	 "{drive}"
+	],
+    "initComment": " ",
+	"initCode": [
+		"long {x_pos}; // Drive Positions",
+		"long v=10; // velocity",
+		"Stepper_Drive  {drive};"
+	],
+
+
+	"setupComment": "void setup() {",
+	"setupCode": [
+		"drive_vl.init(0);"
+	],
+	
+	"loopReadComment": "void loop() { ",
+	"loopReadCode": [
+		"// read all  Data:",
+		"drive_vl.getTarget();"
+	],
+	"loopCalcComment": " ",
+	"loopCalcCode": [
+		"// calculate",
+		"{x_pos} += v ; // calculate left"
+		
+	],
+	"looopWriteComment": "// Ausgabe der Stepper Position in der seriellen Konsole\n  Serial.print(\"pos: \");\n  Serial.print(x_vl);\n  Serial.println(\" cm\");  // Kurze Pause\n  delay(500);}",
+	"loopWriteCode": [
+		"// write all data:",
+		"drive_vl.setTarget({x_pos});"
+
+	],
+    "functionComment": " ",
+	"functionCode": []
+
+},
+
+"Assembly":{
+	  "Name": "Stepper-Drive",
+    "Type": "Drive",
+	"Geometry": {
+			  "JointType" : "fixed",
+   			  "xyz":{"X":0,"Y":0,"Z":32},
+			  "rpy":{"R": 0.0, "P": 0.0, "Y": 0},
+  			  "box":{ "L":50, "W":45, "H":64, "Type": "Box"},
+			  "mass": 120
+		     },
+		  "description":"The Drive System of the Robot",
+      "Components" : [
+   
+	  {
+		  "Reference":"RC-34-2321",
+		  "Name": "HolderBase",
+		  "Number" : "1",
+		  "Data3D": "stepper_Holder_64.STL",
+		  "Type": "3D-Print",
+		    "Geometry": {
+			  "JointType" : "fixed",
+   			  "xyz":{"X":0,"Y":0,"Z":0},
+			  "rpy":{"R": 0.0, "P": 0.0, "Y": 0},
+  			  "box":{ "L":50, "W":50, "H":64, "Type": "Box"},
+			  "mass": 40
+		     },
+          "Material": {
+			 "MaterialName" : "PLA grey",
+			 "Color":{
+				"ColorName": "grey",
+				"rgba": [128,  128,  128,  255],
+			    "Texture": null
+			 }
+			 },
+		  "description":"Base for Stepper Motor as 3D Printed Parf"
+	  },
+	  	  {
+		  "Reference":"RC-34-2321.5",
+		  "Name": "Stepper Motor NEMA17",
+		  "Number" : "1",
+		  "Data3D": "Stepper.stl",
+		  "Type": "motor",
+		  		  "Geometry": {
+			  "JointType" : "fixed",
+   			  "xyz":{"X":15,"Y":0,"Z":0},
+			  "rpy":{"R": 0.0, "P": 0.0, "Y": 0},
+  			  "box":{ "L":42, "W":42, "H":64, "Type": "Box"},
+			  "mass": 200
+		     },
+
+          "Material": {
+			 "MaterialName" : "PLA grey",
+			 "Color":{
+				"ColorName": "white",
+				"rgba": [128,  128,  128,  100],
+			    "Texture": null
+			 }
+			 },
+		  "description":"Complete Stepper Motor for Drive System"
+
+	  },
+	   {
+		  "Reference":"RC-34-2321",
+		  "Name": "Motor Controller",
+		  "Number" : "1",
+		  "Data3D": "MotorController.stl",
+		  "Type": "pcb",
+		   "Geometry": {
+			  "JointType" : "fixed",
+   			  "xyz":{"X":15,"Y":0,"Z":0},
+			  "rpy":{"R": 0.0, "P": 0.0, "Y": 0},
+  			  "box":{ "L":50, "W":45, "H":64, "Type": "Box"},
+			  "mass": 20
+		     },
+		            "Material": {
+			 "MaterialName" : "pcby",
+			 "Color":{
+				"ColorName": "flex",
+				"rgba": [188,  128,  128,  100],
+			    "Texture": null
+			 }
+			 },
+		  "description":"Controllerfor  Stepper Motor on Drive System"
+
+
+	  }
+
+	]
+  }
+}
+

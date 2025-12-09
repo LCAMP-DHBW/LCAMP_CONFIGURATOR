@@ -1,0 +1,962 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<robot name="LCAMP_Robot">
+  <link name="center">
+    <collision>
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_bl">
+    <collision>
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_bl_Stepper-Drive_0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="stepper_Holder_64.STL">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\DriveSystem\STL-Step-Dateien\stepper_Holder_64.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_bl_Stepper-Drive_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="Stepper.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.04200000315904617 0.04200000315904617 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_bl_Stepper-Drive_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="MotorController.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_bl_Stepper-Drive_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_bl_Regular-Wheel_0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="wheel_hub_ax.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0010000000474974513" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Wheel_Hub_ax.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_bl_Regular-Wheel_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_30_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0020000000949949026" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\RegularWheel\Stl-Step-Dateien\Regular_Wheel_Star_30_84.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_bl_Regular-Wheel_0_material">
+        <color rgba="0.11764705926179886 0.5647059082984924 1 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_24_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.028000001329928637" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\RegularWheel\Stl-Step-Dateien\Regular_Wheel_Star_24_84.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_bl_Regular-Wheel_0_material">
+        <color rgba="0.11764705926179886 0.5647059082984924 1 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.028000001329928637" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Hub_Cup_8.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_bl_Regular-Wheel_0_material">
+        <color rgba="0.6784313917160034 0.8470588326454163 0.9019607901573181 1" />
+      </material>
+    </visual>
+    <visual name="Wheel_92_outside.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.01500000071246177" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\RegularWheel\Stl-Step-Dateien\Wheel_92_outside.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_bl_Regular-Wheel_0_material">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_br">
+    <collision>
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_br_Stepper-Drive_0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="stepper_Holder_64.STL">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\DriveSystem\STL-Step-Dateien\stepper_Holder_64.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_br_Stepper-Drive_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="Stepper.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.04200000315904617 0.04200000315904617 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_br_Stepper-Drive_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="MotorController.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_br_Stepper-Drive_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_br_Regular-Wheel_0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="wheel_hub_ax.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0010000000474974513" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Wheel_Hub_ax.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_br_Regular-Wheel_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_30_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0020000000949949026" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\RegularWheel\Stl-Step-Dateien\Regular_Wheel_Star_30_84.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_br_Regular-Wheel_0_material">
+        <color rgba="0.11764705926179886 0.5647059082984924 1 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_24_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.028000001329928637" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\RegularWheel\Stl-Step-Dateien\Regular_Wheel_Star_24_84.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_br_Regular-Wheel_0_material">
+        <color rgba="0.11764705926179886 0.5647059082984924 1 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.028000001329928637" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Hub_Cup_8.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_br_Regular-Wheel_0_material">
+        <color rgba="0.6784313917160034 0.8470588326454163 0.9019607901573181 1" />
+      </material>
+    </visual>
+    <visual name="Wheel_92_outside.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.01500000071246177" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\RegularWheel\Stl-Step-Dateien\Wheel_92_outside.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_br_Regular-Wheel_0_material">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fl">
+    <collision>
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fl_Stepper-Drive_0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="stepper_Holder_64.STL">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\DriveSystem\STL-Step-Dateien\stepper_Holder_64.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fl_Stepper-Drive_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="Stepper.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.04200000315904617 0.04200000315904617 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_fl_Stepper-Drive_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="MotorController.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_fl_Stepper-Drive_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fl_Regular-Wheel_0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="wheel_hub_ax.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0010000000474974513" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Wheel_Hub_ax.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fl_Regular-Wheel_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_30_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0020000000949949026" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\RegularWheel\Stl-Step-Dateien\Regular_Wheel_Star_30_84.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fl_Regular-Wheel_0_material">
+        <color rgba="0.11764705926179886 0.5647059082984924 1 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_24_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.028000001329928637" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\RegularWheel\Stl-Step-Dateien\Regular_Wheel_Star_24_84.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fl_Regular-Wheel_0_material">
+        <color rgba="0.11764705926179886 0.5647059082984924 1 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.028000001329928637" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Hub_Cup_8.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fl_Regular-Wheel_0_material">
+        <color rgba="0.6784313917160034 0.8470588326454163 0.9019607901573181 1" />
+      </material>
+    </visual>
+    <visual name="Wheel_92_outside.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.01500000071246177" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\RegularWheel\Stl-Step-Dateien\Wheel_92_outside.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fl_Regular-Wheel_0_material">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fr">
+    <collision>
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fr_Stepper-Drive_0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="stepper_Holder_64.STL">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\DriveSystem\STL-Step-Dateien\stepper_Holder_64.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fr_Stepper-Drive_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="Stepper.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.04200000315904617 0.04200000315904617 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_fr_Stepper-Drive_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="MotorController.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_fr_Stepper-Drive_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fr_Regular-Wheel_0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="wheel_hub_ax.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0010000000474974513" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Wheel_Hub_ax.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fr_Regular-Wheel_0_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_30_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0020000000949949026" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\RegularWheel\Stl-Step-Dateien\Regular_Wheel_Star_30_84.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fr_Regular-Wheel_0_material">
+        <color rgba="0.11764705926179886 0.5647059082984924 1 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_24_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.028000001329928637" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\RegularWheel\Stl-Step-Dateien\Regular_Wheel_Star_24_84.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fr_Regular-Wheel_0_material">
+        <color rgba="0.11764705926179886 0.5647059082984924 1 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.028000001329928637" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Hub_Cup_8.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fr_Regular-Wheel_0_material">
+        <color rgba="0.6784313917160034 0.8470588326454163 0.9019607901573181 1" />
+      </material>
+    </visual>
+    <visual name="Wheel_92_outside.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.01500000071246177" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\RegularWheel\Stl-Step-Dateien\Wheel_92_outside.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fr_Regular-Wheel_0_material">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_front">
+    <collision>
+      <geometry>
+        <box size="0.04000000189989805 0.21000000834465027 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_curved_Sensor_1_0_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_curved_Sensor_2_0_3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_curved_Sensor_4_0_5">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_front_Sensorbox_curved_0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual name="Sensorbox curved_64_15.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\SensorSystems\STL-Step-Files\Sensorbox curved_64_15.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_back">
+    <collision>
+      <geometry>
+        <box size="0.04000000189989805 0.21000000834465027 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_curved_Sensor_1_0_7">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_curved_Sensor_2_0_9">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_curved_Sensor_4_0_11">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_back_Sensorbox_curved_0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual name="Sensorbox curved_64_15.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\SensorSystems\STL-Step-Files\Sensorbox curved_64_15.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_center">
+    <collision>
+      <geometry>
+        <box size="0.09400000446476042 0.04000000283122063 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_center_Sensor_1_0_13">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_center_Sensor_2_0_15">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_center_Sensorbox_center_0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.03000000142492354" />
+      <geometry>
+        <cylinder length="0.04000000283122063" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_center_Sensorbox_center_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.03000000142492354" />
+      <geometry>
+        <cylinder length="0.04000000283122063" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_center_Sensorbox_center_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual name="Sensorbox_small_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\SensorSystems\STL-Step-Files\Sensorbox_small_64.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Sensorbox_center_Sensorbox_center_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_controller">
+    <collision>
+      <geometry>
+        <box size="0.09400000446476042 0.04000000283122063 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_controller_Controller_0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.03000000142492354" />
+      <geometry>
+        <cylinder length="0.04000000283122063" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_controller_Controller_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.03000000142492354" />
+      <geometry>
+        <cylinder length="0.04000000283122063" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_controller_Controller_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual name="Sensorbox_small_arduino_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\SensorSystems\STL-Step-Files\Sensorbox_small_arduino_64.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Sensorbox_controller_Controller_0_material">
+        <color rgba="0 0 0.545098066329956 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="CenterPlate_Alu">
+    <collision>
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.006000000052154064" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Basplate_Pexi">
+    <collision>
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.0020000000949949026" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="bjoint_Drive_bl" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.10000000149011612 0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Drive_bl" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_bl_Stepper-Drive_0" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+    <parent link="Drive_bl" />
+    <child link="Drive_bl_Stepper-Drive_0" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_bl_Regular-Wheel_0" type="continuous">
+    <origin rpy="-1.5707963705062866 0 0" xyz="0 0.005000000353902578 0" />
+    <parent link="Drive_bl" />
+    <child link="Drive_bl_Regular-Wheel_0" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="bjoint_Drive_br" type="fixed">
+    <origin rpy="0 0 3.1415927410125732" xyz="-0.10000000149011612 -0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Drive_br" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_br_Stepper-Drive_0" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+    <parent link="Drive_br" />
+    <child link="Drive_br_Stepper-Drive_0" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_br_Regular-Wheel_0" type="continuous">
+    <origin rpy="-1.5707963705062866 0 0" xyz="0 0.005000000353902578 0" />
+    <parent link="Drive_br" />
+    <child link="Drive_br_Regular-Wheel_0" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="bjoint_Drive_fl" type="fixed">
+    <origin rpy="0 0 0" xyz="0.10000000149011612 0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Drive_fl" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_fl_Stepper-Drive_0" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+    <parent link="Drive_fl" />
+    <child link="Drive_fl_Stepper-Drive_0" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_fl_Regular-Wheel_0" type="continuous">
+    <origin rpy="-1.5707963705062866 0 0" xyz="0 0.005000000353902578 0" />
+    <parent link="Drive_fl" />
+    <child link="Drive_fl_Regular-Wheel_0" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="bjoint_Drive_fr" type="fixed">
+    <origin rpy="0 0 3.1415927410125732" xyz="0.10000000149011612 -0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Drive_fr" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_fr_Stepper-Drive_0" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+    <parent link="Drive_fr" />
+    <child link="Drive_fr_Stepper-Drive_0" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_fr_Regular-Wheel_0" type="continuous">
+    <origin rpy="-1.5707963705062866 0 0" xyz="0 0.005000000353902578 0" />
+    <parent link="Drive_fr" />
+    <child link="Drive_fr_Regular-Wheel_0" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="bjoint_Sensorbox_front" type="fixed">
+    <origin rpy="0 0 0" xyz="0.15000000596046448 0 0" />
+    <parent link="center" />
+    <child link="Sensorbox_front" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j__2b" type="fixed">
+    <origin rpy="15 90 0" xyz="15 65 32" />
+    <parent link="Sensorbox_front_Sensorbox_curved_0" />
+    <child link="Sensorbox_curved_Sensor_1_0_1" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j__4b" type="fixed">
+    <origin rpy="0 90 0" xyz="25 23 32" />
+    <parent link="Sensorbox_front_Sensorbox_curved_0" />
+    <child link="Sensorbox_curved_Sensor_2_0_3" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j__6b" type="fixed">
+    <origin rpy="-15 90 0" xyz="15 -65 32" />
+    <parent link="Sensorbox_front_Sensorbox_curved_0" />
+    <child link="Sensorbox_curved_Sensor_4_0_5" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Sensorbox_front_Sensorbox_curved_0" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.03200000151991844" />
+    <parent link="Sensorbox_front" />
+    <child link="Sensorbox_front_Sensorbox_curved_0" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="bjoint_Sensorbox_back" type="fixed">
+    <origin rpy="0 0 3.1415927410125732" xyz="-0.15000000596046448 0 0" />
+    <parent link="center" />
+    <child link="Sensorbox_back" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j__8b" type="fixed">
+    <origin rpy="15 90 0" xyz="15 65 32" />
+    <parent link="Sensorbox_back_Sensorbox_curved_0" />
+    <child link="Sensorbox_curved_Sensor_1_0_7" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j__10b" type="fixed">
+    <origin rpy="0 90 0" xyz="25 23 32" />
+    <parent link="Sensorbox_back_Sensorbox_curved_0" />
+    <child link="Sensorbox_curved_Sensor_2_0_9" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j__12b" type="fixed">
+    <origin rpy="-15 90 0" xyz="15 -65 32" />
+    <parent link="Sensorbox_back_Sensorbox_curved_0" />
+    <child link="Sensorbox_curved_Sensor_4_0_11" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Sensorbox_back_Sensorbox_curved_0" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.03200000151991844" />
+    <parent link="Sensorbox_back" />
+    <child link="Sensorbox_back_Sensorbox_curved_0" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="bjoint_Sensorbox_center" type="fixed">
+    <origin rpy="0 0 3.1415927410125732" xyz="0 -0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Sensorbox_center" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j__14b" type="fixed">
+    <origin rpy="-90 0 0" xyz="23 30 -30" />
+    <parent link="Sensorbox_center_Sensorbox_center_0" />
+    <child link="Sensorbox_center_Sensor_1_0_13" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j__16b" type="fixed">
+    <origin rpy="-90 0 0" xyz="-23 30 -30" />
+    <parent link="Sensorbox_center_Sensorbox_center_0" />
+    <child link="Sensorbox_center_Sensor_2_0_15" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Sensorbox_center_Sensorbox_center_0" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+    <parent link="Sensorbox_center" />
+    <child link="Sensorbox_center_Sensorbox_center_0" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="bjoint_Sensorbox_controller" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Sensorbox_controller" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Sensorbox_controller_Controller_0" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+    <parent link="Sensorbox_controller" />
+    <child link="Sensorbox_controller_Controller_0" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="bjoint_CenterPlate_Alu" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.030000001192092896" />
+    <parent link="center" />
+    <child link="CenterPlate_Alu" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="bjoint_Basplate_Pexi" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.030000001192092896" />
+    <parent link="center" />
+    <child link="Basplate_Pexi" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+</robot>

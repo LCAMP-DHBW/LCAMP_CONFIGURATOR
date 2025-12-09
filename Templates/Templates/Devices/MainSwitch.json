@@ -1,0 +1,28 @@
+{
+	"Description": "Code for Arduino to control IMU",
+	
+	
+
+	"Assembly": {
+		"Type": "Device",
+		"Name": "IMU",
+		"Components": [
+			
+			{
+				"idCode": "RC-34-2321.5",
+				"Name": "IMU PCB",
+				"Number": 1,
+				"Data3D": "IMUpcb.stl",
+				"Type": "pcb",
+				"description": "Sensor PCB for IMU"
+			},
+			{
+				"idCode": "RC-34-2321",
+				"Name": "Top",
+				"Number": 1,
+				"Data3D": "SensorCover.stl",
+				"Type": "3D-Print"
+			}
+		]
+	},
+}

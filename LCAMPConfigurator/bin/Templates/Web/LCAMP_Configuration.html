@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LCAMP Configurator</title>
+    <link rel="stylesheet" href="LCAMP_Configuration.css">
+</head>
+
+<body>
+
+    <div class="main-content">
+
+        <div class="container">
+            <h2>Nachricht an LCAMP Configurator senden</h2>
+
+            <label for="sender">Absender</label>
+            <select id="sender">
+                <option value="DHBW">DHBW</option>
+                <option value="TKnika">TKnika</option>
+                <option value="CNG">CNG</option>
+            </select>
+
+            <label for="command">Command</label>
+            <select id="command">
+                <option value="Start">Start</option>
+                <option value="Stop">Stop</option>
+                <option value="Restart">Restart</option>
+                <option value="Status">Status</option>
+                <option value="Load">Load</option>
+                <option value="Save">Save</option>
+                <option value="Generate_Partlist">Generate Partlist</option>
+                <option value="Generate_URDF">Generate URDF</option>
+                <option disabled>──────────</option>
+                <option value="GetSensorTemplate">GetSensorTemplate</option>
+                <option value="GetDriveTemplate">GetDriveTemplate</option>
+            </select>
+
+            <label for="content">Nachricht</label>
+            <textarea id="content" placeholder="Hier den Inhalt eingeben..."></textarea>
+
+            <button class="btn-full" onclick="sendCommand()">Command senden</button>
+
+            <div class="subform">
+                <h3>Achskonfiguration</h3>
+                <div class="grid-container">
+                    <div>
+                        <label for="frontDrives">Vorderachse-Antrieb</label>
+                        <select id="frontDrives">
+                            <option value="DC-Drive">DC-Drive</option>
+                            <option value="Stepper-Drive">Stepper-Drive</option>
+                            <option value="Drive-Holder">Drive-Holder</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="rearDrives">Hinterachse-Antrieb</label>
+                        <select id="rearDrives">
+                            <option value="DC-Drive">DC-Drive</option>
+                            <option value="Stepper-Drive">Stepper-Drive</option>
+                            <option value="Drive-Holder">Drive-Holder</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="frontWheels">Vorderachse-Räder</label>
+                        <select id="frontWheels">
+                            <option value="Regular-Wheel">Regular-Wheel</option>
+                            <option value="Omni-Wheel">Omni-Wheel</option>
+                            <option value="Mecanum-Wheel">Mecanum-Wheel</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="rearWheels">Hinterachse-Räder</label>
+                        <select id="rearWheels">
+                            <option value="Regular-Wheel">Regular-Wheel</option>
+                            <option value="Omni-Wheel">Omni-Wheel</option>
+                            <option value="Mecanum-Wheel">Mecanum-Wheel</option>
+                        </select>
+                    </div>
+                </div>
+                <label>Antriebsart</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="driveType" value="Differential" checked> Differential Drive</label>
+                    <label><input type="radio" name="driveType" value="Omni"> Omni Drive</label>
+                </div>
+                <!-- Neues Feld: Robotername -->
+                <div class="form-field">
+                    <label for="robotName">Robotername</label>
+                    <input type="text" id="robotName" placeholder="Name des Roboters eingeben">
+                </div>
+
+                <!-- Neues Feld: Seriennummer -->
+                <div class="form-field">
+                    <label for="serialNumber">Seriennummer:</label>
+                    <span id="serialNumber">no Robot defined</span>
+                </div>
+                <div class="btn-row">
+                    <button onclick="sendConfiguration()">Roboter-Konfiguration senden</button>
+                </div>
+            </div>
+
+            <div class="sensorform">
+                <h3>Sensor-Konfiguration</h3>
+                <div class="btn-row">
+                    <button id="tab-btn-front" class="tab-btn active" onclick="showSensorTab(0)">Sensorbox
+                        Front</button>
+                    <button id="tab-btn-rear" class="tab-btn" onclick="showSensorTab(1)">Sensorbox Rear</button>
+                    <button id="tab-btn-center" class="tab-btn" onclick="showSensorTab(2)">Sensorbox Center</button>
+                    <button id="tab-btn-controller" class="tab-btn" onclick="showSensorTab(3)">Sensorbox
+                        Controller</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="frontSensors" class="tab-panel">
+                        <h4>Sensorbox Front</h4>
+                        <div class="sensor-grid">
+                            <div>
+                                <label>Sensor 1:</label><select></select>
+                                <label>Sensor 2:</label><select></select>
+                            </div>
+                            <div>
+                                <label>Sensor 3:</label><select></select>
+                                <label>Sensor 4:</label><select></select>
+                            </div>
+                        </div>
+                        <div class="tooltip">
+                            <label>Aux Sensor:</label>
+                            <select id="auxSensorFront"></select>
+                            <span class="tooltiptext">Wählen Sie einen zusätzlichen Sensor!&#10;(wenn verfügbar)</span>
+                        </div>
+                        <div class="tooltip">
+                            <label>Aux Controller:</label>
+                            <select id="auxControllerFront"></select>
+                            <span class="tooltiptext">Wählen Sie einen zusätzlichen Controller für die
+                                Front-Sensorbox!&#10;(wenn verfügbar)</span>
+                        </div>
+
+                    </div>
+                    <div id="rearSensors" class="tab-panel hidden">
+                        <h4>Sensorbox Rear</h4>
+                        <div class="sensor-grid">
+                            <div>
+                                <label>Sensor 1:</label><select></select>
+                                <label>Sensor 2:</label><select></select>
+                            </div>
+                            <div>
+                                <label>Sensor 3:</label><select></select>
+                                <label>Sensor 4:</label><select></select>
+                            </div>
+                        </div>
+                        <div class="tooltip">
+                            <label>Aux Sensor:</label>
+                            <select id="auxSensorRear"></select>
+                            <span class="tooltiptext">Wählen Sie einen zusätzlichen Sensor!&#10;(wenn verfügbar)</span>
+                        </div>
+                        <div class="tooltip">
+                            <label>Aux Controller:</label>
+                            <select id="auxControllerRear"></select>
+                            <span class="tooltiptext">Wählen Sie einen zusätzlichen Controller für die
+                                Heck-Sensorbox!&#10;(wenn verfügbar)</span>
+                        </div>
+
+                    </div>
+                    <div id="centerSensors" class="tab-panel hidden">
+                        <h4>Sensorbox Center</h4>
+                        <div class="sensor-grid">
+                            <div>
+                                <label>Sensor 1:</label><select></select>
+                                <label>Sensor 2:</label><select></select>
+                            </div>
+                            <div>
+                                <label>Sensor 3:</label><select></select>
+                                <label>Sensor 4:</label><select></select>
+                            </div>
+                        </div>
+                        <label>Aux Sensor:</label><select id="auxSensorCenter"></select>
+                    </div>
+                    <div id="controllerSensors" class="tab-panel hidden">
+                        <h4>Sensorbox Controller</h4>
+                        <div class="sensor-grid">
+                            <div>
+                                <label>Sensor 1:</label><select></select>
+                                <label>Sensor 2:</label><select></select>
+                            </div>
+                            <div>
+                                <label>Sensor 3:</label><select></select>
+                                <label>Sensor 4:</label><select></select>
+                            </div>
+                        </div>
+                        <label>Aux Sensor:</label><select id="auxSensorController"></select>
+                    </div>
+                </div>
+                <div class="btn-row">
+                    <button onclick="sendSensors()">Sensor-Konfiguration senden</button>
+                </div>
+            </div>
+
+            <div class="subform">
+                <h3>System Konfiguration</h3>
+                <div class="grid-container">
+                    <div>
+                        <label for="Controller">Controller</label>
+                        <select id="sys_controler">
+                            <option value="NoController">...</option>
+                            <option value="Arduino_Uno_R4">Arduino Uno R4</option>
+                            <option value="Arduino_Mega">Arduino Mega</option>
+                            <option value="Esp_32">Esp 32</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="Akku">Battery</label>
+                        <select id="sys_akku">
+                            <option value="0mAh">...</option>
+                            <option value="3300mAh">3300mAh</option>
+                            <option value="5500mAh">5500mAh</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="Center">Zentral-Platte</label>
+                        <select id="sys_center">
+                            <option value="Alu">Alu Basis-Platte</option>
+                            <option value="3DPrint">3DPrint</option>
+                            <option value="Wood">Wood</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="bottom_sheed">Boden Platte</label>
+                        <select id="sys_botton">
+                            <option value="None">...</option>
+                            <option value="Pexi">Pexi Glas</option>
+                            <option value="Wood">Holzfaser</option>
+                            <option value="MetalSheet">Blech</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="radio-group">
+                    <label><input type="checkbox" name="optionType" value="Micro_Ros"> Micro Ros</label>
+                    <label><input type="checkbox" name="optionType" value="OPC_UA">OPC-UA</label>
+                    <label><input type="checkbox" name="optionType" value="MQQT">MQQT</label>
+                    <label><input type="checkbox" name="optionType" value="Can_Open">Can-Open</label>
+                </div>
+
+                <div class="btn-row">
+                    <button onclick="sendSystemConfiguration()">System-Konfiguration senden</button>
+                </div>
+            </div>
+
+            <div class="subform" id="colorSchemeForm">
+                <h3>Color Scheme Configurator</h3>
+                <div class="color-inputs">
+                    <label for="baseColor">Grundfarbe:</label>
+                    <input type="color" id="baseColor" value="#d0d0ef">
+
+                    <label for="mainColor">Hauptfarbe:</label>
+                    <input type="color" id="mainColor" value="#0078d4">
+
+                    <label for="detailColor">Detailfarbe:</label>
+                    <input type="color" id="detailColor" value="#6c757d">
+
+                    <label for="accentColor">Akzentfarbe:</label>
+                    <input type="color" id="accentColor" value="#ffc400">
+
+                </div>
+                <canvas id="colorCanvas" width="400" height="200"></canvas>
+                <img id="colorPreviewImage" src="default-image.png" alt="Farbschema-Vorschau" class="preview-image">
+                <div class="btn-row">
+                    <button onclick="sendColorSchemeConfiguration()">Farbschema anwenden</button>
+                </div>
+            </div>
+            <div class="subform" id="Actions">
+                <h3>Actions to be done</h3>
+                <div class="btn-row">
+                    <button onclick="sendActionPartList()">Generate Parlist</button>
+                    <button onclick="sendActionURDF()">Generate DigialTwin (URDF)</button>
+                </div>
+            </div>
+
+            <div class="response" id="reply">
+                <strong>Antwort:</strong>
+            </div>
+            <footer>
+                <span id="stats"></span>
+                <span style="flex:1 1 auto"></span>
+                <kbd>Enter</kbd> zum Suchen
+            </footer>
+        </div>
+    </div>
+
+
+
+    <script src="LCAMP_Configuration_Script.js"></script>
+
+
+
+
+</body>
+
+</html>

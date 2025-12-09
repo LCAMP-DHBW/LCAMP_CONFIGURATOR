@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<open_emulation_platform version="1.6">
+  <system>
+    <origin>0 0 0 0 0 0 1</origin>
+    <workspace_params>{
+  "autosave": false,
+  "autosave_period": 120,
+  "force_thread_sleep": 0.01,
+  "Physics": {
+    "Settings": {
+      "constraint_iterations": 50,
+      "emulation_step": 0.005,
+      "global_erp": 0.2,
+      "global_cfm": 0.0,
+      "time_relation": 1.0,
+      "physics_scale": 10.0,
+      "sleeping_time": 2.0,
+      "broadphase": 0,
+      "solver": 0
+    },
+    "Debug": {
+      "debug_contact_points": false,
+      "debug_constraints": false,
+      "debug_interval": 1000.0
+    }
+  },
+  "Graphics": {
+    "enable_graphics_engine": false,
+    "Shadows": {
+      "shadows_enabled": false,
+      "component_shadows_enabled": false,
+      "environment_shadows_enabled": true,
+      "shadows_bias": -0.0001
+    },
+    "Lights": {
+      "component_lights_enabled": true,
+      "hemisphere_lights_enabled": true,
+      "ambient_light_enabled": true,
+      "ambient_light_color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_light_intensity": 1.0,
+      "directional_light_enabled": true,
+      "directional_light_color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "directional_light_intensity": 1.0,
+      "directional_light_position": [
+        0.0,
+        0.0,
+        5.0
+      ]
+    },
+    "Ground": {
+      "ground_enabled": true,
+      "grid_enabled": true,
+      "grid_size": 3,
+      "ground_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ]
+    }
+  }
+}</workspace_params>
+    <assembly name="Robot" visible="true">
+      <origin>0 0 0 0 0 0 1</origin>
+      <component name="LCAMP_Robot_1_1" guid="adf84f8f-4901-4810-adc9-17026f1b4d3c" visible="true">
+        <origin>0 0 0 0 0 0 1</origin>
+        <variable name="behavior.setup_params">{ ip = 127.0.0.1, port = 8400, polling = 1, max_size = 1024 }</variable>
+        <variable name="behavior.rpm_per_volt">1000</variable>
+        <variable name="behavior.visible_covers">System.Boolean[]</variable>
+        <variable name="behavior.voltage_range">-10.0 10.0</variable>
+      </component>
+      <constraint name="constraint_sensor_fl">
+        <origin>0 0 0 0 0 0 1</origin>
+        <parent>LCAMP_Robot_1_1.body</parent>
+        <child>02_Sensor_FL.body</child>
+        <axis>fixed</axis>
+        <limits>0.0 1.0</limits>
+        <rotation_order>-1</rotation_order>
+        <breaking_impulse_threshold>0</breaking_impulse_threshold>
+        <disable_collisions_between_linked_bodies>true</disable_collisions_between_linked_bodies>
+      </constraint>
+    </assembly>
+    <connection name="Robot.Power_supply_ideal.dc_p">
+      <connection_path name="Robot.LCAMP_Robot_1_1.x1" />
+    </connection>
+  </system>
+</open_emulation_platform>

@@ -1,0 +1,331 @@
+{
+	"Description": "Assembly for Main Frame",
+	"Assembly": {
+		"Name": "LCamp Robot",
+		"Type": "Component",
+		"Geometry": {
+			"JointType": "fixed",
+			"xyz": {
+				"X": 0,
+				"Y": 0,
+				"Z": 28
+			},
+			"rpy": {
+				"R": 0.0,
+				"P": 0.0,
+				"Y": 0
+			},
+			"box": {
+				"L": 300,
+				"W": 140,
+				"H": 64,
+				"Type": "Box"
+			},
+			"mass": 120
+		},
+		"description": "The Center Core of the Robot",
+		"Components": [
+			{
+				"Name": "Drive bl",
+				"Type": "Frame",
+				"PositionId": "1",
+				"Geometry": {
+					"JointType": "fixed",
+					"Status": "inactive",
+					"xyz": {
+						"X": -100,
+						"Y": 70,
+						"Z": 0
+					},
+					"rpy": {
+						"R": 0.0,
+						"P": 0.0,
+						"Y": 0
+					},
+					"box": {
+						"L": 100,
+						"W": 50,
+						"H": 61,
+						"Type": "Box"
+					},
+					"mass": 120
+				},
+				"description": "Lopkalisierung für  Drive back left"
+			},
+			{
+				"Name": "Drive br",
+				"Type": "Frame",
+				"PositionId": "2",
+				"Geometry": {
+					"JointType": "fixed",
+					"Status": "inactive",
+					"xyz": {
+						"X": -100,
+						"Y": -70,
+						"Z": 0
+					},
+					"rpy": {
+						"R": 0.0,
+						"P": 0.0,
+						"Y": 180
+					},
+					"box": {
+						"L": 100,
+						"W": 50,
+						"H": 61,
+						"Type": "Box"
+					},
+					"mass": 120
+				},
+				"description": "Lopkalisierung für Drive back right"
+			},
+			{
+				"Name": "Drive fl",
+				"Type": "Frame",
+				"PositionId": "3",
+				"Geometry": {
+					"JointType": "fixed",
+					"Status": "inactive",
+					"xyz": {
+						"X": 100,
+						"Y": 70,
+						"Z": 0
+					},
+					"rpy": {
+						"R": 0.0,
+						"P": 0.0,
+						"Y": 0
+					},
+					"box": {
+						"L": 100,
+						"W": 50,
+						"H": 61,
+						"Type": "Box"
+					},
+					"mass": 120
+				},
+				"description": "Lopkalisierung für Drive front left"
+			},
+			{
+				"Name": "Drive fr",
+				"Type": "Frame",
+				"PositionId": "4",
+				"Geometry": {
+					"JointType": "fixed",
+					"Status": "inactive",
+					"xyz": {
+						"X": 100,
+						"Y": -70,
+						"Z": 0
+					},
+					"rpy": {
+						"R": 0.0,
+						"P": 0.0,
+						"Y": 180
+					},
+					"box": {
+						"L": 100,
+						"W": 50,
+						"H": 61,
+						"Type": "Box"
+					},
+					"mass": 120
+				},
+				"description": "Lopkalisierung für Drive front right"
+			},
+			{
+				"Name": "Sensorbox front",
+				"Type": "Frame",
+				"PositionId": "5",
+				"Geometry": {
+					"JointType": "fixed",
+					"Status": "inactive",
+					"xyz": {
+						"X": 150,
+						"Y": 0,
+						"Z": 0
+					},
+					"rpy": {
+						"R": 0.0,
+						"P": 0.0,
+						"Y": 0
+					},
+					"box": {
+						"L": 40,
+						"W": 210,
+						"H": 64,
+						"Type": "Box"
+					},
+					"mass": 120
+				},
+				"description": "Lopkalisierung für Sensorbox front"
+			},
+			{
+				"Name": "Sensorbox back",
+				"Type": "Frame",
+				"PositionId": "6",
+				"Geometry": {
+					"JointType": "fixed",
+					"Status": "inactive",
+					"xyz": {
+						"X": -150,
+						"Y": 0,
+						"Z": 0
+					},
+					"rpy": {
+						"R": 0.0,
+						"P": 0.0,
+						"Y": 180
+					},
+					"box": {
+						"L": 40,
+						"W": 210,
+						"H": 64,
+						"Type": "Box"
+					},
+					"mass": 120
+				},
+				"description": "Lopkalisierung für Sensorbox back"
+			},
+			{
+				"Name": "Sensorbox center",
+				"Type": "Frame",
+				"PositionId": "7",
+				"Geometry": {
+					"JointType": "fixed",
+					"Status": "inactive",
+					"xyz": {
+						"X": 0,
+						"Y": -70,
+						"Z": 0
+					},
+					"rpy": {
+						"R": 0.0,
+						"P": 0.0,
+						"Y": 180
+					},
+					"box": {
+						"L": 94,
+						"W": 40,
+						"H": 64,
+						"Type": "Box"
+					},
+					"mass": 120
+				},
+				"description": "Lopkalisierung für Sensorbox center"
+			},
+			{
+				"Name": "Sensorbox controller",
+				"Type": "Frame",
+				"PositionId": "8",
+				"Geometry": {
+					"JointType": "fixed",
+					"Status": "inactive",
+					"xyz": {
+						"X": 0,
+						"Y": 70,
+						"Z": 0
+					},
+					"rpy": {
+						"R": 0.0,
+						"P": 0.0,
+						"Y": 0
+					},
+					"box": {
+						"L": 94,
+						"W": 40,
+						"H": 64,
+						"Type": "Box"
+					},
+					"mass": 120
+				},
+				"description": "Lopkalisierung für Sensorbox Controller on the right"
+			},
+			{
+				"Reference": "RC-34-2321",
+				"Name": "CenterPlate Alu",
+				"Number": "1",
+				"Data3D": "BasePlate.stl",
+				"Type": "Basis",
+				"Geometry": {
+					"JointType": "fixed",
+					"Status": "inactive",
+					"xyz": {
+						"X": 0,
+						"Y": 0,
+						"Z": 30
+					},
+					"rpy": {
+						"R": 0.0,
+						"P": 0.0,
+						"Y": 0
+					},
+					"box": {
+						"L": 300,
+						"W": 140,
+						"H": 6,
+						"Type": "Box"
+					},
+					"mass": 120
+				},
+				"Material": {
+					"MaterialName": "PLA",
+					"Color": {
+						"ColorName": "grey",
+						"rgba": [
+							128,
+							128,
+							128,
+							255
+						],
+						"Texture": null
+					}
+				},
+				"description": "Base for System"
+			},
+			{
+				"Reference": "RC-34-2321.5",
+				"Name": "Basplate Pexi",
+				"Number": "1",
+				"Data3D": "bodenPlatte_solid.stl",
+				"Type": "Basis",
+				"PositionId": "2",
+				"Geometry": {
+					"JointType": "fixed",
+					"Status": "inactive",
+					"xyz": {
+						"X": 0,
+						"Y": 0,
+						"Z": -30
+					},
+					"rpy": {
+						"R": 0.0,
+						"P": 0.0,
+						"Y": 0
+					},
+					"box": {
+						"L": 300,
+						"W": 140,
+						"H": 2,
+						"Type": "Box"
+					},
+					"mass": 120
+				},
+				"Material": {
+					"MaterialName": "Pexi",
+					"Color": {
+						"ColorName": "transp",
+						"rgba": [
+							128,
+							128,
+							198,
+							40
+						],
+						"Texture": null
+					}
+				},
+				"description": "Lower Coverplate"
+			}
+		]
+	}
+}

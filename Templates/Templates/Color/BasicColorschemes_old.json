@@ -1,0 +1,69 @@
+{
+  "Name": "Default Color Schemes",
+  "Type": "ColorScheme",
+   "description": "List of default color schemes",
+  "SchemeList": {
+    "Light": {
+      "Base": "#FFFFFF",
+      "Main": "#000000",
+      "Accent": "#6495ED",
+      "Detail": "#808080"
+    },
+    "Dark": {
+      "Base": "#000000",
+      "Main": "#FFFFFF",
+      "Accent": "#FF4500",
+      "Detail": "#A9A9A9"
+    },
+    "HighContrast": {
+      "Base": "#000000",
+      "Main": "#FFFF00",
+      "Accent": "#00FF00",
+      "Detail": "#FF00FF"
+    },
+
+    "Red": {
+      "Base": "#FFFFFF",
+      "Main": "#8B0000",
+      "Accent": "#FF0000",
+      "Detail": "#CD5C5C"
+    },
+    "Green": {
+      "Base": "#FFFFFF",
+      "Main": "#006400",
+      "Accent": "#32CD32",
+      "Detail": "#228B22"
+    },
+    "Blue": {
+      "Base": "#FFFFFF",
+      "Main": "#00008B",
+      "Accent": "#1E90FF",
+      "Detail": "#87CEEB"
+    },
+    "Gray": {
+      "Base": "#D3D3D3",
+      "Main": "#000000",
+      "Accent": "#696969",
+      "Detail": "#2F4F4F"
+    },
+    "BlackWhite": {
+      "Base": "#FFFFFF",
+      "Main": "#000000",
+      "Accent": "#000000",
+      "Detail": "#D3D3D3"
+    },
+       "BlueT": {
+      "Base": "#FFFFFF",
+      "Main": "#00008B",
+      "Accent": "#1E90FF",
+      "Detail": "#87CEEB",
+      "Tire":"#FFFFFF"
+    }, "RedT": {
+      "Base": "#FFFFFF",
+      "Main": "#8B0000",
+      "Accent": "#FF0000",
+      "Detail": "#CD5C5C", 
+      "Tire":"#FFFFFF"
+    }
+  }
+}

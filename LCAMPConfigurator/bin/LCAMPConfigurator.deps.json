@@ -6,11 +6,11 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "LCAMPConfigurator/1.0.0": {
+      "LCAMPConfigurator/1.2.3": {
         "dependencies": {
           "ClosedXML": "0.105.0",
           "LCAMPConfiguratorCore": "1.0.0",
-          "LCAMPConfiguratorUserInterface": "1.0.0",
+          "LCAMPConfiguratorUserInterface": "1.2.3",
           "Microsoft.CSharp": "4.7.0",
           "Siemens.RosSharp.Urdf": "2.2.0",
           "System.Configuration.ConfigurationManager": "9.0.7",
@@ -1087,14 +1087,14 @@
           }
         }
       },
-      "LCAMPConfiguratorUserInterface/1.0.0": {
+      "LCAMPConfiguratorUserInterface/1.2.3": {
         "dependencies": {
           "LCAMPConfiguratorCore": "1.0.0",
           "LCAMPConfigurtatorColor": "1.0.0"
         },
         "runtime": {
           "LCAMPConfiguratorUserInterface.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.2.3",
             "fileVersion": "0.0.0.0"
           }
         }
@@ -1133,7 +1133,7 @@
     }
   },
   "libraries": {
-    "LCAMPConfigurator/1.0.0": {
+    "LCAMPConfigurator/1.2.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1913,7 +1913,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "LCAMPConfiguratorUserInterface/1.0.0": {
+    "LCAMPConfiguratorUserInterface/1.2.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

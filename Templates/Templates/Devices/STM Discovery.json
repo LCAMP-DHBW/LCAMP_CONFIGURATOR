@@ -1,0 +1,22 @@
+{
+	"Description": "Code for Arduino to control IMU",
+	
+	
+
+	"Assembly": {
+		"Type": "Controler",
+		"Name": "STM32 Discovery",
+		"Components": [
+			
+			{
+				"idCode": "RC-34-2321.5",
+				"Name": "Contoller PCB",
+				"Number": 1,
+				"Data3D": "IMUpcb.stl",
+				"Type": "pcb",
+				"description": "STM32 Discovery Controller Board"
+			}
+			
+		]
+	}
+}

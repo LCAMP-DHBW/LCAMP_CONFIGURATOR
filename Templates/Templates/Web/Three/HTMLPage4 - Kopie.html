@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js GLTFLoader Test</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #1a1a1a;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 18px;
+            z-index: 100;
+        }
+
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 13px;
+            z-index: 100;
+            background: rgba(0,0,0,0.8);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #444;
+        }
+
+        .control-group {
+            margin-bottom: 8px;
+        }
+
+        .key {
+            background: #333;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        #error {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff6b6b;
+            font-size: 16px;
+            text-align: center;
+            z-index: 100;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">Lade 3D-Modell...</div>
+    <div id="error">
+        GLTFLoader konnte nicht geladen werden.<br>
+        Zeige Fallback-Würfel an.
+    </div>
+    <div id="info">
+        <div class="control-group">
+            <strong>🎮 3D-Steuerung:</strong>
+        </div>
+        <div class="control-group">
+            🖱️ <strong>Maus ziehen:</strong> Yaw + Pitch (Y + X Achse)
+        </div>
+        <div class="control-group">
+            <span class="key">Shift</span> + 🖱️ <strong>ziehen:</strong> Pitch (X-Achse)
+        </div>
+        <div class="control-group">
+            <span class="key">Ctrl</span> + 🖱️ <strong>ziehen:</strong> Roll (Z-Achse)
+        </div>
+        <div class="control-group">
+            🖱️ <strong>Mausrad:</strong> Zoom
+        </div>
+        <div class="control-group">
+            <span class="key">R</span> <strong>Reset Rotation</strong>
+        </div>
+    </div>
+
+    <!-- Three.js und GLTFLoader direkt von einem funktionierenden CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r128/examples/js/loaders/GLTFLoader.js"></script>
+
+    <script>
+        // Szene, Kamera und Renderer erstellen
+        const scene = new THREE.Scene();
+        // Heller Hintergrund
+        scene.background = new THREE.Color(0xf0f0f0);
+
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 10, 1500);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        // Renderer-Einstellungen für hellere Darstellung
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        renderer.toneMapping = THREE.LinearToneMapping;
+        renderer.toneMappingExposure = 2.0; // Helligkeit erhöhen
+        renderer.gammaOutput = true;
+        renderer.gammaFactor = 2.2;
+        document.body.appendChild(renderer.domElement);
+
+        // Erweiterte Maus-Steuerung für alle 3 Achsen (Roll, Pitch, Yaw)
+        let mouseX = 0, mouseY = 0;
+        let isMouseDown = false;
+        let rotationX = 0, rotationY = 0, rotationZ = 0;
+        let isShiftPressed = false;
+        let isCtrlPressed = false;
+
+        // Keyboard-Events für Modifikatoren und Reset
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Shift') isShiftPressed = true;
+            if (event.key === 'Control') isCtrlPressed = true;
+
+            // Reset Rotation mit R-Taste
+            if (event.key === 'r' || event.key === 'R') {
+                rotationX = 0;
+                rotationY = 0;
+                rotationZ = 0;
+                console.log('Rotation zurückgesetzt');
+            }
+        });
+
+        document.addEventListener('keyup', (event) => {
+            if (event.key === 'Shift') isShiftPressed = false;
+            if (event.key === 'Control') isCtrlPressed = false;
+        });
+
+        document.addEventListener('mousedown', () => isMouseDown = true);
+        document.addEventListener('mouseup', () => isMouseDown = false);
+
+        document.addEventListener('mousemove', (event) => {
+            if (isMouseDown) {
+                const deltaX = (event.clientX / window.innerWidth) * 2 - 1;
+                const deltaY = -(event.clientY / window.innerHeight) * 2 + 1;
+
+                if (isCtrlPressed) {
+                    // Roll (Z-Achse) - mit Ctrl + Maus
+                    rotationZ += (deltaX - mouseX) * 2;
+                } else if (isShiftPressed) {
+                    // Pitch (X-Achse) - mit Shift + Maus
+                    rotationX += (deltaY - mouseY) * 2;
+                } else {
+                    // Standard: Yaw (Y-Achse) und Pitch (X-Achse)
+                    rotationY += (deltaX - mouseX) * 2;
+                    rotationX += (deltaY - mouseY) * 2;
+                }
+
+                mouseX = deltaX;
+                mouseY = deltaY;
+            }
+        });
+
+        // Zoom mit Mausrad
+        let cameraDistance = 500;
+        document.addEventListener('wheel', (event) => {
+            cameraDistance += event.deltaY * 0.5;
+            cameraDistance = Math.max(200, Math.min(1000, cameraDistance));
+        });
+
+		// Weiches Ambient Light
+		const ambientLight = new THREE.AmbientLight(0xffffff, 2.5);
+		scene.add(ambientLight);
+
+        // Hauptlicht (Directional Light)
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
+        directionalLight.position.set(10, 10, 5);
+        directionalLight.castShadow = true;
+        directionalLight.shadow.mapSize.width = 2048;
+        directionalLight.shadow.mapSize.height = 2048;
+        scene.add(directionalLight);
+
+        // Zusätzliche Point Lights für mehr Helligkeit
+        const pointLight1 = new THREE.PointLight(0xffffff, 1.2);
+        pointLight1.position.set(-10, 10, -10);
+        scene.add(pointLight1);
+
+        const pointLight2 = new THREE.PointLight(0xffffff, 1.0);
+        pointLight2.position.set(10, -5, 10);
+        scene.add(pointLight2);
+
+        const pointLight3 = new THREE.PointLight(0xffffff, 0.8);
+        pointLight3.position.set(-5, -10, -5);
+        scene.add(pointLight3);
+
+        // Spot Light für dramatischere Beleuchtung
+        const spotLight = new THREE.SpotLight(0xffffff, 1.0);
+        spotLight.position.set(0, 20, 10);
+        spotLight.angle = Math.PI / 4;
+        spotLight.penumbra = 0.1;
+        spotLight.castShadow = true;
+        scene.add(spotLight);
+
+        // Hemisphere Light für natürlichere Beleuchtung
+        const hemisphereLight = new THREE.HemisphereLight(0xffffff, 0x444444, 0.8);
+        scene.add(hemisphereLight);
+
+        // Variablen für Modell
+        let model = null;
+        const loadingElement = document.getElementById('loading');
+        const errorElement = document.getElementById('error');
+
+        // Fallback-Funktion: Erstelle einen hellen Würfel
+        function createFallbackCube() {
+            const geometry = new THREE.BoxGeometry(2, 2, 2);
+            const material = new THREE.MeshStandardMaterial({
+                color: 0x00ff00,
+                roughness: 0.1,
+                metalness: 0.3,
+                emissive: 0x002200 // Leichtes Leuchten
+            });
+            const cube = new THREE.Mesh(geometry, material);
+            cube.castShadow = true;
+            cube.receiveShadow = true;
+            scene.add(cube);
+            model = cube;
+            camera.position.z = cameraDistance;
+            loadingElement.style.display = 'none';
+            errorElement.style.display = 'block';
+            setTimeout(() => {
+                errorElement.style.display = 'none';
+            }, 3000);
+        }
+
+        // Versuche GLTFLoader zu laden (vereinfacht)
+        function loadGLTFModel() {
+            // Prüfe ob GLTFLoader verfügbar ist
+            if (typeof THREE.GLTFLoader !== 'undefined') {
+                console.log('GLTFLoader ist verfügbar');
+                loadModelWithGLTF();
+            } else {
+                console.warn('GLTFLoader nicht verfügbar, verwende Fallback');
+                setTimeout(() => {
+                    if (typeof THREE.GLTFLoader !== 'undefined') {
+                        console.log('GLTFLoader nach Verzögerung verfügbar');
+                        loadModelWithGLTF();
+                    } else {
+                        createFallbackCube();
+                    }
+                }, 1000); // Warte 1 Sekunde auf das Laden
+            }
+        }
+
+        // Modell mit GLTFLoader laden
+        function loadModelWithGLTF() {
+            const loader = new THREE.GLTFLoader();
+
+            loader.load(
+                'roboteil.glb',
+                function (gltf) {
+                    // Erfolgreich geladen
+                    model = gltf.scene;
+                    scene.add(model);
+
+                    // Schatten aktivieren
+                    model.traverse((child) => {
+                        if (child.isMesh) {
+                            child.castShadow = true;
+                            child.receiveShadow = true;
+                        }
+                    });
+
+                    // Modell zentrieren
+                    const box = new THREE.Box3().setFromObject(model);
+                    const center = box.getCenter(new THREE.Vector3());
+                    const size = box.getSize(new THREE.Vector3());
+
+                    model.position.x = -center.x;
+                    model.position.y = -center.y;
+                    model.position.z = -center.z;
+
+                    // Kamera Position
+                    const maxDim = Math.max(size.x, size.y, size.z);
+                    cameraDistance = maxDim * 2;
+                    camera.position.z = cameraDistance;
+
+                    loadingElement.style.display = 'none';
+                    console.log('Modell erfolgreich geladen');
+                },
+                function (progress) {
+                    // Ladefortschritt
+                    const percent = Math.round((progress.loaded / progress.total) * 100);
+                    loadingElement.textContent = `Lade 3D-Modell... ${percent}%`;
+                },
+                function (error) {
+                    // Fehler beim Laden der GLB-Datei
+                    console.error('Fehler beim Laden von roboteil.glb:', error);
+                    loadingElement.textContent = 'roboteil.glb nicht gefunden';
+                    createFallbackCube();
+                }
+            );
+        }
+
+        // Boden hinzufügen
+        const floorGeometry = new THREE.PlaneGeometry(20, 20);
+        const floorMaterial = new THREE.MeshStandardMaterial({
+            color: 0x404040,
+            roughness: 0.8
+        });
+        const floor = new THREE.Mesh(floorGeometry, floorMaterial);
+        floor.rotation.x = -Math.PI / 2;
+        floor.position.y = -2;
+        floor.receiveShadow = true;
+        scene.add(floor);
+
+        // Kamera rotiert um die Szene
+        const radius = 800;  // Abstand vom Zentrum
+        const speed = 0.0005;
+
+       /* function animate() {
+            requestAnimationFrame(animate);
+
+            const t = Date.now() * speed;
+
+            // Kamera kreist um Z-Achse
+            camera.position.x = radius * Math.cos(t);
+            camera.position.z = radius * Math.sin(t);
+            camera.position.y = 5; // leicht erhöht
+            camera.lookAt(0, 0, 0);
+
+            renderer.render(scene, camera);
+        }
+        */
+        // Animationsschleife
+        function animate() {
+            requestAnimationFrame(animate);
+
+          /// Kamera-Position basierend auf Zoom
+            camera.position.x = 0;
+            camera.position.y = 2;
+            camera.position.z = cameraDistance;
+            camera.lookAt(0, 0, 0);
+
+            // Modell mit allen 3 Rotationsachsen rotieren
+            if (model) {
+                // Manuelle Rotation anwenden
+                model.rotation.x = rotationX;
+                model.rotation.y = rotationY;
+                model.rotation.z = rotationZ + (Date.now() * speed); // Kontinuierliche Y-Rotation
+            }
+
+            renderer.render(scene, camera);
+        }
+
+        // Fenstergröße anpassen
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // Starte die Anwendung
+        loadGLTFModel();
+        animate();
+
+    </script>
+</body>
+</html>

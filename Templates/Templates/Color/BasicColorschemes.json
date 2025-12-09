@@ -1,0 +1,241 @@
+{
+  "Name": "Default Color Schemes",
+  "Type": "ColorScheme",
+  "Description": "List of default color schemes",
+  "SchemeList": {
+    "Light": {
+      "Base": "#FFFFFFFF",
+      "Main": "#FF000000",
+      "Accent": "#FF6495ED",
+      "Detail": "#FFC0C0C0",
+      "Tire": "#FF000000"
+    },
+    "Dark": {
+      "Base": "#000000",
+      "Main": "#FFFFFF",
+      "Accent": "#FF4500",
+      "Detail": "#A9A9A9"
+    },
+    "HighContrast": {
+      "Base": "#000000",
+      "Main": "#FFFF00",
+      "Accent": "#00FF00",
+      "Detail": "#FF00FF"
+    },
+    "Red": {
+      "Base": "#FFFFFF",
+      "Main": "#8B0000",
+      "Accent": "#FF0000",
+      "Detail": "#CD5C5C"
+    },
+    "Green": {
+      "Base": "#FFFFFF",
+      "Main": "#006400",
+      "Accent": "#32CD32",
+      "Detail": "#228B22"
+    },
+    "Blue": {
+      "Base": "#FFFFFFFF",
+      "Main": "#FF00008B",
+      "Accent": "#FFADD8E6",
+      "Detail": "#FF1E90FF",
+      "Tire": "#FF000000"
+    },
+    "Gray": {
+      "Base": "#D3D3D3",
+      "Main": "#000000",
+      "Accent": "#696969",
+      "Detail": "#2F4F4F"
+    },
+    "BlackWhite": {
+      "Base": "#FFFFFF",
+      "Main": "#000000",
+      "Accent": "#000000",
+      "Detail": "#D3D3D3"
+    },
+    "BlueT": {
+      "Base": "#FFFFFF",
+      "Main": "#00008B",
+      "Accent": "#1E90FF",
+      "Detail": "#87CEEB",
+      "Tire": "#FFFFFF"
+    },
+    "RedT": {
+      "Base": "#FFFFFF",
+      "Main": "#8B0000",
+      "Accent": "#FF0000",
+      "Detail": "#CD5C5C",
+      "Tire": "#FFFFFF"
+    },
+    "Yellow": {
+      "Base": "#FFC0C0C0",
+      "Main": "#FF808000",
+      "Detail": "#FFFFFF80",
+      "Accent": "#FF808080",
+      "Tire": "#FF000000"
+    },
+    "newMat": {
+      "Base": "#FFFFFFFF",
+      "Main": "#FF000000",
+      "Detail": "#FF808080",
+      "Accent": "#FF6495ED",
+      "Tire": "#FF000000"
+    }
+  },
+  "SchemeListMaterials": {
+    "newMat": {
+      "Base": {
+        "Properties": {},
+        "MaterialType": "PLA",
+        "Color": {
+          "ArgbValue": "FFFFFFFF",
+          "ColorName": "Weiß",
+          "rgba": [
+            255,
+            255,
+            255,
+            255
+          ],
+          "Texture": null
+        },
+        "Technology": "3D Print",
+        "Center": null,
+        "Density": null,
+        "ComponentType": "Materials",
+        "Name": "PLA Filament  Weiß",
+        "Id": 0,
+        "PositionId": null,
+        "Status": null,
+        "Type": null,
+        "Description": "PLA Filament  Weiß Weiß ARGB ( 255, 255, 255, 255 )",
+        "Parent": null,
+        "Reference": "PLA_4.wFFF",
+        "Version": null,
+        "Components": []
+      },
+      "Main": null,
+      "Detail": {
+        "Properties": {},
+        "MaterialType": "PLA",
+        "Color": {
+          "ArgbValue": "FFC0C0C0",
+          "ColorName": "Hellgrau",
+          "rgba": [
+            192,
+            192,
+            192,
+            255
+          ],
+          "Texture": null
+        },
+        "Technology": "3D Print",
+        "Center": null,
+        "Density": null,
+        "ComponentType": "Materials",
+        "Name": "PLA Filament  Hellgrau",
+        "Id": 0,
+        "PositionId": null,
+        "Status": null,
+        "Type": null,
+        "Description": "PLA Filament  Hellgrau Hellgrau ARGB ( 255, 192, 192, 192 )",
+        "Parent": null,
+        "Reference": "PLA_w.sCCC",
+        "Version": null,
+        "Components": []
+      },
+      "Accent": null,
+      "Tire": null
+    },
+    "Blue": {
+      "Base": {
+        "Properties": {},
+        "MaterialType": "PLA",
+        "Color": {
+          "ArgbValue": "FFFFFFFF",
+          "ColorName": "Weiß",
+          "rgba": [
+            255,
+            255,
+            255,
+            255
+          ],
+          "Texture": null
+        },
+        "Technology": "3D Print",
+        "Center": null,
+        "Density": null,
+        "ComponentType": "Materials",
+        "Name": "PLA Filament  Weiß",
+        "Id": 0,
+        "PositionId": null,
+        "Status": null,
+        "Type": null,
+        "Description": "PLA Filament  Weiß Weiß ARGB ( 255, 255, 255, 255 )",
+        "Parent": null,
+        "Reference": "PLA_4.wFFF",
+        "Version": null,
+        "Components": []
+      },
+      "Main": null,
+      "Detail": {
+        "Properties": {},
+        "MaterialType": "PLA",
+        "Color": {
+          "ArgbValue": "FFC0C0C0",
+          "ColorName": "Hellgrau",
+          "rgba": [
+            192,
+            192,
+            192,
+            255
+          ],
+          "Texture": null
+        },
+        "Technology": "3D Print",
+        "Center": null,
+        "Density": null,
+        "ComponentType": "Materials",
+        "Name": "PLA Filament  Hellgrau",
+        "Id": 0,
+        "PositionId": null,
+        "Status": null,
+        "Type": null,
+        "Description": "PLA Filament  Hellgrau Hellgrau ARGB ( 255, 192, 192, 192 )",
+        "Parent": null,
+        "Reference": "PLA_w.sCCC",
+        "Version": null,
+        "Components": []
+      },
+      "Accent": {
+        "Properties": {},
+        "MaterialType": "PLA",
+        "Color": {
+          "ArgbValue": "FFADD8E6",
+          "ColorName": "Hellblau",
+          "rgba": [
+            173,
+            216,
+            230,
+            255
+          ],
+          "Texture": null
+        },
+        "Technology": "3D Print",
+        "Center": null,
+        "Density": null,
+        "ComponentType": "Materials",
+        "Name": "PLA Filament  Hellblau",
+        "Id": 0,
+        "PositionId": null,
+        "Status": null,
+        "Type": null,
+        "Description": null,
+        "Parent": null,
+        "Reference": "PLA_i.0ADE",
+        "Version": null,
+        "Components": []
+      },
+      "Tire": null
+    }
+  }
+}

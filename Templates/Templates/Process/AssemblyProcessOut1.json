@@ -1,0 +1,250 @@
+{
+  "DeviceType":"Process",
+  "Steps": [
+    {
+      "Resources": [
+        {
+          "Id": 0,
+          "Name": "Component Organizer",
+          "Type": "Tool",
+          "Description": null,
+          "Reference": "R1",
+          "Version": null,
+          "Parent": null,
+          "ComponentType": "Component",
+          "Components": []
+        },
+        {
+          "Id": 0,
+          "Name": "Emma Brown",
+          "Type": "Personnel",
+          "Description": null,
+          "Reference": "R2",
+          "Version": null,
+          "Parent": null,
+          "ComponentType": "Component",
+          "Components": []
+        }
+      ],
+      "EstimatedDuration": "0.5h",
+      "Dependencies": [],
+      "Id": 0,
+      "Name": "Material Preparation",
+      "Type": null,
+      "Description": "Prepare and organize all necessary Materials and Tooling for assembly.",
+      "Reference": "QS1.1",
+      "Version": null,
+      "Parent": null,
+      "ComponentType": "Component",
+      "Components": []
+    },
+    {
+      "Resources": [
+        {
+          "Id": 0,
+          "Name": "Component Organizer",
+          "Type": "Tool",
+          "Description": null,
+          "Reference": "R1",
+          "Version": null,
+          "Parent": null,
+          "ComponentType": "Component",
+          "Components": []
+        },
+        {
+          "Id": 0,
+          "Name": "Emma Brown",
+          "Type": "Personnel",
+          "Description": null,
+          "Reference": "R2",
+          "Version": null,
+          "Parent": null,
+          "ComponentType": "Component",
+          "Components": []
+        }
+      ],
+      "EstimatedDuration": "1h",
+      "Dependencies": [],
+      "Id": 0,
+      "Name": "Workstation Preparation",
+      "Type": null,
+      "Description": "Prepare and organize the Workstation for assembly.",
+      "Reference": "QS1.2",
+      "Version": null,
+      "Parent": null,
+      "ComponentType": "Component",
+      "Components": []
+    },
+    {
+      "Resources": [
+        {
+          "Id": 0,
+          "Name": "Chassis Assembly Workbench",
+          "Type": "ARKITE System",
+          "Description": null,
+          "Reference": "R3",
+          "Version": null,
+          "Parent": null,
+          "ComponentType": "Component",
+          "Components": []
+        },
+        {
+          "Id": 0,
+          "Name": "Liam Davis",
+          "Type": "Personnel",
+          "Description": null,
+          "Reference": "R4",
+          "Version": null,
+          "Parent": null,
+          "ComponentType": "Component",
+          "Components": []
+        }
+      ],
+      "EstimatedDuration": "2h",
+      "Dependencies": [
+        "QS1"
+      ],
+      "Id": 0,
+      "Name": "Chassis Assembly",
+      "Type": null,
+      "Description": "Assemble the main chassis of the mobile robot, including mounting the frame and wheels.",
+      "Reference": "QS2",
+      "Version": null,
+      "Parent": null,
+      "ComponentType": "Component",
+      "Components": []
+    },
+    {
+      "Resources": [
+        {
+          "Id": 0,
+          "Name": "Wire Strippers",
+          "Type": "Tool",
+          "Description": null,
+          "Reference": "R5",
+          "Version": null,
+          "Parent": null,
+          "ComponentType": "Component",
+          "Components": []
+        },
+        {
+          "Id": 0,
+          "Name": "Olivia Martinez",
+          "Type": "Personnel",
+          "Description": null,
+          "Reference": "R6",
+          "Version": null,
+          "Parent": null,
+          "ComponentType": "Component",
+          "Components": []
+        }
+      ],
+      "EstimatedDuration": "2h",
+      "Dependencies": [
+        "QS2"
+      ],
+      "Id": 0,
+      "Name": "Electrical Wiring",
+      "Type": null,
+      "Description": "Install and connect all electrical components, including wiring the sensors and control units.",
+      "Reference": "QS3",
+      "Version": null,
+      "Parent": null,
+      "ComponentType": "Component",
+      "Components": []
+    },
+    {
+      "Resources": [
+        {
+          "Id": 0,
+          "Name": "Software Installation PC",
+          "Type": "Computer",
+          "Description": null,
+          "Reference": "R7",
+          "Version": null,
+          "Parent": null,
+          "ComponentType": "Component",
+          "Components": []
+        },
+        {
+          "Id": 0,
+          "Name": "Noah Wilson",
+          "Type": "Personnel",
+          "Description": null,
+          "Reference": "R8",
+          "Version": null,
+          "Parent": null,
+          "ComponentType": "Component",
+          "Components": []
+        }
+      ],
+      "EstimatedDuration": "1.5h",
+      "Dependencies": [
+        "QS3"
+      ],
+      "Id": 0,
+      "Name": "Software Installation",
+      "Type": null,
+      "Description": "Install and configure the software necessary for the mobile robot's operation, including firmware and control algorithms.",
+      "Reference": "QS4",
+      "Version": null,
+      "Parent": null,
+      "ComponentType": "Component",
+      "Components": []
+    },
+    {
+      "Resources": [
+        {
+          "Id": 0,
+          "Name": "Testing Equipment",
+          "Type": "Tool",
+          "Description": null,
+          "Reference": "R9",
+          "Version": null,
+          "Parent": null,
+          "ComponentType": "Component",
+          "Components": []
+        },
+        {
+          "Id": 0,
+          "Name": "Sophia Johnson",
+          "Type": "Personnel",
+          "Description": null,
+          "Reference": "R10",
+          "Version": null,
+          "Parent": null,
+          "ComponentType": "Component",
+          "Components": []
+        }
+      ],
+      "EstimatedDuration": "2h",
+      "Dependencies": [
+        "S4"
+      ],
+      "Id": 0,
+      "Name": "Final Testing",
+      "Type": null,
+      "Description": "Perform final testing and calibration of the mobile robot to ensure all components are functioning correctly.",
+      "Reference": "QS5",
+      "Version": null,
+      "Parent": null,
+      "ComponentType": "Component",
+      "Components": []
+    }
+  ],
+  "Output": {
+    "Name": "Mobile Robot",
+    "Quantity": "50 units",
+    "PackagingType": "Custom Crates"
+  },
+  "AdditionalNotes": "Ensure all safety protocols are followed, particularly during electrical wiring and final testing phases.",
+  "Id": 0,
+  "Name": "Mobile Robot Assembly",
+  "Type": null,
+  "Description": "A comprehensive process for assembling the mobile robots, including all Steps from component assembly to final testing.",
+  "Reference": "Q002",
+  "Version": null,
+  "Parent": null,
+  "ComponentType": "Component",
+  "Components": []
+}

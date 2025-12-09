@@ -1,0 +1,1052 @@
+[
+  {
+    "Properties": {},
+    "MaterialType": "PLA",
+    "Color": {
+      "ArgbValue": "FFADD8E6",
+      "ColorName": "Hellblau",
+      "rgba": [
+        173,
+        216,
+        230,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "3D Print",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PLA Filament  Hellblau",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PLA_m.yADE",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PLA",
+    "Color": {
+      "ArgbValue": "FF000000",
+      "ColorName": "Schwarz",
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "3D Print",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PLA Filament  Schwarz",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PLA_Z.n000",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PLA",
+    "Color": {
+      "ArgbValue": "FFFFFFFF",
+      "ColorName": "Weiß",
+      "rgba": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "3D Print",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PLA Filament  Weiß",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PLA_X.0FFF",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PLA",
+    "Color": {
+      "ArgbValue": "FFAD0000",
+      "ColorName": "Rot",
+      "rgba": [
+        173,
+        0,
+        0,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "3D Print",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PLA Filament  Rot",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PLA_n.zA00",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PLA",
+    "Color": {
+      "ArgbValue": "FF0000A0",
+      "ColorName": "Dunkelblau",
+      "rgba": [
+        0,
+        0,
+        160,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "3D Print",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PLA Filament  DunkelBlau",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PLA_n.p00A",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PLA",
+    "Color": {
+      "ArgbValue": "FF708090",
+      "ColorName": "Grau",
+      "rgba": [
+        112,
+        128,
+        144,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "3D Print",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PLA Filament  Grau",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PLA_r.m789",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PLA",
+    "Color": {
+      "ArgbValue": "FFC0C0C0",
+      "ColorName": "Hellgrau",
+      "rgba": [
+        192,
+        192,
+        192,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "3D Print",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PLA Filament  Hellgrau",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PLA_v.uCCC",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Pexi",
+    "Color": {
+      "ArgbValue": "7FFFE4B5",
+      "ColorName": "Transparent",
+      "rgba": [
+        255,
+        228,
+        181,
+        127
+      ],
+      "Texture": null
+    },
+    "Technology": "WaterJetCut",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Pexi Trans",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PexiR.OFEB",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "FiberWood",
+    "Color": {
+      "ArgbValue": "FFD2691E",
+      "ColorName": "Schokoladenbraun",
+      "rgba": [
+        210,
+        105,
+        30,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "LaserJetCut",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "BasePlate",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "FibeE.rD61",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Alu",
+    "Color": {
+      "ArgbValue": "7FFFE4B5",
+      "ColorName": "Transparent",
+      "rgba": [
+        255,
+        228,
+        181,
+        127
+      ],
+      "Texture": null
+    },
+    "Technology": "WaterJetCut",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Alu BasePlate",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Alu_u.OFEB",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Stahl",
+    "Color": {
+      "ArgbValue": "FF808080",
+      "ColorName": "Grau",
+      "rgba": [
+        128,
+        128,
+        128,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "LaserJetCut",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Stahl Grundplatte",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Stah3.r888",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Aluminium",
+    "Color": {
+      "ArgbValue": "FFC0C0C0",
+      "ColorName": "Silber",
+      "rgba": [
+        192,
+        192,
+        192,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Extrusion",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Aluminium Profil",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Alum8.uCCC",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Kunststoff",
+    "Color": {
+      "ArgbValue": "FFFF0000",
+      "ColorName": "Rot",
+      "rgba": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Spritzguss",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Kunststoff Gehäuse",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Kuns0.nF00",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Kupfer",
+    "Color": {
+      "ArgbValue": "FFB87333",
+      "ColorName": "Kupferbraun",
+      "rgba": [
+        184,
+        115,
+        51,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Ziehen",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Kupfer Rohr",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "KupfH.0B73",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Edelstahl",
+    "Color": {
+      "ArgbValue": "FF708090",
+      "ColorName": "Schiefergrau",
+      "rgba": [
+        112,
+        128,
+        144,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Stanzen",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Edelstahl Blech",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Edel5.m789",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Titan",
+    "Color": {
+      "ArgbValue": "FF778899",
+      "ColorName": "Titangrau",
+      "rgba": [
+        119,
+        136,
+        153,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Fräsen",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Titan Bauteil",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Tita9.z789",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Bronze",
+    "Color": {
+      "ArgbValue": "FFCD7F32",
+      "ColorName": "Bronze",
+      "rgba": [
+        205,
+        127,
+        50,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Gießen",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Bronze Buchse",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "BronL.xC73",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Carbon",
+    "Color": {
+      "ArgbValue": "FF2F4F4F",
+      "ColorName": "Anthrazit",
+      "rgba": [
+        47,
+        79,
+        79,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Laminieren",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Carbon Platte",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "CarbN.r244",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Messing",
+    "Color": {
+      "ArgbValue": "FFB5651D",
+      "ColorName": "Messinggelb",
+      "rgba": [
+        181,
+        101,
+        29,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Drehen",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Messing Fitting",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Mess9.oB61",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Glas",
+    "Color": {
+      "ArgbValue": "FFE6F3FF",
+      "ColorName": "Transparent",
+      "rgba": [
+        230,
+        243,
+        255,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Tempern",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Glas Scheibe",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "GlasY.0EFF",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Keramik",
+    "Color": {
+      "ArgbValue": "FFF5F5DC",
+      "ColorName": "Beige",
+      "rgba": [
+        245,
+        245,
+        220,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Brennen",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Keramik Isolator",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "KeraL.nFFD",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Gummi",
+    "Color": {
+      "ArgbValue": "FF000000",
+      "ColorName": "Schwarz",
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Vulkanisieren",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Gummi Dichtung",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Gummf.n000",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PVC",
+    "Color": {
+      "ArgbValue": "FFFFFFFF",
+      "ColorName": "Weiß",
+      "rgba": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Extrudieren",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PVC Rohr",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PVC_N.0FFF",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "ABS",
+    "Color": {
+      "ArgbValue": "FF0000FF",
+      "ColorName": "Blau",
+      "rgba": [
+        0,
+        0,
+        255,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Spritzguss",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "ABS Gehäuse",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "ABS_z.s00F",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PC",
+    "Color": {
+      "ArgbValue": "FF00FF00",
+      "ColorName": "Grün",
+      "rgba": [
+        0,
+        255,
+        0,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Thermoformen",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Polycarbonat Abdeckung",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PC__n.s0F0",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PEEK",
+    "Color": {
+      "ArgbValue": "FFFFE4B5",
+      "ColorName": "Beige",
+      "rgba": [
+        255,
+        228,
+        181,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Spritzguss",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PEEK Lager",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PEEKV.pFEB",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PTFE",
+    "Color": {
+      "ArgbValue": "FFF0F8FF",
+      "ColorName": "Altweiß",
+      "rgba": [
+        240,
+        248,
+        255,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Pressen",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PTFE Dichtung",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PTFEU.xFFF",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Holz",
+    "Color": {
+      "ArgbValue": "FFD2691E",
+      "ColorName": "Schokoladenbraun",
+      "rgba": [
+        210,
+        105,
+        30,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Fräsen",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Holz Griff",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Holzc.rD61",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Magnesium",
+    "Color": {
+      "ArgbValue": "FFADD8E6",
+      "ColorName": "Hellblau",
+      "rgba": [
+        173,
+        216,
+        230,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Druckguss",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Magnesium Gehäuse",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Magni.yADE",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Zink",
+    "Color": {
+      "ArgbValue": "FF708090",
+      "ColorName": "Zinkgrau",
+      "rgba": [
+        112,
+        128,
+        144,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Galvanisieren",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Zink Beschichtung",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Zink4.m789",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Nickel",
+    "Color": {
+      "ArgbValue": "FF8C7853",
+      "ColorName": "Nickelgrau",
+      "rgba": [
+        140,
+        120,
+        83,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Elektroplattieren",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Nickel Überzug",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Nicku.0875",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Gold",
+    "Color": {
+      "ArgbValue": "FFFFD700",
+      "ColorName": "Gold",
+      "rgba": [
+        255,
+        215,
+        0,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Aufdampfen",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Gold Kontakt",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Goldh.wFD0",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Silber",
+    "Color": {
+      "ArgbValue": "FFC0C0C0",
+      "ColorName": "Silber",
+      "rgba": [
+        192,
+        192,
+        192,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Walzen",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Silber Leitung",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Silb8.uCCC",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Platin",
+    "Color": {
+      "ArgbValue": "FFE5E4E2",
+      "ColorName": "Platinweiß",
+      "rgba": [
+        229,
+        228,
+        226,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Sputtern",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Platin Sensor",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Platu.0EEE",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "Wolfram",
+    "Color": {
+      "ArgbValue": "FF36454F",
+      "ColorName": "Anthrazit",
+      "rgba": [
+        54,
+        69,
+        79,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "Ziehen",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "Wolfram Draht",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "Wolfv.o344",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  }
+]

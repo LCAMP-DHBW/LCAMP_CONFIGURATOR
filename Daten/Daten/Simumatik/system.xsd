@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0.15">
+    <!--Attribute type declaration -->
+
+    <xs:simpleType name="smtk_name">
+        <xs:annotation>
+            <xs:documentation>Officially, variable names in OEP can be any length and can consist of lowercase letters ( a-z ), digits ( 0-9 ), and the underscore character ( _ ). An additional restriction is that, although a variable name can contain digits, the first character of a variable name cannot be a digit.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="smtk_string">
+            <xs:pattern value="[A-Za-z_\d][A-Za-z\d_]*" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="smtk_guid">
+        <xs:annotation>
+            <xs:documentation>This restrict the input to match the official guid RegEx pattern</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="smtk_string">
+            <xs:pattern value="(\{){0,1}[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}(\}){0,1}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Type declaration -->
+
+    <xs:simpleType name="smtk_string">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(.|\s)*\S(.|\s)*" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="smtk_empty_string">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(.|\s)*" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="smtk_link">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(((.|\s)*\S(.|\s)*))?" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="smtk_bool">
+        <xs:restriction base="xs:boolean">
+            <xs:pattern value="(.|\s)*\S(.|\s)*" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="smtk_int">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="(.|\s)*\S(.|\s)*" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="smtk_float">
+        <xs:restriction base="xs:float">
+            <xs:pattern value="(.|\s)*\S(.|\s)*" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="smtk_axis">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(.|\s)*\S(.|\s)*" />
+            <xs:enumeration value="fixed" />
+            <xs:enumeration value="x" />
+            <xs:enumeration value="y" />
+            <xs:enumeration value="z" />
+            <xs:enumeration value="rx" />
+            <xs:enumeration value="ry" />
+            <xs:enumeration value="rz" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Coefficient type v0.3 -->
+
+    <xs:simpleType name="smtk_coefficient"> <!-- Use to create a float value between 0 and 1 -->
+        <xs:restriction base="smtk_float">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Vector types v0.3 -->
+
+    <xs:simpleType name="smtk_vector">
+        <xs:list itemType="smtk_float"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="smtk_string_array">
+        <xs:list itemType="smtk_string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="smtk_guid_array">
+        <xs:list itemType="smtk_guid"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="smtk_coeff_vector">
+        <xs:list itemType="smtk_coefficient"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="smtk_vector2">
+        <xs:restriction base="smtk_vector">
+            <xs:length value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="smtk_vector3">
+        <xs:restriction base="smtk_vector">
+            <xs:length value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="smtk_rgba">
+        <xs:restriction base="smtk_coeff_vector">
+            <xs:length value="4"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="smtk_vector6">
+        <xs:restriction base="smtk_vector">
+            <xs:length value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="smtk_transform">
+        <xs:restriction base="smtk_vector">
+            <xs:length value="7"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Choices types v0.3 -->
+
+    <xs:simpleType name="smtk_order_choice">
+        <xs:annotation>
+            <xs:documentation>
+                random: The order is random.
+
+                sequence: The order follows the order of addition of the products
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="smtk_string">
+            <xs:enumeration value="random" />
+            <xs:enumeration value="sequence" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Component declaration v0.3 -->
+    <xs:complexType name="public_variable">        <!-- Used to create user variables -->
+        <xs:simpleContent>
+            <xs:extension base="smtk_empty_string">
+                <xs:attribute name="name" type="smtk_string" use="required" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="component">
+        <xs:annotation>
+            <xs:documentation>
+            Instances of components can be included inside assemblies using the 'component' element. 
+
+            The attributes 'name' and 'guid' are used to define the unique name inside the assembly and the component type to instance respectively.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="origin" type="smtk_transform" minOccurs="1" maxOccurs="1" default="0 0 0 0 0 0 1">
+                <xs:annotation>
+                    <xs:documentation>(float[7]) It's the value of the element frame relative to the system frame.</xs:documentation>
+                    <xs:appinfo>{"default":"0 0 0 0 0 0 1""}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="variable" type="public_variable" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Used to store public input variable values for each component instance.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" type="smtk_name" use="required" />
+        <xs:attribute name="guid" type="smtk_guid" use="required" />
+        <xs:attribute name="visible" type="smtk_bool" use="optional" />
+        <xs:attribute name="version" type="smtk_float" use="optional" />
+    </xs:complexType>
+
+    <!-- Product Input declaration v0.3 -->
+
+    <xs:complexType name="product_entry">
+        <xs:annotation>
+            <xs:documentation>
+            Product entries are special assemblies that allow manually or automatically introducing product oriented components dynamically during the simulation.
+            Introduced components will be children of the element, similar to regular assemblies.
+            
+            TODO: should we allow saving the products in the system file as well?
+            </xs:documentation>
+        </xs:annotation>
+        <xs:all>
+            <xs:element name="origin" type="smtk_transform" minOccurs="1" maxOccurs="1" default="0 0 0 0 0 0 1">
+                <xs:annotation>
+                    <xs:documentation>(float[7]) It's the value of the element frame relative to the system frame.</xs:documentation>
+                    <xs:appinfo>{"default":"0 0 0 0 0 0 1"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="products" type="smtk_guid_array" minOccurs="1" maxOccurs="1" >
+                <xs:annotation>
+                    <xs:documentation>(string array) This elements can be added to define GUIDs of one or several components that may be introduced.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="order" type="smtk_order_choice" minOccurs="1" maxOccurs="1" default="sequence">
+                <xs:annotation>
+                    <xs:documentation>(str) Defines the introduction order for the components, a choice between: 'random', 'sequence'</xs:documentation>
+                    <xs:appinfo>{"default":"sequence"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="interval" type="smtk_float" minOccurs="1" maxOccurs="1" default="0">
+                <xs:annotation>
+                    <xs:documentation>(float) Defines the automatic introduction interval in seconds. 0 value disables the function.</xs:documentation>
+                    <xs:appinfo>{"default":"0"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="min_drop_time" type="smtk_float" minOccurs="0" maxOccurs="1" default="0">
+                <xs:annotation>
+                    <xs:documentation>(float) Defines the minimum time in seconds between manual drops of products. 0 value disables the function.</xs:documentation>
+                    <xs:appinfo>{"default":"0"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="max_products" type="smtk_int" minOccurs="0" maxOccurs="1" default="10">
+                <xs:annotation>
+                    <xs:documentation>(int) Defines the maximum amount of products that wil be introduced.</xs:documentation>
+                    <xs:appinfo>{"default":"10"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:all>
+        <xs:attribute name="name" type="smtk_name" use="required" />
+        <xs:attribute name="visible" type="smtk_bool" use="optional" />
+    </xs:complexType>
+
+    <!-- Product Output declaration v0.3 -->
+
+    <xs:complexType name="product_exit">
+        <xs:annotation>
+            <xs:documentation>
+            Product exits are special elements that allow automatically removing product oriented components dynamically during the simulation.
+            Product outputs have a cylindric shape that can be parametrized using its variables. Any component with a collission shape enteryng the cylinder will be removed.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="origin" type="smtk_transform" minOccurs="1" maxOccurs="1" default="0 0 0 0 0 0 1">
+                <xs:annotation>
+                    <xs:documentation>(float[7]) Is the value of the element frame relative to the system frame.</xs:documentation>
+                    <xs:appinfo>{"default":"0 0 0 0 0 0 1"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="radius" type="smtk_float" minOccurs="1" maxOccurs="1" default="1">
+                <xs:annotation>
+                    <xs:documentation>(float) Defines the radius of the detecting cylinder in meters.</xs:documentation>
+                    <xs:appinfo>{"default":"1"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="length" type="smtk_float" minOccurs="1" maxOccurs="1" default="1">
+                <xs:annotation>
+                    <xs:documentation>(float) Defines the length of the detecting cylinder in meters.</xs:documentation>
+                    <xs:appinfo>{"default":"1"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="delay" type="smtk_float" minOccurs="1" maxOccurs="1" default="0">
+                <xs:annotation>
+                    <xs:documentation>(float) Defines the time in seconds to delay the deletion of the component from its detection.</xs:documentation>
+                    <xs:appinfo>{"default":"0"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="only_products" type="smtk_bool" minOccurs="0" maxOccurs="1" default="false">
+                <xs:annotation>
+                    <xs:documentation>(bool) If deactivated the product exit wil remove any component, not just the ones introduced by product entries.</xs:documentation>
+                    <xs:appinfo>{"default":"true"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="manual_control" type="smtk_bool" minOccurs="0" maxOccurs="1" default="false">
+                <xs:annotation>
+                    <xs:documentation>(bool) If activated allows using the electric port to control when the products should be removed.</xs:documentation>
+                    <xs:appinfo>{"default":"false"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" type="smtk_name" use="required" />
+        <xs:attribute name="visible" type="smtk_bool" use="optional" />
+    </xs:complexType>
+
+    <!-- Connection_path path declaration v0.3 -->
+
+    <xs:complexType name="connection_path">
+        <xs:annotation>
+            <xs:documentation>
+            Used to define the specific path between the output port and the input port.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="pivots2D" type="smtk_string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="pivots3D" type="smtk_string" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="name" type="smtk_string" use="required" />
+    </xs:complexType>
+
+    <!-- Connection dclaration v0.3 -->
+
+    <xs:complexType name="connection">
+        <xs:annotation>
+            <xs:documentation>
+            Used to define an external connection between component input ports and outputs ports. It can handle several connection paths (up to 100).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="to" type="smtk_string_array" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="connection_path" type="connection_path" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="name" type="smtk_string" use="required" />
+    </xs:complexType>
+
+    <!-- component symbol declaration v0.3 -->
+
+    <xs:complexType name="component_symbol">
+        <xs:annotation>
+            <xs:documentation>
+            Used to add a component symbol to a drawing page.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="position" type="smtk_vector2" minOccurs="1" maxOccurs="1" />
+            <xs:element name="rotation" type="smtk_float" minOccurs="1" maxOccurs="1" />
+            <xs:element name="scale" type="smtk_float" minOccurs="1" maxOccurs="1" />
+            <xs:element name="flip_horizontal" type="smtk_bool" minOccurs="0" maxOccurs="1" /> 
+            <xs:element name="flip_vertical" type="smtk_bool" minOccurs="0" maxOccurs="1" />
+            <xs:element name="name_position" type="smtk_vector2" minOccurs="1" maxOccurs="1" />
+       </xs:sequence>
+        <xs:attribute name="name" type="smtk_string" use="required" />
+    </xs:complexType>
+
+    <!-- note declaration v0.3 -->
+
+    <xs:complexType name="note">
+        <xs:annotation>
+            <xs:documentation>
+            Used to add a note to a drawing page.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="text" type="smtk_string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="position" type="smtk_vector2" minOccurs="1" maxOccurs="1" />
+            <xs:element name="rotation" type="smtk_float" minOccurs="1" maxOccurs="1" />
+            <xs:element name="scale" type="smtk_float" minOccurs="1" maxOccurs="1" />
+       </xs:sequence>
+    </xs:complexType>
+
+    <!-- drawing page declaration v0.3 -->
+
+    <xs:complexType name="drawing_page">
+        <xs:annotation>
+            <xs:documentation>
+            Used to add a drawing page to the system.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="number" type="smtk_int" minOccurs="1" maxOccurs="1" />
+            <xs:element name="component_symbol" type="component_symbol" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="note" type="note" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="name" type="smtk_string" use="required" />
+    </xs:complexType>
+
+    <!-- Constraint declaration  v0.3 -->
+
+    <xs:complexType name="constraint">
+        <xs:annotation>
+            <xs:documentation>
+            Constraints can be used to physically attach links of different components.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="origin" type="smtk_transform" minOccurs="1" maxOccurs="1" default="0 0 0 0 0 0 1">
+                <xs:annotation>
+                    <xs:documentation>(float[7]) Is the position of the joint frame relative to the parent center of mass frame.</xs:documentation>
+                    <xs:appinfo>{"default":"0 0 0 0 0 0 1"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="parent" type="smtk_link" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>(str) Is the path to the main component link, i.e. 'component_1.link_1'</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="child" type="smtk_link" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>(str) Is the path to the child component link, i.e. 'component_2.link_1'</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="axis" type="smtk_axis" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>(int) indicates the axis of the joint: x, y, z, rx, ry, rz, fixed.</xs:documentation>
+                    <xs:appinfo>{"default":"fixed"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="limits" type="smtk_vector2" minOccurs="1" maxOccurs="1" default="0 1">
+                <xs:annotation>
+                    <xs:documentation>(float[2]) These are the limits of the axis if not fixed, in meters or radians.</xs:documentation>
+                    <xs:appinfo>{"default":"0 1"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="rotation_order" type="smtk_int" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>(int) XYZ Rotation order. Value from -1 to 5. -1:Default 0:XYZ, 1:XZY, 2:YXZ, 3:YZX, 4:ZXY, 5:ZYX.</xs:documentation>
+                    <xs:appinfo>{"var_type":"constant" ,"default":"-1"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="breaking_impulse_threshold" type="smtk_float" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>(float) Maximum allowed impulse in the joint before being broken. If the variable is not added or i equal to 0 there will be unlimited.</xs:documentation>
+                    <xs:appinfo>{"var_type":"input" ,"default":"100"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="disable_collisions_between_linked_bodies" type="smtk_bool" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>(bool) It disables collisions between linked bodies by default (if True), for more stability.</xs:documentation>
+                    <xs:appinfo>{"var_type":"input" ,"default":"true"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" type="smtk_name" use="required" />
+        <xs:attribute name="visible" type="smtk_bool" use="optional" />
+    </xs:complexType>
+
+    <!-- Assembly declaration  v0.3 -->
+
+    <xs:complexType name="assembly">
+        <xs:annotation>
+            <xs:documentation>
+            Assembly elements are used to group components. Assemblies in a system are defined with an 'assembly' element and should have unique names saved as attribute.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="origin" type="smtk_transform" minOccurs="1" maxOccurs="1" default="0 0 0 0 0 0 1">
+                <xs:annotation>
+                    <xs:documentation>(float[7]) set the initial position of the assembly in the system.</xs:documentation>
+                    <xs:appinfo>{"default":"0 0 0 0 0 0 1"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="component" type="component" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="constraint" type="constraint" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="name" type="smtk_name" use="required" />
+        <xs:attribute name="visible" type="smtk_bool" use="optional" />
+    </xs:complexType>
+    
+    <!-- Root element declaration  v0.3 -->
+
+    <!-- Assembly declaration  v0.3 -->
+
+    <xs:complexType name="camera_view">
+        <xs:annotation>
+            <xs:documentation>
+            Camera views are used to help navigating a system and jump between different locations easily. 
+            They should have unique names saved as attribute.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="position" type="smtk_vector3" minOccurs="1" maxOccurs="1" default="0 0 0">
+                <xs:annotation>
+                    <xs:documentation>(float[3]) set the initial position of the camera.</xs:documentation>
+                    <xs:appinfo>{"default":"0 0 0"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="target" type="smtk_vector3" minOccurs="1" maxOccurs="1" default="0 0 0">
+                <xs:annotation>
+                    <xs:documentation>(float[3]) set the initial target of the camera.</xs:documentation>
+                    <xs:appinfo>{"default":"0 0 0"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="index" type="smtk_int" minOccurs="1" maxOccurs="1" default="0">
+                <xs:annotation>
+                    <xs:documentation>(int) set the camera view index.</xs:documentation>
+                    <xs:appinfo>{"default":"0"}</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" type="smtk_name" use="required" />
+    </xs:complexType>
+    
+    <!-- Root element declaration  v0.3 -->
+
+    <xs:element name="open_emulation_platform">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="system" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                        Simumatik System File
+                        A system file defines a setup of components, grouped into assemblies and connected to each other, to fullfil a given functionality.
+                        Systems are defined using a system file and stored in the cloud so they can be loaded by several users.
+                        The system file has an 'open_emulation_platform' element as root elemnt, with the standard version as attribute. The root element can include just one 'system' child element, with the 'name' and 'guid' as attributes.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="origin" type="smtk_transform" minOccurs="1" maxOccurs="1" default="0 0 0 0 0 0 1">
+                                <xs:annotation>
+                                    <xs:documentation>(float[7]) set the initial position of the system in the workspace.</xs:documentation>
+                                    <xs:appinfo>{"default":"0 0 0 0 0 0 1"}</xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="workspace_params" type="xs:string" minOccurs="0" maxOccurs="1" />
+                            <xs:element name="assembly" type="assembly" minOccurs="0" maxOccurs="unbounded" />
+                            <xs:element name="camera_view" type="camera_view" minOccurs="0" maxOccurs="unbounded" />
+                            <xs:element name="product_entry" type="product_entry" minOccurs="0" maxOccurs="unbounded" />
+                            <xs:element name="product_exit" type="product_exit" minOccurs="0" maxOccurs="unbounded" />
+                            <xs:element name="connection" type="connection" minOccurs="0" maxOccurs="unbounded" />
+                            <xs:element name="drawing_page" type="drawing_page" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="version" type="smtk_float" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
