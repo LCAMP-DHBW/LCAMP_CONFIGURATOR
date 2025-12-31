@@ -1,0 +1,190 @@
+{
+  "ComponentType": "LCAMPRobot",
+  "Name": "Muntaketa Prozesua",
+  "Id": 0,
+  "Type": "Process",
+  "Description": null,
+  "Parent": "LCAMP",
+  "Components": [
+    {
+      "Step_Id": 1,
+      "Name": "Planifikazioa eta prestaketa",
+      "Description": "Proiektuaren oinarriak ezartzea helburuak definituz, osagaiak hautatuz eta planak eginez.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "1.1",
+          "Name": "Eskakizunen analisia",
+          "Description": "Argi eta garbi definitu robotak zer egin behar duen. Adibideak: lerro bat jarraitzea, oztopoak saihestea, objektuak garraiatzea edo urrutiko kontrola izatea.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "1.2",
+          "Name": "Osagaien hautaketa",
+          "Description": "Hautatu osagaiak eskakizunen arabera: txasisa, transmisoa (motorrak, gurpilak), kontrolagailua (adib. Arduino), sentsoreak (adib. ultrasoinuak), motor gidaria eta elikadura iturria.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "1.3",
+          "Name": "Diseinua eta eskema elektrikoa",
+          "Description": "Sortu muntaketa mekanikorako marrazki bat eta muntaketa osoaren kableatuaren eskema zehatza.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "1.4",
+          "Name": "Lan-eremua prestatzea",
+          "Description": "Prestatu tresna guztiak (torlojugailua, soldagailua, multimetroa) eta osagaiak, lan-eremu ondo argiztatuan.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 2,
+      "Name": "Muntaketa mekanikoa",
+      "Description": "Robotaren gorputzaren muntaketa fisikoa.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "2.1",
+          "Name": "Txasisaren muntaketa",
+          "Description": "Muntatu egitura argibideen arabera edo zure diseinu propioaren arabera.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "2.2",
+          "Name": "Motorrak eta gurpilak jartzea",
+          "Description": "Finkatu motorrak sendo eta paraleloan txasisean eta jarri gurpilak motor-ardatzetan.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "2.3",
+          "Name": "Osagai gehigarriak instalatzea",
+          "Description": "Jarri euskarriak kontrolagailuarentzat, sentsoreentzat, bateriarentzat eta aukerako euskarri-gurpilarentzat.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 3,
+      "Name": "Integrazio elektrikoa eta elektronikoa",
+      "Description": "Osagai elektroniko guztien kableatua. Garrantzitsua: Bateria azkenik konektatzen da.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "3.1",
+          "Name": "Kontrolagailua eta motor gidaria kokatzea",
+          "Description": "Jarri mikro-kontrolagailua eta motor gidariaren plaka leku egokietan.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "3.2",
+          "Name": "Motor gidaria kableatzea",
+          "Description": "Konektatu motorrak motor gidariaren irteeretara eta gidariaren kontrol sarrerak kontrolagailuaren pin digitaletara.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "3.3",
+          "Name": "Sentsoreak konektatzea",
+          "Description": "Konektatu sentsoreak kontrolagailuaren pin egokietara (energia [VCC], masa [GND] eta seinalea).",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "3.4",
+          "Name": "Elikadura ezartzea",
+          "Description": "Konektatu bateria motor gidariaren eta kontrolagailuaren elikadura sarreretara. Gomendagarria da pizteko/itzaltzeko etengailu bat erabiltzea.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 4,
+      "Name": "Software instalazioa eta programazioa",
+      "Description": "Robota bizitzara ekartzea beharrezko softwarea eta logika erabiliz.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "4.1",
+          "Name": "Garapen-ingurunea konfiguratzea",
+          "Description": "Instalatu beharrezko softwarea zure ordenagailuan (adib. Arduino IDE).",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "4.2",
+          "Name": "Liburutegiak instalatzea",
+          "Description": "Gehitu behar diren software liburutegiak sentsoreentzat edo motor gidariarentzat.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "4.3",
+          "Name": "Oinarrizko logika programatzea",
+          "Description": "Idatzi kodea pausoz pauso: lehenik irakurri sentsoreen balioak, gero sortu motor funtzioak eta azkenik batu biak kontrol logika batean.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "4.4",
+          "Name": "Kodea igo",
+          "Description": "Transferitu amaitutako programa robotaren mikro-kontrolagailura.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 5,
+      "Name": "Proba, kalibrazioa eta iterazioa",
+      "Description": "Ziurtatu robota espero bezala funtzionatzen duela eta akatsak konpontzea.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "5.1",
+          "Name": "Modulu-probak",
+          "Description": "Probatu osagai bakoitza banaka. Motorrak ondo biratzen dute? Sentsoreen irakurketak sinesgarriak dira?",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "5.2",
+          "Name": "Kalibrazioa",
+          "Description": "Doitu software balioak errealitatearen arabera, adib. motorren abiadurak zuzenean ibiltzeko edo sentsoreentzako atalaseak.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "5.3",
+          "Name": "Arazoen konponketa (Debugging)",
+          "Description": "Bilatu sistematikoki akatsak mekanikan, elektronikan edo softwarean.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "5.4",
+          "Name": "Iterazioa",
+          "Description": "Hobetu kodea eta mekanika proba-emaitzen arabera ziklo errepikatu batean.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 6,
+      "Name": "Amaiera eta dokumentazioa",
+      "Description": "Proiektu garbi, seguru eta ondo dokumentatu baterako azken urratsak.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "6.1",
+          "Name": "Kableen kudeaketa",
+          "Description": "Finkatu eta antolatu kable guztiak brida edo kiribil-hodi bidez, kalteak eta trabak saihesteko.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "6.2",
+          "Name": "Estalkia instalatzea",
+          "Description": "Aukeran, babestu elektronika etxebizitza edo estalki batekin.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "6.3",
+          "Name": "Dokumentazioa",
+          "Description": "Iruzkinak gehitu kodeari, gorde eskema elektrikoa eta sortu osagaien zerrenda etorkizunerako erreferentzia gisa.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    }
+  ]
+}

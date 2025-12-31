@@ -1,28 +1,17 @@
 {
-	"Description": "Code for Arduino to control IMU",
-	
-	
-
+	"Description": "PartDescription for Main Switsch",
 	"Assembly": {
 		"Type": "Device",
-		"Name": "IMU",
+		"Name": "Main Switch",
 		"Components": [
-			
 			{
 				"idCode": "RC-34-2321.5",
-				"Name": "IMU PCB",
+				"Name": "Main Switch",
 				"Number": 1,
-				"Data3D": "IMUpcb.stl",
+				"Data3D": "MainSwitch.stl",
 				"Type": "pcb",
-				"description": "Sensor PCB for IMU"
-			},
-			{
-				"idCode": "RC-34-2321",
-				"Name": "Top",
-				"Number": 1,
-				"Data3D": "SensorCover.stl",
-				"Type": "3D-Print"
+				"description": "Mainswitch for Akku"
 			}
 		]
-	},
+	}
 }

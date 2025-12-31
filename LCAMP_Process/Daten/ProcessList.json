@@ -1,0 +1,244 @@
+{
+  "ComponentType": "LCAMPRobot",
+  "Name": "assembly Process",
+  "Id": 0,
+  "Type": "Process",
+  "Description": null,
+  "Parent": "LCAMP",
+  "Components": [
+    {
+      "Step_Id": 1,
+      "Name": "Planung und Vorbereitung",
+      "Description": "Grundsteinlegung für das Projekt durch Definition der Ziele, Auswahl der Komponenten und Erstellung von Plänen.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "1.1",
+          "Name": "Anforderungsanalyse",
+          "Description": "Definieren Sie klar, was der Roboter tun soll. Beispiele: Einer Linie folgen, Hindernissen ausweichen, Objekte transportieren oder ferngesteuert werden.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "1.2",
+          "Name": "Komponentenauswahl",
+          "Description": "Wählen Sie Bauteile basierend auf den Anforderungen aus: Chassis, Antrieb (Motoren, Räder), Controller (z.B. Arduino), Sensorik (z.B. Ultraschall), Motorsteuerung und Stromversorgung.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "1.3",
+          "Name": "Design und Schaltplan",
+          "Description": "Erstellen Sie eine Skizze für die mechanische Montage und einen detaillierten Schaltplan für die gesamte Verkabelung.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "1.4",
+          "Name": "Arbeitsplatz einrichten",
+          "Description": "Legen Sie alle Werkzeuge (Schraubendreher, Lötkolben, Multimeter) und Bauteile an einem gut beleuchteten Arbeitsplatz bereit.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 2,
+      "Name": "Paralelle Montage der Komponenten",
+      "Description": "Montage der einzelnen Komponenten.",
+      "ComponentType": "ProcesStep ",
+      "Components": [
+        {
+          "Step_Id": "2a",
+          "Name": "Montage Regular-Wheel",
+          "Template": "assemblyRegular-Wheel",
+          "Description": "Montage eines einfachen Rades.",
+          "Number": "2",
+          "ComponentType": "ProcesStep parallel"
+        },
+        {
+          "Step_Id": "2b",
+          "Name": "Montage Ommni-Wheel",
+          "Description": "Montage eines Omni-Wheel.",
+          "Number": "2",
+          "ComponentType": "ProcesStep parallel",
+          "station": "Station 4",
+          "estimatedDuration": "00:06:00",
+          "decisionPoint": {
+            "question": "Montage vollständig und korrekt?",
+            "options": [
+              {
+                "label": "Ja, weiter",
+                "nextStepId": -1
+              },
+              {
+                "label": "Ausschuss",
+                "nextStepId": 6,
+                "status": "Rework",
+                "requiresManualAction": true
+              },
+              {
+                "label": "Nacharbeit erforderlich",
+                "nextStepId": 2,
+                "status": "Rework",
+                "requiresManualAction": true
+              }
+            ]
+          }
+        },
+        {
+          "Step_Id": "2f",
+          "Name": "Montage SensorBox",
+          "Template": "assemblySensorBox",
+          "Description": "Montage einer Sensorbox.",
+          "Number": "1",
+          "ComponentType": "ProcesStep parallel"
+        }
+      ]
+    },
+    {
+      "Step_Id": 2,
+      "Name": "Mechanische Montage",
+      "Description": "Der physische Zusammenbau des Roboterkörpers.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "2.1",
+          "Name": "Chassis-Aufbau",
+          "Description": "Montieren Sie den Rahmen gemäß der Anleitung oder Ihrem eigenen Design.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "2.2",
+          "Name": "Motoren und Räder anbringen",
+          "Description": "Befestigen Sie die Motoren fest und parallel zueinander am Chassis und montieren Sie die Räder auf den Motorwellen.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "2.3",
+          "Name": "Zusatzkomponenten montieren",
+          "Description": "Bringen Sie Halterungen für Controller, Sensoren, Akku und ein eventuelles Stützrad an.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 3,
+      "Name": "Elektrische und Elektronische Integration",
+      "Description": "Die Verkabelung aller elektronischen Komponenten. Wichtig: Der Akku wird als letztes angeschlossen.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "3.1",
+          "Name": "Controller und Motorsteuerung platzieren",
+          "Description": "Schrauben Sie den Mikrocontroller und das Motortreiber-Board auf die vorgesehenen Plätze.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "3.2",
+          "Name": "Motorsteuerung verkabeln",
+          "Description": "Verbinden Sie die Motoren mit den Ausgängen des Motortreibers und die Steuerungseingänge des Treibers mit den digitalen Pins des Controllers.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "3.3",
+          "Name": "Sensoren anschließen",
+          "Description": "Verbinden Sie die Sensoren mit den entsprechenden Pins des Controllers (Strom [VCC], Masse [GND] und Signal).",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "3.4",
+          "Name": "Stromversorgung herstellen",
+          "Description": "Verbinden Sie den Akku mit den Stromeingängen von Motortreiber und Controller. Ein Ein-/Ausschalter wird empfohlen.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 4,
+      "Name": "Software-Installation und Programmierung",
+      "Description": "Der Roboter wird mit der notwendigen Software und Logik zum Leben erweckt.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "4.1",
+          "Name": "Entwicklungsumgebung einrichten",
+          "Description": "Installieren Sie die notwendige Software auf Ihrem Computer (z.B. Arduino IDE).",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "4.2",
+          "Name": "Bibliotheken installieren",
+          "Description": "Fügen Sie eventuell benötigte Software-Bibliotheken für Sensoren oder den Motortreiber hinzu.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "4.3",
+          "Name": "Grundlegende Logik programmieren",
+          "Description": "Schreiben Sie den Code schrittweise: Zuerst Sensorwerte auslesen, dann Motorfunktionen erstellen und schließlich beides zu einer Steuerungslogik verbinden.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "4.4",
+          "Name": "Code hochladen",
+          "Description": "Übertragen Sie das fertige Programm auf den Mikrocontroller des Roboters.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 5,
+      "Name": "Test, Kalibrierung und Iteration",
+      "Description": "Sicherstellen, dass der Roboter wie erwartet funktioniert, und Fehler beheben.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "5.1",
+          "Name": "Modultests",
+          "Description": "Testen Sie jede Komponente einzeln. Drehen die Motoren korrekt? Liefern die Sensoren plausible Werte?",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "5.2",
+          "Name": "Kalibrierung",
+          "Description": "Passen Sie Softwarewerte an die Realität an, z.B. Motorgeschwindigkeiten für Geradeausfahrt oder Schwellenwerte für Sensoren.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "5.3",
+          "Name": "Fehlerbehebung (Debugging)",
+          "Description": "Suchen Sie systematisch nach Fehlern in Mechanik, Elektrik oder Software.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "5.4",
+          "Name": "Iteration",
+          "Description": "Verbessern Sie Code und Mechanik basierend auf den Testergebnissen in einem wiederholten Zyklus.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 6,
+      "Name": "Finalisierung und Dokumentation",
+      "Description": "Die abschließenden Components für ein sauberes, sicheres und nachvollziehbares Projekt.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "6.1",
+          "Name": "Kabelmanagement",
+          "Description": "Sichern und ordnen Sie alle Kabel mit Kabelbindern oder Spiralschläuchen, um Defekte und Hängenbleiben zu vermeiden.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "6.2",
+          "Name": "Gehäuse anbringen",
+          "Description": "Schützen Sie die Elektronik optional mit einem Gehäuse oder einer Abdeckung.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "6.3",
+          "Name": "Dokumentation",
+          "Description": "Kommentieren Sie den Code, bewahren Sie den Schaltplan auf und erstellen Sie eine Liste der Bauteile für zukünftige Referenz.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    }
+  ]
+}

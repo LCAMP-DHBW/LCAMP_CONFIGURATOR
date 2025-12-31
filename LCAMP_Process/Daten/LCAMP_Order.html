@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Nachrichten an LCAMP Configurator</title>
+</head>
+<body>
+    <h2>Nachricht an LCAMP Configurator senden</h2>
+
+    <input type="text" id="sender" placeholder="Absender">
+    <input type="text" id="content" placeholder="Nachricht">
+    <input type="text" id="command" placeholder="Command">
+    <button onclick="sendJson()">Senden</button>
+
+    <pre><strong>Antwort:</strong> <span id="reply"></span></pre>
+
+    <script>
+        async function sendJson() {
+            const msg = {
+                sender: document.getElementById('sender').value,
+                content: document.getElementById('content').value,
+                command: document.getElementById('command').value // NEU: Command
+            };
+
+            console.log("Sende:", msg);
+
+            const res = await fetch('http://localhost:5000/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(msg)
+            });
+
+            const json = await res.json();
+            document.getElementById('reply').textContent = JSON.stringify(json, null, 2);
+        }
+    </script>
+</body>
+</html>

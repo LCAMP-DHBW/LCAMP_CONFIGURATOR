@@ -1,0 +1,190 @@
+{
+  "ComponentType": "LCAMPRobot",
+  "Name": "Processus d'assemblage",
+  "Id": 0,
+  "Type": "Process",
+  "Description": null,
+  "Parent": "LCAMP",
+  "Components": [
+    {
+      "Step_Id": 1,
+      "Name": "Planification et préparation",
+      "Description": "Établir les bases du projet en définissant les objectifs, en sélectionnant les composants et en créant les plans.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "1.1",
+          "Name": "Analyse des besoins",
+          "Description": "Définissez clairement ce que le robot doit faire. Exemples : suivre une ligne, éviter les obstacles, transporter des objets ou être télécommandé.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "1.2",
+          "Name": "Sélection des composants",
+          "Description": "Sélectionnez les composants en fonction des besoins : châssis, entraînement (moteurs, roues), contrôleur (par ex. Arduino), capteurs (par ex. ultrason), pilote moteur et alimentation électrique.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "1.3",
+          "Name": "Conception et schéma électrique",
+          "Description": "Créez un croquis pour l'assemblage mécanique et un schéma de câblage détaillé pour l'ensemble du montage.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "1.4",
+          "Name": "Préparer l'espace de travail",
+          "Description": "Préparez tous les outils (tournevis, fer à souder, multimètre) et composants dans un espace de travail bien éclairé.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 2,
+      "Name": "Assemblage mécanique",
+      "Description": "L'assemblage physique du corps du robot.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "2.1",
+          "Name": "Assemblage du châssis",
+          "Description": "Assemblez le cadre selon les instructions ou votre propre conception.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "2.2",
+          "Name": "Fixer les moteurs et les roues",
+          "Description": "Fixez fermement les moteurs parallèlement les uns aux autres sur le châssis et montez les roues sur les axes des moteurs.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "2.3",
+          "Name": "Installer des composants supplémentaires",
+          "Description": "Fixez les supports pour le contrôleur, les capteurs, la batterie et éventuellement une roue de support.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 3,
+      "Name": "Intégration électrique et électronique",
+      "Description": "Le câblage de tous les composants électroniques. Important : La batterie est connectée en dernier.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "3.1",
+          "Name": "Placer le contrôleur et le pilote moteur",
+          "Description": "Vissez le microcontrôleur et la carte pilote moteur aux emplacements prévus.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "3.2",
+          "Name": "Câbler le pilote moteur",
+          "Description": "Connectez les moteurs aux sorties du pilote moteur et les entrées de commande du pilote aux broches numériques du contrôleur.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "3.3",
+          "Name": "Connecter les capteurs",
+          "Description": "Connectez les capteurs aux broches correspondantes du contrôleur (alimentation [VCC], masse [GND] et signal).",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "3.4",
+          "Name": "Établir l'alimentation électrique",
+          "Description": "Connectez la batterie aux entrées d'alimentation du pilote moteur et du contrôleur. Un interrupteur marche/arrêt est recommandé.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 4,
+      "Name": "Installation logicielle et programmation",
+      "Description": "Donner vie au robot avec le logiciel et la logique nécessaires.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "4.1",
+          "Name": "Configurer l'environnement de développement",
+          "Description": "Installez le logiciel nécessaire sur votre ordinateur (par ex. Arduino IDE).",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "4.2",
+          "Name": "Installer les bibliothèques",
+          "Description": "Ajoutez les bibliothèques logicielles nécessaires pour les capteurs ou le pilote moteur.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "4.3",
+          "Name": "Programmer la logique de base",
+          "Description": "Écrivez le code étape par étape : lisez d'abord les valeurs des capteurs, puis créez les fonctions moteur, et enfin combinez les deux dans une logique de contrôle.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "4.4",
+          "Name": "Téléverser le code",
+          "Description": "Transférez le programme final sur le microcontrôleur du robot.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 5,
+      "Name": "Test, calibration et itération",
+      "Description": "S'assurer que le robot fonctionne comme prévu et corriger les erreurs.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "5.1",
+          "Name": "Tests des modules",
+          "Description": "Testez chaque composant individuellement. Les moteurs tournent-ils correctement ? Les capteurs fournissent-ils des valeurs plausibles ?",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "5.2",
+          "Name": "Calibration",
+          "Description": "Ajustez les valeurs logicielles en fonction de la réalité, par ex. vitesses des moteurs pour rouler droit ou seuils pour les capteurs.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "5.3",
+          "Name": "Dépannage (Debugging)",
+          "Description": "Recherchez systématiquement les erreurs dans la mécanique, l'électronique ou le logiciel.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "5.4",
+          "Name": "Itération",
+          "Description": "Améliorez le code et la mécanique sur la base des résultats des tests dans un cycle répété.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 6,
+      "Name": "Finalisation et documentation",
+      "Description": "Les étapes finales pour un projet propre, sûr et bien documenté.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "6.1",
+          "Name": "Gestion des câbles",
+          "Description": "Fixez et organisez tous les câbles avec des colliers de serrage ou des gaines spiralées pour éviter les dommages et les accrochages.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "6.2",
+          "Name": "Installer le boîtier",
+          "Description": "Protégez éventuellement l'électronique avec un boîtier ou un couvercle.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "6.3",
+          "Name": "Documentation",
+          "Description": "Commentez le code, conservez le schéma électrique et établissez une liste des composants pour référence future.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    }
+  ]
+}

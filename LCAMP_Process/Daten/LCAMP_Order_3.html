@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>LCAMP Configurator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            width: 650px;
+        }
+
+        h2, h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        select, textarea, input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        button {
+            width: 48%;
+            padding: 14px;
+            margin-top: 20px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            button:hover {
+                background-color: #005a9e;
+            }
+
+            button + button {
+                margin-left: 4%;
+            }
+
+        .response {
+            background-color: #f0f3f7;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            min-height: 250px;
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+        }
+
+        .subform {
+            background-color: #eef1f6;
+            padding: 15px 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Nachricht an LCAMP Configurator senden</h2>
+
+        <label for="sender">Absender</label>
+        <select id="sender">
+            <option value="DHBW">DHBW</option>
+            <option value="TKnika">TKnika</option>
+            <option value="CNG">CNG</option>
+        </select>
+
+        <label for="command">Command</label>
+        <select id="command">
+            <option value="Start">Start</option>
+            <option value="Stop">Stop</option>
+            <option value="Restart">Restart</option>
+            <option value="Status">Status</option>
+            <option value="Load">Load</option>
+            <option value="Save">Save</option>
+            <option value="Generate_Partlist">Generate Partlist</option>
+            <option value="Generate_URDF">Generate URDF</option>
+        </select>
+
+        <label for="content">Nachricht</label>
+        <textarea id="content" placeholder="Hier den Inhalt eingeben..."></textarea>
+
+        <!-- Command-Button direkt nach Nachricht -->
+        <button style="width:100%; margin-top:15px;" onclick="sendCommand()">Command senden</button>
+
+        <!-- Unterformular für Achskonfiguration -->
+        <div class="subform">
+            <h3>Achskonfiguration</h3>
+            <div class="grid-container">
+                <div>
+                    <label for="frontDrives">Vorderachse-Antrieb</label>
+                    <select id="frontDrives">
+                        <option value="DC-Drive">DC-Drive</option>
+                        <option value="Stepper-Drive">Stepper-Drive</option>
+                        <option value="Drive-Holder">Dive-Holder</option>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label for="rearDrives">Hinterachse-Antrieb</label>
+                    <select id="rearDrives">
+                        <option value="DC-Drive">DC-Drive</option>
+                        <option value="Stepper-Drive">Stepper-Drive</option>
+                        <option value="Drive-Holder">Dive-Holder</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="frontWheels">Vorderachse-Räder</label>
+                    <select id="frontWheels">
+                        <option value="Regular-Wheel">Regular-Wheel</option>
+                        <option value="Omni-Wheel">Omni-Wheel</option>
+                        <option value="Mecanum-Wheel">Mecanum-Wheel</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="rearWheels">Hinterachse-Räder</label>
+                    <select id="rearWheels">
+                        <option value="Regular-Wheel">Regular-Wheel</option>
+                        <option value="Omni-Wheel">Omni-Wheel</option>
+                        <option value="Mecanum-Wheel">Mecanum-Wheel</option>
+                    </select>
+                </div>
+            </div>
+
+            <label>Antriebsart</label>
+            <div class="radio-group">
+                <label><input type="radio" name="driveType" value="Differential" checked> Differential Drive</label>
+                <label><input type="radio" name="driveType" value="Omni"> Omni Drive</label>
+            </div>
+        </div>
+
+        <!-- Zwei Buttons -->
+        <div style="display:flex; justify-content: space-between;">
+            <!-- <button onclick="sendCommand()">Command senden</button>  -->
+            <button onclick="sendConfiguration()">Achskonfiguration senden</button>
+        </div>
+
+        <div class="response" id="reply"><strong>Antwort:</strong></div>
+    </div>
+
+    <script>
+        async function sendCommand() {
+            const msg = {
+                sender: document.getElementById('sender').value,
+                command: document.getElementById('command').value,
+                content: document.getElementById('content').value
+            };
+            await sendToServer(msg);
+        }
+
+        async function sendConfiguration() {
+            const msg = {
+                sender: document.getElementById('sender').value,
+                command: document.getElementById('command').value,
+                content: document.getElementById('content').value,
+                axisConfiguration: { // eingebettetes JSON-Objekt
+                    frontDrives: document.getElementById('frontDrives').value,
+                    rearDrives: document.getElementById('rearDrives').value,
+                    frontWheels: document.getElementById('frontWheels').value,
+                    rearWheels: document.getElementById('rearWheels').value,
+                    driveType: document.querySelector('input[name="driveType"]:checked').value
+                }
+            };
+            await sendToServer(msg);
+        }
+
+        async function sendToServer(msg) {
+            try {
+                const res = await fetch('http://localhost:5000/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(msg)
+                });
+                const json = await res.json();
+                document.getElementById('reply').textContent = JSON.stringify(json, null, 2);
+            } catch (err) {
+                document.getElementById('reply').textContent = "Fehler beim Senden: " + err;
+            }
+        }
+    </script>
+</body>
+</html>
