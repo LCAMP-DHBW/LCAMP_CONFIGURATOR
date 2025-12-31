@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>LCAMP Configurator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        select, textarea, input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            transition: border 0.2s;
+            box-sizing: border-box;
+        }
+
+            select:focus, textarea:focus, input:focus {
+                border-color: #0078d4;
+                outline: none;
+            }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 20px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            button:hover {
+                background-color: #005a9e;
+            }
+
+        .response {
+            background-color: #f0f3f7;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            min-height: 250px;
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Nachricht an LCAMP Configurator senden</h2>
+
+        <label for="sender">Absender</label>
+        <select id="sender">
+            <option value="Alice">Alice</option>
+            <option value="Bob">Bob</option>
+            <option value="Charlie">Charlie</option>
+        </select>
+
+        <label for="command">Command</label>
+        <select id="command">
+            <option value="Start">Start</option>
+            <option value="Stop">Stop</option>
+            <option value="Restart">Restart</option>
+            <option value="Status">Status</option>
+        </select>
+
+        <label for="content">Nachricht</label>
+        <textarea id="content" placeholder="Hier den Inhalt eingeben..."></textarea>
+
+        <button onclick="sendJson()">Senden</button>
+
+        <div class="response" id="reply"><strong>Antwort:</strong></div>
+    </div>
+
+    <script>
+        async function sendJson() {
+            const msg = {
+                sender: document.getElementById('sender').value,
+                command: document.getElementById('command').value,
+                content: document.getElementById('content').value
+            };
+
+            try {
+                const res = await fetch('http://localhost:5000/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(msg)
+                });
+
+                const json = await res.json();
+                document.getElementById('reply').textContent = JSON.stringify(json, null, 2);
+            } catch (err) {
+                document.getElementById('reply').textContent = "Fehler beim Senden: " + err;
+            }
+        }
+    </script>
+</body>
+</html>

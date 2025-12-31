@@ -111,7 +111,7 @@
     },
     {
       "Properties": {},
-      "Name": "Sound",
+      "Name": "IMU",
       "Id": 0,
       "Type": "Device",
       "ComponentType": "ComponetItem"
@@ -163,6 +163,72 @@
       "ComponentType": "ComponetItem"
     }
   ],
+  "Components": [
+    {
+      "Properties": {},
+      "Name": "MainFrame Alu",
+      "Id": 0,
+      "Type": "MainFrame",
+      "Description": "The central Plate of the Robots",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "MainFrame ABS",
+      "Id": 0,
+      "Type": "MainFrame",
+      "Description": "The central Plate of the Robots",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "MainFrame Composite",
+      "Id": 0,
+      "Type": "MainFrame",
+      "Description": "The central Plate of the Robots",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "BottomPlate Pexi",
+      "Id": 0,
+      "Type": "Base",
+      "Description": "The botom cover of the Robots",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "BottomPlate Alu",
+      "Id": 0,
+      "Type": "Base",
+      "Description": "The botom cover of the Robots",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "BottomPlate wood",
+      "Id": 0,
+      "Type": "Base",
+      "Description": "The botom cover of the Robots",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "Screw Linzenkopf",
+      "Id": 0,
+      "Type": "Connecting",
+      "Description": "The central Plate of the Robots",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "Screw LinSenkkopf",
+      "Id": 0,
+      "Type": "Connecting",
+      "Description": "The central Plate of the Robots",
+      "ComponentType": "ComponetItem"
+    }
+  ],
   "Communication": [
     {
       "Properties": {},
@@ -193,6 +259,20 @@
       "Name": "Arduino Uno R4",
       "Id": 0,
       "Type": "Controler",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "Bottom_Plate",
+      "Id": 0,
+      "Type": "MainFrame",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "CenterPlate",
+      "Id": 0,
+      "Type": "MainFrame",
       "ComponentType": "ComponetItem"
     },
     {

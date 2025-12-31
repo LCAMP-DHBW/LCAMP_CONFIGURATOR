@@ -1,0 +1,190 @@
+{
+  "ComponentType": "LCAMPRobot",
+  "Name": "Assembly Process",
+  "Id": 0,
+  "Type": "Process",
+  "Description": null,
+  "Parent": "LCAMP",
+  "Components": [
+    {
+      "Step_Id": 1,
+      "Name": "Planning and Preparation",
+      "Description": "Laying the foundation for the project by defining goals, selecting components, and creating plans.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "1.1",
+          "Name": "Requirements Analysis",
+          "Description": "Clearly define what the robot should do. Examples: follow a line, avoid obstacles, transport objects, or be remote-controlled.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "1.2",
+          "Name": "Component Selection",
+          "Description": "Select components based on requirements: chassis, drive (motors, wheels), controller (e.g., Arduino), sensors (e.g., ultrasonic), motor driver, and power supply.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "1.3",
+          "Name": "Design and Circuit Diagram",
+          "Description": "Create a sketch for mechanical assembly and a detailed wiring diagram for the entire setup.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "1.4",
+          "Name": "Set Up Workspace",
+          "Description": "Prepare all tools (screwdriver, soldering iron, multimeter) and components at a well-lit workspace.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 2,
+      "Name": "Mechanical Assembly",
+      "Description": "The physical assembly of the robot body.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "2.1",
+          "Name": "Chassis Assembly",
+          "Description": "Assemble the frame according to the instructions or your own design.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "2.2",
+          "Name": "Attach Motors and Wheels",
+          "Description": "Secure the motors firmly and parallel to each other on the chassis and mount the wheels on the motor shafts.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "2.3",
+          "Name": "Install Additional Components",
+          "Description": "Attach brackets for the controller, sensors, battery, and any optional support wheel.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 3,
+      "Name": "Electrical and Electronic Integration",
+      "Description": "Wiring all electronic components. Important: The battery is connected last.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "3.1",
+          "Name": "Place Controller and Motor Driver",
+          "Description": "Screw the microcontroller and motor driver board onto the designated spots.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "3.2",
+          "Name": "Wire the Motor Driver",
+          "Description": "Connect the motors to the outputs of the motor driver and the control inputs of the driver to the controller’s digital pins.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "3.3",
+          "Name": "Connect Sensors",
+          "Description": "Connect the sensors to the corresponding pins of the controller (power [VCC], ground [GND], and signal).",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "3.4",
+          "Name": "Establish Power Supply",
+          "Description": "Connect the battery to the power inputs of the motor driver and controller. An on/off switch is recommended.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 4,
+      "Name": "Software Installation and Programming",
+      "Description": "Bringing the robot to life with the necessary software and logic.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "4.1",
+          "Name": "Set Up Development Environment",
+          "Description": "Install the necessary software on your computer (e.g., Arduino IDE).",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "4.2",
+          "Name": "Install Libraries",
+          "Description": "Add any required software libraries for sensors or the motor driver.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "4.3",
+          "Name": "Program Basic Logic",
+          "Description": "Write the code step by step: first read sensor values, then create motor functions, and finally combine both into a control logic.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "4.4",
+          "Name": "Upload Code",
+          "Description": "Transfer the finished program to the robot's microcontroller.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 5,
+      "Name": "Testing, Calibration, and Iteration",
+      "Description": "Ensure the robot works as expected and fix issues.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "5.1",
+          "Name": "Module Testing",
+          "Description": "Test each component individually. Do the motors spin correctly? Are the sensor readings plausible?",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "5.2",
+          "Name": "Calibration",
+          "Description": "Adjust software values to reality, e.g., motor speeds for straight driving or threshold values for sensors.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "5.3",
+          "Name": "Debugging",
+          "Description": "Systematically search for errors in mechanics, electronics, or software.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "5.4",
+          "Name": "Iteration",
+          "Description": "Improve code and mechanics based on test results in a repeated cycle.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    },
+    {
+      "Step_Id": 6,
+      "Name": "Finalization and Documentation",
+      "Description": "The final steps for a clean, safe, and well-documented project.",
+      "ComponentType": "ProcesStep",
+      "Components": [
+        {
+          "Step_Id": "6.1",
+          "Name": "Cable Management",
+          "Description": "Secure and organize all cables with cable ties or spiral tubing to prevent damage and snagging.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "6.2",
+          "Name": "Attach Enclosure",
+          "Description": "Optionally protect the electronics with a housing or cover.",
+          "ComponentType": "ProcesStep"
+        },
+        {
+          "Step_Id": "6.3",
+          "Name": "Documentation",
+          "Description": "Comment the code, store the circuit diagram, and create a list of components for future reference.",
+          "ComponentType": "ProcesStep"
+        }
+      ]
+    }
+  ]
+}
