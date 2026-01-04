@@ -1,0 +1,63 @@
+{
+  "ColorScheme": {
+    "base": "#d0d0f0",
+    "main": "#a0a0f0",
+    "detail": "#80a5ff",
+    "accent": "#ff00f0",
+    "tire": "#000404"
+  },
+  "DriveSystems": [
+    {
+      "id": 1,
+      "drive": "DC-Drive",
+      "wheelType": "Regular-Wheel"
+    },
+    {
+      "id": 2,
+      "drive": "DC-Drive",
+      "wheelType": "Regular-Wheel"
+    },
+    {
+      "id": 3,
+      "drive": "DC-Drive",
+      "wheelType": "Regular-Wheel"
+    },
+    {
+      "id": 4,
+      "drive": "DC-Drive",
+      "wheelType": "Regular-Wheel"
+    }
+  ],
+  "SensorDevices": [
+    {
+      "type": "LIDAR",
+      "location": "f1",
+      "color": "#d0d0f0"
+    },
+    {
+      "type": "LIDAR",
+      "location": "f2",
+      "color": "#d0d0f0"
+    },
+    {
+      "type": "LIDAR",
+      "location": "f3",
+      "color": "#d0d0f0"
+    },
+    {
+      "type": "LIDAR",
+      "location": "f4",
+      "color": "#d0d0f0"
+    },
+    {
+      "type": "LIDAR",
+      "location": "c1",
+      "color": "#d0d0f0"
+    },
+    {
+      "type": "LIDAR",
+      "location": "f2",
+      "color": "#d0d0f0"
+    }
+  ]
+}

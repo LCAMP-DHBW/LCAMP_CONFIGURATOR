@@ -1,0 +1,63 @@
+{
+  "colorScheme": {
+    "baseColor": "#d0d0f0",
+    "mainColor": "#a0a0f0",
+    "detailColor": "#80a5ff",
+    "accentColor": "#ff00f0",
+    "tireColor": "#000404"
+  },
+  "drive": [
+    {
+      "id": 1,
+      "drive": "Stepper-drive",
+      "wheelType": "Regular"
+    },
+    {
+      "id": 2,
+      "drive": "DC-drive",
+      "wheelType": "Regular"
+    },
+    {
+      "id": 3,
+      "drive": "DC-drive",
+      "wheelType": "Regular"
+    },
+    {
+      "id": 4,
+      "drive": "DC-drive",
+      "wheelType": "Regular"
+    }
+  ],
+  "sensors": [
+    {
+      "type": "LED",
+      "location": "f1",
+      "color": "#a0a0f0"
+    },
+    {
+      "type": "LED",
+      "location": "f2",
+      "color": "#2f9364"
+    },
+    {
+      "type": "LED",
+      "location": "l1",
+      "color": "#d0d0f0"
+    },
+    {
+      "type": "LED",
+      "location": "f4",
+      "color": "#cb1527"
+    },
+    {
+      "type": "LED",
+      "location": "b2",
+      "color": "#80a5ff"
+    },
+    {
+      "type": "LED",
+      "location": "b4",
+      "color": "#2c2caf"
+    }
+  ]
+}

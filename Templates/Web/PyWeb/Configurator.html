@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>LCAMP Robot-Config Generator</title>
+   <link rel="stylesheet" href="RobotConfigurator.css">
+</head>
+<body>
+
+<div class="container">
+<h1> 
+     <img src="RobotConfig.png" alt="🤖" class="title-icon">
+      LCAMP Robot Config Generator
+</h1>
+
+<!-- Color Scheme -->
+<section>
+<h2>🎨 Color Scheme</h2>
+<div class="color-grid">
+    <div><label>Base</label><input type="color" id="baseColor" value="#d0d0f0"></div>
+    <div><label>Main</label><input type="color" id="mainColor" value="#a0a0f0"></div>
+    <div><label>Detail</label><input type="color" id="detailColor" value="#80a5ff"></div>
+    <div><label>Accent</label><input type="color" id="accentColor" value="#ff00f0"></div>
+    <div><label>Tire</label><input type="color" id="tireColor" value="#000404"></div>
+</div>
+</section>
+
+<!-- DriveSystem -->
+<section>
+<h2>🚗 Drive System</h2>
+<div id="driveList" class="grid-2"></div>
+<button onclick="addDrive()">➕ Drive hinzufügen</button>
+</section>
+
+<!-- Sensors -->
+<section>
+<h2>🔍 Sensors</h2>
+<div id="sensorList" class="grid-4"></div>
+<button onclick="addSensor()">➕ Sensor hinzufügen</button>
+</section>
+
+<!-- JSON Output -->
+<section>
+<h2>📄 JSON</h2>
+<button onclick="generateJSON()">JSON erzeugen</button>
+<button onclick="downloadJSON()">💾 JSON speichern</button>
+<button onclick="saveJsonToServer()">💾 JSON auf Server speichern</button>
+<button onclick="sendToServer()">💾 JSON an LCMP Configurator senden</button>
+
+<button onclick="openNewTab()">Configuration In neuem Tab öffnen</button>
+<div id="fileName">"..."</div>
+
+<textarea id="output"></textarea>
+<textarea id="reply"></textarea>
+
+</section>
+
+</div>
+
+<script>
+/* ---------- Konfiguration ---------- */
+const driveTypes = ["DC-Drive","Stepper-Drive","Drive-Holder"];
+const wheelTypes = ["Regular-Wheel","Mecanum-Wheel","Omni-Wheel"];
+const sensorTypes = ["RGB-LED","LIDAR","US_Sensor_hc_Sr04","LED-Light"];
+const sensorLocations = ["f1","f2","f3","f4","c1","c2","l1","l2","b1","b2","b3","b4"];
+const colorOptions = ["baseColor","mainColor","detailColor","accentColor"];
+
+/* ---------- DriveSystem ---------- */
+function addDrive() {
+    const container = document.getElementById("driveList");
+    const id = container.children.length + 1;
+    const div = document.createElement("div");
+    div.innerHTML = `
+        <div class="readonly-id">Drive ID: ${id}</div>
+        <label>Drive Type</label>
+        <select class="drive-type">
+            ${driveTypes.map(d=>`<option value="${d}">${d}</option>`).join("")}
+        </select>
+
+        <label>Wheel Type</label>
+        <select class="drive-wheel-type">
+            ${wheelTypes.map(w=>`<option value="${w}">${w}</option>`).join("")}
+        </select>
+    `;
+    container.appendChild(div);
+}
+
+/* ---------- Sensors ---------- */
+function addSensor() {
+    const container = document.getElementById("sensorList");
+    const id = container.children.length + 1;
+
+    // Nächste freie Location
+    const used = Array.from(container.querySelectorAll(".sensor-location")).map(sel=>sel.value);
+    const nextFree = sensorLocations.find(l=>!used.includes(l)) || sensorLocations[0];
+
+    const div = document.createElement("div");
+    div.innerHTML = `
+        <label>Sensor ${id}</label>
+        <select class="sensor-type">
+            ${sensorTypes.map(t=>`<option value="${t}">${t}</option>`).join("")}
+        </select>
+
+        <select class="sensor-location">
+            ${sensorLocations.map(l=>`<option value="${l}" ${l===nextFree?'selected':''}>${l}</option>`).join("")}
+        </select>
+
+        <select class="sensor-color" onchange="syncColorDropdown(this)">
+            ${colorOptions.map(c=>`<option value="${c}">${c}</option>`).join("")}
+            <option value="custom">custom</option>
+        </select>
+
+        <input type="color" class="sensor-custom-color" value="#ff0000" oninput="updateDropdownFromColor(this)">
+    `;
+    container.appendChild(div);
+    syncColorDropdown(div.querySelector(".sensor-color"));
+}
+
+/* ---------- Synchronisierung Farbe ---------- */
+function syncColorDropdown(dropdown) {
+    const div = dropdown.parentElement;
+    const colorInput = div.querySelector(".sensor-custom-color");
+    if(colorOptions.includes(dropdown.value)){
+        colorInput.value = document.getElementById(dropdown.value).value;
+    }
+}
+
+function updateDropdownFromColor(colorInput){
+    const div = colorInput.parentElement;
+    const dropdown = div.querySelector(".sensor-color");
+    const val = colorInput.value.toLowerCase();
+    const found = colorOptions.find(c=>document.getElementById(c).value.toLowerCase()===val);
+    dropdown.value = found ? found : "custom";
+}
+
+function openNewTab() {
+    aFileName=  document.getElementById("fileName").textContent;
+    if (!aFileName || aFileName === "...") {
+    alert("Keine Config-Datei ausgewählt");
+    return;
+    }
+// Sicherheit: evtl. vorhandene Anführungszeichen entfernen
+    aFileName = aFileName.replace(/^"+|"+$/g, "");
+
+    window.open(
+        `Animate_LCAMPRpbot.html?config=${encodeURIComponent(aFileName)}`,
+        "_blank"
+    );
+    
+}
+/* ---------- JSON ---------- */
+function generateJSON() {
+    const DriveSystems = [];
+    document.querySelectorAll("#driveList > div").forEach((div,i)=>{
+        DriveSystems.push({
+            id: i+1,
+            drive: div.querySelector(".drive-type").value,
+            wheelType: div.querySelector(".drive-wheel-type").value
+        });
+    });
+
+    const SensorDevices = [];
+    document.querySelectorAll("#sensorList > div").forEach(div=>{
+        let colorVal = div.querySelector(".sensor-color").value;
+        if(colorOptions.includes(colorVal)){
+            colorVal = document.getElementById(colorVal).value;
+        } else {
+            colorVal = div.querySelector(".sensor-custom-color").value;
+        }
+        SensorDevices.push({
+            type: div.querySelector(".sensor-type").value,
+            location: div.querySelector(".sensor-location").value,
+            color: colorVal
+        });
+    });
+
+    const json = {
+        ColorScheme:{
+            base: baseColor.value,
+            main: mainColor.value,
+            detail: detailColor.value,
+            accent: accentColor.value,
+            tire: tireColor.value
+        },
+        DriveSystems,
+        SensorDevices
+    };
+    output.value = JSON.stringify(json,null,2);
+}
+
+function saveJsonToServer() {
+    if(!output.value){
+        alert("Bitte zuerst JSON erzeugen!");
+        return;
+    }
+
+    fetch('http://127.0.0.1:5000/save_json', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: output.value
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(`Server: ${data.message}\nDatei: ${data.file}`);
+        document.getElementById("fileName").textContent = `"${data.file}"`;
+        })
+    .catch(err => {
+        console.error(err);
+        alert("Fehler beim Speichern auf dem Server!");
+    });
+}
+
+/* ---------- Download ---------- */
+function downloadJSON() {
+    if(!output.value){ alert("Bitte zuerst JSON erzeugen!"); return; }
+    const blob = new Blob([output.value],{type:"application/json"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "RobotConfig.json";
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+
+async function sendToServer() {
+      if(!output.value){ alert("Bitte zuerst JSON erzeugen!"); return; }
+
+    const msg=   output.value;
+    const replyDiv = document.getElementById('reply');
+    try {
+        const res = await fetch('http://localhost:7077/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: output.value
+        });
+        const jsonData = await res.json();
+
+        // Seriennummer auslesen, falls vorhanden
+        if (jsonData.serialNumber) {
+            document.getElementById('serialNumber').textContent = jsonData.serialNumber;
+        }
+        if (jsonData.robotName) {
+            document.getElementById('robotName').value = jsonData.robotName;
+        }
+        replyDiv.textContent = JSON.stringify(jsonData, null, 2);
+    } catch (err) {
+        alert("Fehler beim Senden: " +err);
+        replyDiv.textContent = "Fehler beim Senden: " + err;
+    }
+}
+/* ---------- Initial ---------- */
+addDrive(); addDrive();addDrive(); addDrive();
+addSensor(); 
+</script>
+
+</body>
+</html>

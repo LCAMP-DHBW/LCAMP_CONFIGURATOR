@@ -61,6 +61,6 @@ $output_dest = "Output"
 # Ordner kopieren (inkl. Unterordner und Dateien)
 Copy-Item -Path $output_source -Destination $output_dest -Recurse -Force
 
-
+Pause
 
 

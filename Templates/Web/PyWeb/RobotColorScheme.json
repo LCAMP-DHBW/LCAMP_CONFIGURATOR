@@ -1,0 +1,29 @@
+
+{"colorScheme":{
+  "baseColor":  "#D0D0F0",
+  "mainColor":  "#A0A0F0",
+  "detailColor":  "#80a5ff",
+  "accentColor":  "#ff00f0",
+  "sensorColors": [
+    "#ff0000",
+    "#00ff00",
+    "#0000ff",
+    "#ffff00",
+    "#ff00ff",
+    "#00ffff",
+    "#ffa500",
+    "#800080",
+    "#008000",
+    "#000080",
+    "#808000",
+    "#800000"
+  ]
+},
+
+ "wheels": [
+    { "type": "regular", "id": 1 }, 
+    { "type": "mecanumL", "id": 2 }, 
+    { "type": "mecanumR", "id": 3 },
+    { "type": "omni", "id": 4 }
+  ]
+}

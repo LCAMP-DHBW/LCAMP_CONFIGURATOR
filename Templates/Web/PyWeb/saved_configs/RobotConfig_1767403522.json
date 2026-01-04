@@ -1,0 +1,53 @@
+{
+  "colorScheme": {
+    "baseColor": "#dedeed",
+    "mainColor": "#91e2f2",
+    "detailColor": "#9bff80",
+    "accentColor": "#ff00f0",
+    "tireColor": "#000404"
+  },
+  "drive": [
+    {
+      "id": 1,
+      "drive": "DC-drive",
+      "wheelType": "Regular"
+    },
+    {
+      "id": 2,
+      "drive": "DC-drive",
+      "wheelType": "Regular"
+    },
+    {
+      "id": 3,
+      "drive": "DC-drive",
+      "wheelType": "Omni"
+    },
+    {
+      "id": 4,
+      "drive": "DC-drive",
+      "wheelType": "Omni"
+    }
+  ],
+  "sensors": [
+    {
+      "type": "LED",
+      "location": "f1",
+      "color": "#dedeed"
+    },
+    {
+      "type": "LED",
+      "location": "f2",
+      "color": "#dedeed"
+    },
+    {
+      "type": "LED",
+      "location": "f3",
+      "color": "#dedeed"
+    },
+    {
+      "type": "LED",
+      "location": "f4",
+      "color": "#dedeed"
+    }
+  ]
+}

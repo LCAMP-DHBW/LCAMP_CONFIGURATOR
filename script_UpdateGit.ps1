@@ -79,4 +79,6 @@ else {
 
 Write-Host "🎉 Fertig."
 
+Pause
+
 

@@ -1,5 +1,5 @@
 # Power shell script
-scriptV1.ps1
+script*.ps1
 
 # Other Files Type
 *.sln
@@ -10,3 +10,4 @@ scriptV1.ps1
 *.user
 *.cs
 *.resx
+*.ps1

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Viewer</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+  </style>
+</head>
+<body>
+
+ <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+
+<script type="module">
+
+
+ import * as THREE from 'three';
+ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+    console.log("Three.js wird geladen...");
+    console.log("Three.js Version:", THREE.REVISION);
+
+
+import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three/examples/jsm/loaders/GLTFLoader.js";
+import { STLLoader } from "https://cdn.jsdelivr.net/npm/three/examples/jsm/loaders/STLLoader.js";
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xeeeeee);
+
+const camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 0.1, 1000);
+camera.position.set(500, 500, 500);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+
+// Licht
+scene.add(new THREE.AmbientLight(0xffffff, 0.8));
+const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+dirLight.position.set(500, 500, 500);
+scene.add(dirLight);
+
+// ===== GLB laden =====
+new GLTFLoader().load("roboteil.glb", gltf => {
+  scene.add(gltf.scene);
+});
+
+// ===== STL laden =====
+new STLLoader().load("model.stl", geometry => {
+  const material = new THREE.MeshStandardMaterial({ color: 0x0077ff });
+  const mesh = new THREE.Mesh(geometry, material);
+  scene.add(mesh);
+});
+
+function animate() {
+  requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+}
+animate();
+</script>
+</body>
+</html>
