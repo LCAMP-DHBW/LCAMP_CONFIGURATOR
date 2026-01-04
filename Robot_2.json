@@ -1,0 +1,2041 @@
+{
+  "ComponentType": "LCAMPRobot",
+  "Geometry": {
+    "JointType": "Fixed",
+    "xyz": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 28.0
+    },
+    "box": {
+      "L": 300.0,
+      "W": 140.0,
+      "H": 64.0,
+      "R": 0.0,
+      "Type": "Box"
+    },
+    "mass": 120.0,
+    "unitXYZ": "none",
+    "unitRPY": "none"
+  },
+  "Name": "LCAMP Mobile Robot",
+  "Id": 0,
+  "Type": "Component",
+  "Description": "The Center Core of the Robot",
+  "Parent": "Robot",
+  "Template": "LCAMPRobot",
+  "Components": [
+    {
+      "Properties": {},
+      "IdCode": "LCAMP-0-0-0-0",
+      "Number": "0",
+      "ComponentType": "PartDescription",
+      "Geometry": {
+        "JointType": "Fixed",
+        "xyz": {
+          "X": -100.0,
+          "Y": 70.0,
+          "Z": 0.0
+        },
+        "box": {
+          "L": 100.0,
+          "W": 50.0,
+          "H": 61.0,
+          "R": 0.0,
+          "Type": "Box"
+        },
+        "mass": 120.0,
+        "unitXYZ": "mm",
+        "unitRPY": "grad"
+      },
+      "Name": "Drive bl",
+      "Id": 0,
+      "PositionId": "1",
+      "Type": "Frame",
+      "Description": "Lopkalisierung für  Drive back left",
+      "Parent": "LCAMP Mobile Robot",
+      "Components": []
+    },
+    {
+      "Properties": {},
+      "IdCode": "LCAMP-0-0-0-0",
+      "Number": "0",
+      "ComponentType": "PartDescription",
+      "Geometry": {
+        "JointType": "Fixed",
+        "xyz": {
+          "X": -100.0,
+          "Y": -70.0,
+          "Z": 0.0
+        },
+        "rpy": {
+          "R": 0.0,
+          "P": 0.0,
+          "Y": 180.0
+        },
+        "box": {
+          "L": 100.0,
+          "W": 50.0,
+          "H": 61.0,
+          "R": 0.0,
+          "Type": "Box"
+        },
+        "mass": 120.0,
+        "unitXYZ": "mm",
+        "unitRPY": "grad"
+      },
+      "Name": "Drive br",
+      "Id": 0,
+      "PositionId": "2",
+      "Type": "Frame",
+      "Description": "Lopkalisierung für Drive back right",
+      "Parent": "LCAMP Mobile Robot",
+      "Components": []
+    },
+    {
+      "Properties": {},
+      "Number": "0",
+      "ComponentType": "PartDescription",
+      "Geometry": {
+        "JointType": "Fixed",
+        "xyz": {
+          "X": 100.0,
+          "Y": 70.0,
+          "Z": 0.0
+        },
+        "box": {
+          "L": 100.0,
+          "W": 50.0,
+          "H": 61.0,
+          "R": 0.0,
+          "Type": "Box"
+        },
+        "mass": 120.0,
+        "unitXYZ": "mm",
+        "unitRPY": "grad"
+      },
+      "Name": "Drive fl",
+      "Id": 0,
+      "PositionId": "3",
+      "Type": "Frame",
+      "Description": "Lopkalisierung für Drive front left",
+      "Parent": "LCAMP Mobile Robot",
+      "Components": []
+    },
+    {
+      "Properties": {},
+      "IdCode": "LCAMP-0-0-0-0",
+      "Number": "0",
+      "ComponentType": "PartDescription",
+      "Geometry": {
+        "JointType": "Fixed",
+        "xyz": {
+          "X": 100.0,
+          "Y": -70.0,
+          "Z": 0.0
+        },
+        "rpy": {
+          "R": 0.0,
+          "P": 0.0,
+          "Y": 180.0
+        },
+        "box": {
+          "L": 100.0,
+          "W": 50.0,
+          "H": 61.0,
+          "R": 0.0,
+          "Type": "Box"
+        },
+        "mass": 120.0,
+        "unitXYZ": "mm",
+        "unitRPY": "grad"
+      },
+      "Name": "Drive fr",
+      "Id": 0,
+      "PositionId": "4",
+      "Type": "Frame",
+      "Description": "Lopkalisierung für Drive front right",
+      "Parent": "LCAMP Mobile Robot",
+      "Components": []
+    },
+    {
+      "Properties": {},
+      "Number": "0",
+      "ComponentType": "PartDescription",
+      "Geometry": {
+        "JointType": "Fixed",
+        "xyz": {
+          "X": 150.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "box": {
+          "L": 40.0,
+          "W": 210.0,
+          "H": 64.0,
+          "R": 0.0,
+          "Type": "Box"
+        },
+        "mass": 120.0,
+        "unitXYZ": "mm",
+        "unitRPY": "grad"
+      },
+      "Name": "Sensorbox front",
+      "Id": 0,
+      "PositionId": "5",
+      "Type": "Frame",
+      "Description": "Lopkalisierung für Sensorbox front",
+      "Parent": "LCAMP Mobile Robot",
+      "Components": [
+        {
+          "Properties": {},
+          "ComponentType": "Device",
+          "Geometry": {
+            "JointType": "Fixed",
+            "xyz": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": -32.0
+            },
+            "box": {
+              "L": 40.0,
+              "W": 210.0,
+              "H": 64.0,
+              "R": 0.0,
+              "Type": "Box"
+            },
+            "mass": 120.0,
+            "unitXYZ": "mm",
+            "unitRPY": "grad"
+          },
+          "Name": "Sensorbox curved",
+          "Id": 0,
+          "Type": "SensorBox",
+          "Description": "The Sensorbox on Front of the Robot",
+          "Parent": "Sensorbox front",
+          "Template": "Sensorbox curved",
+          "Components": [
+            {
+              "Properties": {},
+              "Number": "0",
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 15.0,
+                  "Y": 65.0,
+                  "Z": 32.0
+                },
+                "rpy": {
+                  "R": 15.0,
+                  "P": 90.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 30.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 1",
+              "Id": 0,
+              "PositionId": "1",
+              "Status": "active",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 1 ganz links",
+              "Parent": "Sensorbox curved",
+              "Components": [
+                {
+                  "Properties": {},
+                  "ComponentType": "Device",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 30.0,
+                      "R": 20.0,
+                      "Type": "Cylinder"
+                    },
+                    "mass": 120.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "Lidar",
+                  "Id": 1,
+                  "Type": "Sensor",
+                  "Description": "The Drive System of the Robot",
+                  "Parent": "Sensor 1",
+                  "Template": "Lidar",
+                  "Components": [
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "SensorBase_li.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "ColorName": "grey",
+                          "rgba": [
+                            128,
+                            128,
+                            128,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 0.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 0.0,
+                          "R": 0.0,
+                          "Type": "None"
+                        },
+                        "mass": 0.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Base",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Base Part as 3D Printed Parf for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "LidarSensorpcb.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "ColorName": "grey",
+                          "rgba": [
+                            128,
+                            128,
+                            128,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 10.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 10.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 4.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "sensor PCB",
+                      "Id": 0,
+                      "Type": "pcb",
+                      "Description": "Sensor pcb for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321.5",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "SensorTop_li.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "ColorName": "grey",
+                          "rgba": [
+                            128,
+                            128,
+                            128,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 20.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 10.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 4.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Top",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Cover for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Properties": {},
+              "Number": "0",
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 25.0,
+                  "Y": 23.0,
+                  "Z": 32.0
+                },
+                "rpy": {
+                  "R": 0.0,
+                  "P": 90.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 30.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 2",
+              "Id": 0,
+              "PositionId": "2",
+              "Status": "active",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 2 mitte links",
+              "Parent": "Sensorbox curved",
+              "Components": [
+                {
+                  "Properties": {},
+                  "ComponentType": "Device",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 30.0,
+                      "R": 20.0,
+                      "Type": "Cylinder"
+                    },
+                    "mass": 120.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "Lidar",
+                  "Id": 2,
+                  "Type": "Sensor",
+                  "Description": "The Drive System of the Robot",
+                  "Parent": "Sensor 2",
+                  "Template": "Lidar",
+                  "Components": [
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "SensorBase_li.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "ColorName": "grey",
+                          "rgba": [
+                            128,
+                            128,
+                            128,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 0.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 0.0,
+                          "R": 0.0,
+                          "Type": "None"
+                        },
+                        "mass": 0.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Base",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Base Part as 3D Printed Parf for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "LidarSensorpcb.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "ColorName": "grey",
+                          "rgba": [
+                            128,
+                            128,
+                            128,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 10.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 10.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 4.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "sensor PCB",
+                      "Id": 0,
+                      "Type": "pcb",
+                      "Description": "Sensor pcb for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321.5",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "SensorTop_li.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "ColorName": "grey",
+                          "rgba": [
+                            128,
+                            128,
+                            128,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 20.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 10.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 4.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Top",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Cover for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Properties": {},
+              "Number": "0",
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 25.0,
+                  "Y": -23.0,
+                  "Z": 32.0
+                },
+                "rpy": {
+                  "R": 0.0,
+                  "P": 90.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 30.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 3",
+              "Id": 0,
+              "PositionId": "3",
+              "Status": "active",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 3 mitte rechts",
+              "Parent": "Sensorbox curved",
+              "Components": [
+                {
+                  "Properties": {},
+                  "ComponentType": "Device",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 30.0,
+                      "R": 20.0,
+                      "Type": "Cylinder"
+                    },
+                    "mass": 120.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "Lidar",
+                  "Id": 3,
+                  "Type": "Sensor",
+                  "Description": "The Drive System of the Robot",
+                  "Parent": "Sensor 3",
+                  "Template": "Lidar",
+                  "Components": [
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "SensorBase_li.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "ColorName": "grey",
+                          "rgba": [
+                            128,
+                            128,
+                            128,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 0.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 0.0,
+                          "R": 0.0,
+                          "Type": "None"
+                        },
+                        "mass": 0.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Base",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Base Part as 3D Printed Parf for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "LidarSensorpcb.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "ColorName": "grey",
+                          "rgba": [
+                            128,
+                            128,
+                            128,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 10.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 10.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 4.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "sensor PCB",
+                      "Id": 0,
+                      "Type": "pcb",
+                      "Description": "Sensor pcb for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321.5",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "SensorTop_li.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "ColorName": "grey",
+                          "rgba": [
+                            128,
+                            128,
+                            128,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 20.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 10.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 4.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Top",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Cover for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Properties": {},
+              "Number": "0",
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 15.0,
+                  "Y": -65.0,
+                  "Z": 32.0
+                },
+                "rpy": {
+                  "R": -15.0,
+                  "P": 90.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 30.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 4",
+              "Id": 0,
+              "PositionId": "4",
+              "Status": "active",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 4 ganz rechts",
+              "Parent": "Sensorbox curved",
+              "Components": [
+                {
+                  "Properties": {},
+                  "ComponentType": "Device",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 30.0,
+                      "R": 20.0,
+                      "Type": "Cylinder"
+                    },
+                    "mass": 120.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "Lidar",
+                  "Id": 4,
+                  "Type": "Sensor",
+                  "Description": "The Drive System of the Robot",
+                  "Parent": "Sensor 4",
+                  "Template": "Lidar",
+                  "Components": [
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "SensorBase_li.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "ColorName": "grey",
+                          "rgba": [
+                            128,
+                            128,
+                            128,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 0.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 0.0,
+                          "R": 0.0,
+                          "Type": "None"
+                        },
+                        "mass": 0.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Base",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Base Part as 3D Printed Parf for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "LidarSensorpcb.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "ColorName": "grey",
+                          "rgba": [
+                            128,
+                            128,
+                            128,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 10.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 10.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 4.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "sensor PCB",
+                      "Id": 0,
+                      "Type": "pcb",
+                      "Description": "Sensor pcb for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321.5",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "SensorTop_li.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "ColorName": "grey",
+                          "rgba": [
+                            128,
+                            128,
+                            128,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 20.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 10.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 4.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Top",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Cover for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Properties": {},
+              "Number": "1",
+              "Data3D": "Sensorbox curved_64_15.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "ColorName": "grey",
+                  "rgba": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "sbFront",
+              "Id": 0,
+              "Type": "3D-Print",
+              "Description": "Sensorbox",
+              "Parent": "Sensorbox curved",
+              "Reference": "RC-34-2321",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "Number": "3, LinX, d=20mm",
+              "Data3D": "pin.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "ColorName": "grey",
+                  "rgba": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
+                },
+                "mass": 0.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Connetion Pins",
+              "Id": 0,
+              "Type": "pcb",
+              "Description": "Pins to Connect Sensorbox",
+              "Parent": "Sensorbox curved",
+              "Reference": "RC-34-2321.5",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "ComponentType": "Device",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
+                },
+                "mass": 0.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "ESP 32",
+              "Id": 5,
+              "Type": "Controler",
+              "Parent": "Sensorbox curved",
+              "Template": "ESP 32",
+              "Components": [
+                {
+                  "Properties": {},
+                  "IdCode": "RC-34-2321.5",
+                  "Number": "1",
+                  "Data3D": "IMUpcb.stl",
+                  "ComponentType": "PartDescription",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 0.0,
+                      "R": 0.0,
+                      "Type": "None"
+                    },
+                    "mass": 0.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "Contoller PCB",
+                  "Id": 0,
+                  "Type": "pcb",
+                  "Description": "Esp 32 Controller Board",
+                  "Parent": "ESP 32",
+                  "Components": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Properties": {},
+      "Number": "0",
+      "ComponentType": "PartDescription",
+      "Geometry": {
+        "JointType": "Fixed",
+        "xyz": {
+          "X": -150.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "rpy": {
+          "R": 0.0,
+          "P": 0.0,
+          "Y": 180.0
+        },
+        "box": {
+          "L": 40.0,
+          "W": 210.0,
+          "H": 64.0,
+          "R": 0.0,
+          "Type": "Box"
+        },
+        "mass": 120.0,
+        "unitXYZ": "mm",
+        "unitRPY": "grad"
+      },
+      "Name": "Sensorbox back",
+      "Id": 0,
+      "PositionId": "6",
+      "Type": "Frame",
+      "Description": "Lopkalisierung für Sensorbox back",
+      "Parent": "LCAMP Mobile Robot",
+      "Components": [
+        {
+          "Properties": {},
+          "ComponentType": "Device",
+          "Geometry": {
+            "JointType": "Fixed",
+            "xyz": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": -32.0
+            },
+            "box": {
+              "L": 40.0,
+              "W": 210.0,
+              "H": 64.0,
+              "R": 0.0,
+              "Type": "Box"
+            },
+            "mass": 120.0,
+            "unitXYZ": "mm",
+            "unitRPY": "grad"
+          },
+          "Name": "Sensorbox curved",
+          "Id": 0,
+          "Type": "SensorBox",
+          "Description": "The Sensorbox on Front of the Robot",
+          "Parent": "Sensorbox back",
+          "Template": "Sensorbox curved",
+          "Components": [
+            {
+              "Properties": {},
+              "Number": "0",
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 15.0,
+                  "Y": 65.0,
+                  "Z": 32.0
+                },
+                "rpy": {
+                  "R": 15.0,
+                  "P": 90.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 30.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 1",
+              "Id": 0,
+              "PositionId": "1",
+              "Status": "inactive",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 1 ganz links",
+              "Parent": "Sensorbox curved",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "Number": "0",
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 25.0,
+                  "Y": 23.0,
+                  "Z": 32.0
+                },
+                "rpy": {
+                  "R": 0.0,
+                  "P": 90.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 30.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 2",
+              "Id": 0,
+              "PositionId": "2",
+              "Status": "inactive",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 2 mitte links",
+              "Parent": "Sensorbox curved",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "Number": "0",
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 25.0,
+                  "Y": -23.0,
+                  "Z": 32.0
+                },
+                "rpy": {
+                  "R": 0.0,
+                  "P": 90.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 30.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 3",
+              "Id": 0,
+              "PositionId": "3",
+              "Status": "inactive",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 3 mitte rechts",
+              "Parent": "Sensorbox curved",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "Number": "0",
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 15.0,
+                  "Y": -65.0,
+                  "Z": 32.0
+                },
+                "rpy": {
+                  "R": -15.0,
+                  "P": 90.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 30.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 4",
+              "Id": 0,
+              "PositionId": "4",
+              "Status": "inactive",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 4 ganz rechts",
+              "Parent": "Sensorbox curved",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "Number": "1",
+              "Data3D": "Sensorbox curved_64_15.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "ColorName": "grey",
+                  "rgba": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "sbFront",
+              "Id": 0,
+              "Type": "3D-Print",
+              "Description": "Sensorbox",
+              "Parent": "Sensorbox curved",
+              "Reference": "RC-34-2321",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "Number": "3, LinX, d=20mm",
+              "Data3D": "pin.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "ColorName": "grey",
+                  "rgba": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
+                },
+                "mass": 0.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Connetion Pins",
+              "Id": 0,
+              "Type": "pcb",
+              "Description": "Pins to Connect Sensorbox",
+              "Parent": "Sensorbox curved",
+              "Reference": "RC-34-2321.5",
+              "Components": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Properties": {},
+      "Number": "0",
+      "ComponentType": "PartDescription",
+      "Geometry": {
+        "JointType": "Fixed",
+        "xyz": {
+          "X": 0.0,
+          "Y": -70.0,
+          "Z": 0.0
+        },
+        "rpy": {
+          "R": 0.0,
+          "P": 0.0,
+          "Y": 180.0
+        },
+        "box": {
+          "L": 94.0,
+          "W": 40.0,
+          "H": 64.0,
+          "R": 0.0,
+          "Type": "Box"
+        },
+        "mass": 120.0,
+        "unitXYZ": "mm",
+        "unitRPY": "grad"
+      },
+      "Name": "Sensorbox center",
+      "Id": 0,
+      "PositionId": "7",
+      "Type": "Frame",
+      "Description": "Lopkalisierung für Sensorbox center",
+      "Parent": "LCAMP Mobile Robot",
+      "Components": [
+        {
+          "Properties": {},
+          "ComponentType": "Device",
+          "Geometry": {
+            "JointType": "Fixed",
+            "xyz": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 32.0
+            },
+            "box": {
+              "L": 100.0,
+              "W": 40.0,
+              "H": 61.0,
+              "R": 0.0,
+              "Type": "Box"
+            },
+            "mass": 120.0,
+            "unitXYZ": "mm",
+            "unitRPY": "grad"
+          },
+          "Name": "Sensorbox center",
+          "Id": 0,
+          "Type": "SensorBox",
+          "Description": "Te Sensorbox on Front of the Robot",
+          "Parent": "Sensorbox center",
+          "Template": "Sensorbox center",
+          "Components": [
+            {
+              "Properties": {},
+              "Number": "0",
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 23.0,
+                  "Y": 30.0,
+                  "Z": -30.0
+                },
+                "rpy": {
+                  "R": -90.0,
+                  "P": 0.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 40.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 1",
+              "Id": 0,
+              "PositionId": "1",
+              "Status": "inactive",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 1 vorn",
+              "Parent": "Sensorbox center",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "Number": "0",
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": -23.0,
+                  "Y": 30.0,
+                  "Z": -30.0
+                },
+                "rpy": {
+                  "R": -90.0,
+                  "P": 0.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 40.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 2",
+              "Id": 0,
+              "PositionId": "2",
+              "Status": "inactive",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 2 hinten",
+              "Parent": "Sensorbox center",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "IdCode": "RC-34-2321",
+              "Number": "1",
+              "Data3D": "Sensorbox_small_64.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "ColorName": "grey",
+                  "rgba": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 100.0,
+                  "W": 40.0,
+                  "H": 61.0,
+                  "R": 0.0,
+                  "Type": "Box"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "sbCenter",
+              "Id": 0,
+              "Type": "3D-Print",
+              "Description": "Sensorbox",
+              "Parent": "Sensorbox center",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "IdCode": "RC-34-2321.5",
+              "Number": "3, LinX, d=20mm",
+              "Data3D": "pin.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "ColorName": "grey",
+                  "rgba": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
+                },
+                "mass": 0.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Connetion Pins",
+              "Id": 0,
+              "Type": "Norm",
+              "Description": "Pins to Connect Sensorbox",
+              "Parent": "Sensorbox center",
+              "Components": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Properties": {},
+      "Number": "0",
+      "ComponentType": "PartDescription",
+      "Geometry": {
+        "JointType": "Fixed",
+        "xyz": {
+          "X": 0.0,
+          "Y": 70.0,
+          "Z": 0.0
+        },
+        "box": {
+          "L": 94.0,
+          "W": 40.0,
+          "H": 64.0,
+          "R": 0.0,
+          "Type": "Box"
+        },
+        "mass": 120.0,
+        "unitXYZ": "mm",
+        "unitRPY": "grad"
+      },
+      "Name": "Sensorbox controller",
+      "Id": 0,
+      "PositionId": "8",
+      "Type": "Frame",
+      "Description": "Lopkalisierung für Sensorbox Controller on the right",
+      "Parent": "LCAMP Mobile Robot",
+      "Components": [
+        {
+          "Properties": {},
+          "ComponentType": "Device",
+          "Geometry": {
+            "JointType": "Fixed",
+            "xyz": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 32.0
+            },
+            "box": {
+              "L": 100.0,
+              "W": 40.0,
+              "H": 61.0,
+              "R": 0.0,
+              "Type": "Box"
+            },
+            "mass": 120.0,
+            "unitXYZ": "mm",
+            "unitRPY": "grad"
+          },
+          "Name": "Controller",
+          "Id": 0,
+          "Type": "SensorBox",
+          "Description": "Te Sensorbox on Front of the Robot",
+          "Parent": "Sensorbox controller",
+          "Template": "Controller",
+          "Components": [
+            {
+              "Properties": {},
+              "Number": "0",
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 23.0,
+                  "Y": 30.0,
+                  "Z": -30.0
+                },
+                "rpy": {
+                  "R": -90.0,
+                  "P": 0.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 40.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 1",
+              "Id": 0,
+              "PositionId": "1",
+              "Status": "inactive",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 1 vorn",
+              "Parent": "Controller",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "Number": "0",
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": -23.0,
+                  "Y": 30.0,
+                  "Z": -30.0
+                },
+                "rpy": {
+                  "R": -90.0,
+                  "P": 0.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 40.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 2",
+              "Id": 0,
+              "PositionId": "2",
+              "Status": "inactive",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 2 hintens",
+              "Parent": "Controller",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "IdCode": "RC-34-2321.5",
+              "Number": "1",
+              "Data3D": "Sensorbox_small_arduino_64.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "ColorName": "grey",
+                  "rgba": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 100.0,
+                  "W": 40.0,
+                  "H": 61.0,
+                  "R": 0.0,
+                  "Type": "Box"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "sb_center_cont",
+              "Id": 0,
+              "Type": "3D-Print",
+              "Description": "Base for Battery and Controller",
+              "Parent": "Controller",
+              "Components": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Properties": {},
+      "Number": "1",
+      "Data3D": "BasePlate.stl",
+      "Material": {
+        "Properties": {},
+        "MaterialType": "Default",
+        "Color": {
+          "ColorName": "grey",
+          "rgba": [
+            128,
+            128,
+            128,
+            255
+          ]
+        },
+        "ComponentType": "Materials",
+        "Name": "Material",
+        "Id": 0,
+        "Components": []
+      },
+      "ComponentType": "PartDescription",
+      "Geometry": {
+        "JointType": "Fixed",
+        "xyz": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 30.0
+        },
+        "box": {
+          "L": 300.0,
+          "W": 140.0,
+          "H": 6.0,
+          "R": 0.0,
+          "Type": "Box"
+        },
+        "mass": 120.0,
+        "unitXYZ": "mm",
+        "unitRPY": "grad"
+      },
+      "Name": "CenterPlate Alu",
+      "Id": 0,
+      "Type": "Basis",
+      "Description": "Base for System",
+      "Parent": "LCAMP Mobile Robot",
+      "Reference": "RC-34-2321",
+      "Components": []
+    },
+    {
+      "Properties": {},
+      "Number": "1",
+      "Data3D": "bodenPlatte_solid.stl",
+      "Material": {
+        "Properties": {},
+        "MaterialType": "Default",
+        "Color": {
+          "ColorName": "transp",
+          "rgba": [
+            128,
+            128,
+            198,
+            40
+          ]
+        },
+        "ComponentType": "Materials",
+        "Name": "Material",
+        "Id": 0,
+        "Components": []
+      },
+      "ComponentType": "PartDescription",
+      "Geometry": {
+        "JointType": "Fixed",
+        "xyz": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -30.0
+        },
+        "box": {
+          "L": 300.0,
+          "W": 140.0,
+          "H": 2.0,
+          "R": 0.0,
+          "Type": "Box"
+        },
+        "mass": 120.0,
+        "unitXYZ": "mm",
+        "unitRPY": "grad"
+      },
+      "Name": "Basplate Pexi",
+      "Id": 0,
+      "PositionId": "2",
+      "Type": "Basis",
+      "Description": "Lower Coverplate",
+      "Parent": "LCAMP Mobile Robot",
+      "Reference": "RC-34-2321.5",
+      "Components": []
+    }
+  ]
+}
