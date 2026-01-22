@@ -1,0 +1,47 @@
+{
+
+	"initCode": [
+		"// Definition der Pins",
+		"const int trigPin = 9;",
+		"const int echoPin = 10;",
+
+		"// Variable zur Speicherung der berechneten Distanz",
+		"long duration;",
+		"int distance;"
+	],
+
+
+
+
+	"setupComment": "void setup() {",
+	"setupCode": [
+
+		"// Initialisieren der seriellen Kommunikation  Serial.begin(9600);",
+
+		"// Setzen der Pin-Modi",
+		"pinMode(trigPin, OUTPUT);",
+		"pinMode(echoPin, INPUT);"
+	],
+	"loopComment": "void loop() { ",
+	"loopCode": [
+		"// Sicherstellen, dass der Trig-Pin LOW ist",
+		"digitalWrite(trigPin, LOW);",
+		"delayMicroseconds(2);",
+
+		"// Trig-Pin auf HIGH setzen, um den Ultraschallimpuls zu senden",
+		"digitalWrite(trigPin, HIGH);",
+		"delayMicroseconds(10);",
+		"digitalWrite(trigPin, LOW);",
+
+
+		"// Messen der Zeit, die das Signal braucht, um zur�ckzukehren",
+		"duration = pulseIn(echoPin, HIGH);"
+	],
+	"calcCode": [
+		"// Berechnung der Distanz (Schallgeschwindigkeit = 343 m/s)",
+		"// Dauer ist in Mikrosekunden, deswegen:",
+		"distance = duration * 0.034 / 2;"
+	],
+	"outComment": "// Ausgabe der Distanz in der seriellen Konsole\n  Serial.print(\"Distanz: \");\n  Serial.print(distance);\n  Serial.println(\" cm\");  // Kurze Pause\n  delay(500);}"
+
+}

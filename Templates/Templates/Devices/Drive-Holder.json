@@ -1,0 +1,96 @@
+{
+"Description":"Assembly for Drive-Holder",
+
+"Assembly":{
+	  "Name": "Drive-Holder",
+    "Type": "Drive",
+	"Geometry": {
+			  "JointType" : "fixed",
+   			  "xyz":{"X":0,"Y":0,"Z":32},
+			  "rpy":{"R": 0.0, "P": 0.0, "Y": 0},
+			  "box":{ "L":50, "W":45, "H":64, "Type": "Box"},
+			  "mass": 120
+		     },
+		  "description":"The Drive System of the Robot",
+      "Components" : [
+  
+	  {
+		  "Reference":"RC-34-2321",
+		  "Name": "HolderBase",
+		  "Number" : "1",
+		  "Data3D": "Passive_Holder_64.stl",
+		  "Type": "3D-Print",
+		  "Geometry": {
+			  "JointType" : "fixed",
+   			  "xyz":{"X":0,"Y":0,"Z":0},
+			  "rpy":{"R": 0.0, "P": 0.0, "Y": 0},
+  			  "box":{ "L":50, "W":45, "H":64, "Type": "Box"},
+			  "mass": 40
+		     },
+		  "Material": {
+			 "MaterialName" : "PLA",
+			 "Color":{
+				"ColorName": "grey",
+				"rgba": [128,  128,  128,  255],
+			    "Texture": null
+			 }
+			 },
+		  "description":"Base for Drive-Holder as 3D Printed Part"
+	  },
+	  	   {
+		  "Reference":"RC-34-2321",
+		  "Number" : "1",
+		  "Data3D": "Wheel shaft.stl",
+		  "Type": "3d Print",
+		  "idCode":"RC-34-2321",
+		  "Name": "Schaft",
+		  "Number" : 1,
+		  "Data3D": "adjusting ring.stl",
+		  "Type": "Standard part",
+		  		  "Geometry": {
+			  "JointType" : "fixed",
+   			  "xyz":{"X":0,"Y":0,"Z":0},
+			  "rpy":{"R": 0.0, "P": 0.0, "Y": 0},
+  			  "box":{"H":60, "R": 3.0, "Type": "Cylinder"},
+			  "mass": 40
+		     },
+
+		   "Material": {
+			 "MaterialName" : "PLA",
+			 "Color":{
+				"ColorName": "grey",
+				"rgba": [128,  128,  128,  255],
+			    "Texture": null
+			 }
+		   },
+   		  "description":"Ring Drive-Holder as 3D Printed Part"
+
+		},
+
+	  	  
+	   {
+		  "Reference":"RC-34-2321",
+		  "Number" : "1",
+		  "Data3D": "Wheel shaft.stl",
+		  "Type": "3d Print",
+		  "idCode":"RC-34-2321",
+		  "Name": "adjusting ring",
+		  "Number" : 2,
+		  "Data3D": "adjusting ring.stl",
+		  "Type": "Standard part",
+		   "Material": {
+			 "MaterialName" : "PLA",
+			 "Color":{
+				"ColorName": "grey",
+				"rgba": [128,  128,  128,  255],
+			    "Texture": null
+			 }
+		   },
+   		  "description":"Ring Drive-Holder as 3D Printed Part"
+
+		}
+
+	]
+  }
+}
+

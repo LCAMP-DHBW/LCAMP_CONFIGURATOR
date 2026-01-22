@@ -1,0 +1,91 @@
+{
+	"arduinoCode": {
+		"initCode": [
+			"// Definition der Pins für die RGB-Kanäle",
+			"const  int redPin = 9;",
+			"const int greenPin = 10;",
+			"const int bluePin = 11;",
+			"// Funktion zum Setzen der Farbe der RGB-LED",
+			"void setColor(int, redValue, int greenValue, int blueValue)",
+			"{",
+			"analogWrite(redPin",
+			"redValue);",
+			"analogWrite(greenPin",
+			"greenValue);",
+			"analogWrite(bluePin",
+			"blueValue);",
+			"}"
+		],
+		"setupComment": "void setup() {",
+		"setupCode": [
+			"// Setze die Pins als Ausgang",
+			"pinMode(redPin, OUTPUT);",
+			"pinMode(greenPin,OUTPUT);",
+			"pinMode(bluePin,OUTPUT);"
+		],
+		"loopComment": "void loop() { ",
+		"loopCode": [
+			"// LED leuchten lassen"
+		],
+		"calcCode": [
+			"// Berechnung RGB LED "
+		],
+		"outComment": "// Ausgabe der Distanz in der seriellen Konsole\n  Serial.print(\"Distanz: \");\n  Serial.print(distance);\n  Serial.println(\" cm\");  // Kurze Pause\n  delay(500);}",
+		"outCode": [
+			"// Ausgabe RGB LED ",
+			"setColor(255, 0, 0); // Rot"
+		]
+	},
+	"Assembly": {
+		"Name": "RGB-LED",
+		"Type": "Actor",
+		"Geometry": {
+			"JointType": "fixed",
+			"xyz": {
+				"X": 0,
+				"Y": 0,
+				"Z": 0
+			},
+			"rpy": {
+				"R": 0.0,
+				"P": 0.0,
+				"Y": 0
+			},
+			"box": {
+				"H": 30,
+				"R": 20.0,
+				"Type": "Cylinder"
+			},
+			"mass": 120
+		},
+		"description": "The Drive System of the Robot",
+		"Components": [
+			{
+				"Reference": "RC-34-2321",
+				"Name": "Base",
+				"Number": "1",
+				"3DData": "SensorBase.stl",
+				"Type": "3D-Print",
+				"Collor": "red",
+				"description": "Sensor Base Part as 3D Printed Parf for RGB-LED"
+			},
+			{
+				"Reference": "RC-34-2321.5",
+				"Name": "sensor PCB",
+				"Number": "1",
+				"3DData": "Sensorpcb.stl",
+				"Type": "pcb",
+				"Collor": "grey",
+				"description": "Sensor pcb for RGB-LED"
+			},
+			{
+				"Reference": "RC-34-2321",
+				"Name": "Top",
+				"Number": "1",
+				"3DData": "SensorTop_0.stl",
+				"Type": "3D-Print",
+				"Collor": "red",
+			}
+		]
+	}
+}

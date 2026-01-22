@@ -1,0 +1,11 @@
+{
+  "FileName": "URDF\\RobiControl.urdf",
+  "URDF_Path": null,
+  "DefaultRobot": "omni",
+  "SystemMode": "FileSystem",
+  "use_defaultGeometry": false,
+  "use_predefinedWheels": false,
+  "gen_subSystems": false,
+  "gen_extendedSystem": false,
+  "gen_collisionBox": false
+}

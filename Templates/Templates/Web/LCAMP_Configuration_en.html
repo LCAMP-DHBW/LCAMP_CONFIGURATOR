@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LCAMP Configurator</title>
+    <link rel="stylesheet" href="LCAMP_Configuration.css">
+</head>
+
+<body>
+
+    <div class="main-content">
+
+        <div class="container">
+            <h2>Send Message to LCAMP Configurator</h2>
+
+            <label for="sender">Sender</label>
+            <select id="sender">
+                <option value="DHBW">DHBW</option>
+                <option value="TKnika">TKnika</option>
+                <option value="CNG">CNG</option>
+            </select>
+
+            <label for="command">Command</label>
+            <select id="command">
+                <option value="Start">Start</option>
+                <option value="Stop">Stop</option>
+                <option value="Restart">Restart</option>
+                <option value="Status">Status</option>
+                <option value="Load">Load</option>
+                <option value="Save">Save</option>
+                <option value="Generate_Partlist">Generate Partlist</option>
+                <option value="Generate_URDF">Generate URDF</option>
+                <option disabled>──────────</option>
+                <option value="GetSensorTemplate">GetSensorTemplate</option>
+                <option value="GetDriveTemplate">GetDriveTemplate</option>
+            </select>
+
+            <label for="content">Message</label>
+            <textarea id="content" placeholder="Enter content here..."></textarea>
+
+            <button class="btn-full" onclick="sendCommand()">Send Command</button>
+
+            <div class="subform">
+                <h3>Axis Configuration</h3>
+                <div class="grid-container">
+                    <div>
+                        <label for="frontDrives">Front Axle Drive</label>
+                        <select id="frontDrives">
+                            <option value="DC-Drive">DC-Drive</option>
+                            <option value="Stepper-Drive">Stepper-Drive</option>
+                            <option value="Drive-Holder">Drive-Holder</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="rearDrives">Rear Axle Drive</label>
+                        <select id="rearDrives">
+                            <option value="DC-Drive">DC-Drive</option>
+                            <option value="Stepper-Drive">Stepper-Drive</option>
+                            <option value="Drive-Holder">Drive-Holder</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="frontWheels">Front Axle Wheels</label>
+                        <select id="frontWheels">
+                            <option value="Regular-Wheel">Regular-Wheel</option>
+                            <option value="Omni-Wheel">Omni-Wheel</option>
+                            <option value="Mecanum-Wheel">Mecanum-Wheel</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="rearWheels">Rear Axle Wheels</label>
+                        <select id="rearWheels">
+                            <option value="Regular-Wheel">Regular-Wheel</option>
+                            <option value="Omni-Wheel">Omni-Wheel</option>
+                            <option value="Mecanum-Wheel">Mecanum-Wheel</option>
+                        </select>
+                    </div>
+                </div>
+                <label>Drive Type</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="driveType" value="Differential" checked> Differential Drive</label>
+                    <label><input type="radio" name="driveType" value="Omni"> Omni Drive</label>
+                </div>
+                <div class="form-field">
+                    <label for="robotName">Robot Name</label>
+                    <input type="text" id="robotName" placeholder="Enter robot name">
+                </div>
+
+                <div class="form-field">
+                    <label for="serialNumber">Serial Number:</label>
+                    <span id="serialNumber">no Robot defined</span>
+                </div>
+                <div class="btn-row">
+                    <button onclick="sendConfiguration()">Send Robot Configuration</button>
+                </div>
+            </div>
+
+            <div class="sensorform">
+                <h3>Sensor Configuration</h3>
+                <div class="btn-row">
+                    <button id="tab-btn-front" class="tab-btn active" onclick="showSensorTab(0)">Sensorbox Front</button>
+                    <button id="tab-btn-back" class="tab-btn" onclick="showSensorTab(1)">Sensorbox Back</button>
+                    <button id="tab-btn-center" class="tab-btn" onclick="showSensorTab(2)">Sensorbox Center</button>
+                    <button id="tab-btn-controller" class="tab-btn" onclick="showSensorTab(3)">Sensorbox Controller</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="frontSensors" class="tab-panel">
+                        <h4>Sensorbox Front</h4>
+                        <div class="sensor-grid">
+                            <div>
+                                <label>Sensor 1:</label><select></select>
+                                <label>Sensor 2:</label><select></select>
+                            </div>
+                            <div>
+                                <label>Sensor 3:</label><select></select>
+                                <label>Sensor 4:</label><select></select>
+                            </div>
+                        </div>
+                        <div class="tooltip">
+                            <label>Aux Sensor:</label>
+                            <select id="auxSensorFront"></select>
+                            <span class="tooltiptext">Select an additional sensor!&#10;(if available)</span>
+                        </div>
+                        <div class="tooltip">
+                            <label>Aux Controller:</label>
+                            <select id="auxControllerFront"></select>
+                            <span class="tooltiptext">Select an additional controller for the front sensorbox!&#10;(if available)</span>
+                        </div>
+
+                    </div>
+                    <div id="backSensors" class="tab-panel hidden">
+                        <h4>Sensorbox Back</h4>
+                        <div class="sensor-grid">
+                            <div>
+                                <label>Sensor 1:</label><select></select>
+                                <label>Sensor 2:</label><select></select>
+                            </div>
+                            <div>
+                                <label>Sensor 3:</label><select></select>
+                                <label>Sensor 4:</label><select></select>
+                            </div>
+                        </div>
+                        <div class="tooltip">
+                            <label>Aux Sensor:</label>
+                            <select id="auxSensorBack"></select>
+                            <span class="tooltiptext">Select an additional sensor!&#10;(if available)</span>
+                        </div>
+                        <div class="tooltip">
+                            <label>Aux Controller:</label>
+                            <select id="auxControllerBack"></select>
+                            <span class="tooltiptext">Select an additional controller for the rear sensorbox!&#10;(if available)</span>
+                        </div>
+
+                    </div>
+                    <div id="centerSensors" class="tab-panel hidden">
+                        <h4>Sensorbox Center</h4>
+                        <div class="sensor-grid">
+                            <div>
+                                <label>Sensor 1:</label><select></select>
+                                <label>Sensor 2:</label><select></select>
+                            </div>
+                            <div>
+                                <label>Sensor 3:</label><select></select>
+                                <label>Sensor 4:</label><select></select>
+                            </div>
+                        </div>
+                        <label>Aux Sensor:</label><select id="auxSensorCenter"></select>
+                    </div>
+                    <div id="controllerSensors" class="tab-panel hidden">
+                        <h4>Sensorbox Controller</h4>
+                        <div class="sensor-grid">
+                            <div>
+                                <label>Sensor 1:</label><select></select>
+                                <label>Sensor 2:</label><select></select>
+                            </div>
+                            <div>
+                                <label>Sensor 3:</label><select></select>
+                                <label>Sensor 4:</label><select></select>
+                            </div>
+                        </div>
+                        <label>Aux Sensor:</label><select id="auxSensorController"></select>
+                    </div>
+                </div>
+                <div class="btn-row">
+                    <button onclick="sendSensors()">Send Sensor Configuration</button>
+                </div>
+            </div>
+
+            <div class="subform">
+                <h3>System Configuration</h3>
+                <div class="grid-container">
+                    <div>
+                        <label for="Controller">Controller</label>
+                        <select id="sys_controler">
+                            <option value="NoController">...</option>
+                            <option value="Arduino_Uno_R4">Arduino Uno R4</option>
+                            <option value="Arduino_Mega">Arduino Mega</option>
+                            <option value="Esp_32">Esp 32</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="Akku">Battery</label>
+                        <select id="sys_akku">
+                            <option value="0mAh">...</option>
+                            <option value="3300mAh">3300mAh</option>
+                            <option value="5500mAh">5500mAh</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="Center">Center Plate</label>
+                        <select id="sys_center">
+                            <option value="Alu">Aluminum Base Plate</option>
+                            <option value="3DPrint">3D Print</option>
+                            <option value="Wood">Wood</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="bottom_sheed">Bottom Plate</label>
+                        <select id="sys_botton">
+                            <option value="None">...</option>
+                            <option value="Pexi">Plexiglass</option>
+                            <option value="Wood">Wood Fiber</option>
+                            <option value="MetalSheet">Metal Sheet</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="radio-group">
+                    <label><input type="checkbox" name="optionType" value="Micro_Ros"> Micro ROS</label>
+                    <label><input type="checkbox" name="optionType" value="OPC_UA">OPC-UA</label>
+                    <label><input type="checkbox" name="optionType" value="MQQT">MQTT</label>
+                    <label><input type="checkbox" name="optionType" value="Can_Open">CANopen</label>
+                </div>
+
+                <div class="btn-row">
+                    <button onclick="sendSystemConfiguration()">Send System Configuration</button>
+                </div>
+            </div>
+
+            <div class="subform" id="colorSchemeForm">
+                <h3>Color Scheme Configurator</h3>
+                <div class="color-inputs">
+                    <label for="baseColor">Base Color:</label>
+                    <input type="color" id="baseColor" value="#d0d0ef">
+
+                    <label for="mainColor">Main Color:</label>
+                    <input type="color" id="mainColor" value="#0078d4">
+
+                    <label for="accentColor">Accent Color:</label>
+                    <input type="color" id="accentColor" value="#ffc400">
+
+                    <label for="detailColor">Detail Color:</label>
+                    <input type="color" id="detailColor" value="#6c757d">
+                </div>
+                <canvas id="colorCanvas" width="400" height="200"></canvas>
+                <img id="colorPreviewImage" src="default-image.png" alt="Color scheme preview" class="preview-image">
+                <div class="btn-row">
+                    <button onclick="updatePreviewImage()">Apply Color Scheme</button>
+                </div>
+            </div>
+            <div class="response" id="reply">
+                <strong>Response:</strong>
+            </div>
+            <footer>
+                <span id="stats"></span>
+                <span style="flex:1 1 auto"></span>
+                <kbd>Enter</kbd> to search
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // --- Global Variables ---
+
+
+        // --- Sensor Form Scripts ---
+        function showSensorTab(index) {
+            const panels = document.querySelectorAll('.tab-panel');
+            const buttons = document.querySelectorAll('.tab-btn');
+            panels.forEach((panel, i) => {
+                panel.classList.toggle('hidden', i !== index);
+            });
+            buttons.forEach((btn, i) => btn.classList.toggle('active', i === index));
+        }
+
+
+
+        function collectSensors(containerId) {
+            const selects = document.querySelectorAll(`#${containerId} select`);
+            return Array.from(selects).map(sel => sel.value);
+        }
+
+
+
+        async function sendSensors() {
+            const sensorData = {
+                front: collectSensors("frontSensors"),
+                frontAux: document.getElementById('auxSensorFront').value,
+                back: collectSensors("backSensors"),
+                backAux: document.getElementById('auxSensorBack').value,
+                center: collectSensors("centerSensors"),
+                centerAux: document.getElementById('auxSensorCenter').value,
+                controller: collectSensors("controllerSensors"),
+                controllerAux: document.getElementById('auxSensorController').value
+            };
+            const msg = {
+                sender: document.getElementById('sender')?.value || "WebUI",
+                command: "SetSensors",
+                content: document.getElementById('content')?.value || "",
+                type: "setSensors",
+                sensorConfiguration: sensorData
+            };
+            await sendToServer(msg);
+        }
+
+        // --- Server Communication ---
+        async function sendCommand() {
+            const msg = {
+                sender: document.getElementById('sender').value,
+                command: document.getElementById('command').value,
+                content: document.getElementById('content').value,
+                type: "sendCommand"
+            };
+            await sendToServer(msg);
+        }
+
+        async function sendConfiguration() {
+            const msg = {
+                sender: document.getElementById('sender').value,
+                command: document.getElementById('command').value,
+                content: document.getElementById('content').value,
+                type: "setAxis",
+                axisConfiguration: {
+                    frontDrives: document.getElementById('frontDrives').value,
+                    rearDrives: document.getElementById('rearDrives').value,
+                    frontWheels: document.getElementById('frontWheels').value,
+                    rearWheels: document.getElementById('rearWheels').value,
+                    driveType: document.querySelector('input[name="driveType"]:checked').value,
+                    robotName: document.getElementById('robotName').value,
+                }
+            };
+            await sendToServer(msg);
+        }
+
+        async function sendSystemConfiguration() {
+            const msg = {
+                sender: document.getElementById('sender').value,
+                command: document.getElementById('command').value,
+                content: document.getElementById('content').value,
+                type: "setSystemConfig",
+            };
+            await sendToServer(msg);
+        }
+
+        async function sendToServer(msg) {
+            const replyDiv = document.getElementById('reply');
+            try {
+                const res = await fetch('http://localhost:7070/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(msg)
+                });
+                const jsonData = await res.json();
+
+                // Read serial number if available
+                if (jsonData.serialNumber) {
+                    document.getElementById('serialNumber').textContent = jsonData.serialNumber;
+                }
+                if (jsonData.robotName) {
+                    document.getElementById('robotName').value = jsonData.robotName;
+                }
+                replyDiv.textContent = JSON.stringify(jsonData, null, 2);
+            } catch (err) {
+                replyDiv.textContent = "Error sending: " + err;
+            }
+        }
+
+        // --- Initialization ---
+        (async function init() {
+
+            const sensorOptionsJson = { "options": ["...", "Lidar", "UltraSonic", "LED-Light", "Temp"] };
+            const sensorOptionsAuxJson = { "options": ["...", "LineFollower"] };
+            const sensorOptionsControllerJson = { "options": ["...", "ESP32", "Raspberry Zero", "Arduino Nano"] };
+
+            // Populate dropdowns in panels
+            const panels = ["frontSensors", "backSensors", "centerSensors", "controllerSensors"];
+            panels.forEach(panelId => populateSelects(panelId, sensorOptionsJson.options));
+
+            // Populate new Aux dropdowns
+            const auxSelects = ["auxSensorFront", "auxSensorBack", "auxSensorCenter", "auxSensorController"];
+            auxSelects.forEach(selectId => populateSingleSelect(selectId, sensorOptionsAuxJson.options));
+            const contrSelects = ["auxControllerFront", "auxControllerBack", "auxControllerCenter"];
+            contrSelects.forEach(selectId => populateSingleSelect(selectId, sensorOptionsControllerJson.options));
+
+        })();
+
+        function populateSelects(containerId, options) {
+            const selects = document.querySelectorAll(`#${containerId} select`);
+            selects.forEach(select => {
+                select.innerHTML = "";
+                options.forEach(opt => {
+                    const optionElement = document.createElement("option");
+                    optionElement.value = opt;
+                    optionElement.textContent = opt;
+                    select.appendChild(optionElement);
+                });
+            });
+        }
+
+        function populateSingleSelect(id, options) {
+            const select = document.getElementById(id);
+            if (!select) return;
+            select.innerHTML = "";
+            options.forEach(opt => {
+                const optionElement = document.createElement("option");
+                optionElement.value = opt;
+                optionElement.textContent = opt;
+                select.appendChild(optionElement);
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>

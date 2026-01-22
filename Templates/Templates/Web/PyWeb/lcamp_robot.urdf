@@ -1,0 +1,1981 @@
+<?xml version="1.0" ?>
+<robot name="LCAMP_Mobile_Robot">
+  <link name="base_link">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+  <link name="Drive_bl">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Stepper_Drive">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="HolderBase">
+    <inertial>
+      <mass value="0.04"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="4e-05" ixy="0" ixz="0" iyy="4e-05" iyz="0" izz="4e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/stepper_Holder_64.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_3">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/stepper_Holder_64.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Stepper_Motor_NEMA17">
+    <inertial>
+      <mass value="0.2"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0002" ixy="0" ixz="0" iyy="0.0002" iyz="0" izz="0.0002"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Stepper.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_4">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 0.39215686274509803"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Stepper.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Motor_Controller">
+    <inertial>
+      <mass value="0.02"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="2e-05" ixy="0" ixz="0" iyy="2e-05" iyz="0" izz="2e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/MotorController.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_5">
+        <color rgba="0.7372549019607844 0.5019607843137255 0.5019607843137255 0.39215686274509803"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/MotorController.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Regular_Wheel">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Wheel_Hub">
+    <inertial>
+      <mass value="0.013"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.3e-05" ixy="0" ixz="0" iyy="1.3e-05" iyz="0" izz="1.3e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/wheel_hub_ax.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_7">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/wheel_hub_ax.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rim_inner">
+    <inertial>
+      <mass value="0.013"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.3e-05" ixy="0" ixz="0" iyy="1.3e-05" iyz="0" izz="1.3e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Regular_Wheel_Star_30_84.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_8">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Regular_Wheel_Star_30_84.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rim_outer">
+    <inertial>
+      <mass value="0.013"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.3e-05" ixy="0" ixz="0" iyy="1.3e-05" iyz="0" izz="1.3e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Regular_Wheel_Star_24_84.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_9">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Regular_Wheel_Star_24_84.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Wheel_Hub_Cap">
+    <inertial>
+      <mass value="0.013"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.3e-05" ixy="0" ixz="0" iyy="1.3e-05" iyz="0" izz="1.3e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Hub_Cup_8.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_10">
+        <color rgba="0.5372549019607843 0.8117647058823529 0.9411764705882353 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Hub_Cup_8.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Tire">
+    <inertial>
+      <mass value="0.013"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.3e-05" ixy="0" ixz="0" iyy="1.3e-05" iyz="0" izz="1.3e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Wheel_92_outside.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_11">
+        <color rgba="0.00392156862745098 0.00392156862745098 0.00392156862745098 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Wheel_92_outside.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_br">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Stepper_Drive">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="HolderBase">
+    <inertial>
+      <mass value="0.04"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="4e-05" ixy="0" ixz="0" iyy="4e-05" iyz="0" izz="4e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/stepper_Holder_64.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_14">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/stepper_Holder_64.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Stepper_Motor_NEMA17">
+    <inertial>
+      <mass value="0.2"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0002" ixy="0" ixz="0" iyy="0.0002" iyz="0" izz="0.0002"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Stepper.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_15">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 0.39215686274509803"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Stepper.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Motor_Controller">
+    <inertial>
+      <mass value="0.02"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="2e-05" ixy="0" ixz="0" iyy="2e-05" iyz="0" izz="2e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/MotorController.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_16">
+        <color rgba="0.7372549019607844 0.5019607843137255 0.5019607843137255 0.39215686274509803"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/MotorController.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Regular_Wheel">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Wheel_Hub">
+    <inertial>
+      <mass value="0.013"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.3e-05" ixy="0" ixz="0" iyy="1.3e-05" iyz="0" izz="1.3e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/wheel_hub_ax.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_18">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/wheel_hub_ax.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rim_inner">
+    <inertial>
+      <mass value="0.013"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.3e-05" ixy="0" ixz="0" iyy="1.3e-05" iyz="0" izz="1.3e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Regular_Wheel_Star_30_84.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_19">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Regular_Wheel_Star_30_84.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rim_outer">
+    <inertial>
+      <mass value="0.013"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.3e-05" ixy="0" ixz="0" iyy="1.3e-05" iyz="0" izz="1.3e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Regular_Wheel_Star_24_84.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_20">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Regular_Wheel_Star_24_84.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Wheel_Hub_Cap">
+    <inertial>
+      <mass value="0.013"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.3e-05" ixy="0" ixz="0" iyy="1.3e-05" iyz="0" izz="1.3e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Hub_Cup_8.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_21">
+        <color rgba="0.5372549019607843 0.8117647058823529 0.9411764705882353 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Hub_Cup_8.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Tire">
+    <inertial>
+      <mass value="0.013"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.3e-05" ixy="0" ixz="0" iyy="1.3e-05" iyz="0" izz="1.3e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Wheel_92_outside.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_22">
+        <color rgba="0.00392156862745098 0.00392156862745098 0.00392156862745098 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Wheel_92_outside.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fl">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Drive_Holder">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="HolderBase">
+    <inertial>
+      <mass value="0.04"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="4e-05" ixy="0" ixz="0" iyy="4e-05" iyz="0" izz="4e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Passive_Holder_64.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_25">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Passive_Holder_64.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Schaft">
+    <inertial>
+      <mass value="0.04"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="4e-05" ixy="0" ixz="0" iyy="4e-05" iyz="0" izz="4e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/adjusting ring.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_26">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/adjusting ring.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="adjusting_ring">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/adjusting ring.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_27">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/adjusting ring.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Omni_Wheel">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Wheel_Hub">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Wheel_Hub_ax.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_29">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Wheel_Hub_ax.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rim_inner_a">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_2a.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_30">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_2a.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rim_inner_b">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_2b.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_31">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_2b.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rim_outer_a">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_32">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rim_outer_b">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_33">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Wheel_Hub_Cap">
+    <inertial>
+      <mass value="0.013"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.3e-05" ixy="0" ixz="0" iyy="1.3e-05" iyz="0" izz="1.3e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Hub_Cup_8.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_34">
+        <color rgba="0.5372549019607843 0.8117647058823529 0.9411764705882353 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Hub_Cup_8.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_35">
+        <color rgba="0.00392156862745098 0.00392156862745098 0.00392156862745098 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Roller">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_36">
+        <color rgba="0.00392156862745098 0.00392156862745098 0.00392156862745098 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RollerPin">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Pin_Roller.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_37">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Pin_Roller.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_38">
+        <color rgba="0.00392156862745098 0.00392156862745098 0.00392156862745098 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Roller">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_39">
+        <color rgba="0.00392156862745098 0.00392156862745098 0.00392156862745098 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RollerPin">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Pin_Roller.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_40">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Pin_Roller.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fr">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Drive_Holder">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="HolderBase">
+    <inertial>
+      <mass value="0.04"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="4e-05" ixy="0" ixz="0" iyy="4e-05" iyz="0" izz="4e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Passive_Holder_64.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_43">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Passive_Holder_64.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Schaft">
+    <inertial>
+      <mass value="0.04"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="4e-05" ixy="0" ixz="0" iyy="4e-05" iyz="0" izz="4e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/adjusting ring.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_44">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/adjusting ring.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="adjusting_ring">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/adjusting ring.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_45">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/adjusting ring.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Omni_Wheel">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Wheel_Hub">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Wheel_Hub_ax.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_47">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Wheel_Hub_ax.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rim_inner_a">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_2a.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_48">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_2a.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rim_inner_b">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_2b.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_49">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_2b.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rim_outer_a">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_50">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rim_outer_b">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_51">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Star_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Wheel_Hub_Cap">
+    <inertial>
+      <mass value="0.013"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.3e-05" ixy="0" ixz="0" iyy="1.3e-05" iyz="0" izz="1.3e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Hub_Cup_8.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_52">
+        <color rgba="0.5372549019607843 0.8117647058823529 0.9411764705882353 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Hub_Cup_8.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_53">
+        <color rgba="0.00392156862745098 0.00392156862745098 0.00392156862745098 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Roller">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_54">
+        <color rgba="0.00392156862745098 0.00392156862745098 0.00392156862745098 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RollerPin">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Pin_Roller.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_55">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Pin_Roller.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_56">
+        <color rgba="0.00392156862745098 0.00392156862745098 0.00392156862745098 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Roller">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_57">
+        <color rgba="0.00392156862745098 0.00392156862745098 0.00392156862745098 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RollerPin">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Pin_Roller.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_58">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Pin_Roller.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_front">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensorbox_curved">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensor_1">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensor_2">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensor_3">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensor_4">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="sbFront">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Sensorbox curved_64_15.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_65">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Sensorbox curved_64_15.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Connetion_Pins">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/pin.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_66">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/pin.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_back">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensorbox_curved">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensor_1">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensor_2">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensor_3">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensor_4">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="sbFront">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Sensorbox curved_64_15.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_73">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Sensorbox curved_64_15.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Connetion_Pins">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/pin.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_74">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/pin.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_center">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensorbox_center">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensor_1">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensor_2">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="sbCenter">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Sensorbox_small_64.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_79">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Sensorbox_small_64.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Connetion_Pins">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/pin.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_80">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/pin.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_controller">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Controller">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensor_1">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="Sensor_2">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="sb_center_cont">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Sensorbox_small_arduino_64.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_85">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Sensorbox_small_arduino_64.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="CenterPlate_Alu">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/BasePlate.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_86">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/BasePlate.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Basplate_Pexi">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/BasePlate.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_87">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.7764705882352941 0.1568627450980392"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/BasePlate.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="MainFrame">
+    <inertial>
+      <mass value="0.12"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+    </inertial>
+  </link>
+  <link name="CenterPlate_Alu">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/BasePlate.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_89">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.5019607843137255 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/BasePlate.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Basplate_Pexi">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/BasePlate.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="color_90">
+        <color rgba="0.5019607843137255 0.5019607843137255 0.7764705882352941 0.1568627450980392"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/BasePlate.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Scrws">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Pin_3_14.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lcamp_robot_description/stl_files/Pin_3_14.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_link_to_Drive_bl" type="fixed">
+    <parent link="base_link"/>
+    <child link="Drive_bl"/>
+    <origin xyz="-0.1 0.07 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Drive_bl_to_Stepper_Drive" type="fixed">
+    <parent link="Drive_bl"/>
+    <child link="Stepper_Drive"/>
+    <origin xyz="0.0 0.0 0.032" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Stepper_Drive_to_HolderBase" type="fixed">
+    <parent link="Stepper_Drive"/>
+    <child link="HolderBase"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Stepper_Drive_to_Stepper_Motor_NEMA17" type="fixed">
+    <parent link="Stepper_Drive"/>
+    <child link="Stepper_Motor_NEMA17"/>
+    <origin xyz="0.015 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Stepper_Drive_to_Motor_Controller" type="fixed">
+    <parent link="Stepper_Drive"/>
+    <child link="Motor_Controller"/>
+    <origin xyz="0.015 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Drive_bl_to_Regular_Wheel" type="continuous">
+    <parent link="Drive_bl"/>
+    <child link="Regular_Wheel"/>
+    <origin xyz="0.0 0.005 0.0" rpy="-1.4137166941154071 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="Regular_Wheel_to_Wheel_Hub" type="fixed">
+    <parent link="Regular_Wheel"/>
+    <child link="Wheel_Hub"/>
+    <origin xyz="0.0 0.0 0.001" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Regular_Wheel_to_rim_inner" type="fixed">
+    <parent link="Regular_Wheel"/>
+    <child link="rim_inner"/>
+    <origin xyz="0.0 0.0 0.002" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Regular_Wheel_to_rim_outer" type="fixed">
+    <parent link="Regular_Wheel"/>
+    <child link="rim_outer"/>
+    <origin xyz="0.0 0.0 0.028" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Regular_Wheel_to_Wheel_Hub_Cap" type="fixed">
+    <parent link="Regular_Wheel"/>
+    <child link="Wheel_Hub_Cap"/>
+    <origin xyz="0.0 0.0 0.028" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Regular_Wheel_to_Tire" type="fixed">
+    <parent link="Regular_Wheel"/>
+    <child link="Tire"/>
+    <origin xyz="0.0 0.0 0.015" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="base_link_to_Drive_br" type="fixed">
+    <parent link="base_link"/>
+    <child link="Drive_br"/>
+    <origin xyz="-0.1 -0.07 0.0" rpy="0.0 0.0 2.8274333882308142"/>
+  </joint>
+  <joint name="Drive_br_to_Stepper_Drive" type="fixed">
+    <parent link="Drive_br"/>
+    <child link="Stepper_Drive"/>
+    <origin xyz="0.0 0.0 0.032" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Stepper_Drive_to_HolderBase" type="fixed">
+    <parent link="Stepper_Drive"/>
+    <child link="HolderBase"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Stepper_Drive_to_Stepper_Motor_NEMA17" type="fixed">
+    <parent link="Stepper_Drive"/>
+    <child link="Stepper_Motor_NEMA17"/>
+    <origin xyz="0.015 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Stepper_Drive_to_Motor_Controller" type="fixed">
+    <parent link="Stepper_Drive"/>
+    <child link="Motor_Controller"/>
+    <origin xyz="0.015 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Drive_br_to_Regular_Wheel" type="continuous">
+    <parent link="Drive_br"/>
+    <child link="Regular_Wheel"/>
+    <origin xyz="0.0 0.005 0.0" rpy="-1.4137166941154071 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="Regular_Wheel_to_Wheel_Hub" type="fixed">
+    <parent link="Regular_Wheel"/>
+    <child link="Wheel_Hub"/>
+    <origin xyz="0.0 0.0 0.001" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Regular_Wheel_to_rim_inner" type="fixed">
+    <parent link="Regular_Wheel"/>
+    <child link="rim_inner"/>
+    <origin xyz="0.0 0.0 0.002" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Regular_Wheel_to_rim_outer" type="fixed">
+    <parent link="Regular_Wheel"/>
+    <child link="rim_outer"/>
+    <origin xyz="0.0 0.0 0.028" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Regular_Wheel_to_Wheel_Hub_Cap" type="fixed">
+    <parent link="Regular_Wheel"/>
+    <child link="Wheel_Hub_Cap"/>
+    <origin xyz="0.0 0.0 0.028" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Regular_Wheel_to_Tire" type="fixed">
+    <parent link="Regular_Wheel"/>
+    <child link="Tire"/>
+    <origin xyz="0.0 0.0 0.015" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="base_link_to_Drive_fl" type="fixed">
+    <parent link="base_link"/>
+    <child link="Drive_fl"/>
+    <origin xyz="0.1 0.07 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Drive_fl_to_Drive_Holder" type="fixed">
+    <parent link="Drive_fl"/>
+    <child link="Drive_Holder"/>
+    <origin xyz="0.0 0.0 0.032" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Drive_Holder_to_HolderBase" type="fixed">
+    <parent link="Drive_Holder"/>
+    <child link="HolderBase"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Drive_Holder_to_Schaft" type="fixed">
+    <parent link="Drive_Holder"/>
+    <child link="Schaft"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Drive_Holder_to_adjusting_ring" type="fixed">
+    <parent link="Drive_Holder"/>
+    <child link="adjusting_ring"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Drive_fl_to_Omni_Wheel" type="continuous">
+    <parent link="Drive_fl"/>
+    <child link="Omni_Wheel"/>
+    <origin xyz="0.0 0.005 0.0" rpy="-1.4137166941154071 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="Omni_Wheel_to_Wheel_Hub" type="fixed">
+    <parent link="Omni_Wheel"/>
+    <child link="Wheel_Hub"/>
+    <origin xyz="0.0 0.0 0.001" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_rim_inner_a" type="fixed">
+    <parent link="Omni_Wheel"/>
+    <child link="rim_inner_a"/>
+    <origin xyz="0.0 0.0 0.002" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_rim_inner_b" type="fixed">
+    <parent link="Omni_Wheel"/>
+    <child link="rim_inner_b"/>
+    <origin xyz="0.0 0.0 0.005" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_rim_outer_a" type="fixed">
+    <parent link="Omni_Wheel"/>
+    <child link="rim_outer_a"/>
+    <origin xyz="0.0 0.0 0.026" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_rim_outer_b" type="fixed">
+    <parent link="Omni_Wheel"/>
+    <child link="rim_outer_b"/>
+    <origin xyz="0.0 0.0 0.032" rpy="0.0 2.8274333882308142 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_Wheel_Hub_Cap" type="fixed">
+    <parent link="Omni_Wheel"/>
+    <child link="Wheel_Hub_Cap"/>
+    <origin xyz="0.0 0.0 0.034" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_Rollers_a" type="continuous">
+    <parent link="Omni_Wheel"/>
+    <child link="Rollers_a"/>
+    <origin xyz="0.0 0.0 0.008" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="Rollers_a_to_Roller" type="continuous">
+    <parent link="Rollers_a"/>
+    <child link="Roller"/>
+    <origin xyz="0.0 0.0 0.031" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="Rollers_a_to_RollerPin" type="fixed">
+    <parent link="Rollers_a"/>
+    <child link="RollerPin"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_Rollers_b" type="continuous">
+    <parent link="Omni_Wheel"/>
+    <child link="Rollers_b"/>
+    <origin xyz="0.0 0.0 0.028" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="Rollers_b_to_Roller" type="continuous">
+    <parent link="Rollers_b"/>
+    <child link="Roller"/>
+    <origin xyz="0.0 0.0 0.006" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="Rollers_b_to_RollerPin" type="fixed">
+    <parent link="Rollers_b"/>
+    <child link="RollerPin"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="base_link_to_Drive_fr" type="fixed">
+    <parent link="base_link"/>
+    <child link="Drive_fr"/>
+    <origin xyz="0.1 -0.07 0.0" rpy="0.0 0.0 2.8274333882308142"/>
+  </joint>
+  <joint name="Drive_fr_to_Drive_Holder" type="fixed">
+    <parent link="Drive_fr"/>
+    <child link="Drive_Holder"/>
+    <origin xyz="0.0 0.0 0.032" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Drive_Holder_to_HolderBase" type="fixed">
+    <parent link="Drive_Holder"/>
+    <child link="HolderBase"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Drive_Holder_to_Schaft" type="fixed">
+    <parent link="Drive_Holder"/>
+    <child link="Schaft"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Drive_Holder_to_adjusting_ring" type="fixed">
+    <parent link="Drive_Holder"/>
+    <child link="adjusting_ring"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Drive_fr_to_Omni_Wheel" type="continuous">
+    <parent link="Drive_fr"/>
+    <child link="Omni_Wheel"/>
+    <origin xyz="0.0 0.005 0.0" rpy="-1.4137166941154071 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="Omni_Wheel_to_Wheel_Hub" type="fixed">
+    <parent link="Omni_Wheel"/>
+    <child link="Wheel_Hub"/>
+    <origin xyz="0.0 0.0 0.001" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_rim_inner_a" type="fixed">
+    <parent link="Omni_Wheel"/>
+    <child link="rim_inner_a"/>
+    <origin xyz="0.0 0.0 0.002" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_rim_inner_b" type="fixed">
+    <parent link="Omni_Wheel"/>
+    <child link="rim_inner_b"/>
+    <origin xyz="0.0 0.0 0.005" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_rim_outer_a" type="fixed">
+    <parent link="Omni_Wheel"/>
+    <child link="rim_outer_a"/>
+    <origin xyz="0.0 0.0 0.026" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_rim_outer_b" type="fixed">
+    <parent link="Omni_Wheel"/>
+    <child link="rim_outer_b"/>
+    <origin xyz="0.0 0.0 0.032" rpy="0.0 2.8274333882308142 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_Wheel_Hub_Cap" type="fixed">
+    <parent link="Omni_Wheel"/>
+    <child link="Wheel_Hub_Cap"/>
+    <origin xyz="0.0 0.0 0.034" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_Rollers_a" type="continuous">
+    <parent link="Omni_Wheel"/>
+    <child link="Rollers_a"/>
+    <origin xyz="0.0 0.0 0.008" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="Rollers_a_to_Roller" type="continuous">
+    <parent link="Rollers_a"/>
+    <child link="Roller"/>
+    <origin xyz="0.0 0.0 0.031" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="Rollers_a_to_RollerPin" type="fixed">
+    <parent link="Rollers_a"/>
+    <child link="RollerPin"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Omni_Wheel_to_Rollers_b" type="continuous">
+    <parent link="Omni_Wheel"/>
+    <child link="Rollers_b"/>
+    <origin xyz="0.0 0.0 0.028" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="Rollers_b_to_Roller" type="continuous">
+    <parent link="Rollers_b"/>
+    <child link="Roller"/>
+    <origin xyz="0.0 0.0 0.006" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="Rollers_b_to_RollerPin" type="fixed">
+    <parent link="Rollers_b"/>
+    <child link="RollerPin"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="base_link_to_Sensorbox_front" type="fixed">
+    <parent link="base_link"/>
+    <child link="Sensorbox_front"/>
+    <origin xyz="0.15 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Sensorbox_front_to_Sensorbox_curved" type="fixed">
+    <parent link="Sensorbox_front"/>
+    <child link="Sensorbox_curved"/>
+    <origin xyz="0.0 0.0 -0.032" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Sensorbox_curved_to_Sensor_1" type="fixed">
+    <parent link="Sensorbox_curved"/>
+    <child link="Sensor_1"/>
+    <origin xyz="0.024 0.065 0.02" rpy="0.2356194490192345 1.4137166941154071 0.0"/>
+  </joint>
+  <joint name="Sensorbox_curved_to_Sensor_2" type="fixed">
+    <parent link="Sensorbox_curved"/>
+    <child link="Sensor_2"/>
+    <origin xyz="0.03 0.023 0.024" rpy="0.0 1.4137166941154071 0.0"/>
+  </joint>
+  <joint name="Sensorbox_curved_to_Sensor_3" type="fixed">
+    <parent link="Sensorbox_curved"/>
+    <child link="Sensor_3"/>
+    <origin xyz="0.03 -0.023 0.024" rpy="0.0 1.4137166941154071 0.0"/>
+  </joint>
+  <joint name="Sensorbox_curved_to_Sensor_4" type="fixed">
+    <parent link="Sensorbox_curved"/>
+    <child link="Sensor_4"/>
+    <origin xyz="0.024 -0.065 0.02" rpy="-0.2356194490192345 1.4137166941154071 0.0"/>
+  </joint>
+  <joint name="Sensorbox_curved_to_sbFront" type="fixed">
+    <parent link="Sensorbox_curved"/>
+    <child link="sbFront"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Sensorbox_curved_to_Connetion_Pins" type="fixed">
+    <parent link="Sensorbox_curved"/>
+    <child link="Connetion_Pins"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="base_link_to_Sensorbox_back" type="fixed">
+    <parent link="base_link"/>
+    <child link="Sensorbox_back"/>
+    <origin xyz="-0.15 0.0 0.0" rpy="0.0 0.0 2.8274333882308142"/>
+  </joint>
+  <joint name="Sensorbox_back_to_Sensorbox_curved" type="fixed">
+    <parent link="Sensorbox_back"/>
+    <child link="Sensorbox_curved"/>
+    <origin xyz="0.0 0.0 -0.032" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Sensorbox_curved_to_Sensor_1" type="fixed">
+    <parent link="Sensorbox_curved"/>
+    <child link="Sensor_1"/>
+    <origin xyz="0.024 0.065 0.02" rpy="0.2356194490192345 1.4137166941154071 0.0"/>
+  </joint>
+  <joint name="Sensorbox_curved_to_Sensor_2" type="fixed">
+    <parent link="Sensorbox_curved"/>
+    <child link="Sensor_2"/>
+    <origin xyz="0.03 0.023 0.024" rpy="0.0 1.4137166941154071 0.0"/>
+  </joint>
+  <joint name="Sensorbox_curved_to_Sensor_3" type="fixed">
+    <parent link="Sensorbox_curved"/>
+    <child link="Sensor_3"/>
+    <origin xyz="0.03 -0.023 0.024" rpy="0.0 1.4137166941154071 0.0"/>
+  </joint>
+  <joint name="Sensorbox_curved_to_Sensor_4" type="fixed">
+    <parent link="Sensorbox_curved"/>
+    <child link="Sensor_4"/>
+    <origin xyz="0.024 -0.065 0.02" rpy="-0.2356194490192345 1.4137166941154071 0.0"/>
+  </joint>
+  <joint name="Sensorbox_curved_to_sbFront" type="fixed">
+    <parent link="Sensorbox_curved"/>
+    <child link="sbFront"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Sensorbox_curved_to_Connetion_Pins" type="fixed">
+    <parent link="Sensorbox_curved"/>
+    <child link="Connetion_Pins"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="base_link_to_Sensorbox_center" type="fixed">
+    <parent link="base_link"/>
+    <child link="Sensorbox_center"/>
+    <origin xyz="0.0 -0.07 0.0" rpy="0.0 0.0 2.8274333882308142"/>
+  </joint>
+  <joint name="Sensorbox_center_to_Sensorbox_center" type="fixed">
+    <parent link="Sensorbox_center"/>
+    <child link="Sensorbox_center"/>
+    <origin xyz="0.0 0.0 0.032" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Sensorbox_center_to_Sensor_1" type="fixed">
+    <parent link="Sensorbox_center"/>
+    <child link="Sensor_1"/>
+    <origin xyz="0.023 0.03 -0.03" rpy="-1.4137166941154071 0.0 0.0"/>
+  </joint>
+  <joint name="Sensorbox_center_to_Sensor_2" type="fixed">
+    <parent link="Sensorbox_center"/>
+    <child link="Sensor_2"/>
+    <origin xyz="-0.023 0.03 -0.03" rpy="-1.4137166941154071 0.0 0.0"/>
+  </joint>
+  <joint name="Sensorbox_center_to_sbCenter" type="fixed">
+    <parent link="Sensorbox_center"/>
+    <child link="sbCenter"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Sensorbox_center_to_Connetion_Pins" type="fixed">
+    <parent link="Sensorbox_center"/>
+    <child link="Connetion_Pins"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="base_link_to_Sensorbox_controller" type="fixed">
+    <parent link="base_link"/>
+    <child link="Sensorbox_controller"/>
+    <origin xyz="0.0 0.07 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Sensorbox_controller_to_Controller" type="fixed">
+    <parent link="Sensorbox_controller"/>
+    <child link="Controller"/>
+    <origin xyz="0.0 0.0 0.032" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="Controller_to_Sensor_1" type="fixed">
+    <parent link="Controller"/>
+    <child link="Sensor_1"/>
+    <origin xyz="0.023 0.03 -0.03" rpy="-1.4137166941154071 0.0 0.0"/>
+  </joint>
+  <joint name="Controller_to_Sensor_2" type="fixed">
+    <parent link="Controller"/>
+    <child link="Sensor_2"/>
+    <origin xyz="-0.023 0.03 -0.03" rpy="-1.4137166941154071 0.0 0.0"/>
+  </joint>
+  <joint name="Controller_to_sb_center_cont" type="fixed">
+    <parent link="Controller"/>
+    <child link="sb_center_cont"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="base_link_to_CenterPlate_Alu" type="fixed">
+    <parent link="base_link"/>
+    <child link="CenterPlate_Alu"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="base_link_to_Basplate_Pexi" type="fixed">
+    <parent link="base_link"/>
+    <child link="Basplate_Pexi"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="base_link_to_MainFrame" type="fixed">
+    <parent link="base_link"/>
+    <child link="MainFrame"/>
+    <origin xyz="0.0 0.0 0.028" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="MainFrame_to_CenterPlate_Alu" type="fixed">
+    <parent link="MainFrame"/>
+    <child link="CenterPlate_Alu"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="MainFrame_to_Basplate_Pexi" type="fixed">
+    <parent link="MainFrame"/>
+    <child link="Basplate_Pexi"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="MainFrame_to_Scrws" type="fixed">
+    <parent link="MainFrame"/>
+    <child link="Scrws"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+</robot>

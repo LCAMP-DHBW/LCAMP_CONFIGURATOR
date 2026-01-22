@@ -1,0 +1,67 @@
+{
+	"Description": "Code for Arduino to control Line Follower",
+	
+	"ArduinoCode": {
+		"libraries": [
+			"// Benötigte Dateien für den Line Follower",
+			"LineFollower.ino"
+		],	
+		"headers": [
+			"// Benötigte Header-Datei für den Line Follower",
+		    "#include \"wire.h\""
+
+		],
+
+		"initComment": " ",
+
+		"initCode": [
+			"// Definition der Pins für die Line Follower",
+			"const int Pin_1 = 12;",
+			"const int Pin_2 = 13;"
+		],
+
+		"setupComment": "void setup() {",
+		"setupCode": [
+			"// Setze die Pins als Ausgang",
+			"pinMode(Pin_1, OUTPUT);",
+			"pinMode(Pin_2, OUTPUT);"
+		],
+		"loopReadComment": "void loop() { ",
+		"loopReadCode": [
+			"// Line Follower read data"
+		],
+		"loopCalcComment": " ",
+		"calcCode": [
+			"// Berechnung control vector from Line follower "
+		],
+		"loopWriteCode": [
+			"// now Responce Line follower",
+			"// calculation has to be done in Controll Mode"
+		],
+		"functionComment": " ",
+		"functionCode": []
+	},
+
+	"Assembly": {
+		"type": "AuxSensor",
+		"Name": "Line Follower",
+		"parts": [
+			{
+				"Reference": "RC-34-2321",
+				"Name": "Base",
+				"Number": "1",
+				"Data3D": "SensorBase.stl",
+				"Type": "3D-Print",
+				"description": "Sensor Base Part as 3D Printed Part for LineFollowe"
+			},
+			{
+				"Reference": "RC-34-2321.5",
+				"Name": "sensor PCB",
+				"Number": 1,
+				"Data3D": "Sensorpcb.stl",
+				"Type": "pcb",
+				"description": "Sensor PCB for LineFollower"
+			}
+		]
+	}
+}

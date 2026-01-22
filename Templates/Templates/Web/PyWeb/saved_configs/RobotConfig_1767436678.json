@@ -1,0 +1,38 @@
+{
+  "colorScheme": {
+    "baseColor": "#d0d0f0",
+    "mainColor": "#a0a0f0",
+    "detailColor": "#80a5ff",
+    "accentColor": "#ff00f0",
+    "tireColor": "#000404"
+  },
+  "drive": [
+    {
+      "id": 1,
+      "drive": "DC-drive",
+      "wheelType": "Mecanum"
+    },
+    {
+      "id": 2,
+      "drive": "DC-drive",
+      "wheelType": "Mecanum"
+    },
+    {
+      "id": 3,
+      "drive": "DC-drive",
+      "wheelType": "Mecanum"
+    },
+    {
+      "id": 4,
+      "drive": "DC-drive",
+      "wheelType": "Mecanum"
+    }
+  ],
+  "sensors": [
+    {
+      "type": "LED",
+      "location": "f1",
+      "color": "#f20d2f"
+    }
+  ]
+}

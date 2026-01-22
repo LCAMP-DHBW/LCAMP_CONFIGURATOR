@@ -1,0 +1,9 @@
+{
+  "BasePath": "D:\\Users\\kdRupp\\Source\\Repos\\LCAMP-DHBW",
+  "TemplatePath": "Templates",
+  "DataPath": "Daten",
+  "OutputPath": "Output",
+  "WebURL": "http://localhost:7077/",
+  "WebRestart": false,
+  "Data": {}
+}

@@ -1,0 +1,718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<robot name="LCAMP_Robot">
+  <link name="center">
+    <collision>
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="sbFront">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="100" />
+      <inertia ixx="4.746667343030406E-05" ixy="0" ixz="0" iyy="0.0004016333905630151" iyz="0" izz="0.000380833387599174" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\SensorSystems\STL-Step-Files\Sensorbox curved_64_15.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="sbFront_material">
+        <color rgba="0.82421875 0.80859375 0.859375 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\SensorSystems\STL-Step-Files\Sensorbox curved_64_15.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="sbRear">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="100" />
+      <inertia ixx="4.746667343030406E-05" ixy="0" ixz="0" iyy="0.0004016333905630151" iyz="0" izz="0.000380833387599174" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\SensorSystems\STL-Step-Files\Sensorbox curved_64_15.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="sbRear_material">
+        <color rgba="0.82421875 0.80859375 0.859375 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\SensorSystems\STL-Step-Files\Sensorbox curved_64_15.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="sbLeft">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="100" />
+      <inertia ixx="4.746667343030406E-05" ixy="0" ixz="0" iyy="0.0004016333905630151" iyz="0" izz="0.000380833387599174" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\SensorSystems\STL-Step-Files\Sensorbox_small_64.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="sbLeft_material">
+        <color rgba="0.82421875 0.80859375 0.859375 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\SensorSystems\STL-Step-Files\Sensorbox_small_64.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="sbRight">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="100" />
+      <inertia ixx="4.746667343030406E-05" ixy="0" ixz="0" iyy="0.0004016333905630151" iyz="0" izz="0.000380833387599174" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\SensorSystems\STL-Step-Files\Sensorbox_small_arduino.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="sbRight_material">
+        <color rgba="0.82421875 0.80859375 0.859375 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\SensorSystems\STL-Step-Files\Sensorbox_small_arduino.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Wheel1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="100" />
+      <inertia ixx="4.746667343030406E-05" ixy="0" ixz="0" iyy="0.0004016333905630151" iyz="0" izz="0.000380833387599174" />
+    </inertial>
+    <visual name="Wheel_Hub">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Wheel_Hub.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="mecanumWheel_1a_pin">
+      <origin rpy="0 0 0" xyz="0 0 0.003000000142492354" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\mecanumWheel_1a_pin.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="mecanumWheel_1b_pin24">
+      <origin rpy="0 0 0" xyz="0 0 0.03800000180490315" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\mecanumWheel_1b_pin24.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8">
+      <origin rpy="0 0 0" xyz="0 0 0.035000001662410796" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Hub_Cup_8.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1a">
+      <origin rpy="0 0.7853981852531433 0" xyz="-0 0.0390000018524006 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1b">
+      <origin rpy="0 0.7853981852531434 0.6981317400932312" xyz="-0.02506871914245708 0.029875733715573515 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1c">
+      <origin rpy="0 0.7853981852531433 1.3962634801864624" xyz="-0.03840750472397466 0.006772276232192138 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1d">
+      <origin rpy="0 0.7853981852531433 2.094395160675049" xyz="-0.03377499121532283 -0.019500002894669417 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1e">
+      <origin rpy="0 0.7853981852531434 2.792526960372925" xyz="-0.013338780462851198 -0.03664801604795421 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1f">
+      <origin rpy="0 0.7853981852531433 -2.792526547108786" xyz="0.01333879560816086 -0.036648010535511456 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1g">
+      <origin rpy="0 0.7853981852531434 -2.094394985829489" xyz="0.03377499462481124 -0.019499996989261865 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1h">
+      <origin rpy="0 0.7853981852531433 -1.3962629477130337" xyz="0.03840750111791207 0.006772296683166904 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1i">
+      <origin rpy="0 0.7853981852531434 -0.698131386433737" xyz="0.025068708576618637 0.02987574258136218 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel1_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Wheel2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="100" />
+      <inertia ixx="4.746667343030406E-05" ixy="0" ixz="0" iyy="0.0004016333905630151" iyz="0" izz="0.000380833387599174" />
+    </inertial>
+    <visual name="Wheel_Hub">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Wheel_Hub.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="mecanumWheel_1a_pin">
+      <origin rpy="0 0 0" xyz="0 0 0.003000000142492354" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\mecanumWheel_1a_pin.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="mecanumWheel_1b_pin24">
+      <origin rpy="0 0 0" xyz="0 0 0.03800000180490315" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\mecanumWheel_1b_pin24.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8">
+      <origin rpy="0 0 0" xyz="0 0 0.035000001662410796" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Hub_Cup_8.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1a">
+      <origin rpy="0 0.7853981852531433 0" xyz="-0 0.0390000018524006 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1b">
+      <origin rpy="0 0.7853981852531434 0.6981317400932312" xyz="-0.02506871914245708 0.029875733715573515 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1c">
+      <origin rpy="0 0.7853981852531433 1.3962634801864624" xyz="-0.03840750472397466 0.006772276232192138 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1d">
+      <origin rpy="0 0.7853981852531433 2.094395160675049" xyz="-0.03377499121532283 -0.019500002894669417 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1e">
+      <origin rpy="0 0.7853981852531434 2.792526960372925" xyz="-0.013338780462851198 -0.03664801604795421 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1f">
+      <origin rpy="0 0.7853981852531433 -2.792526547108786" xyz="0.01333879560816086 -0.036648010535511456 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1g">
+      <origin rpy="0 0.7853981852531434 -2.094394985829489" xyz="0.03377499462481124 -0.019499996989261865 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1h">
+      <origin rpy="0 0.7853981852531433 -1.3962629477130337" xyz="0.03840750111791207 0.006772296683166904 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1i">
+      <origin rpy="0 0.7853981852531434 -0.698131386433737" xyz="0.025068708576618637 0.02987574258136218 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel2_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Wheel3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="100" />
+      <inertia ixx="4.746667343030406E-05" ixy="0" ixz="0" iyy="0.0004016333905630151" iyz="0" izz="0.000380833387599174" />
+    </inertial>
+    <visual name="Wheel_Hub">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Wheel_Hub.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="mecanumWheel_1a_pin">
+      <origin rpy="0 0 0" xyz="0 0 0.003000000142492354" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\mecanumWheel_1a_pin.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="mecanumWheel_1b_pin24">
+      <origin rpy="0 0 0" xyz="0 0 0.03800000180490315" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\mecanumWheel_1b_pin24.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8">
+      <origin rpy="0 0 0" xyz="0 0 0.035000001662410796" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Hub_Cup_8.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1a">
+      <origin rpy="0 0.7853981852531433 0" xyz="-0 0.0390000018524006 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1b">
+      <origin rpy="0 0.7853981852531434 0.6981317400932312" xyz="-0.02506871914245708 0.029875733715573515 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1c">
+      <origin rpy="0 0.7853981852531433 1.3962634801864624" xyz="-0.03840750472397466 0.006772276232192138 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1d">
+      <origin rpy="0 0.7853981852531433 2.094395160675049" xyz="-0.03377499121532283 -0.019500002894669417 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1e">
+      <origin rpy="0 0.7853981852531434 2.792526960372925" xyz="-0.013338780462851198 -0.03664801604795421 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1f">
+      <origin rpy="0 0.7853981852531433 -2.792526547108786" xyz="0.01333879560816086 -0.036648010535511456 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1g">
+      <origin rpy="0 0.7853981852531434 -2.094394985829489" xyz="0.03377499462481124 -0.019499996989261865 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1h">
+      <origin rpy="0 0.7853981852531433 -1.3962629477130337" xyz="0.03840750111791207 0.006772296683166904 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1i">
+      <origin rpy="0 0.7853981852531434 -0.698131386433737" xyz="0.025068708576618637 0.02987574258136218 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel3_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Wheel4">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="100" />
+      <inertia ixx="4.746667343030406E-05" ixy="0" ixz="0" iyy="0.0004016333905630151" iyz="0" izz="0.000380833387599174" />
+    </inertial>
+    <visual name="Wheel_Hub">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Wheel_Hub.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="mecanumWheel_1a_pin">
+      <origin rpy="0 0 0" xyz="0 0 0.003000000142492354" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\mecanumWheel_1a_pin.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="mecanumWheel_1b_pin24">
+      <origin rpy="0 0 0" xyz="0 0 0.03800000180490315" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\mecanumWheel_1b_pin24.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8">
+      <origin rpy="0 0 0" xyz="0 0 0.035000001662410796" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\Wheels\STL-Step-Dateien\Hub_Cup_8.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.3 0.3 0.5 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1a">
+      <origin rpy="0 0.7853981852531433 0" xyz="-0 0.0390000018524006 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1b">
+      <origin rpy="0 0.7853981852531434 0.6981317400932312" xyz="-0.02506871914245708 0.029875733715573515 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1c">
+      <origin rpy="0 0.7853981852531433 1.3962634801864624" xyz="-0.03840750472397466 0.006772276232192138 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1d">
+      <origin rpy="0 0.7853981852531433 2.094395160675049" xyz="-0.03377499121532283 -0.019500002894669417 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1e">
+      <origin rpy="0 0.7853981852531434 2.792526960372925" xyz="-0.013338780462851198 -0.03664801604795421 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1f">
+      <origin rpy="0 0.7853981852531433 -2.792526547108786" xyz="0.01333879560816086 -0.036648010535511456 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1g">
+      <origin rpy="0 0.7853981852531434 -2.094394985829489" xyz="0.03377499462481124 -0.019499996989261865 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1h">
+      <origin rpy="0 0.7853981852531433 -1.3962629477130337" xyz="0.03840750111791207 0.006772296683166904 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <visual name="Mecanum_Rolle_1i">
+      <origin rpy="0 0.7853981852531434 -0.698131386433737" xyz="0.025068708576618637 0.02987574258136218 0.020000001415610313" />
+      <geometry>
+        <mesh filename="D:\Users\kdRupp\Source\Repos\LCAMP-DHBW\Daten\DHBW CAD-Data\MecanumWheel\STL-Step-Files\Mecanum_Rolle_1.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Wheel4_material">
+        <color rgba="0.95 0.95 0.95 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="wheel_hl">
+    <collision>
+      <geometry>
+        <cylinder length="0.028000001329928637" radius="0.04800000227987766" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="wheel_hr">
+    <collision>
+      <geometry>
+        <cylinder length="0.028000001329928637" radius="0.04800000227987766" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="wheel_vl">
+    <collision>
+      <geometry>
+        <cylinder length="0.028000001329928637" radius="0.04800000227987766" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="wheel_vr">
+    <collision>
+      <geometry>
+        <cylinder length="0.028000001329928637" radius="0.04800000227987766" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_hl" type="continuous">
+    <origin rpy="1.5707963267948966 0 0" xyz="-0.10000000149011612 0.09000000357627869 0" />
+    <parent link="center" />
+    <child link="wheel_hl" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_hlhc" type="fixed">
+    <origin rpy="0 3.141592653589793 0" xyz="0 0 0.012000000104308128" />
+    <parent link="wheel_hl" />
+    <child link="Wheel1" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_hr" type="continuous">
+    <origin rpy="1.5707963267948966 0 0" xyz="-0.10000000149011612 -0.09000000357627869 0" />
+    <parent link="center" />
+    <child link="wheel_hr" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_hrhc" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.012000000104308128" />
+    <parent link="wheel_hr" />
+    <child link="Wheel2" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_vl" type="continuous">
+    <origin rpy="1.5707963267948966 0 0" xyz="0.10000000149011612 0.09000000357627869 0" />
+    <parent link="center" />
+    <child link="wheel_vl" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_vlhc" type="fixed">
+    <origin rpy="0 3.141592653589793 0" xyz="0 0 0.012000000104308128" />
+    <parent link="wheel_vl" />
+    <child link="Wheel3" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_vr" type="continuous">
+    <origin rpy="1.5707963267948966 0 0" xyz="0.10000000474974513 -0.09000000357627869 0" />
+    <parent link="center" />
+    <child link="wheel_vr" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_vrhc" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.012000000104308128" />
+    <parent link="wheel_vr" />
+    <child link="Wheel4" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sbFront" type="fixed">
+    <origin rpy="0 0 0" xyz="0.15000000596046448 0 -0.03200000151991844" />
+    <parent link="center" />
+    <child link="sbFront" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sbRear" type="fixed">
+    <origin rpy="0 0 3.141592653589793" xyz="-0.15000000596046448 0 -0.03200000151991844" />
+    <parent link="center" />
+    <child link="sbRear" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sbLeft" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.07000000029802322 0.03200000151991844" />
+    <parent link="center" />
+    <child link="sbLeft" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sbRight" type="fixed">
+    <origin rpy="-1.5707963267948966 0 3.141592653589793" xyz="0.1300000101327896 -0.08000000566244125 -0.005000000353902578" />
+    <parent link="center" />
+    <child link="sbRight" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+</robot>
