@@ -9,6 +9,7 @@
       "LCAMPConfigurator/1.2.3": {
         "dependencies": {
           "ClosedXML": "0.105.0",
+          "ConfigurationExporter": "1.0.0",
           "LCAMPConfiguratorCore": "1.0.0",
           "LCAMPConfiguratorUserInterface": "1.2.3",
           "Microsoft.CSharp": "4.7.0",
@@ -1076,6 +1077,20 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "ConfigurationExporter/1.0.0": {
+        "dependencies": {
+          "ClosedXML": "0.105.0",
+          "LCAMPConfiguratorCore": "1.0.0",
+          "Newtonsoft.Json": "13.0.4",
+          "Siemens.RosSharp.Urdf": "2.2.0"
+        },
+        "runtime": {
+          "ConfigurationExporter.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "LCAMPConfiguratorCore/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.4"
@@ -1907,6 +1922,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "ConfigurationExporter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "LCAMPConfiguratorCore/1.0.0": {
       "type": "project",
