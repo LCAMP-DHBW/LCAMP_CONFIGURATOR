@@ -7,5 +7,7 @@
   "use_predefinedWheels": false,
   "gen_subSystems": false,
   "gen_extendedSystem": false,
-  "gen_collisionBox": false
+  "gen_collisionBox": true,
+  "gen_3dGeometry": true,
+  "gen_DefaultRobot": false
 }

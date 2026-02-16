@@ -1,0 +1,8 @@
+{
+	"Description": "Code for Arduino to control MQTT",
+	"Assembly": {
+		"Type": "Communication",
+		"Name": "MQTT",
+		"Description": "The Comunication Platform for MQTT"
+	}
+}

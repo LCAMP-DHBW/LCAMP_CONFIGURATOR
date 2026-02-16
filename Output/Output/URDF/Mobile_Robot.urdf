@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<robot name="LCAMP_Robot">
+  <link name="center">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="50" />
+      <inertia ixx="9.873334740207909E-05" ixy="0" ixz="0" iyy="0.00039206672253317153" iyz="0" izz="0.0004566667317381781" />
+    </inertial>
+    <visual name="center">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.06400000303983688" />
+      </geometry>
+      <material name="center_material">
+        <color rgba="0.6000000238418579 0.4000000059604645 0.699999988079071 0.5" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_bl">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="2.592083702685407E-06" ixy="0" ixz="0" iyy="5.717084147974034E-06" iyz="0" izz="5.208334075481045E-06" />
+    </inertial>
+    <visual name="Drive_bl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+      <material name="Drive_bl_material">
+        <color rgba="0.2 0.7 0.7 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_bl_Drive-Holder">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Passive_Holder_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Passive_Holder_64.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_bl_Drive-Holder_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="adjusting ring.stl">
+      <origin rpy="1.5707963705062866 0 0" xyz="0 0 -0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.06000000238418579" radius="0.003000000026077032" />
+      </geometry>
+      <material name="Drive_bl_Drive-Holder_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_bl_Regular-Wheel">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="wheel_hub_ax.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0010000000474974513" />
+      <geometry>
+        <mesh filename=".\stlFiles\wheel_hub_ax.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_bl_Regular-Wheel_material">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_30_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0020000000949949026" />
+      <geometry>
+        <mesh filename=".\stlFiles\Regular_Wheel_Star_30_84.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_bl_Regular-Wheel_material">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_24_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.02800000086426735" />
+      <geometry>
+        <mesh filename=".\stlFiles\Regular_Wheel_Star_24_84.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_bl_Regular-Wheel_material">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.02800000086426735" />
+      <geometry>
+        <mesh filename=".\stlFiles\Hub_Cup_8.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_bl_Regular-Wheel_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="Wheel_92_outside.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.015000000596046448" />
+      <geometry>
+        <mesh filename=".\stlFiles\Wheel_92_outside.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_bl_Regular-Wheel_material">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_br">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="2.592083702685407E-06" ixy="0" ixz="0" iyy="5.717084147974034E-06" iyz="0" izz="5.208334075481045E-06" />
+    </inertial>
+    <visual name="Drive_br">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+      <material name="Drive_br_material">
+        <color rgba="0.2 0.7 0.7 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_br_Drive-Holder">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Passive_Holder_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Passive_Holder_64.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_br_Drive-Holder_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="adjusting ring.stl">
+      <origin rpy="1.5707963705062866 0 0" xyz="0 0 -0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.06000000238418579" radius="0.003000000026077032" />
+      </geometry>
+      <material name="Drive_br_Drive-Holder_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_br_Regular-Wheel">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="wheel_hub_ax.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0010000000474974513" />
+      <geometry>
+        <mesh filename=".\stlFiles\wheel_hub_ax.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_br_Regular-Wheel_material">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_30_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0020000000949949026" />
+      <geometry>
+        <mesh filename=".\stlFiles\Regular_Wheel_Star_30_84.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_br_Regular-Wheel_material">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_24_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.02800000086426735" />
+      <geometry>
+        <mesh filename=".\stlFiles\Regular_Wheel_Star_24_84.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_br_Regular-Wheel_material">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.02800000086426735" />
+      <geometry>
+        <mesh filename=".\stlFiles\Hub_Cup_8.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_br_Regular-Wheel_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="Wheel_92_outside.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.015000000596046448" />
+      <geometry>
+        <mesh filename=".\stlFiles\Wheel_92_outside.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_br_Regular-Wheel_material">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fl">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="2.592083702685407E-06" ixy="0" ixz="0" iyy="5.717084147974034E-06" iyz="0" izz="5.208334075481045E-06" />
+    </inertial>
+    <visual name="Drive_fl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+      <material name="Drive_fl_material">
+        <color rgba="0.2 0.7 0.7 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fl_Drive-Holder">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Passive_Holder_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Passive_Holder_64.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fl_Drive-Holder_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="adjusting ring.stl">
+      <origin rpy="1.5707963705062866 0 0" xyz="0 0 -0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.06000000238418579" radius="0.003000000026077032" />
+      </geometry>
+      <material name="Drive_fl_Drive-Holder_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fl_Regular-Wheel">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="wheel_hub_ax.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0010000000474974513" />
+      <geometry>
+        <mesh filename=".\stlFiles\wheel_hub_ax.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fl_Regular-Wheel_material">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_30_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0020000000949949026" />
+      <geometry>
+        <mesh filename=".\stlFiles\Regular_Wheel_Star_30_84.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fl_Regular-Wheel_material">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_24_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.02800000086426735" />
+      <geometry>
+        <mesh filename=".\stlFiles\Regular_Wheel_Star_24_84.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fl_Regular-Wheel_material">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.02800000086426735" />
+      <geometry>
+        <mesh filename=".\stlFiles\Hub_Cup_8.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fl_Regular-Wheel_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="Wheel_92_outside.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.015000000596046448" />
+      <geometry>
+        <mesh filename=".\stlFiles\Wheel_92_outside.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fl_Regular-Wheel_material">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fr">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="2.592083702685407E-06" ixy="0" ixz="0" iyy="5.717084147974034E-06" iyz="0" izz="5.208334075481045E-06" />
+    </inertial>
+    <visual name="Drive_fr">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+      <material name="Drive_fr_material">
+        <color rgba="0.2 0.7 0.7 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fr_Drive-Holder">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Passive_Holder_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Passive_Holder_64.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fr_Drive-Holder_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="adjusting ring.stl">
+      <origin rpy="1.5707963705062866 0 0" xyz="0 0 -0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.06000000238418579" radius="0.003000000026077032" />
+      </geometry>
+      <material name="Drive_fr_Drive-Holder_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fr_Regular-Wheel">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="wheel_hub_ax.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0010000000474974513" />
+      <geometry>
+        <mesh filename=".\stlFiles\wheel_hub_ax.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fr_Regular-Wheel_material">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_30_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0020000000949949026" />
+      <geometry>
+        <mesh filename=".\stlFiles\Regular_Wheel_Star_30_84.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fr_Regular-Wheel_material">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <visual name="Regular_Wheel_Star_24_84.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.02800000086426735" />
+      <geometry>
+        <mesh filename=".\stlFiles\Regular_Wheel_Star_24_84.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fr_Regular-Wheel_material">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.02800000086426735" />
+      <geometry>
+        <mesh filename=".\stlFiles\Hub_Cup_8.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fr_Regular-Wheel_material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <visual name="Wheel_92_outside.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.015000000596046448" />
+      <geometry>
+        <mesh filename=".\stlFiles\Wheel_92_outside.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Drive_fr_Regular-Wheel_material">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_front">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="2.0081669528150755E-05" ixy="0" ixz="0" iyy="2.3733336715152028E-06" iyz="0" izz="1.90416693799587E-05" />
+    </inertial>
+    <visual name="Sensorbox_front">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.04000000189989805 0.21000000834465027 0.06400000303983688" />
+      </geometry>
+      <material name="Sensorbox_front_material">
+        <color rgba="0.2 0.7 0.7 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.04000000189989805 0.21000000834465027 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_front_Sensorbox_curved">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="3D">
+      <origin rpy="0.2617993950843811 -1.5707963705062866 0" xyz="0.015000000596046448 0.0650000050663948 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 0.19607843458652496" />
+      </material>
+    </visual>
+    <visual name="3D">
+      <origin rpy="0 1.5707963705062866 0" xyz="0.02500000037252903 0.023000001907348633 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 0.19607843458652496" />
+      </material>
+    </visual>
+    <visual name="3D">
+      <origin rpy="0 1.5707963705062866 0" xyz="0.02500000037252903 -0.023000001907348633 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 0.19607843458652496" />
+      </material>
+    </visual>
+    <visual name="3D">
+      <origin rpy="-0.2617993950843811 -1.5707963705062866 0" xyz="0.015000000596046448 -0.0650000050663948 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 0.19607843458652496" />
+      </material>
+    </visual>
+    <visual name="Sensorbox curved_64_15.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Sensorbox curved_64_15.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_back">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="2.0081669528150755E-05" ixy="0" ixz="0" iyy="2.3733336715152028E-06" iyz="0" izz="1.90416693799587E-05" />
+    </inertial>
+    <visual name="Sensorbox_back">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.04000000189989805 0.21000000834465027 0.06400000303983688" />
+      </geometry>
+      <material name="Sensorbox_back_material">
+        <color rgba="0.2 0.7 0.7 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.04000000189989805 0.21000000834465027 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_back_Sensorbox_curved">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="3D">
+      <origin rpy="0.2617993950843811 -1.5707963705062866 0" xyz="0.015000000596046448 0.0650000050663948 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 0.19607843458652496" />
+      </material>
+    </visual>
+    <visual name="3D">
+      <origin rpy="0 1.5707963705062866 0" xyz="0.02500000037252903 0.023000001907348633 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 0.19607843458652496" />
+      </material>
+    </visual>
+    <visual name="3D">
+      <origin rpy="0 1.5707963705062866 0" xyz="0.02500000037252903 -0.023000001907348633 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 0.19607843458652496" />
+      </material>
+    </visual>
+    <visual name="3D">
+      <origin rpy="-0.2617993950843811 -1.5707963705062866 0" xyz="0.015000000596046448 -0.0650000050663948 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 0.19607843458652496" />
+      </material>
+    </visual>
+    <visual name="Sensorbox curved_64_15.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Sensorbox curved_64_15.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_center">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="2.3733336715152028E-06" ixy="0" ixz="0" iyy="5.38833410112967E-06" iyz="0" izz="4.3483339529376145E-06" />
+    </inertial>
+    <visual name="Sensorbox_center">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.09400000446476042 0.04000000283122063 0.06400000303983688" />
+      </geometry>
+      <material name="Sensorbox_center_material">
+        <color rgba="0.2 0.7 0.7 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.09400000446476042 0.04000000283122063 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_center_Sensorbox_center">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="3D">
+      <origin rpy="-1.5707963705062866 0 0" xyz="0.023000001907348633 0.030000001192092896 -0.030000001192092896" />
+      <geometry>
+        <cylinder length="0.04000000283122063" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_center_Sensorbox_center_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 0.19607843458652496" />
+      </material>
+    </visual>
+    <visual name="3D">
+      <origin rpy="-1.5707963705062866 0 0" xyz="-0.023000001907348633 0.030000001192092896 -0.030000001192092896" />
+      <geometry>
+        <cylinder length="0.04000000283122063" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_center_Sensorbox_center_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 0.19607843458652496" />
+      </material>
+    </visual>
+    <visual name="Sensorbox_small_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Sensorbox_small_64.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Sensorbox_center_Sensorbox_center_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_controller">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="2.3733336715152028E-06" ixy="0" ixz="0" iyy="5.38833410112967E-06" iyz="0" izz="4.3483339529376145E-06" />
+    </inertial>
+    <visual name="Sensorbox_controller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.09400000446476042 0.04000000283122063 0.06400000303983688" />
+      </geometry>
+      <material name="Sensorbox_controller_material">
+        <color rgba="0.2 0.7 0.7 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.09400000446476042 0.04000000283122063 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_controller_Controller">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="3D">
+      <origin rpy="-1.5707963705062866 0 0" xyz="0.023000001907348633 0.030000001192092896 -0.030000001192092896" />
+      <geometry>
+        <cylinder length="0.04000000283122063" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_controller_Controller_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 0.19607843458652496" />
+      </material>
+    </visual>
+    <visual name="3D">
+      <origin rpy="-1.5707963705062866 0 0" xyz="-0.023000001907348633 0.030000001192092896 -0.030000001192092896" />
+      <geometry>
+        <cylinder length="0.04000000283122063" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_controller_Controller_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 0.19607843458652496" />
+      </material>
+    </visual>
+    <visual name="Sensorbox_small_arduino_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Sensorbox_small_arduino_64.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Sensorbox_controller_Controller_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="CenterPlate_Alu">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="8.181667832491666E-06" ixy="0" ixz="0" iyy="3.751500534560091E-05" iyz="0" izz="4.566667317381781E-05" />
+    </inertial>
+    <visual name="CenterPlate_Alu">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.006000000052154064" />
+      </geometry>
+      <material name="CenterPlate_Alu_material">
+        <color rgba="0.2 0.7 0.7 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.006000000052154064" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Basplate_Pexi">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="8.168334497258434E-06" ixy="0" ixz="0" iyy="3.750167201036768E-05" iyz="0" izz="4.566667317381781E-05" />
+    </inertial>
+    <visual name="Basplate_Pexi">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.0020000000949949026" />
+      </geometry>
+      <material name="Basplate_Pexi_material">
+        <color rgba="0.2 0.7 0.7 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.0020000000949949026" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_Drive_bl" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.10000000149011612 0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Drive_bl" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_bl_Drive-Holder" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+    <parent link="Drive_bl" />
+    <child link="Drive_bl_Drive-Holder" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_bl_Regular-Wheel" type="continuous">
+    <origin rpy="-1.5707963705062866 0 0" xyz="0 0.005000000353902578 0" />
+    <parent link="Drive_bl" />
+    <child link="Drive_bl_Regular-Wheel" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_br" type="fixed">
+    <origin rpy="0 0 3.1415927410125732" xyz="-0.10000000149011612 -0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Drive_br" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_br_Drive-Holder" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+    <parent link="Drive_br" />
+    <child link="Drive_br_Drive-Holder" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_br_Regular-Wheel" type="continuous">
+    <origin rpy="-1.5707963705062866 0 0" xyz="0 0.005000000353902578 0" />
+    <parent link="Drive_br" />
+    <child link="Drive_br_Regular-Wheel" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_fl" type="fixed">
+    <origin rpy="0 0 0" xyz="0.10000000149011612 0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Drive_fl" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_fl_Drive-Holder" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+    <parent link="Drive_fl" />
+    <child link="Drive_fl_Drive-Holder" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_fl_Regular-Wheel" type="continuous">
+    <origin rpy="-1.5707963705062866 0 0" xyz="0 0.005000000353902578 0" />
+    <parent link="Drive_fl" />
+    <child link="Drive_fl_Regular-Wheel" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_fr" type="fixed">
+    <origin rpy="0 0 3.1415927410125732" xyz="0.10000000149011612 -0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Drive_fr" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_fr_Drive-Holder" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+    <parent link="Drive_fr" />
+    <child link="Drive_fr_Drive-Holder" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Drive_fr_Regular-Wheel" type="continuous">
+    <origin rpy="-1.5707963705062866 0 0" xyz="0 0.005000000353902578 0" />
+    <parent link="Drive_fr" />
+    <child link="Drive_fr_Regular-Wheel" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Sensorbox_front" type="fixed">
+    <origin rpy="0 0 0" xyz="0.15000000596046448 0 0" />
+    <parent link="center" />
+    <child link="Sensorbox_front" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Sensorbox_front_Sensorbox_curved" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.03200000151991844" />
+    <parent link="Sensorbox_front" />
+    <child link="Sensorbox_front_Sensorbox_curved" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Sensorbox_back" type="fixed">
+    <origin rpy="0 0 3.1415927410125732" xyz="-0.15000000596046448 0 0" />
+    <parent link="center" />
+    <child link="Sensorbox_back" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Sensorbox_back_Sensorbox_curved" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.03200000151991844" />
+    <parent link="Sensorbox_back" />
+    <child link="Sensorbox_back_Sensorbox_curved" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Sensorbox_center" type="fixed">
+    <origin rpy="0 0 3.1415927410125732" xyz="0 -0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Sensorbox_center" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Sensorbox_center_Sensorbox_center" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+    <parent link="Sensorbox_center" />
+    <child link="Sensorbox_center_Sensorbox_center" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Sensorbox_controller" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Sensorbox_controller" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_sub_Sensorbox_controller_Controller" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+    <parent link="Sensorbox_controller" />
+    <child link="Sensorbox_controller_Controller" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_CenterPlate_Alu" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.030000001192092896" />
+    <parent link="center" />
+    <child link="CenterPlate_Alu" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Basplate_Pexi" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.030000001192092896" />
+    <parent link="center" />
+    <child link="Basplate_Pexi" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+</robot>

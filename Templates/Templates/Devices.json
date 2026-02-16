@@ -166,6 +166,22 @@
   "Communication": [
     {
       "Properties": {},
+      "Name": "MQTT",
+      "Id": 0,
+      "Type": "Communication",
+      "Description": "The Comunication Platform for MQTT",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "OPC/UA",
+      "Id": 0,
+      "Type": "Communication",
+      "Description": "The Comunication Platform for OPC/UA",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
       "Name": "uRos",
       "Id": 0,
       "Type": "Communication",
@@ -310,10 +326,26 @@
     },
     {
       "Properties": {},
+      "Name": "MQTT",
+      "Id": 0,
+      "Type": "Communication",
+      "Description": "The Comunication Platform for MQTT",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
       "Name": "Omni-Wheel",
       "Id": 0,
       "Type": "Wheel",
       "Description": "The Wheel of the Robot",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "OPC/UA",
+      "Id": 0,
+      "Type": "Communication",
+      "Description": "The Comunication Platform for OPC/UA",
       "ComponentType": "ComponetItem"
     },
     {

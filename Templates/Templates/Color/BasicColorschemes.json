@@ -87,6 +87,27 @@
       "Detail": "#FFFF8040",
       "Accent": "#FF80FF00",
       "Tire": "#FF400040"
+    },
+    "LCAMP": {
+      "Base": "#FFFFFFFF",
+      "Main": "#FF0000FF",
+      "Detail": "#FFC0C0C0",
+      "Accent": "#FF6495ED",
+      "Tire": "#FF000000"
+    },
+    "DHBW": {
+      "Base": "#FFFFFFFF",
+      "Main": "#FF808080",
+      "Detail": "#FFFF0000",
+      "Accent": "#FFFFFFFF",
+      "Tire": "#FF000000"
+    },
+    "LightL": {
+      "Base": "#FFFFFFFF",
+      "Main": "#FF000000",
+      "Detail": "#FFC0C0C0",
+      "Accent": "#FF6495ED",
+      "Tire": "#FF000000"
     }
   },
   "SchemeListMaterials": {
@@ -250,6 +271,27 @@
       "Tire": null
     },
     "mySpecial": {
+      "Base": null,
+      "Main": null,
+      "Detail": null,
+      "Accent": null,
+      "Tire": null
+    },
+    "LCAMP": {
+      "Base": null,
+      "Main": null,
+      "Detail": null,
+      "Accent": null,
+      "Tire": null
+    },
+    "DHBW": {
+      "Base": null,
+      "Main": null,
+      "Detail": null,
+      "Accent": null,
+      "Tire": null
+    },
+    "LightL": {
       "Base": null,
       "Main": null,
       "Detail": null,

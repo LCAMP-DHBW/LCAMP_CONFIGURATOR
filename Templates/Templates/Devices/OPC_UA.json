@@ -1,0 +1,8 @@
+{
+	"Description": "Code for Arduino to control OPC/UA",
+	"Assembly": {
+		"Type": "Communication",
+		"Name": "OPC/UA",
+		"Description": "The Comunication Platform for OPC/UA"
+	}
+}

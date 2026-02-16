@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <robot name="LCAMP_Robot">
   <link name="center">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="50" />
+      <inertia ixx="9.873334740207909E-05" ixy="0" ixz="0" iyy="0.00039206672253317153" iyz="0" izz="0.0004566667317381781" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.06400000303983688" />
+      </geometry>
+      <material name="center_material">
+        <color rgba="0.6 0.4 0.7 0.5" />
+      </material>
+    </visual>
     <collision>
       <geometry>
         <box size="0.3000000142492354 0.14000000059604645 0.06400000303983688" />
@@ -604,6 +617,19 @@
     </collision>
   </link>
   <link name="wheel_hl">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="50" />
+      <inertia ixx="3.20666712359217E-05" ixy="0" ixz="0" iyy="3.20666712359217E-05" iyz="0" izz="57.600002735853195" />
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder length="0.028000001329928637" radius="0.04800000227987766" />
+      </geometry>
+      <material name="wheel_hl_material">
+        <color rgba="0.6 0.7 0.8 0.6" />
+      </material>
+    </visual>
     <collision>
       <geometry>
         <cylinder length="0.028000001329928637" radius="0.04800000227987766" />
@@ -611,6 +637,19 @@
     </collision>
   </link>
   <link name="wheel_hr">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="50" />
+      <inertia ixx="3.20666712359217E-05" ixy="0" ixz="0" iyy="3.20666712359217E-05" iyz="0" izz="57.600002735853195" />
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder length="0.028000001329928637" radius="0.04800000227987766" />
+      </geometry>
+      <material name="wheel_hr_material">
+        <color rgba="0.6 0.7 0.8 0.6" />
+      </material>
+    </visual>
     <collision>
       <geometry>
         <cylinder length="0.028000001329928637" radius="0.04800000227987766" />
@@ -618,6 +657,19 @@
     </collision>
   </link>
   <link name="wheel_vl">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="50" />
+      <inertia ixx="3.20666712359217E-05" ixy="0" ixz="0" iyy="3.20666712359217E-05" iyz="0" izz="57.600002735853195" />
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder length="0.028000001329928637" radius="0.04800000227987766" />
+      </geometry>
+      <material name="wheel_vl_material">
+        <color rgba="0.6 0.7 0.8 0.6" />
+      </material>
+    </visual>
     <collision>
       <geometry>
         <cylinder length="0.028000001329928637" radius="0.04800000227987766" />
@@ -625,6 +677,19 @@
     </collision>
   </link>
   <link name="wheel_vr">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="50" />
+      <inertia ixx="3.20666712359217E-05" ixy="0" ixz="0" iyy="3.20666712359217E-05" iyz="0" izz="57.600002735853195" />
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder length="0.028000001329928637" radius="0.04800000227987766" />
+      </geometry>
+      <material name="wheel_vr_material">
+        <color rgba="0.6 0.7 0.8 0.6" />
+      </material>
+    </visual>
     <collision>
       <geometry>
         <cylinder length="0.028000001329928637" radius="0.04800000227987766" />
