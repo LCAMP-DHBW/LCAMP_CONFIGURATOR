@@ -1,20 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<robot name="Mobile_Robot_x1">
+<robot name="Mobile_Robot_s1">
   <link name="centerFrame">
-    <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0" />
-      <mass value="50" />
-      <inertia ixx="9.873334740207909E-05" ixy="0" ixz="0" iyy="0.00039206672253317153" iyz="0" izz="0.0004566667317381781" />
-    </inertial>
-    <visual name="centerFrame">
-      <origin rpy="0 0 0" xyz="0 0 0" />
-      <geometry>
-        <box size="0.3000000142492354 0.14000000059604645 0.06400000303983688" />
-      </geometry>
-      <material name="centerFrame_material">
-        <color rgba="0.6000000238418579 0.4000000059604645 0.699999988079071 0.5" />
-      </material>
-    </visual>
     <collision>
       <geometry>
         <box size="0.3000000142492354 0.14000000059604645 0.06400000303983688" />
