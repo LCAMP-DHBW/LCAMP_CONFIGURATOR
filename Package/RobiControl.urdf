@@ -1,0 +1,2734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<robot name="LCAMP_Robot">
+  <link name="center">
+    <collision>
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_bl">
+    <collision>
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_bl_DC-Drive_1a">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="DC_Holder_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_bl_DC-Drive_1a_material">
+        <color rgba="0 0.545098066329956 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual name="dc.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_bl_DC-Drive_1a_material">
+        <color rgba="0 0.545098066329956 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual name="MotorController.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_bl_DC-Drive_1a_material">
+        <color rgba="0 0.545098066329956 0.545098066329956 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_0_0_3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_1_1_5">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_2_2_7">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_3_3_9">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_4_4_11">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_5_5_13">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_0_0_15">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_1_1_17">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_2_2_19">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_3_3_21">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_4_4_23">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_5_5_25">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_bl_Omni-Wheel_2a">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Wheel_Hub_ax.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0010000000474974513" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_bl_Omni-Wheel_2a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_2a.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0020000000949949026" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_bl_Omni-Wheel_2a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_2b.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0050000002374872565" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_bl_Omni-Wheel_2a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_1.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.026000001234933734" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_bl_Omni-Wheel_2a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_1.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_bl_Omni-Wheel_2a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.034000001614913344" />
+      <geometry>
+        <cylinder length="0.00800000037997961" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Drive_bl_Omni-Wheel_2a_material">
+        <color rgba="0.9725490212440491 0.9725490212440491 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_br">
+    <collision>
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_br_DC-Drive_27a">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="DC_Holder_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_br_DC-Drive_27a_material">
+        <color rgba="0 0.545098066329956 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual name="dc.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_br_DC-Drive_27a_material">
+        <color rgba="0 0.545098066329956 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual name="MotorController.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_br_DC-Drive_27a_material">
+        <color rgba="0 0.545098066329956 0.545098066329956 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_0_0_29">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_1_1_31">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_2_2_33">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_3_3_35">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_4_4_37">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_5_5_39">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_0_0_41">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_1_1_43">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_2_2_45">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_3_3_47">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_4_4_49">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_5_5_51">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_br_Omni-Wheel_28a">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Wheel_Hub_ax.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0010000000474974513" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_br_Omni-Wheel_28a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_2a.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0020000000949949026" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_br_Omni-Wheel_28a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_2b.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0050000002374872565" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_br_Omni-Wheel_28a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_1.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.026000001234933734" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_br_Omni-Wheel_28a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_1.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_br_Omni-Wheel_28a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.034000001614913344" />
+      <geometry>
+        <cylinder length="0.00800000037997961" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Drive_br_Omni-Wheel_28a_material">
+        <color rgba="0.9725490212440491 0.9725490212440491 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fl">
+    <collision>
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fl_DC-Drive_53a">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="DC_Holder_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_fl_DC-Drive_53a_material">
+        <color rgba="0 0.545098066329956 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual name="dc.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_fl_DC-Drive_53a_material">
+        <color rgba="0 0.545098066329956 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual name="MotorController.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_fl_DC-Drive_53a_material">
+        <color rgba="0 0.545098066329956 0.545098066329956 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_0_0_55">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_1_1_57">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_2_2_59">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_3_3_61">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_4_4_63">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_5_5_65">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_0_0_67">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_1_1_69">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_2_2_71">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_3_3_73">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_4_4_75">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_5_5_77">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fl_Omni-Wheel_54a">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Wheel_Hub_ax.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0010000000474974513" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_fl_Omni-Wheel_54a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_2a.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0020000000949949026" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_fl_Omni-Wheel_54a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_2b.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0050000002374872565" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_fl_Omni-Wheel_54a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_1.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.026000001234933734" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_fl_Omni-Wheel_54a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_1.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_fl_Omni-Wheel_54a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.034000001614913344" />
+      <geometry>
+        <cylinder length="0.00800000037997961" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Drive_fl_Omni-Wheel_54a_material">
+        <color rgba="0.9725490212440491 0.9725490212440491 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fr">
+    <collision>
+      <geometry>
+        <box size="0.10000000474974513 0.05000000074505806 0.06100000441074371" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fr_DC-Drive_79a">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="DC_Holder_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_fr_DC-Drive_79a_material">
+        <color rgba="0 0.545098066329956 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual name="dc.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_fr_DC-Drive_79a_material">
+        <color rgba="0 0.545098066329956 0.545098066329956 1" />
+      </material>
+    </visual>
+    <visual name="MotorController.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.05000000074505806 0.04500000178813934 0.06400000303983688" />
+      </geometry>
+      <material name="Drive_fr_DC-Drive_79a_material">
+        <color rgba="0 0.545098066329956 0.545098066329956 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_0_0_81">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_1_1_83">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_2_2_85">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_3_3_87">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_4_4_89">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_a_Rollers_a_5_5_91">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_0_0_93">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_1_1_95">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_2_2_97">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_3_3_99">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_4_4_101">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Rollers_b_Rollers_b_5_5_103">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Roller">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\OmniWheel_Roller_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Roller_material">
+        <color rgba="0.3921568691730499 0.5843137502670288 0.929411768913269 1" />
+      </material>
+    </visual>
+    <visual name="RollerPin">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename=".\stlFiles\Pin_Roller.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="RollerPin_material">
+        <color rgba="0.501960813999176 0.501960813999176 0.501960813999176 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Drive_fr_Omni-Wheel_80a">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Wheel_Hub_ax.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0010000000474974513" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_fr_Omni-Wheel_80a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_2a.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0020000000949949026" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_fr_Omni-Wheel_80a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_2b.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.0050000002374872565" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_fr_Omni-Wheel_80a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_1.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.026000001234933734" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_fr_Omni-Wheel_80a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="OmniWheel_Star_1.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Drive_fr_Omni-Wheel_80a_material">
+        <color rgba="0.4000000059604645 0.8039215803146362 0.6666666865348816 1" />
+      </material>
+    </visual>
+    <visual name="Hub_Cup_8.stl">
+      <origin rpy="0 0 0" xyz="0 0 0.034000001614913344" />
+      <geometry>
+        <cylinder length="0.00800000037997961" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Drive_fr_Omni-Wheel_80a_material">
+        <color rgba="0.9725490212440491 0.9725490212440491 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_front">
+    <collision>
+      <geometry>
+        <box size="0.04000000189989805 0.21000000834465027 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_curved_Sensor_1_0_106">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Lidar">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.01" />
+      </geometry>
+      <material name="Lidar_material">
+        <color rgba="0.5 0.5 0.9 0.6" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_curved_Sensor_2_0_108">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Lidar">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.01" />
+      </geometry>
+      <material name="Lidar_material">
+        <color rgba="0.5 0.5 0.9 0.6" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_curved_Sensor_3_0_110">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Lidar">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.01" />
+      </geometry>
+      <material name="Lidar_material">
+        <color rgba="0.5 0.5 0.9 0.6" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_curved_Sensor_4_0_112">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual name="Lidar">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.01" />
+      </geometry>
+      <material name="Lidar_material">
+        <color rgba="0.5 0.5 0.9 0.6" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_front_Sensorbox_curved_105a">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_105a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_105a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_105a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_105a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <visual name="Sensorbox curved_64_15.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Sensorbox_front_Sensorbox_curved_105a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_back">
+    <collision>
+      <geometry>
+        <box size="0.04000000189989805 0.21000000834465027 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_back_Sensorbox_curved_114a">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_114a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_114a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_114a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.03200000151991844" />
+      <geometry>
+        <cylinder length="0.030000001192092896" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_114a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <visual name="Sensorbox curved_64_15.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.1" />
+      </geometry>
+      <material name="Sensorbox_back_Sensorbox_curved_114a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_center">
+    <collision>
+      <geometry>
+        <box size="0.09400000446476042 0.04000000283122063 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_center_Sensorbox_center_115a">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.03000000142492354" />
+      <geometry>
+        <cylinder length="0.04000000283122063" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_center_Sensorbox_center_115a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.03000000142492354" />
+      <geometry>
+        <cylinder length="0.04000000283122063" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_center_Sensorbox_center_115a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <visual name="Sensorbox_small_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.10000000149011612 0.04000000283122063 0.06100000441074371" />
+      </geometry>
+      <material name="Sensorbox_center_Sensorbox_center_115a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_controller">
+    <collision>
+      <geometry>
+        <box size="0.09400000446476042 0.04000000283122063 0.06400000303983688" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Sensorbox_controller_Controller_116a">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1.6666669041539343E-08" ixy="0" ixz="0" iyy="1.6666669041539343E-08" iyz="0" izz="1.6666669041539343E-08" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.03000000142492354" />
+      <geometry>
+        <cylinder length="0.04000000283122063" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_controller_Controller_116a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.03000000142492354" />
+      <geometry>
+        <cylinder length="0.04000000283122063" radius="0.020000001415610313" />
+      </geometry>
+      <material name="Sensorbox_controller_Controller_116a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <visual name="Sensorbox_small_arduino_64.stl">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.10000000149011612 0.04000000283122063 0.06100000441074371" />
+      </geometry>
+      <material name="Sensorbox_controller_Controller_116a_material">
+        <color rgba="0.6274510025978088 0.6274510025978088 0.6274510025978088 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="CenterPlate_Alu">
+    <collision>
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.006000000052154064" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Basplate_Pexi">
+    <collision>
+      <geometry>
+        <box size="0.3000000142492354 0.14000000059604645 0.0020000000949949026" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_Drive_bl" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.10000000149011612 0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Drive_bl" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_bl_DC-Drive" type="fixed">
+    <origin rpy="0 3.1415927410125732 0" xyz="0 0 0.012000000104308128" />
+    <parent link="Drive_bl" />
+    <child link="Drive_bl_DC-Drive_1a" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_4a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -2.6179938316345215" xyz="-0.01900000125169754 0.03290896490216255 0.00800000037997961" />
+    <parent link="Drive_bl_Omni-Wheel_2a" />
+    <child link="Rollers_a_Rollers_a_0_0_3" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_6a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -1.570796251296997" xyz="-0.03800000250339508 -1.6610328668065222E-09 0.00800000037997961" />
+    <parent link="Drive_bl_Omni-Wheel_2a" />
+    <child link="Rollers_a_Rollers_a_1_1_5" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_8a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -0.5235987305641174" xyz="-0.01899999938905239 -0.03290896862745285 0.00800000037997961" />
+    <parent link="Drive_bl_Omni-Wheel_2a" />
+    <child link="Rollers_a_Rollers_a_2_2_7" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_10a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 0.523598849773407" xyz="0.01900000497698784 -0.03290896490216255 0.00800000037997961" />
+    <parent link="Drive_bl_Omni-Wheel_2a" />
+    <child link="Rollers_a_Rollers_a_3_3_9" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_12a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 1.5707964897155762" xyz="0.03800000250339508 4.9830988224641715E-09 0.00800000037997961" />
+    <parent link="Drive_bl_Omni-Wheel_2a" />
+    <child link="Rollers_a_Rollers_a_4_4_11" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_14a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 2.6179943084716797" xyz="0.018999988213181496 0.03290897607803345 0.00800000037997961" />
+    <parent link="Drive_bl_Omni-Wheel_2a" />
+    <child link="Rollers_a_Rollers_a_5_5_13" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_16a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -3.1415927410125732" xyz="-0 0.03800000250339508 0.02800000086426735" />
+    <parent link="Drive_bl_Omni-Wheel_2a" />
+    <child link="Rollers_b_Rollers_b_0_0_15" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_18a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -2.094395160675049" xyz="-0.03290896862745285 0.01899999938905239 0.02800000086426735" />
+    <parent link="Drive_bl_Omni-Wheel_2a" />
+    <child link="Rollers_b_Rollers_b_1_1_17" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_20a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -1.0471974611282349" xyz="-0.03290896490216255 -0.01900000311434269 0.02800000086426735" />
+    <parent link="Drive_bl_Omni-Wheel_2a" />
+    <child link="Rollers_b_Rollers_b_2_2_19" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_22a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 8.742277657347586E-08" xyz="3.3220657336130444E-09 -0.03800000250339508 0.02800000086426735" />
+    <parent link="Drive_bl_Omni-Wheel_2a" />
+    <child link="Rollers_b_Rollers_b_3_3_21" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_24a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 1.047197699546814" xyz="0.03290896862745285 -0.018999997526407242 0.02800000086426735" />
+    <parent link="Drive_bl_Omni-Wheel_2a" />
+    <child link="Rollers_b_Rollers_b_4_4_23" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_26a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 2.094395399093628" xyz="0.03290896117687225 0.019000014290213585 0.02800000086426735" />
+    <parent link="Drive_bl_Omni-Wheel_2a" />
+    <child link="Rollers_b_Rollers_b_5_5_25" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_bl_Omni-Wheel" type="fixed">
+    <origin rpy="0 3.1415927410125732 0" xyz="0 0 0.012000000104308128" />
+    <parent link="Drive_bl" />
+    <child link="Drive_bl_Omni-Wheel_2a" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_br" type="fixed">
+    <origin rpy="0 0 3.1415927410125732" xyz="-0.10000000149011612 -0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Drive_br" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_br_DC-Drive" type="fixed">
+    <origin rpy="0 3.1415927410125732 0" xyz="0 0 0.012000000104308128" />
+    <parent link="Drive_br" />
+    <child link="Drive_br_DC-Drive_27a" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_30a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -2.6179938316345215" xyz="-0.01900000125169754 0.03290896490216255 0.00800000037997961" />
+    <parent link="Drive_br_Omni-Wheel_28a" />
+    <child link="Rollers_a_Rollers_a_0_0_29" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_32a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -1.570796251296997" xyz="-0.03800000250339508 -1.6610328668065222E-09 0.00800000037997961" />
+    <parent link="Drive_br_Omni-Wheel_28a" />
+    <child link="Rollers_a_Rollers_a_1_1_31" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_34a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -0.5235987305641174" xyz="-0.01899999938905239 -0.03290896862745285 0.00800000037997961" />
+    <parent link="Drive_br_Omni-Wheel_28a" />
+    <child link="Rollers_a_Rollers_a_2_2_33" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_36a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 0.523598849773407" xyz="0.01900000497698784 -0.03290896490216255 0.00800000037997961" />
+    <parent link="Drive_br_Omni-Wheel_28a" />
+    <child link="Rollers_a_Rollers_a_3_3_35" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_38a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 1.5707964897155762" xyz="0.03800000250339508 4.9830988224641715E-09 0.00800000037997961" />
+    <parent link="Drive_br_Omni-Wheel_28a" />
+    <child link="Rollers_a_Rollers_a_4_4_37" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_40a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 2.6179943084716797" xyz="0.018999988213181496 0.03290897607803345 0.00800000037997961" />
+    <parent link="Drive_br_Omni-Wheel_28a" />
+    <child link="Rollers_a_Rollers_a_5_5_39" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_42a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -3.1415927410125732" xyz="-0 0.03800000250339508 0.02800000086426735" />
+    <parent link="Drive_br_Omni-Wheel_28a" />
+    <child link="Rollers_b_Rollers_b_0_0_41" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_44a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -2.094395160675049" xyz="-0.03290896862745285 0.01899999938905239 0.02800000086426735" />
+    <parent link="Drive_br_Omni-Wheel_28a" />
+    <child link="Rollers_b_Rollers_b_1_1_43" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_46a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -1.0471974611282349" xyz="-0.03290896490216255 -0.01900000311434269 0.02800000086426735" />
+    <parent link="Drive_br_Omni-Wheel_28a" />
+    <child link="Rollers_b_Rollers_b_2_2_45" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_48a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 8.742277657347586E-08" xyz="3.3220657336130444E-09 -0.03800000250339508 0.02800000086426735" />
+    <parent link="Drive_br_Omni-Wheel_28a" />
+    <child link="Rollers_b_Rollers_b_3_3_47" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_50a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 1.047197699546814" xyz="0.03290896862745285 -0.018999997526407242 0.02800000086426735" />
+    <parent link="Drive_br_Omni-Wheel_28a" />
+    <child link="Rollers_b_Rollers_b_4_4_49" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_52a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 2.094395399093628" xyz="0.03290896117687225 0.019000014290213585 0.02800000086426735" />
+    <parent link="Drive_br_Omni-Wheel_28a" />
+    <child link="Rollers_b_Rollers_b_5_5_51" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_br_Omni-Wheel" type="fixed">
+    <origin rpy="0 3.1415927410125732 0" xyz="0 0 0.012000000104308128" />
+    <parent link="Drive_br" />
+    <child link="Drive_br_Omni-Wheel_28a" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_fl" type="fixed">
+    <origin rpy="0 0 0" xyz="0.10000000149011612 0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Drive_fl" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_fl_DC-Drive" type="fixed">
+    <origin rpy="0 3.1415927410125732 0" xyz="0 0 0.012000000104308128" />
+    <parent link="Drive_fl" />
+    <child link="Drive_fl_DC-Drive_53a" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_56a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -2.6179938316345215" xyz="-0.01900000125169754 0.03290896490216255 0.00800000037997961" />
+    <parent link="Drive_fl_Omni-Wheel_54a" />
+    <child link="Rollers_a_Rollers_a_0_0_55" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_58a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -1.570796251296997" xyz="-0.03800000250339508 -1.6610328668065222E-09 0.00800000037997961" />
+    <parent link="Drive_fl_Omni-Wheel_54a" />
+    <child link="Rollers_a_Rollers_a_1_1_57" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_60a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -0.5235987305641174" xyz="-0.01899999938905239 -0.03290896862745285 0.00800000037997961" />
+    <parent link="Drive_fl_Omni-Wheel_54a" />
+    <child link="Rollers_a_Rollers_a_2_2_59" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_62a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 0.523598849773407" xyz="0.01900000497698784 -0.03290896490216255 0.00800000037997961" />
+    <parent link="Drive_fl_Omni-Wheel_54a" />
+    <child link="Rollers_a_Rollers_a_3_3_61" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_64a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 1.5707964897155762" xyz="0.03800000250339508 4.9830988224641715E-09 0.00800000037997961" />
+    <parent link="Drive_fl_Omni-Wheel_54a" />
+    <child link="Rollers_a_Rollers_a_4_4_63" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_66a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 2.6179943084716797" xyz="0.018999988213181496 0.03290897607803345 0.00800000037997961" />
+    <parent link="Drive_fl_Omni-Wheel_54a" />
+    <child link="Rollers_a_Rollers_a_5_5_65" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_68a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -3.1415927410125732" xyz="-0 0.03800000250339508 0.02800000086426735" />
+    <parent link="Drive_fl_Omni-Wheel_54a" />
+    <child link="Rollers_b_Rollers_b_0_0_67" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_70a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -2.094395160675049" xyz="-0.03290896862745285 0.01899999938905239 0.02800000086426735" />
+    <parent link="Drive_fl_Omni-Wheel_54a" />
+    <child link="Rollers_b_Rollers_b_1_1_69" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_72a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -1.0471974611282349" xyz="-0.03290896490216255 -0.01900000311434269 0.02800000086426735" />
+    <parent link="Drive_fl_Omni-Wheel_54a" />
+    <child link="Rollers_b_Rollers_b_2_2_71" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_74a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 8.742277657347586E-08" xyz="3.3220657336130444E-09 -0.03800000250339508 0.02800000086426735" />
+    <parent link="Drive_fl_Omni-Wheel_54a" />
+    <child link="Rollers_b_Rollers_b_3_3_73" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_76a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 1.047197699546814" xyz="0.03290896862745285 -0.018999997526407242 0.02800000086426735" />
+    <parent link="Drive_fl_Omni-Wheel_54a" />
+    <child link="Rollers_b_Rollers_b_4_4_75" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_78a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 2.094395399093628" xyz="0.03290896117687225 0.019000014290213585 0.02800000086426735" />
+    <parent link="Drive_fl_Omni-Wheel_54a" />
+    <child link="Rollers_b_Rollers_b_5_5_77" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_fl_Omni-Wheel" type="fixed">
+    <origin rpy="0 3.1415927410125732 0" xyz="0 0 0.012000000104308128" />
+    <parent link="Drive_fl" />
+    <child link="Drive_fl_Omni-Wheel_54a" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_fr" type="fixed">
+    <origin rpy="0 0 3.1415927410125732" xyz="0.10000000149011612 -0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Drive_fr" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_fr_DC-Drive" type="fixed">
+    <origin rpy="0 3.1415927410125732 0" xyz="0 0 0.012000000104308128" />
+    <parent link="Drive_fr" />
+    <child link="Drive_fr_DC-Drive_79a" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_82a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -2.6179938316345215" xyz="-0.01900000125169754 0.03290896490216255 0.00800000037997961" />
+    <parent link="Drive_fr_Omni-Wheel_80a" />
+    <child link="Rollers_a_Rollers_a_0_0_81" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_84a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -1.570796251296997" xyz="-0.03800000250339508 -1.6610328668065222E-09 0.00800000037997961" />
+    <parent link="Drive_fr_Omni-Wheel_80a" />
+    <child link="Rollers_a_Rollers_a_1_1_83" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_86a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -0.5235987305641174" xyz="-0.01899999938905239 -0.03290896862745285 0.00800000037997961" />
+    <parent link="Drive_fr_Omni-Wheel_80a" />
+    <child link="Rollers_a_Rollers_a_2_2_85" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_88a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 0.523598849773407" xyz="0.01900000497698784 -0.03290896490216255 0.00800000037997961" />
+    <parent link="Drive_fr_Omni-Wheel_80a" />
+    <child link="Rollers_a_Rollers_a_3_3_87" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_90a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 1.5707964897155762" xyz="0.03800000250339508 4.9830988224641715E-09 0.00800000037997961" />
+    <parent link="Drive_fr_Omni-Wheel_80a" />
+    <child link="Rollers_a_Rollers_a_4_4_89" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_92a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 2.6179943084716797" xyz="0.018999988213181496 0.03290897607803345 0.00800000037997961" />
+    <parent link="Drive_fr_Omni-Wheel_80a" />
+    <child link="Rollers_a_Rollers_a_5_5_91" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_94a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -3.1415927410125732" xyz="-0 0.03800000250339508 0.02800000086426735" />
+    <parent link="Drive_fr_Omni-Wheel_80a" />
+    <child link="Rollers_b_Rollers_b_0_0_93" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_96a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -2.094395160675049" xyz="-0.03290896862745285 0.01899999938905239 0.02800000086426735" />
+    <parent link="Drive_fr_Omni-Wheel_80a" />
+    <child link="Rollers_b_Rollers_b_1_1_95" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_98a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 -1.0471974611282349" xyz="-0.03290896490216255 -0.01900000311434269 0.02800000086426735" />
+    <parent link="Drive_fr_Omni-Wheel_80a" />
+    <child link="Rollers_b_Rollers_b_2_2_97" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_100a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 8.742277657347586E-08" xyz="3.3220657336130444E-09 -0.03800000250339508 0.02800000086426735" />
+    <parent link="Drive_fr_Omni-Wheel_80a" />
+    <child link="Rollers_b_Rollers_b_3_3_99" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_102a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 1.047197699546814" xyz="0.03290896862745285 -0.018999997526407242 0.02800000086426735" />
+    <parent link="Drive_fr_Omni-Wheel_80a" />
+    <child link="Rollers_b_Rollers_b_4_4_101" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j_OmniWheel_Roller_2.stl_104a" type="continuous">
+    <origin rpy="3.1415927410125732 1.570796251296997 2.094395399093628" xyz="0.03290896117687225 0.019000014290213585 0.02800000086426735" />
+    <parent link="Drive_fr_Omni-Wheel_80a" />
+    <child link="Rollers_b_Rollers_b_5_5_103" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Drive_fr_Omni-Wheel" type="fixed">
+    <origin rpy="0 3.1415927410125732 0" xyz="0 0 0.012000000104308128" />
+    <parent link="Drive_fr" />
+    <child link="Drive_fr_Omni-Wheel_80a" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Sensorbox_front" type="fixed">
+    <origin rpy="0 0 0" xyz="0.15000000596046448 0 0" />
+    <parent link="center" />
+    <child link="Sensorbox_front" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j__107b" type="fixed">
+    <origin rpy="15 90 0" xyz="15 65 32" />
+    <parent link="Sensorbox_front_Sensorbox_curved_105a" />
+    <child link="Sensorbox_curved_Sensor_1_0_106" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j__109b" type="fixed">
+    <origin rpy="0 90 0" xyz="25 23 32" />
+    <parent link="Sensorbox_front_Sensorbox_curved_105a" />
+    <child link="Sensorbox_curved_Sensor_2_0_108" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j__111b" type="fixed">
+    <origin rpy="0 90 0" xyz="25 -23 32" />
+    <parent link="Sensorbox_front_Sensorbox_curved_105a" />
+    <child link="Sensorbox_curved_Sensor_3_0_110" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="j__113b" type="fixed">
+    <origin rpy="-15 90 0" xyz="15 -65 32" />
+    <parent link="Sensorbox_front_Sensorbox_curved_105a" />
+    <child link="Sensorbox_curved_Sensor_4_0_112" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Sensorbox_front_Sensorbox_curved" type="fixed">
+    <origin rpy="0 3.1415927410125732 0" xyz="0 0 0.012000000104308128" />
+    <parent link="Sensorbox_front" />
+    <child link="Sensorbox_front_Sensorbox_curved_105a" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Sensorbox_back" type="fixed">
+    <origin rpy="0 0 3.1415927410125732" xyz="-0.15000000596046448 0 0" />
+    <parent link="center" />
+    <child link="Sensorbox_back" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Sensorbox_back_Sensorbox_curved" type="fixed">
+    <origin rpy="0 3.1415927410125732 0" xyz="0 0 0.012000000104308128" />
+    <parent link="Sensorbox_back" />
+    <child link="Sensorbox_back_Sensorbox_curved_114a" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Sensorbox_center" type="fixed">
+    <origin rpy="0 0 3.1415927410125732" xyz="0 -0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Sensorbox_center" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Sensorbox_center_Sensorbox_center" type="fixed">
+    <origin rpy="0 3.1415927410125732 0" xyz="0 0 0.012000000104308128" />
+    <parent link="Sensorbox_center" />
+    <child link="Sensorbox_center_Sensorbox_center_115a" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Sensorbox_controller" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.07000000029802322 0" />
+    <parent link="center" />
+    <child link="Sensorbox_controller" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Sensorbox_controller_Controller" type="fixed">
+    <origin rpy="0 3.1415927410125732 0" xyz="0 0 0.012000000104308128" />
+    <parent link="Sensorbox_controller" />
+    <child link="Sensorbox_controller_Controller_116a" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_CenterPlate_Alu" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.030000001192092896" />
+    <parent link="center" />
+    <child link="CenterPlate_Alu" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+  <joint name="joint_Basplate_Pexi" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.030000001192092896" />
+    <parent link="center" />
+    <child link="Basplate_Pexi" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.1" friction="0.1" />
+  </joint>
+</robot>

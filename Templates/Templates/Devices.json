@@ -95,7 +95,7 @@
     },
     {
       "Properties": {},
-      "Name": "Line Follower",
+      "Name": "Line-Follower",
       "Id": 0,
       "Type": "AuxSensor",
       "ComponentType": "ComponetItem"

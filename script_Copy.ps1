@@ -17,6 +17,25 @@ $config_dest= "LCAMPConfigurator/bin"
 
 # Ordner kopieren (inkl. Unterordner und Dateien)
 # Binarys
+
+# Export_URDF
+Write-Host "Copy Export_URDF form: $projektName  Export_URDF"
+$config_source = "..\$projektName\Export_URDF\bin\Release\net8.0"
+Copy-Item -Path $config_source -Destination $config_dest -Recurse -Force
+
+# Export_PartList
+Write-Host "Copy Export_PartList form: $projektName  Export_PartList"
+$config_source = "..\$projektName\Export_PartList\bin\Release\net8.0"
+Copy-Item -Path $config_source -Destination $config_dest -Recurse -Force
+
+# ImportRobot
+Write-Host "Copy ImportRobot form: $projektName  ImportRobot"
+$config_source = "..\$projektName\ImportRobot\bin\Release\net8.0"
+Copy-Item -Path $config_source -Destination $config_dest -Recurse -Force
+
+
+
+# LCAMPProcess
 Write-Host "Copy LCAMPConfigurator form: $projektName  Process"
 $config_source = "..\$projektName\LCAMP_Processes\bin\Release\net8.0-windows"
 Copy-Item -Path $config_source -Destination $config_dest -Recurse -Force
@@ -30,10 +49,6 @@ Write-Host "Copy LCAMPConfigurator form: $projektName  Configurator"
 $config_source = "..\$projektName\LCAMPConfigurator\bin\Release\net8.0-windows"
 Copy-Item -Path $config_source -Destination $config_dest -Recurse -Force
 
-# LCAMPProcess
-Write-Host "Copy LCAMPConfigurator form: $projektName  Process"
-$config_source = "..\$projektName\LCAMP_Processes\bin\Release\net8.0-windows"
-Copy-Item -Path $config_source -Destination $config_dest -Recurse -Force
 
 
 
@@ -67,6 +82,12 @@ Copy-Item -Path $template_source -Destination $template_dest -Recurse -Force
 Write-Host "Copy Output"
 $output_source = "..\$projektName\Output"
 $output_dest = "Output"
+# Ordner kopieren (inkl. Unterordner und Dateien)
+Copy-Item -Path $output_source -Destination $output_dest -Recurse -Force
+
+Write-Host "Copy Package"
+$output_source = "..\$projektName\Package"
+$output_dest = "Package"
 # Ordner kopieren (inkl. Unterordner und Dateien)
 Copy-Item -Path $output_source -Destination $output_dest -Recurse -Force
 
