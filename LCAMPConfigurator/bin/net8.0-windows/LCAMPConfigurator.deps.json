@@ -10,6 +10,7 @@
         "dependencies": {
           "ClosedXML": "0.105.0",
           "ConfigurationExporter": "1.0.0",
+          "LCAMPConfiguratorColor": "1.0.0",
           "LCAMPConfiguratorCore": "1.0.0",
           "LCAMPConfiguratorUserInterface": "1.2.3",
           "Microsoft.CSharp": "4.7.0",
@@ -1091,6 +1092,19 @@
           }
         }
       },
+      "LCAMPConfiguratorColor/1.0.0": {
+        "dependencies": {
+          "LCAMPConfiguratorCore": "1.0.0",
+          "SharpGLTF.Core": "1.0.5",
+          "SharpGLTF.Toolkit": "1.0.5"
+        },
+        "runtime": {
+          "LCAMPConfiguratorColor.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "LCAMPConfiguratorCore/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.4"
@@ -1104,26 +1118,13 @@
       },
       "LCAMPConfiguratorUserInterface/1.2.3": {
         "dependencies": {
-          "LCAMPConfiguratorCore": "1.0.0",
-          "LCAMPConfigurtatorColor": "1.0.0"
+          "LCAMPConfiguratorColor": "1.0.0",
+          "LCAMPConfiguratorCore": "1.0.0"
         },
         "runtime": {
           "LCAMPConfiguratorUserInterface.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "LCAMPConfigurtatorColor/1.0.0": {
-        "dependencies": {
-          "LCAMPConfiguratorCore": "1.0.0",
-          "SharpGLTF.Core": "1.0.5",
-          "SharpGLTF.Toolkit": "1.0.5"
-        },
-        "runtime": {
-          "LCAMPConfigurtatorColor.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -1928,17 +1929,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "LCAMPConfiguratorColor/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "LCAMPConfiguratorCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "LCAMPConfiguratorUserInterface/1.2.3": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "LCAMPConfigurtatorColor/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

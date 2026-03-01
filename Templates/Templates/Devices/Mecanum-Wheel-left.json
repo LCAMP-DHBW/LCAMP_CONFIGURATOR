@@ -1,280 +1,485 @@
 {
-	"Description": "Assembly for  Mecanum-Wheel",
-	"Assembly": {
-		"Name": "Mecanum-Wheel",
-		"Type": "Wheel",
-		"Geometry": {
-			"JointType": "continuous",
-			"xyz": {
-				"X": 0,
-				"Y": 0,
-				"Z": 0
-			},
-			"rpy": {
-				"R": -90.0,
-				"P": 0.0,
-				"Y": 0
-			},
-			"box": {
-				"H": 32,
-				"R": 2,
-				"Type": "Cylinder"
-			},
-			"mass": 120
-		},
-		"description": "The Wheel of the Robot",
-		"Components": [
-			{
-				"Reference": "RC-34-2321",
-				"Name": "Wheel-Hub",
-				"Number": "1",
-				"Data3D": "Wheel_Hub_ax.stl",
-				"Type": "Hub",
-				"Material": {
-					"MaterialName": "PLA",
-					"Color": {
-						"ColorName": "grey",
-						"rgba": [
-							128,
-							128,
-							128,
-							255
-						],
-						"Texture": null
-					}
-				},
-				"description": "Hub for Mecanum-Wheel as 3D Printed Part"
-			},
-			{
-				"Reference": "RC-34-2321",
-				"Name": "rimm-inner",
-				"Number": "1",
-				"Data3D": "mecanumWheel_2a_pin.stl",
-				"Type": "3Rimm",
-				"Material": {
-					"MaterialName": "PLA",
-					"Color": {
-						"ColorName": "grey",
-						"rgba": [
-							128,
-							128,
-							128,
-							255
-						],
-						"Texture": null
-					}
-				},
-				"Geometry": {
-					"JointType": "fixed",
-					"xyz": {
-						"X": 0,
-						"Y": 0,
-						"Z": 6
-					},
-					"rpy": {
-						"R": 0.0,
-						"P": 0.0,
-						"Y": 0
-					},
-					"box": {
-						"H": 32,
-						"R": 2,
-						"Type": "Cylinder"
-					},
-					"mass": 120
-				},
-				"description": "Flange forRegular-Wheel as 3D Printed Parf"
-			},
-			{
-				"Reference": "RC-34-2321",
-				"Name": "rimm-outerr",
-				"Number": "1",
-				"Data3D": "mecanumWheel_2b_pin24.stl",
-				"Type": "Rimm",
-				"Material": {
-					"MaterialName": "PLA",
-					"Color": {
-						"ColorName": "grey",
-						"rgba": [
-							128,
-							128,
-							128,
-							255
-						],
-						"Texture": null
-					}
-				},
-				"Geometry": {
-					"JointType": "fixed",
-					"xyz": {
-						"X": 0,
-						"Y": 0,
-						"Z": 38
-					},
-					"rpy": {
-						"R": 0.0,
-						"P": 0.0,
-						"Y": 0
-					},
-					"box": {
-						"H": 32,
-						"R": 2,
-						"Type": "Cylinder"
-					},
-					"mass": 120
-				},
-				"description": "Flange forRegular-Wheel as 3D Printed Parf"
-			},
-			{
-				"Reference": "RC-34-2321",
-				"Name": "Wheel-Hub-Cup",
-				"Number": "1",
-				"Data3D": "Hub_Cup_8.stl",
-				"Type": "HubCap",
-				"Material": {
-					"MaterialName": "PLA lightBlue",
-					"Color": {
-						"ColorName": "lightBlue",
-						"rgba": [
-							137,
-							207,
-							240,
-							255
-						],
-						"Texture": null
-					}
-				},
-				"Geometry": {
-					"JointType": "fixed",
-					"xyz": {
-						"X": 0,
-						"Y": 0,
-						"Z": 36
-					},
-					"rpy": {
-						"R": 0.0,
-						"P": 0.0,
-						"Y": 0
-					},
-					"box": {
-						"H": 8,
-						"R": 20,
-						"Type": "Cylinder"
-					},
-					"mass": 13
-				},
-				"description": "Hub Cup for Mecanum-Wheel as 3D Printed Part"
-			},
-			{
-				"Reference": "RC-34-2321.5",
-				"Name": "Rollers",
-				"Number": "9, RotZ, alfa=-45°, r=40mm",
-				"Type": "Assembly",
-				"description": "Complete Roller Assembly",
-				"Geometry": {
-					"JointType": "continuous",
-					"xyz": {
-						"X": 0,
-						"Y": 0,
-						"Z": 20
-					},
-					"rpy": {
-						"R": 0.0,
-						"P": 0.0,
-						"Y": 0
-					},
-					"box": {
-						"H": 32,
-						"R": 12,
-						"Type": "Cylinder"
-					},
-					"mass": 13
-				},
-				"Components": [
-					{
-						"$type": "LCAMPConfigurator.PartDescription, LCAMPConfigurator",
-						"idCode": "RC-34-2321.5",
-						"Name": "RollerPin",
-						"Number": "1",
-						"Data3D": "Pin_Roller.stl",
-						"Type": "Norm",
-						"Material": {
-							"MaterialName": "Steel",
-							"Color": {
-								"ColorName": "grey",
-								"rgba": [
-									128,
-									128,
-									128,
-									255
-								],
-								"Texture": null
-							}
-						},
-						"Geometry": {
-							"JointType": "fixed",
-							"xyz": {
-								"X": 0,
-								"Y": 0,
-								"Z": 12
-							},
-							"rpy": {
-								"R": 0.0,
-								"P": 0.0,
-								"Y": 0
-							},
-							"box": {
-								"H": 32,
-								"R": 12,
-								"Type": "Cylinder"
-							},
-							"mass": 13
-						},
-						"description": "Complete DC-Motor for Drive System"
-					},
-					{
-						"$type": "LCAMPConfigurator.PartDescription, LCAMPConfigurator",
-						"Reference": "RC-34-2321.5",
-						"Name": "Roller",
-						"Number": "1",
-						"Data3D": "Mecanum_Rolle_1.stl",
-						"Type": "Tire",
-						"Material": {
-							"MaterialName": "PLA",
-							"Color": {
-								"ColorName": "black",
-								"rgba": [
-									1,
-									1,
-									1,
-									255
-								],
-								"Texture": null
-							},
-							"Geometry": {
-								"JointType": "continuous",
-								"xyz": {
-									"X": 0,
-									"Y": 0,
-									"Z": 0
-								},
-								"rpy": {
-									"R": 0.0,
-									"P": 0.0,
-									"Y": 0
-								},
-								"box": {
-									"H": 32,
-									"R": 12,
-									"Type": "Cylinder"
-								},
-								"mass": 13
-							}
-						},
-						"description": "One Roller for Omnie Wheel "
-					}
-				]
-			}
-		]
-	}
+  "Description": "Assembly for  Mecanum-Wheel",
+  "Assembly": {
+    "Properties": {},
+    "Geometry": {
+      "JointType": "Fixed",
+      "xyz": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "box": {
+        "L": 0.0,
+        "W": 0.0,
+        "H": 0.0,
+        "R": 0.0,
+        "Type": "None"
+      },
+      "mass": 0.0,
+      "unitXYZ": "mm",
+      "unitRPY": "grad"
+    },
+    "Name": "Assembly: Mecanum-Wheel",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": "Assembly",
+    "Description": null,
+    "Parent": null,
+    "Reference": null,
+    "Template": null,
+    "Version": null,
+    "ComponentType": "SubSystem",
+    "Components": [
+      {
+        "Properties": {},
+        "IdCode": null,
+        "Number": "1",
+        "Data3D": "Wheel_Hub_ax.stl",
+        "SpecPath": null,
+        "Material": {
+          "Properties": {},
+          "MaterialType": "Default",
+          "Color": {
+            "ArgbValue": null,
+            "ColorName": "grey",
+            "rgba": [
+              128,
+              128,
+              128,
+              255
+            ],
+            "Texture": null
+          },
+          "Technology": null,
+          "Center": null,
+          "Density": null,
+          "ComponentType": "Materials",
+          "Name": "Material",
+          "Id": 0,
+          "PositionId": null,
+          "Status": null,
+          "Type": null,
+          "Description": null,
+          "Parent": null,
+          "Reference": null,
+          "Template": null,
+          "Version": null,
+          "Components": []
+        },
+        "Technology": null,
+        "ComponentType": "PartDescription",
+        "Geometry": {
+          "JointType": "Fixed",
+          "xyz": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "box": {
+            "L": 0.0,
+            "W": 0.0,
+            "H": 0.0,
+            "R": 0.0,
+            "Type": "None"
+          },
+          "mass": 0.0,
+          "unitXYZ": "mm",
+          "unitRPY": "grad"
+        },
+        "Name": "Wheel-Hub",
+        "Id": 0,
+        "PositionId": null,
+        "Status": null,
+        "Type": "Hub",
+        "Description": "Hub for Mecanum-Wheel as 3D Printed Part",
+        "Parent": "Assembly: Mecanum-Wheel",
+        "Reference": "RC-34-2321",
+        "Template": null,
+        "Version": null,
+        "Components": []
+      },
+      {
+        "Properties": {},
+        "IdCode": null,
+        "Number": "1",
+        "Data3D": "mecanumWheel_2a_pin.stl",
+        "SpecPath": null,
+        "Material": {
+          "Properties": {},
+          "MaterialType": "Default",
+          "Color": {
+            "ArgbValue": null,
+            "ColorName": "grey",
+            "rgba": [
+              128,
+              128,
+              128,
+              255
+            ],
+            "Texture": null
+          },
+          "Technology": null,
+          "Center": null,
+          "Density": null,
+          "ComponentType": "Materials",
+          "Name": "Material",
+          "Id": 0,
+          "PositionId": null,
+          "Status": null,
+          "Type": null,
+          "Description": null,
+          "Parent": null,
+          "Reference": null,
+          "Template": null,
+          "Version": null,
+          "Components": []
+        },
+        "Technology": null,
+        "ComponentType": "PartDescription",
+        "Geometry": {
+          "JointType": "Fixed",
+          "xyz": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 6.0
+          },
+          "box": {
+            "L": 0.0,
+            "W": 0.0,
+            "H": 32.0,
+            "R": 2.0,
+            "Type": "Cylinder"
+          },
+          "mass": 120.0,
+          "unitXYZ": "mm",
+          "unitRPY": "grad"
+        },
+        "Name": "rimm-inner",
+        "Id": 0,
+        "PositionId": null,
+        "Status": null,
+        "Type": "3Rimm",
+        "Description": "Flange forRegular-Wheel as 3D Printed Parf",
+        "Parent": "Assembly: Mecanum-Wheel",
+        "Reference": "RC-34-2321",
+        "Template": null,
+        "Version": null,
+        "Components": []
+      },
+      {
+        "Properties": {},
+        "IdCode": "LCAMP-RC-34-2321-0-0-0",
+        "Number": "1",
+        "Data3D": "mecanumWheel_2b_pin24.stl",
+        "SpecPath": null,
+        "Material": {
+          "Properties": {},
+          "MaterialType": "Default",
+          "Color": {
+            "ArgbValue": null,
+            "ColorName": "grey",
+            "rgba": [
+              128,
+              128,
+              128,
+              255
+            ],
+            "Texture": null
+          },
+          "Technology": null,
+          "Center": null,
+          "Density": null,
+          "ComponentType": "Materials",
+          "Name": "Material",
+          "Id": 0,
+          "PositionId": null,
+          "Status": null,
+          "Type": null,
+          "Description": "Material grey ARGB ( 255, 128, 128, 128 )",
+          "Parent": null,
+          "Reference": null,
+          "Template": null,
+          "Version": null,
+          "Components": []
+        },
+        "Technology": null,
+        "ComponentType": "PartDescription",
+        "Geometry": {
+          "JointType": "Fixed",
+          "xyz": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 38.0
+          },
+          "box": {
+            "L": 0.0,
+            "W": 0.0,
+            "H": 32.0,
+            "R": 2.0,
+            "Type": "Cylinder"
+          },
+          "mass": 120.0,
+          "unitXYZ": "mm",
+          "unitRPY": "grad"
+        },
+        "Name": "rimm-outerr",
+        "Id": 0,
+        "PositionId": null,
+        "Status": null,
+        "Type": "Rimm",
+        "Description": "DHBW CAD-Data\\MecanumWheel\\STL-Step-Files\\mecanumWheel_2b_pin24.stl",
+        "Parent": "Assembly: Mecanum-Wheel",
+        "Reference": "RC-34-2321",
+        "Template": null,
+        "Version": null,
+        "Components": []
+      },
+      {
+        "Properties": {},
+        "IdCode": null,
+        "Number": "1",
+        "Data3D": "Hub_Cup_8.stl",
+        "SpecPath": null,
+        "Material": {
+          "Properties": {},
+          "MaterialType": "Default",
+          "Color": {
+            "ArgbValue": null,
+            "ColorName": "lightBlue",
+            "rgba": [
+              137,
+              207,
+              240,
+              255
+            ],
+            "Texture": null
+          },
+          "Technology": null,
+          "Center": null,
+          "Density": null,
+          "ComponentType": "Materials",
+          "Name": "Material",
+          "Id": 0,
+          "PositionId": null,
+          "Status": null,
+          "Type": null,
+          "Description": null,
+          "Parent": null,
+          "Reference": null,
+          "Template": null,
+          "Version": null,
+          "Components": []
+        },
+        "Technology": null,
+        "ComponentType": "PartDescription",
+        "Geometry": {
+          "JointType": "Fixed",
+          "xyz": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 36.0
+          },
+          "box": {
+            "L": 0.0,
+            "W": 0.0,
+            "H": 8.0,
+            "R": 20.0,
+            "Type": "Cylinder"
+          },
+          "mass": 13.0,
+          "unitXYZ": "mm",
+          "unitRPY": "grad"
+        },
+        "Name": "Wheel-Hub-Cup",
+        "Id": 0,
+        "PositionId": null,
+        "Status": null,
+        "Type": "HubCap",
+        "Description": "Hub Cup for Mecanum-Wheel as 3D Printed Part",
+        "Parent": "Assembly: Mecanum-Wheel",
+        "Reference": "RC-34-2321",
+        "Template": null,
+        "Version": null,
+        "Components": []
+      },
+      {
+        "Properties": {},
+        "IdCode": "LCAMP-RC-34-2321.5-0-0-0",
+        "Number": "9, RotZ, alfa=-45°, r=40mm",
+        "Data3D": null,
+        "SpecPath": null,
+        "Material": null,
+        "Technology": null,
+        "ComponentType": "PartDescription",
+        "Geometry": {
+          "JointType": "Continuous",
+          "xyz": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 20.0
+          },
+          "box": {
+            "L": 0.0,
+            "W": 0.0,
+            "H": 32.0,
+            "R": 12.0,
+            "Type": "Cylinder"
+          },
+          "mass": 13.0,
+          "unitXYZ": "mm",
+          "unitRPY": "grad"
+        },
+        "Name": "Rollers",
+        "Id": 0,
+        "PositionId": null,
+        "Status": null,
+        "Type": "Assembly",
+        "Description": "Complete Roller Assembly",
+        "Parent": "Assembly: Mecanum-Wheel",
+        "Reference": "RC-34-2321.5",
+        "Template": null,
+        "Version": null,
+        "Components": [
+          {
+            "Properties": {},
+            "IdCode": "LCAMP--0-0-0",
+            "Number": "1",
+            "Data3D": "Pin_Roller.stl",
+            "SpecPath": "",
+            "Material": {
+              "Properties": {},
+              "MaterialType": "Default",
+              "Color": {
+                "ArgbValue": null,
+                "ColorName": "grey",
+                "rgba": [
+                  128,
+                  128,
+                  128,
+                  255
+                ],
+                "Texture": null
+              },
+              "Technology": null,
+              "Center": null,
+              "Density": null,
+              "ComponentType": "Materials",
+              "Name": "Material",
+              "Id": 0,
+              "PositionId": null,
+              "Status": null,
+              "Type": null,
+              "Description": "Material grey ARGB ( 255, 128, 128, 128 )",
+              "Parent": null,
+              "Reference": null,
+              "Template": null,
+              "Version": null,
+              "Components": []
+            },
+            "Technology": null,
+            "ComponentType": "PartDescription",
+            "Geometry": {
+              "JointType": "Fixed",
+              "xyz": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "box": {
+                "L": 0.0,
+                "W": 0.0,
+                "H": 32.0,
+                "R": 12.0,
+                "Type": "Cylinder"
+              },
+              "mass": 13.0,
+              "unitXYZ": "mm",
+              "unitRPY": "grad"
+            },
+            "Name": "RollerPin",
+            "Id": 0,
+            "PositionId": null,
+            "Status": null,
+            "Type": "Norm",
+            "Description": "DHBW CAD-Data\\OmniWheel\\STL-Step-Dateien\\Pin_Roller.stl",
+            "Parent": "Rollers [9, RotZ, alfa=-45°, r=40mm]",
+            "Reference": "",
+            "Template": null,
+            "Version": null,
+            "Components": []
+          },
+          {
+            "Properties": {},
+            "IdCode": "LCAMP-RC-34-2321.5-0-0-0",
+            "Number": "1",
+            "Data3D": "Mecanum_Rolle_1.stl",
+            "SpecPath": null,
+            "Material": {
+              "Properties": {},
+              "MaterialType": "Default",
+              "Color": {
+                "ArgbValue": null,
+                "ColorName": "black",
+                "rgba": [
+                  1,
+                  1,
+                  1,
+                  255
+                ],
+                "Texture": null
+              },
+              "Technology": null,
+              "Center": null,
+              "Density": null,
+              "ComponentType": "Materials",
+              "Name": "Material",
+              "Id": 0,
+              "PositionId": null,
+              "Status": null,
+              "Type": null,
+              "Description": "Material black ARGB ( 255, 1, 1, 1 )",
+              "Parent": null,
+              "Reference": null,
+              "Template": null,
+              "Version": null,
+              "Components": []
+            },
+            "Technology": null,
+            "ComponentType": "PartDescription",
+            "Geometry": {
+              "JointType": "Fixed",
+              "xyz": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "box": {
+                "L": 0.0,
+                "W": 0.0,
+                "H": 0.0,
+                "R": 0.0,
+                "Type": "None"
+              },
+              "mass": 0.0,
+              "unitXYZ": "mm",
+              "unitRPY": "grad"
+            },
+            "Name": "Roller",
+            "Id": 0,
+            "PositionId": null,
+            "Status": null,
+            "Type": "Tire",
+            "Description": "DHBW CAD-Data\\MecanumWheel\\STL-Step-Files\\Mecanum_Rolle_1.stl",
+            "Parent": "Rollers [9, RotZ, alfa=-45°, r=40mm]",
+            "Reference": "RC-34-2321.5",
+            "Template": null,
+            "Version": null,
+            "Components": []
+          }
+        ]
+      }
+    ]
+  }
 }

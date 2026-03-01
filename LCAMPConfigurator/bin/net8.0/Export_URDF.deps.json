@@ -9,8 +9,8 @@
       "Export_URDF/1.0.0": {
         "dependencies": {
           "ConfigurationExporter": "1.0.0",
-          "LCAMPConfiguratorCore": "1.0.0",
-          "LCAMPConfigurtatorColor": "1.0.0"
+          "LCAMPConfiguratorColor": "1.0.0",
+          "LCAMPConfiguratorCore": "1.0.0"
         },
         "runtime": {
           "Export_URDF.dll": {}
@@ -159,25 +159,25 @@
           }
         }
       },
-      "LCAMPConfiguratorCore/1.0.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.4"
-        },
-        "runtime": {
-          "LCAMPConfiguratorCore.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "LCAMPConfigurtatorColor/1.0.0": {
+      "LCAMPConfiguratorColor/1.0.0": {
         "dependencies": {
           "LCAMPConfiguratorCore": "1.0.0",
           "SharpGLTF.Core": "1.0.5",
           "SharpGLTF.Toolkit": "1.0.5"
         },
         "runtime": {
-          "LCAMPConfigurtatorColor.dll": {
+          "LCAMPConfiguratorColor.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "LCAMPConfiguratorCore/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.4"
+        },
+        "runtime": {
+          "LCAMPConfiguratorCore.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -301,12 +301,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "LCAMPConfiguratorCore/1.0.0": {
+    "LCAMPConfiguratorColor/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "LCAMPConfigurtatorColor/1.0.0": {
+    "LCAMPConfiguratorCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

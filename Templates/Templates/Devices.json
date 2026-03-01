@@ -36,6 +36,14 @@
     },
     {
       "Properties": {},
+      "Name": "Mecanum-Wheel",
+      "Id": 0,
+      "Type": "Wheel",
+      "Description": "The Wheel of the Robot",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
       "Name": "Omni-Wheel",
       "Id": 0,
       "Type": "Wheel",
@@ -73,6 +81,22 @@
       "Name": "RGB-LED",
       "Id": 0,
       "Type": "Actor",
+      "Description": "The Drive System of the Robot",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "US-Sensor",
+      "Id": 0,
+      "Type": "Sensor",
+      "Description": "The Drive System of the Robot",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "US-Sensor",
+      "Id": 0,
+      "Type": "Sensor",
       "Description": "The Drive System of the Robot",
       "ComponentType": "ComponetItem"
     },
@@ -296,7 +320,7 @@
     },
     {
       "Properties": {},
-      "Name": "Line Follower",
+      "Name": "Line-Follower",
       "Id": 0,
       "Type": "AuxSensor",
       "ComponentType": "ComponetItem"
@@ -314,6 +338,21 @@
       "Name": "Main Switch",
       "Id": 0,
       "Type": "Device",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "Mecanum-Wheel",
+      "Id": 0,
+      "Type": "Wheel",
+      "Description": "The Wheel of the Robot",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "Assembly: Mecanum-Wheel",
+      "Id": 0,
+      "Type": "Assembly",
       "ComponentType": "ComponetItem"
     },
     {
@@ -408,6 +447,22 @@
       "Id": 0,
       "Type": "Communication",
       "Description": "The Comunication Platform for Micro Ros",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "US-Sensor",
+      "Id": 0,
+      "Type": "Sensor",
+      "Description": "The Drive System of the Robot",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "US-Sensor",
+      "Id": 0,
+      "Type": "Sensor",
+      "Description": "The Drive System of the Robot",
       "ComponentType": "ComponetItem"
     },
     {

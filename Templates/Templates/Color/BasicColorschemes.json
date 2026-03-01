@@ -297,6 +297,13 @@
       "Detail": null,
       "Accent": null,
       "Tire": null
+    },
+    "Light": {
+      "Base": null,
+      "Main": null,
+      "Detail": null,
+      "Accent": null,
+      "Tire": null
     }
   }
 }
