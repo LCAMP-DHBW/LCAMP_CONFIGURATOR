@@ -36,14 +36,6 @@
     },
     {
       "Properties": {},
-      "Name": "Mecanum-Wheel",
-      "Id": 0,
-      "Type": "Wheel",
-      "Description": "The Wheel of the Robot",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
       "Name": "Omni-Wheel",
       "Id": 0,
       "Type": "Wheel",
@@ -97,7 +89,7 @@
       "Name": "US-Sensor",
       "Id": 0,
       "Type": "Sensor",
-      "Description": "The Drive System of the Robot",
+      "Description": "UltraSonic Sensor",
       "ComponentType": "ComponetItem"
     },
     {
@@ -151,9 +143,32 @@
     },
     {
       "Properties": {},
+      "Name": "Arduino Uno R3",
+      "Id": 0,
+      "Type": "Controler",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "Arduino Mega",
+      "Id": 0,
+      "Type": "Controler",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
       "Name": "ESP 32",
       "Id": 0,
       "Type": "Controler",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "ESP 32",
+      "Id": 0,
+      "Type": "AuxSensor",
+      "Template": "ESP32_SB",
+      "Description": "Aux Controller for Sensorbox",
       "ComponentType": "ComponetItem"
     },
     {

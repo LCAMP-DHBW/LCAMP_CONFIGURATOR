@@ -23,6 +23,13 @@
 			"mass": 120
 		},
 		"description": "The Wheel of the Robot",
+		"Properties": {
+			"left": "ist anders",
+			"left Data3D": "mecanumWheel_1b_pin24.stl",
+			"right Data3D": "mecanumWheel_2b_pin24.stl",
+			"left Data3D": "mecanumWheel_1a_pin24.stl",
+			"right Data3D": "mecanumWheel_2a_pin24.stl"
+		},
 		"Components": [
 			{
 				"Reference": "RC-34-2321",
