@@ -19,11 +19,12 @@
     "unitXYZ": "none",
     "unitRPY": "none"
   },
-  "Name": "LCAMP Mobile Robot",
+  "Name": "Mobile_Robot_s1",
   "Id": 0,
   "Type": "Component",
   "Description": "The Center Core of the Robot",
   "Parent": "Robot",
+  "Template": "LCAMPRobot",
   "Components": [
     {
       "Properties": {},
@@ -52,7 +53,7 @@
       "PositionId": "1",
       "Type": "Frame",
       "Description": "Lopkalisierung für  Drive back left",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile_Robot_s1",
       "Components": [
         {
           "Properties": {},
@@ -75,24 +76,25 @@
             "unitXYZ": "mm",
             "unitRPY": "grad"
           },
-          "Name": "DC-Drive",
+          "Name": "Drive-Holder",
           "Id": 0,
           "Type": "Drive",
           "Description": "The Drive System of the Robot",
           "Parent": "Drive bl",
+          "Template": "Drive-Holder",
           "Components": [
             {
               "Properties": {},
               "Number": "1",
-              "Data3D": "DC_Holder_64.stl",
+              "Data3D": "Passive_Holder_64.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -123,71 +125,24 @@
               "Name": "HolderBase",
               "Id": 0,
               "Type": "3D-Print",
-              "Description": "Base for Stepper Motor as 3D Printed Parf",
-              "Parent": "DC-Drive",
+              "Description": "Base for Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
               "Reference": "RC-34-2321",
-              "Components": []
-            },
-            {
-              "Properties": {},
-              "Number": "1",
-              "Data3D": "dc.stl",
-              "Material": {
-                "Properties": {},
-                "MaterialType": "Default",
-                "Color": {
-                  "rgba": [
-                    208,
-                    208,
-                    239,
-                    255
-                  ]
-                },
-                "ComponentType": "Materials",
-                "Name": "Material",
-                "Id": 0,
-                "Components": []
-              },
-              "ComponentType": "PartDescription",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": 0.0,
-                  "Y": 0.0,
-                  "Z": 0.0
-                },
-                "box": {
-                  "L": 50.0,
-                  "W": 45.0,
-                  "H": 64.0,
-                  "R": 0.0,
-                  "Type": "Box"
-                },
-                "mass": 140.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "DC Motor",
-              "Id": 0,
-              "Type": "motor",
-              "Description": "Complete DC-Motor for Drive System",
-              "Parent": "DC-Drive",
-              "Reference": "RC-34-2321.5",
               "Components": []
             },
             {
               "Properties": {},
               "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "MotorController.stl",
+              "Data3D": "adjusting ring.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -202,23 +157,83 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 0.0
+                  "Z": -32.0
+                },
+                "rpy": {
+                  "R": 90.0,
+                  "P": 0.0,
+                  "Y": 0.0
                 },
                 "box": {
-                  "L": 50.0,
-                  "W": 45.0,
-                  "H": 64.0,
-                  "R": 0.0,
-                  "Type": "Box"
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 60.0,
+                  "R": 3.0,
+                  "Type": "Cylinder"
                 },
-                "mass": 140.0,
+                "mass": 40.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Motor Controller",
+              "Name": "Schaft",
               "Id": 0,
-              "Type": "pcb",
-              "Parent": "DC-Drive",
+              "Type": "Standard part",
+              "Description": "Ring Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
+              "Reference": "RC-34-2321",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "IdCode": "RC-34-2321",
+              "Number": "2",
+              "Data3D": "adjusting ring.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "rgba": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": -32.0
+                },
+                "rpy": {
+                  "R": 90.0,
+                  "P": 0.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 60.0,
+                  "R": 3.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 40.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "adjusting ring",
+              "Id": 0,
+              "Type": "Standard part",
+              "Description": "Ring Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
+              "Reference": "RC-34-2321",
               "Components": []
             }
           ]
@@ -254,6 +269,7 @@
           "Type": "Wheel",
           "Description": "The Wheel of the Robot",
           "Parent": "Drive bl",
+          "Template": "Regular-Wheel",
           "Components": [
             {
               "Properties": {},
@@ -265,9 +281,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -312,9 +328,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -359,9 +375,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -407,8 +423,8 @@
                 "Color": {
                   "rgba": [
                     255,
-                    196,
-                    0,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -454,7 +470,7 @@
                 "Color": {
                   "rgba": [
                     0,
-                    255,
+                    0,
                     0,
                     255
                   ]
@@ -526,7 +542,7 @@
       "PositionId": "2",
       "Type": "Frame",
       "Description": "Lopkalisierung für Drive back right",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile_Robot_s1",
       "Components": [
         {
           "Properties": {},
@@ -549,24 +565,25 @@
             "unitXYZ": "mm",
             "unitRPY": "grad"
           },
-          "Name": "DC-Drive",
+          "Name": "Drive-Holder",
           "Id": 0,
           "Type": "Drive",
           "Description": "The Drive System of the Robot",
           "Parent": "Drive br",
+          "Template": "Drive-Holder",
           "Components": [
             {
               "Properties": {},
               "Number": "1",
-              "Data3D": "DC_Holder_64.stl",
+              "Data3D": "Passive_Holder_64.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -597,71 +614,24 @@
               "Name": "HolderBase",
               "Id": 0,
               "Type": "3D-Print",
-              "Description": "Base for Stepper Motor as 3D Printed Parf",
-              "Parent": "DC-Drive",
+              "Description": "Base for Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
               "Reference": "RC-34-2321",
-              "Components": []
-            },
-            {
-              "Properties": {},
-              "Number": "1",
-              "Data3D": "dc.stl",
-              "Material": {
-                "Properties": {},
-                "MaterialType": "Default",
-                "Color": {
-                  "rgba": [
-                    208,
-                    208,
-                    239,
-                    255
-                  ]
-                },
-                "ComponentType": "Materials",
-                "Name": "Material",
-                "Id": 0,
-                "Components": []
-              },
-              "ComponentType": "PartDescription",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": 0.0,
-                  "Y": 0.0,
-                  "Z": 0.0
-                },
-                "box": {
-                  "L": 50.0,
-                  "W": 45.0,
-                  "H": 64.0,
-                  "R": 0.0,
-                  "Type": "Box"
-                },
-                "mass": 140.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "DC Motor",
-              "Id": 0,
-              "Type": "motor",
-              "Description": "Complete DC-Motor for Drive System",
-              "Parent": "DC-Drive",
-              "Reference": "RC-34-2321.5",
               "Components": []
             },
             {
               "Properties": {},
               "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "MotorController.stl",
+              "Data3D": "adjusting ring.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -676,23 +646,83 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 0.0
+                  "Z": -32.0
+                },
+                "rpy": {
+                  "R": 90.0,
+                  "P": 0.0,
+                  "Y": 0.0
                 },
                 "box": {
-                  "L": 50.0,
-                  "W": 45.0,
-                  "H": 64.0,
-                  "R": 0.0,
-                  "Type": "Box"
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 60.0,
+                  "R": 3.0,
+                  "Type": "Cylinder"
                 },
-                "mass": 140.0,
+                "mass": 40.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Motor Controller",
+              "Name": "Schaft",
               "Id": 0,
-              "Type": "pcb",
-              "Parent": "DC-Drive",
+              "Type": "Standard part",
+              "Description": "Ring Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
+              "Reference": "RC-34-2321",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "IdCode": "RC-34-2321",
+              "Number": "2",
+              "Data3D": "adjusting ring.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "rgba": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": -32.0
+                },
+                "rpy": {
+                  "R": 90.0,
+                  "P": 0.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 60.0,
+                  "R": 3.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 40.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "adjusting ring",
+              "Id": 0,
+              "Type": "Standard part",
+              "Description": "Ring Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
+              "Reference": "RC-34-2321",
               "Components": []
             }
           ]
@@ -728,6 +758,7 @@
           "Type": "Wheel",
           "Description": "The Wheel of the Robot",
           "Parent": "Drive br",
+          "Template": "Regular-Wheel",
           "Components": [
             {
               "Properties": {},
@@ -739,9 +770,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -786,9 +817,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -833,9 +864,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -881,8 +912,8 @@
                 "Color": {
                   "rgba": [
                     255,
-                    196,
-                    0,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -928,7 +959,7 @@
                 "Color": {
                   "rgba": [
                     0,
-                    255,
+                    0,
                     0,
                     255
                   ]
@@ -995,7 +1026,7 @@
       "PositionId": "3",
       "Type": "Frame",
       "Description": "Lopkalisierung für Drive front left",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile_Robot_s1",
       "Components": [
         {
           "Properties": {},
@@ -1018,24 +1049,25 @@
             "unitXYZ": "mm",
             "unitRPY": "grad"
           },
-          "Name": "DC-Drive",
+          "Name": "Drive-Holder",
           "Id": 0,
           "Type": "Drive",
           "Description": "The Drive System of the Robot",
           "Parent": "Drive fl",
+          "Template": "Drive-Holder",
           "Components": [
             {
               "Properties": {},
               "Number": "1",
-              "Data3D": "DC_Holder_64.stl",
+              "Data3D": "Passive_Holder_64.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1066,71 +1098,24 @@
               "Name": "HolderBase",
               "Id": 0,
               "Type": "3D-Print",
-              "Description": "Base for Stepper Motor as 3D Printed Parf",
-              "Parent": "DC-Drive",
+              "Description": "Base for Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
               "Reference": "RC-34-2321",
-              "Components": []
-            },
-            {
-              "Properties": {},
-              "Number": "1",
-              "Data3D": "dc.stl",
-              "Material": {
-                "Properties": {},
-                "MaterialType": "Default",
-                "Color": {
-                  "rgba": [
-                    208,
-                    208,
-                    239,
-                    255
-                  ]
-                },
-                "ComponentType": "Materials",
-                "Name": "Material",
-                "Id": 0,
-                "Components": []
-              },
-              "ComponentType": "PartDescription",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": 0.0,
-                  "Y": 0.0,
-                  "Z": 0.0
-                },
-                "box": {
-                  "L": 50.0,
-                  "W": 45.0,
-                  "H": 64.0,
-                  "R": 0.0,
-                  "Type": "Box"
-                },
-                "mass": 140.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "DC Motor",
-              "Id": 0,
-              "Type": "motor",
-              "Description": "Complete DC-Motor for Drive System",
-              "Parent": "DC-Drive",
-              "Reference": "RC-34-2321.5",
               "Components": []
             },
             {
               "Properties": {},
               "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "MotorController.stl",
+              "Data3D": "adjusting ring.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1145,23 +1130,83 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 0.0
+                  "Z": -32.0
+                },
+                "rpy": {
+                  "R": 90.0,
+                  "P": 0.0,
+                  "Y": 0.0
                 },
                 "box": {
-                  "L": 50.0,
-                  "W": 45.0,
-                  "H": 64.0,
-                  "R": 0.0,
-                  "Type": "Box"
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 60.0,
+                  "R": 3.0,
+                  "Type": "Cylinder"
                 },
-                "mass": 140.0,
+                "mass": 40.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Motor Controller",
+              "Name": "Schaft",
               "Id": 0,
-              "Type": "pcb",
-              "Parent": "DC-Drive",
+              "Type": "Standard part",
+              "Description": "Ring Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
+              "Reference": "RC-34-2321",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "IdCode": "RC-34-2321",
+              "Number": "2",
+              "Data3D": "adjusting ring.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "rgba": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": -32.0
+                },
+                "rpy": {
+                  "R": 90.0,
+                  "P": 0.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 60.0,
+                  "R": 3.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 40.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "adjusting ring",
+              "Id": 0,
+              "Type": "Standard part",
+              "Description": "Ring Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
+              "Reference": "RC-34-2321",
               "Components": []
             }
           ]
@@ -1197,6 +1242,7 @@
           "Type": "Wheel",
           "Description": "The Wheel of the Robot",
           "Parent": "Drive fl",
+          "Template": "Regular-Wheel",
           "Components": [
             {
               "Properties": {},
@@ -1208,9 +1254,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -1255,9 +1301,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -1302,9 +1348,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -1350,8 +1396,8 @@
                 "Color": {
                   "rgba": [
                     255,
-                    196,
-                    0,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1397,7 +1443,7 @@
                 "Color": {
                   "rgba": [
                     0,
-                    255,
+                    0,
                     0,
                     255
                   ]
@@ -1469,7 +1515,7 @@
       "PositionId": "4",
       "Type": "Frame",
       "Description": "Lopkalisierung für Drive front right",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile_Robot_s1",
       "Components": [
         {
           "Properties": {},
@@ -1492,24 +1538,25 @@
             "unitXYZ": "mm",
             "unitRPY": "grad"
           },
-          "Name": "DC-Drive",
+          "Name": "Drive-Holder",
           "Id": 0,
           "Type": "Drive",
           "Description": "The Drive System of the Robot",
           "Parent": "Drive fr",
+          "Template": "Drive-Holder",
           "Components": [
             {
               "Properties": {},
               "Number": "1",
-              "Data3D": "DC_Holder_64.stl",
+              "Data3D": "Passive_Holder_64.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1540,71 +1587,24 @@
               "Name": "HolderBase",
               "Id": 0,
               "Type": "3D-Print",
-              "Description": "Base for Stepper Motor as 3D Printed Parf",
-              "Parent": "DC-Drive",
+              "Description": "Base for Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
               "Reference": "RC-34-2321",
-              "Components": []
-            },
-            {
-              "Properties": {},
-              "Number": "1",
-              "Data3D": "dc.stl",
-              "Material": {
-                "Properties": {},
-                "MaterialType": "Default",
-                "Color": {
-                  "rgba": [
-                    208,
-                    208,
-                    239,
-                    255
-                  ]
-                },
-                "ComponentType": "Materials",
-                "Name": "Material",
-                "Id": 0,
-                "Components": []
-              },
-              "ComponentType": "PartDescription",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": 0.0,
-                  "Y": 0.0,
-                  "Z": 0.0
-                },
-                "box": {
-                  "L": 50.0,
-                  "W": 45.0,
-                  "H": 64.0,
-                  "R": 0.0,
-                  "Type": "Box"
-                },
-                "mass": 140.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "DC Motor",
-              "Id": 0,
-              "Type": "motor",
-              "Description": "Complete DC-Motor for Drive System",
-              "Parent": "DC-Drive",
-              "Reference": "RC-34-2321.5",
               "Components": []
             },
             {
               "Properties": {},
               "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "MotorController.stl",
+              "Data3D": "adjusting ring.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1619,23 +1619,83 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 0.0
+                  "Z": -32.0
+                },
+                "rpy": {
+                  "R": 90.0,
+                  "P": 0.0,
+                  "Y": 0.0
                 },
                 "box": {
-                  "L": 50.0,
-                  "W": 45.0,
-                  "H": 64.0,
-                  "R": 0.0,
-                  "Type": "Box"
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 60.0,
+                  "R": 3.0,
+                  "Type": "Cylinder"
                 },
-                "mass": 140.0,
+                "mass": 40.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Motor Controller",
+              "Name": "Schaft",
               "Id": 0,
-              "Type": "pcb",
-              "Parent": "DC-Drive",
+              "Type": "Standard part",
+              "Description": "Ring Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
+              "Reference": "RC-34-2321",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "IdCode": "RC-34-2321",
+              "Number": "2",
+              "Data3D": "adjusting ring.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "rgba": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": -32.0
+                },
+                "rpy": {
+                  "R": 90.0,
+                  "P": 0.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 60.0,
+                  "R": 3.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 40.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "adjusting ring",
+              "Id": 0,
+              "Type": "Standard part",
+              "Description": "Ring Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
+              "Reference": "RC-34-2321",
               "Components": []
             }
           ]
@@ -1671,6 +1731,7 @@
           "Type": "Wheel",
           "Description": "The Wheel of the Robot",
           "Parent": "Drive fr",
+          "Template": "Regular-Wheel",
           "Components": [
             {
               "Properties": {},
@@ -1682,9 +1743,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -1729,9 +1790,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -1776,9 +1837,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -1824,8 +1885,8 @@
                 "Color": {
                   "rgba": [
                     255,
-                    196,
-                    0,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1871,7 +1932,7 @@
                 "Color": {
                   "rgba": [
                     0,
-                    255,
+                    0,
                     0,
                     255
                   ]
@@ -1938,7 +1999,7 @@
       "PositionId": "5",
       "Type": "Frame",
       "Description": "Lopkalisierung für Sensorbox front",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile_Robot_s1",
       "Components": [
         {
           "Properties": {},
@@ -1966,6 +2027,7 @@
           "Type": "SensorBox",
           "Description": "The Sensorbox on Front of the Robot",
           "Parent": "Sensorbox front",
+          "Template": "Sensorbox curved",
           "Components": [
             {
               "Properties": {},
@@ -1975,9 +2037,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -1996,7 +2058,7 @@
                 },
                 "rpy": {
                   "R": 15.0,
-                  "P": 90.0,
+                  "P": -90.0,
                   "Y": 0.0
                 },
                 "box": {
@@ -2013,182 +2075,11 @@
               "Name": "Sensor 1",
               "Id": 0,
               "PositionId": "1",
-              "Status": "active",
+              "Status": "inactive",
               "Type": "Frame",
               "Description": "Lopkalisierung für Sensor 1 ganz links",
               "Parent": "Sensorbox curved",
-              "Components": [
-                {
-                  "Properties": {},
-                  "ComponentType": "Device",
-                  "Geometry": {
-                    "JointType": "Fixed",
-                    "xyz": {
-                      "X": 0.0,
-                      "Y": 0.0,
-                      "Z": 0.0
-                    },
-                    "box": {
-                      "L": 0.0,
-                      "W": 0.0,
-                      "H": 30.0,
-                      "R": 20.0,
-                      "Type": "Cylinder"
-                    },
-                    "mass": 120.0,
-                    "unitXYZ": "mm",
-                    "unitRPY": "grad"
-                  },
-                  "Name": "LED-Light",
-                  "Id": 1,
-                  "Type": "Sensor",
-                  "Description": "The Drive System of the Robot",
-                  "Parent": "Sensor 1",
-                  "Components": [
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321",
-                      "Number": "1",
-                      "Data3D": "SensorBase.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 0.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Base",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Base Part as 3D Printed Parf for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321.5",
-                      "Number": "1",
-                      "Data3D": "Sensorpcb.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 10.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "sensor PCB",
-                      "Id": 0,
-                      "Type": "pcb",
-                      "Description": "Sensor pcb for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321",
-                      "Number": "1",
-                      "Data3D": "SensorTop_0.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 25.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Top",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Cover for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    }
-                  ]
-                }
-              ]
+              "Components": []
             },
             {
               "Properties": {},
@@ -2198,9 +2089,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -2236,182 +2127,11 @@
               "Name": "Sensor 2",
               "Id": 0,
               "PositionId": "2",
-              "Status": "active",
+              "Status": "inactive",
               "Type": "Frame",
               "Description": "Lopkalisierung für Sensor 2 mitte links",
               "Parent": "Sensorbox curved",
-              "Components": [
-                {
-                  "Properties": {},
-                  "ComponentType": "Device",
-                  "Geometry": {
-                    "JointType": "Fixed",
-                    "xyz": {
-                      "X": 0.0,
-                      "Y": 0.0,
-                      "Z": 0.0
-                    },
-                    "box": {
-                      "L": 0.0,
-                      "W": 0.0,
-                      "H": 30.0,
-                      "R": 20.0,
-                      "Type": "Cylinder"
-                    },
-                    "mass": 120.0,
-                    "unitXYZ": "mm",
-                    "unitRPY": "grad"
-                  },
-                  "Name": "Lidar",
-                  "Id": 2,
-                  "Type": "Sensor",
-                  "Description": "The Drive System of the Robot",
-                  "Parent": "Sensor 2",
-                  "Components": [
-                    {
-                      "Properties": {},
-                      "Number": "1",
-                      "Data3D": "SensorBase_li.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            255,
-                            196,
-                            0,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 0.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 0.0,
-                          "R": 0.0,
-                          "Type": "None"
-                        },
-                        "mass": 0.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Base",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Base Part as 3D Printed Parf for Lidar",
-                      "Parent": "Lidar",
-                      "Reference": "RC-34-2321",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "Number": "1",
-                      "Data3D": "LidarSensorpcb.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            255,
-                            196,
-                            0,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 10.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 10.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 4.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "sensor PCB",
-                      "Id": 0,
-                      "Type": "pcb",
-                      "Description": "Sensor pcb for Lidar",
-                      "Parent": "Lidar",
-                      "Reference": "RC-34-2321.5",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "Number": "1",
-                      "Data3D": "SensorTop_li.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            255,
-                            196,
-                            0,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 20.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 10.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 4.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Top",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Cover for Lidar",
-                      "Parent": "Lidar",
-                      "Reference": "RC-34-2321",
-                      "Components": []
-                    }
-                  ]
-                }
-              ]
+              "Components": []
             },
             {
               "Properties": {},
@@ -2421,9 +2141,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -2473,9 +2193,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -2494,7 +2214,7 @@
                 },
                 "rpy": {
                   "R": -15.0,
-                  "P": 90.0,
+                  "P": -90.0,
                   "Y": 0.0
                 },
                 "box": {
@@ -2511,182 +2231,11 @@
               "Name": "Sensor 4",
               "Id": 0,
               "PositionId": "4",
-              "Status": "active",
+              "Status": "inactive",
               "Type": "Frame",
               "Description": "Lopkalisierung für Sensor 4 ganz rechts",
               "Parent": "Sensorbox curved",
-              "Components": [
-                {
-                  "Properties": {},
-                  "ComponentType": "Device",
-                  "Geometry": {
-                    "JointType": "Fixed",
-                    "xyz": {
-                      "X": 0.0,
-                      "Y": 0.0,
-                      "Z": 0.0
-                    },
-                    "box": {
-                      "L": 0.0,
-                      "W": 0.0,
-                      "H": 30.0,
-                      "R": 20.0,
-                      "Type": "Cylinder"
-                    },
-                    "mass": 120.0,
-                    "unitXYZ": "mm",
-                    "unitRPY": "grad"
-                  },
-                  "Name": "LED-Light",
-                  "Id": 4,
-                  "Type": "Sensor",
-                  "Description": "The Drive System of the Robot",
-                  "Parent": "Sensor 4",
-                  "Components": [
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321",
-                      "Number": "1",
-                      "Data3D": "SensorBase.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 0.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Base",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Base Part as 3D Printed Parf for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321.5",
-                      "Number": "1",
-                      "Data3D": "Sensorpcb.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 10.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "sensor PCB",
-                      "Id": 0,
-                      "Type": "pcb",
-                      "Description": "Sensor pcb for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321",
-                      "Number": "1",
-                      "Data3D": "SensorTop_0.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 25.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Top",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Cover for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    }
-                  ]
-                }
-              ]
+              "Components": []
             },
             {
               "Properties": {},
@@ -2697,9 +2246,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -2744,9 +2293,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -2781,65 +2330,6 @@
               "Parent": "Sensorbox curved",
               "Reference": "RC-34-2321.5",
               "Components": []
-            },
-            {
-              "Properties": {},
-              "ComponentType": "Device",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": 0.0,
-                  "Y": 0.0,
-                  "Z": 0.0
-                },
-                "box": {
-                  "L": 0.0,
-                  "W": 0.0,
-                  "H": 0.0,
-                  "R": 0.0,
-                  "Type": "None"
-                },
-                "mass": 0.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "ESP 32",
-              "Id": 16,
-              "Type": "Controler",
-              "Parent": "Sensorbox curved",
-              "Components": [
-                {
-                  "Properties": {},
-                  "IdCode": "RC-34-2321.5",
-                  "Number": "1",
-                  "Data3D": "IMUpcb.stl",
-                  "ComponentType": "PartDescription",
-                  "Geometry": {
-                    "JointType": "Fixed",
-                    "xyz": {
-                      "X": 0.0,
-                      "Y": 0.0,
-                      "Z": 0.0
-                    },
-                    "box": {
-                      "L": 0.0,
-                      "W": 0.0,
-                      "H": 0.0,
-                      "R": 0.0,
-                      "Type": "None"
-                    },
-                    "mass": 0.0,
-                    "unitXYZ": "mm",
-                    "unitRPY": "grad"
-                  },
-                  "Name": "Contoller PCB",
-                  "Id": 0,
-                  "Type": "pcb",
-                  "Description": "Esp 32 Controller Board",
-                  "Parent": "ESP 32",
-                  "Components": []
-                }
-              ]
             }
           ]
         }
@@ -2877,7 +2367,7 @@
       "PositionId": "6",
       "Type": "Frame",
       "Description": "Lopkalisierung für Sensorbox back",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile_Robot_s1",
       "Components": [
         {
           "Properties": {},
@@ -2905,6 +2395,7 @@
           "Type": "SensorBox",
           "Description": "The Sensorbox on Front of the Robot",
           "Parent": "Sensorbox back",
+          "Template": "Sensorbox curved",
           "Components": [
             {
               "Properties": {},
@@ -2914,9 +2405,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -2935,7 +2426,7 @@
                 },
                 "rpy": {
                   "R": 15.0,
-                  "P": 90.0,
+                  "P": -90.0,
                   "Y": 0.0
                 },
                 "box": {
@@ -2952,182 +2443,11 @@
               "Name": "Sensor 1",
               "Id": 0,
               "PositionId": "1",
-              "Status": "active",
+              "Status": "inactive",
               "Type": "Frame",
               "Description": "Lopkalisierung für Sensor 1 ganz links",
               "Parent": "Sensorbox curved",
-              "Components": [
-                {
-                  "Properties": {},
-                  "ComponentType": "Device",
-                  "Geometry": {
-                    "JointType": "Fixed",
-                    "xyz": {
-                      "X": 0.0,
-                      "Y": 0.0,
-                      "Z": 0.0
-                    },
-                    "box": {
-                      "L": 0.0,
-                      "W": 0.0,
-                      "H": 30.0,
-                      "R": 20.0,
-                      "Type": "Cylinder"
-                    },
-                    "mass": 120.0,
-                    "unitXYZ": "mm",
-                    "unitRPY": "grad"
-                  },
-                  "Name": "LED-Light",
-                  "Id": 1,
-                  "Type": "Sensor",
-                  "Description": "The Drive System of the Robot",
-                  "Parent": "Sensor 1",
-                  "Components": [
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321",
-                      "Number": "1",
-                      "Data3D": "SensorBase.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 0.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Base",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Base Part as 3D Printed Parf for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321.5",
-                      "Number": "1",
-                      "Data3D": "Sensorpcb.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 10.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "sensor PCB",
-                      "Id": 0,
-                      "Type": "pcb",
-                      "Description": "Sensor pcb for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321",
-                      "Number": "1",
-                      "Data3D": "SensorTop_0.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 25.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Top",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Cover for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    }
-                  ]
-                }
-              ]
+              "Components": []
             },
             {
               "Properties": {},
@@ -3137,9 +2457,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -3175,182 +2495,11 @@
               "Name": "Sensor 2",
               "Id": 0,
               "PositionId": "2",
-              "Status": "active",
+              "Status": "inactive",
               "Type": "Frame",
               "Description": "Lopkalisierung für Sensor 2 mitte links",
               "Parent": "Sensorbox curved",
-              "Components": [
-                {
-                  "Properties": {},
-                  "ComponentType": "Device",
-                  "Geometry": {
-                    "JointType": "Fixed",
-                    "xyz": {
-                      "X": 0.0,
-                      "Y": 0.0,
-                      "Z": 0.0
-                    },
-                    "box": {
-                      "L": 0.0,
-                      "W": 0.0,
-                      "H": 30.0,
-                      "R": 20.0,
-                      "Type": "Cylinder"
-                    },
-                    "mass": 120.0,
-                    "unitXYZ": "mm",
-                    "unitRPY": "grad"
-                  },
-                  "Name": "Lidar",
-                  "Id": 2,
-                  "Type": "Sensor",
-                  "Description": "The Drive System of the Robot",
-                  "Parent": "Sensor 2",
-                  "Components": [
-                    {
-                      "Properties": {},
-                      "Number": "1",
-                      "Data3D": "SensorBase_li.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            255,
-                            196,
-                            0,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 0.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 0.0,
-                          "R": 0.0,
-                          "Type": "None"
-                        },
-                        "mass": 0.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Base",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Base Part as 3D Printed Parf for Lidar",
-                      "Parent": "Lidar",
-                      "Reference": "RC-34-2321",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "Number": "1",
-                      "Data3D": "LidarSensorpcb.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            255,
-                            196,
-                            0,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 10.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 10.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 4.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "sensor PCB",
-                      "Id": 0,
-                      "Type": "pcb",
-                      "Description": "Sensor pcb for Lidar",
-                      "Parent": "Lidar",
-                      "Reference": "RC-34-2321.5",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "Number": "1",
-                      "Data3D": "SensorTop_li.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            255,
-                            196,
-                            0,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 20.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 10.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 4.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Top",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Cover for Lidar",
-                      "Parent": "Lidar",
-                      "Reference": "RC-34-2321",
-                      "Components": []
-                    }
-                  ]
-                }
-              ]
+              "Components": []
             },
             {
               "Properties": {},
@@ -3360,9 +2509,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -3412,9 +2561,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -3433,7 +2582,7 @@
                 },
                 "rpy": {
                   "R": -15.0,
-                  "P": 90.0,
+                  "P": -90.0,
                   "Y": 0.0
                 },
                 "box": {
@@ -3450,182 +2599,11 @@
               "Name": "Sensor 4",
               "Id": 0,
               "PositionId": "4",
-              "Status": "active",
+              "Status": "inactive",
               "Type": "Frame",
               "Description": "Lopkalisierung für Sensor 4 ganz rechts",
               "Parent": "Sensorbox curved",
-              "Components": [
-                {
-                  "Properties": {},
-                  "ComponentType": "Device",
-                  "Geometry": {
-                    "JointType": "Fixed",
-                    "xyz": {
-                      "X": 0.0,
-                      "Y": 0.0,
-                      "Z": 0.0
-                    },
-                    "box": {
-                      "L": 0.0,
-                      "W": 0.0,
-                      "H": 30.0,
-                      "R": 20.0,
-                      "Type": "Cylinder"
-                    },
-                    "mass": 120.0,
-                    "unitXYZ": "mm",
-                    "unitRPY": "grad"
-                  },
-                  "Name": "LED-Light",
-                  "Id": 4,
-                  "Type": "Sensor",
-                  "Description": "The Drive System of the Robot",
-                  "Parent": "Sensor 4",
-                  "Components": [
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321",
-                      "Number": "1",
-                      "Data3D": "SensorBase.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 0.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Base",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Base Part as 3D Printed Parf for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321.5",
-                      "Number": "1",
-                      "Data3D": "Sensorpcb.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 10.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "sensor PCB",
-                      "Id": 0,
-                      "Type": "pcb",
-                      "Description": "Sensor pcb for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321",
-                      "Number": "1",
-                      "Data3D": "SensorTop_0.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 25.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Top",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Cover for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    }
-                  ]
-                }
-              ]
+              "Components": []
             },
             {
               "Properties": {},
@@ -3636,9 +2614,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -3683,9 +2661,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -3720,65 +2698,6 @@
               "Parent": "Sensorbox curved",
               "Reference": "RC-34-2321.5",
               "Components": []
-            },
-            {
-              "Properties": {},
-              "ComponentType": "Device",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": 0.0,
-                  "Y": 0.0,
-                  "Z": 0.0
-                },
-                "box": {
-                  "L": 0.0,
-                  "W": 0.0,
-                  "H": 0.0,
-                  "R": 0.0,
-                  "Type": "None"
-                },
-                "mass": 0.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "ESP 32",
-              "Id": 16,
-              "Type": "Controler",
-              "Parent": "Sensorbox curved",
-              "Components": [
-                {
-                  "Properties": {},
-                  "IdCode": "RC-34-2321.5",
-                  "Number": "1",
-                  "Data3D": "IMUpcb.stl",
-                  "ComponentType": "PartDescription",
-                  "Geometry": {
-                    "JointType": "Fixed",
-                    "xyz": {
-                      "X": 0.0,
-                      "Y": 0.0,
-                      "Z": 0.0
-                    },
-                    "box": {
-                      "L": 0.0,
-                      "W": 0.0,
-                      "H": 0.0,
-                      "R": 0.0,
-                      "Type": "None"
-                    },
-                    "mass": 0.0,
-                    "unitXYZ": "mm",
-                    "unitRPY": "grad"
-                  },
-                  "Name": "Contoller PCB",
-                  "Id": 0,
-                  "Type": "pcb",
-                  "Description": "Esp 32 Controller Board",
-                  "Parent": "ESP 32",
-                  "Components": []
-                }
-              ]
             }
           ]
         }
@@ -3801,8 +2720,8 @@
           "Y": 180.0
         },
         "box": {
-          "L": 40.0,
-          "W": 210.0,
+          "L": 94.0,
+          "W": 40.0,
           "H": 64.0,
           "R": 0.0,
           "Type": "Box"
@@ -3816,7 +2735,7 @@
       "PositionId": "7",
       "Type": "Frame",
       "Description": "Lopkalisierung für Sensorbox center",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile_Robot_s1",
       "Components": [
         {
           "Properties": {},
@@ -3844,6 +2763,7 @@
           "Type": "SensorBox",
           "Description": "Te Sensorbox on Front of the Robot",
           "Parent": "Sensorbox center",
+          "Template": "Sensorbox center",
           "Components": [
             {
               "Properties": {},
@@ -3853,9 +2773,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -3891,182 +2811,11 @@
               "Name": "Sensor 1",
               "Id": 0,
               "PositionId": "1",
-              "Status": "active",
+              "Status": "inactive",
               "Type": "Frame",
               "Description": "Lopkalisierung für Sensor 1 vorn",
               "Parent": "Sensorbox center",
-              "Components": [
-                {
-                  "Properties": {},
-                  "ComponentType": "Device",
-                  "Geometry": {
-                    "JointType": "Fixed",
-                    "xyz": {
-                      "X": 0.0,
-                      "Y": 0.0,
-                      "Z": 0.0
-                    },
-                    "box": {
-                      "L": 0.0,
-                      "W": 0.0,
-                      "H": 30.0,
-                      "R": 20.0,
-                      "Type": "Cylinder"
-                    },
-                    "mass": 120.0,
-                    "unitXYZ": "mm",
-                    "unitRPY": "grad"
-                  },
-                  "Name": "LED-Light",
-                  "Id": 1,
-                  "Type": "Sensor",
-                  "Description": "The Drive System of the Robot",
-                  "Parent": "Sensor 1",
-                  "Components": [
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321",
-                      "Number": "1",
-                      "Data3D": "SensorBase.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 0.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Base",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Base Part as 3D Printed Parf for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321.5",
-                      "Number": "1",
-                      "Data3D": "Sensorpcb.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 10.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "sensor PCB",
-                      "Id": 0,
-                      "Type": "pcb",
-                      "Description": "Sensor pcb for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321",
-                      "Number": "1",
-                      "Data3D": "SensorTop_0.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 25.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Top",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Cover for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    }
-                  ]
-                }
-              ]
+              "Components": []
             },
             {
               "Properties": {},
@@ -4076,9 +2825,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -4114,182 +2863,11 @@
               "Name": "Sensor 2",
               "Id": 0,
               "PositionId": "2",
-              "Status": "active",
+              "Status": "inactive",
               "Type": "Frame",
               "Description": "Lopkalisierung für Sensor 2 hinten",
               "Parent": "Sensorbox center",
-              "Components": [
-                {
-                  "Properties": {},
-                  "ComponentType": "Device",
-                  "Geometry": {
-                    "JointType": "Fixed",
-                    "xyz": {
-                      "X": 0.0,
-                      "Y": 0.0,
-                      "Z": 0.0
-                    },
-                    "box": {
-                      "L": 0.0,
-                      "W": 0.0,
-                      "H": 30.0,
-                      "R": 20.0,
-                      "Type": "Cylinder"
-                    },
-                    "mass": 120.0,
-                    "unitXYZ": "mm",
-                    "unitRPY": "grad"
-                  },
-                  "Name": "Lidar",
-                  "Id": 2,
-                  "Type": "Sensor",
-                  "Description": "The Drive System of the Robot",
-                  "Parent": "Sensor 2",
-                  "Components": [
-                    {
-                      "Properties": {},
-                      "Number": "1",
-                      "Data3D": "SensorBase_li.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            255,
-                            196,
-                            0,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 0.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 0.0,
-                          "R": 0.0,
-                          "Type": "None"
-                        },
-                        "mass": 0.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Base",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Base Part as 3D Printed Parf for Lidar",
-                      "Parent": "Lidar",
-                      "Reference": "RC-34-2321",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "Number": "1",
-                      "Data3D": "LidarSensorpcb.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            255,
-                            196,
-                            0,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 10.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 10.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 4.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "sensor PCB",
-                      "Id": 0,
-                      "Type": "pcb",
-                      "Description": "Sensor pcb for Lidar",
-                      "Parent": "Lidar",
-                      "Reference": "RC-34-2321.5",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "Number": "1",
-                      "Data3D": "SensorTop_li.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            255,
-                            196,
-                            0,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 20.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 10.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 4.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Top",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Cover for Lidar",
-                      "Parent": "Lidar",
-                      "Reference": "RC-34-2321",
-                      "Components": []
-                    }
-                  ]
-                }
-              ]
+              "Components": []
             },
             {
               "Properties": {},
@@ -4301,9 +2879,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -4348,9 +2926,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -4401,8 +2979,8 @@
           "Z": 0.0
         },
         "box": {
-          "L": 40.0,
-          "W": 210.0,
+          "L": 94.0,
+          "W": 40.0,
           "H": 64.0,
           "R": 0.0,
           "Type": "Box"
@@ -4416,7 +2994,7 @@
       "PositionId": "8",
       "Type": "Frame",
       "Description": "Lopkalisierung für Sensorbox Controller on the right",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile_Robot_s1",
       "Components": [
         {
           "Properties": {},
@@ -4430,7 +3008,7 @@
             },
             "box": {
               "L": 100.0,
-              "W": 404.0,
+              "W": 40.0,
               "H": 61.0,
               "R": 0.0,
               "Type": "Box"
@@ -4444,6 +3022,7 @@
           "Type": "SensorBox",
           "Description": "Te Sensorbox on Front of the Robot",
           "Parent": "Sensorbox controller",
+          "Template": "Controller",
           "Components": [
             {
               "Properties": {},
@@ -4453,9 +3032,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -4491,182 +3070,11 @@
               "Name": "Sensor 1",
               "Id": 0,
               "PositionId": "1",
-              "Status": "active",
+              "Status": "inactive",
               "Type": "Frame",
               "Description": "Lopkalisierung für Sensor 1 vorn",
               "Parent": "Controller",
-              "Components": [
-                {
-                  "Properties": {},
-                  "ComponentType": "Device",
-                  "Geometry": {
-                    "JointType": "Fixed",
-                    "xyz": {
-                      "X": 0.0,
-                      "Y": 0.0,
-                      "Z": 0.0
-                    },
-                    "box": {
-                      "L": 0.0,
-                      "W": 0.0,
-                      "H": 30.0,
-                      "R": 20.0,
-                      "Type": "Cylinder"
-                    },
-                    "mass": 120.0,
-                    "unitXYZ": "mm",
-                    "unitRPY": "grad"
-                  },
-                  "Name": "Lidar",
-                  "Id": 1,
-                  "Type": "Sensor",
-                  "Description": "The Drive System of the Robot",
-                  "Parent": "Sensor 1",
-                  "Components": [
-                    {
-                      "Properties": {},
-                      "Number": "1",
-                      "Data3D": "SensorBase_li.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 0.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 0.0,
-                          "R": 0.0,
-                          "Type": "None"
-                        },
-                        "mass": 0.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Base",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Base Part as 3D Printed Parf for Lidar",
-                      "Parent": "Lidar",
-                      "Reference": "RC-34-2321",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "Number": "1",
-                      "Data3D": "LidarSensorpcb.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 10.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 10.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 4.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "sensor PCB",
-                      "Id": 0,
-                      "Type": "pcb",
-                      "Description": "Sensor pcb for Lidar",
-                      "Parent": "Lidar",
-                      "Reference": "RC-34-2321.5",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "Number": "1",
-                      "Data3D": "SensorTop_li.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 20.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 10.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 4.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Top",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Cover for Lidar",
-                      "Parent": "Lidar",
-                      "Reference": "RC-34-2321",
-                      "Components": []
-                    }
-                  ]
-                }
-              ]
+              "Components": []
             },
             {
               "Properties": {},
@@ -4676,9 +3084,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -4730,9 +3138,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -4766,105 +3174,6 @@
               "Description": "Base for Battery and Controller",
               "Parent": "Controller",
               "Components": []
-            },
-            {
-              "Properties": {},
-              "Name": "Arduino Uno R4",
-              "Id": 0,
-              "Type": "Controler",
-              "Parent": "Controller",
-              "ComponentType": "ComponetItem",
-              "Components": []
-            },
-            {
-              "Properties": {},
-              "Name": "Akku 3300mAh",
-              "Id": 0,
-              "Type": "Power",
-              "Parent": "Controller",
-              "ComponentType": "ComponetItem",
-              "Components": []
-            },
-            {
-              "Properties": {},
-              "ComponentType": "Device",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": 0.0,
-                  "Y": 0.0,
-                  "Z": 0.0
-                },
-                "box": {
-                  "L": 0.0,
-                  "W": 0.0,
-                  "H": 0.0,
-                  "R": 0.0,
-                  "Type": "None"
-                },
-                "mass": 0.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "uRos",
-              "Id": 0,
-              "Type": "Device",
-              "Parent": "Controller",
-              "Components": []
-            },
-            {
-              "Properties": {},
-              "ComponentType": "Device",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": 0.0,
-                  "Y": 0.0,
-                  "Z": 0.0
-                },
-                "box": {
-                  "L": 0.0,
-                  "W": 0.0,
-                  "H": 0.0,
-                  "R": 0.0,
-                  "Type": "None"
-                },
-                "mass": 0.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "IMU",
-              "Id": 0,
-              "Type": "Device",
-              "Parent": "Controller",
-              "Components": []
-            },
-            {
-              "Properties": {},
-              "ComponentType": "Device",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": 0.0,
-                  "Y": 0.0,
-                  "Z": 0.0
-                },
-                "box": {
-                  "L": 0.0,
-                  "W": 0.0,
-                  "H": 0.0,
-                  "R": 0.0,
-                  "Type": "None"
-                },
-                "mass": 0.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "Sound",
-              "Id": 0,
-              "Type": "Device",
-              "Parent": "Controller",
-              "Components": []
             }
           ]
         }
@@ -4879,9 +3188,9 @@
         "MaterialType": "Default",
         "Color": {
           "rgba": [
-            208,
-            208,
-            239,
+            255,
+            255,
+            255,
             255
           ]
         },
@@ -4913,7 +3222,7 @@
       "Id": 0,
       "Type": "Basis",
       "Description": "Base for System",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile_Robot_s1",
       "Reference": "RC-34-2321",
       "Components": []
     },
@@ -4926,9 +3235,9 @@
         "MaterialType": "Default",
         "Color": {
           "rgba": [
-            208,
-            208,
-            239,
+            255,
+            255,
+            255,
             255
           ]
         },
@@ -4961,7 +3270,7 @@
       "PositionId": "2",
       "Type": "Basis",
       "Description": "Lower Coverplate",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile_Robot_s1",
       "Reference": "RC-34-2321.5",
       "Components": []
     }

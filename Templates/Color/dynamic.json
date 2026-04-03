@@ -28,7 +28,7 @@
     "Sensor l 2": "{Detail}",
     "Basis 2": "{Random}"
   },
-  "Name": "Sensor dynamic",
+  "Name": "dynamic",
   "Id": 0,
   "ComponentType": "Sensor dynamic colorSchemes",
   "Components": []

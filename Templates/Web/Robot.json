@@ -1,0 +1,58 @@
+[
+    {
+        "sender": "DHBW",
+        "command": "Start",
+        "content": "Hallo",
+        "type": "setAxis",
+        "axisConfiguration": {
+            "frontDrives": "DC-Drive",
+            "rearDrives": "Stepper-Drive",
+            "frontWheels": "Regular-Wheel",
+            "rearWheels": "Omni-Wheel",
+            "driveType": "Differential",
+            "robotName": "LCAMP Mobile Robot"
+        }
+    },
+    {
+        "sender": "DHBW",
+        "command": "SetSensors",
+        "content": "Hallo",
+        "type": "setSensors",
+        "sensorConfiguration": {
+            "front": [
+                "UltraSonic",
+                "LED-Light",
+                "...",
+                "UltraSonic",
+                "LineFollower",
+                "ESP32"
+            ],
+            "frontAux": "LineFollower",
+            "rear": [
+                "UltraSonic",
+                "...",
+                "...",
+                "LED-Light",
+                "...",
+                "..."
+            ],
+            "rearAux": "...",
+            "center": [
+                "UltraSonic",
+                "Lidar",
+                "...",
+                "...",
+                "LineFollower"
+            ],
+            "centerAux": "LineFollower",
+            "controller": [
+                "UltraSonic",
+                "Lidar",
+                "...",
+                "...",
+                "..."
+            ],
+            "controllerAux": "..."
+        }
+    }
+]

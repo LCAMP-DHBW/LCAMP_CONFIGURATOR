@@ -83,6 +83,22 @@
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
       "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "US-Sensor",
+      "Id": 0,
+      "Type": "Sensor",
+      "Description": "UltraSonic Sensor",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "US-Sensor",
+      "Id": 0,
+      "Type": "Sensor",
+      "Description": "The Drive System of the Robot",
+      "ComponentType": "ComponetItem"
     }
   ],
   "AuxSensors": [
@@ -95,7 +111,7 @@
     },
     {
       "Properties": {},
-      "Name": "Line Follower",
+      "Name": "Line-Follower",
       "Id": 0,
       "Type": "AuxSensor",
       "ComponentType": "ComponetItem"
@@ -111,7 +127,7 @@
     },
     {
       "Properties": {},
-      "Name": "IMU",
+      "Name": "Main Switch",
       "Id": 0,
       "Type": "Device",
       "ComponentType": "ComponetItem"
@@ -127,9 +143,32 @@
     },
     {
       "Properties": {},
+      "Name": "Arduino Uno R3",
+      "Id": 0,
+      "Type": "Controler",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "Arduino Mega",
+      "Id": 0,
+      "Type": "Controler",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
       "Name": "ESP 32",
       "Id": 0,
       "Type": "Controler",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "ESP 32",
+      "Id": 0,
+      "Type": "AuxSensor",
+      "Template": "ESP32_SB",
+      "Description": "Aux Controller for Sensorbox",
       "ComponentType": "ComponetItem"
     },
     {
@@ -163,73 +202,23 @@
       "ComponentType": "ComponetItem"
     }
   ],
-  "Components": [
-    {
-      "Properties": {},
-      "Name": "MainFrame Alu",
-      "Id": 0,
-      "Type": "MainFrame",
-      "Description": "The central Plate of the Robots",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
-      "Name": "MainFrame ABS",
-      "Id": 0,
-      "Type": "MainFrame",
-      "Description": "The central Plate of the Robots",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
-      "Name": "MainFrame Composite",
-      "Id": 0,
-      "Type": "MainFrame",
-      "Description": "The central Plate of the Robots",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
-      "Name": "BottomPlate Pexi",
-      "Id": 0,
-      "Type": "Base",
-      "Description": "The botom cover of the Robots",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
-      "Name": "BottomPlate Alu",
-      "Id": 0,
-      "Type": "Base",
-      "Description": "The botom cover of the Robots",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
-      "Name": "BottomPlate wood",
-      "Id": 0,
-      "Type": "Base",
-      "Description": "The botom cover of the Robots",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
-      "Name": "Screw Linzenkopf",
-      "Id": 0,
-      "Type": "Connecting",
-      "Description": "The central Plate of the Robots",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
-      "Name": "Screw LinSenkkopf",
-      "Id": 0,
-      "Type": "Connecting",
-      "Description": "The central Plate of the Robots",
-      "ComponentType": "ComponetItem"
-    }
-  ],
   "Communication": [
+    {
+      "Properties": {},
+      "Name": "MQTT",
+      "Id": 0,
+      "Type": "Communication",
+      "Description": "The Comunication Platform for MQTT",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "OPC/UA",
+      "Id": 0,
+      "Type": "Communication",
+      "Description": "The Comunication Platform for OPC/UA",
+      "ComponentType": "ComponetItem"
+    },
     {
       "Properties": {},
       "Name": "uRos",
@@ -265,7 +254,7 @@
       "Properties": {},
       "Name": "Bottom_Plate",
       "Id": 0,
-      "Type": "MainFrame",
+      "Type": "Part",
       "ComponentType": "ComponetItem"
     },
     {
@@ -346,7 +335,7 @@
     },
     {
       "Properties": {},
-      "Name": "Line Follower",
+      "Name": "Line-Follower",
       "Id": 0,
       "Type": "AuxSensor",
       "ComponentType": "ComponetItem"
@@ -361,7 +350,7 @@
     },
     {
       "Properties": {},
-      "Name": "IMU",
+      "Name": "Main Switch",
       "Id": 0,
       "Type": "Device",
       "ComponentType": "ComponetItem"
@@ -376,10 +365,41 @@
     },
     {
       "Properties": {},
+      "Name": "Assembly: Mecanum-Wheel",
+      "Id": 0,
+      "Type": "Assembly",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "Mecanum-Wheel",
+      "Id": 0,
+      "Type": "Wheel",
+      "Description": "The Wheel of the Robot",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "MQTT",
+      "Id": 0,
+      "Type": "Communication",
+      "Description": "The Comunication Platform for MQTT",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
       "Name": "Omni-Wheel",
       "Id": 0,
       "Type": "Wheel",
       "Description": "The Wheel of the Robot",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "OPC/UA",
+      "Id": 0,
+      "Type": "Communication",
+      "Description": "The Comunication Platform for OPC/UA",
       "ComponentType": "ComponetItem"
     },
     {
@@ -442,6 +462,22 @@
       "Id": 0,
       "Type": "Communication",
       "Description": "The Comunication Platform for Micro Ros",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "US-Sensor",
+      "Id": 0,
+      "Type": "Sensor",
+      "Description": "The Drive System of the Robot",
+      "ComponentType": "ComponetItem"
+    },
+    {
+      "Properties": {},
+      "Name": "US-Sensor",
+      "Id": 0,
+      "Type": "Sensor",
+      "Description": "The Drive System of the Robot",
       "ComponentType": "ComponetItem"
     },
     {

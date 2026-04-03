@@ -1119,7 +1119,8 @@
       "LCAMPConfiguratorUserInterface/1.2.3": {
         "dependencies": {
           "LCAMPConfiguratorColor": "1.0.0",
-          "LCAMPConfiguratorCore": "1.0.0"
+          "LCAMPConfiguratorCore": "1.0.0",
+          "ViewerLibary": "1.0.0"
         },
         "runtime": {
           "LCAMPConfiguratorUserInterface.dll": {

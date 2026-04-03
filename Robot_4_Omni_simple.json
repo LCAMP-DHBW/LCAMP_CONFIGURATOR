@@ -1,5 +1,4 @@
 {
-  "DriveConfig": "differential",
   "ComponentType": "LCAMPRobot",
   "Geometry": {
     "JointType": "Fixed",
@@ -19,11 +18,12 @@
     "unitXYZ": "none",
     "unitRPY": "none"
   },
-  "Name": "LCAMP Mobile Robot",
+  "Name": "Mobile Robot",
   "Id": 0,
   "Type": "Component",
   "Description": "The Center Core of the Robot",
   "Parent": "Robot",
+  "Template": "LCAMPRobot",
   "Components": [
     {
       "Properties": {},
@@ -52,7 +52,7 @@
       "PositionId": "1",
       "Type": "Frame",
       "Description": "Lopkalisierung für  Drive back left",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile Robot",
       "Components": [
         {
           "Properties": {},
@@ -75,24 +75,25 @@
             "unitXYZ": "mm",
             "unitRPY": "grad"
           },
-          "Name": "DC-Drive",
+          "Name": "Drive-Holder",
           "Id": 0,
           "Type": "Drive",
           "Description": "The Drive System of the Robot",
           "Parent": "Drive bl",
+          "Template": "Drive-Holder",
           "Components": [
             {
               "Properties": {},
               "Number": "1",
-              "Data3D": "DC_Holder_64.stl",
+              "Data3D": "Passive_Holder_64.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -123,71 +124,24 @@
               "Name": "HolderBase",
               "Id": 0,
               "Type": "3D-Print",
-              "Description": "Base for Stepper Motor as 3D Printed Parf",
-              "Parent": "DC-Drive",
+              "Description": "Base for Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
               "Reference": "RC-34-2321",
-              "Components": []
-            },
-            {
-              "Properties": {},
-              "Number": "1",
-              "Data3D": "dc.stl",
-              "Material": {
-                "Properties": {},
-                "MaterialType": "Default",
-                "Color": {
-                  "rgba": [
-                    208,
-                    208,
-                    239,
-                    255
-                  ]
-                },
-                "ComponentType": "Materials",
-                "Name": "Material",
-                "Id": 0,
-                "Components": []
-              },
-              "ComponentType": "PartDescription",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": 0.0,
-                  "Y": 0.0,
-                  "Z": 0.0
-                },
-                "box": {
-                  "L": 50.0,
-                  "W": 45.0,
-                  "H": 64.0,
-                  "R": 0.0,
-                  "Type": "Box"
-                },
-                "mass": 140.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "DC Motor",
-              "Id": 0,
-              "Type": "motor",
-              "Description": "Complete DC-Motor for Drive System",
-              "Parent": "DC-Drive",
-              "Reference": "RC-34-2321.5",
               "Components": []
             },
             {
               "Properties": {},
               "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "MotorController.stl",
+              "Data3D": "adjusting ring.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -202,23 +156,83 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 0.0
+                  "Z": -32.0
+                },
+                "rpy": {
+                  "R": 90.0,
+                  "P": 0.0,
+                  "Y": 0.0
                 },
                 "box": {
-                  "L": 50.0,
-                  "W": 45.0,
-                  "H": 64.0,
-                  "R": 0.0,
-                  "Type": "Box"
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 60.0,
+                  "R": 3.0,
+                  "Type": "Cylinder"
                 },
-                "mass": 140.0,
+                "mass": 40.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Motor Controller",
+              "Name": "Schaft",
               "Id": 0,
-              "Type": "pcb",
-              "Parent": "DC-Drive",
+              "Type": "Standard part",
+              "Description": "Ring Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
+              "Reference": "RC-34-2321",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "IdCode": "RC-34-2321",
+              "Number": "2",
+              "Data3D": "adjusting ring.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "rgba": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": -32.0
+                },
+                "rpy": {
+                  "R": 90.0,
+                  "P": 0.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 60.0,
+                  "R": 3.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 40.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "adjusting ring",
+              "Id": 0,
+              "Type": "Standard part",
+              "Description": "Ring Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
+              "Reference": "RC-34-2321",
               "Components": []
             }
           ]
@@ -230,7 +244,7 @@
             "JointType": "Continuous",
             "xyz": {
               "X": 0.0,
-              "Y": 5.0,
+              "Y": 0.0,
               "Z": 0.0
             },
             "rpy": {
@@ -241,33 +255,33 @@
             "box": {
               "L": 0.0,
               "W": 0.0,
-              "H": 40.0,
-              "R": 48.0,
+              "H": 32.0,
+              "R": 2.0,
               "Type": "Cylinder"
             },
             "mass": 120.0,
             "unitXYZ": "mm",
             "unitRPY": "grad"
           },
-          "Name": "Regular-Wheel",
+          "Name": "Mecanum-Wheel",
           "Id": 0,
           "Type": "Wheel",
           "Description": "The Wheel of the Robot",
           "Parent": "Drive bl",
+          "Template": "Mecanum-Wheel-left",
           "Components": [
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "wheel_hub_ax.stl",
+              "Data3D": "Wheel_Hub_ax.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -282,39 +296,39 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 1.0
+                  "Z": 0.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
-                  "Type": "Cylinder"
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
                 },
-                "mass": 13.0,
+                "mass": 0.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
               "Name": "Wheel-Hub",
               "Id": 0,
               "Type": "Hub",
-              "Description": "Hub for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Description": "Hub for Mecanum-Wheel as 3D Printed Part",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "Regular_Wheel_Star_30_84.stl",
+              "Data3D": "mecanumWheel_2a_pin.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -329,39 +343,39 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 2.0
+                  "Z": 6.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
+                  "H": 32.0,
+                  "R": 2.0,
                   "Type": "Cylinder"
                 },
-                "mass": 13.0,
+                "mass": 120.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "rim-inner",
+              "Name": "rimm-inner",
               "Id": 0,
-              "Type": "Rimm",
-              "Description": "Inner Rim for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Type": "3Rimm",
+              "Description": "Flange forRegular-Wheel as 3D Printed Parf",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "Regular_Wheel_Star_24_84.stl",
+              "Data3D": "mecanumWheel_2b_pin24.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -376,29 +390,29 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 28.0
+                  "Z": 38.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
+                  "H": 32.0,
+                  "R": 2.0,
                   "Type": "Cylinder"
                 },
-                "mass": 13.0,
+                "mass": 120.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "rim-outer",
+              "Name": "rimm-outerr",
               "Id": 0,
               "Type": "Rimm",
-              "Description": "Outer Rim for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Description": "Flange forRegular-Wheel as 3D Printed Parf",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
               "Data3D": "Hub_Cup_8.stl",
               "Material": {
@@ -407,8 +421,8 @@
                 "Color": {
                   "rgba": [
                     255,
-                    196,
-                    0,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -423,38 +437,37 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 28.0
+                  "Z": 36.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 20.0,
-                  "R": 40.0,
+                  "H": 8.0,
+                  "R": 20.0,
                   "Type": "Cylinder"
                 },
                 "mass": 13.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Wheel-Hub-Cap",
+              "Name": "Wheel-Hub-Cup",
               "Id": 0,
               "Type": "HubCap",
-              "Description": "Hub Cup for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Description": "Hub Cup for Mecanum-Wheel as 3D Printed Part",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321.5",
-              "Number": "1",
-              "Data3D": "Wheel_92_outside.stl",
+              "Number": "9, RotZ, alfa=-45°, r=40mm",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
                     255,
+                    0,
                     0,
                     255
                   ]
@@ -466,29 +479,126 @@
               },
               "ComponentType": "PartDescription",
               "Geometry": {
-                "JointType": "Fixed",
+                "JointType": "Continuous",
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 15.0
+                  "Z": 20.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 30.0,
-                  "R": 48.0,
+                  "H": 32.0,
+                  "R": 12.0,
                   "Type": "Cylinder"
                 },
                 "mass": 13.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Tire",
+              "Name": "Rollers",
               "Id": 0,
-              "Type": "Tire",
-              "Description": "Tire for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
-              "Components": []
+              "Type": "Assembly",
+              "Description": "Complete Roller Assembly",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321.5",
+              "Components": [
+                {
+                  "Properties": {},
+                  "IdCode": "RC-34-2321.5",
+                  "Number": "1",
+                  "Data3D": "Pin_Roller.stl",
+                  "Material": {
+                    "Properties": {},
+                    "MaterialType": "Default",
+                    "Color": {
+                      "ColorName": "grey",
+                      "rgba": [
+                        128,
+                        128,
+                        128,
+                        255
+                      ]
+                    },
+                    "ComponentType": "Materials",
+                    "Name": "Material",
+                    "Id": 0,
+                    "Components": []
+                  },
+                  "ComponentType": "PartDescription",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 12.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 32.0,
+                      "R": 12.0,
+                      "Type": "Cylinder"
+                    },
+                    "mass": 13.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "RollerPin",
+                  "Id": 0,
+                  "Type": "Norm",
+                  "Description": "Complete DC-Motor for Drive System",
+                  "Parent": "Rollers [9, RotZ, alfa=-45°, r=40mm]",
+                  "Components": []
+                },
+                {
+                  "Properties": {},
+                  "Number": "1",
+                  "Data3D": "Mecanum_Rolle_1.stl",
+                  "Material": {
+                    "Properties": {},
+                    "MaterialType": "Default",
+                    "Color": {
+                      "rgba": [
+                        0,
+                        0,
+                        0,
+                        255
+                      ]
+                    },
+                    "ComponentType": "Materials",
+                    "Name": "Material",
+                    "Id": 0,
+                    "Components": []
+                  },
+                  "ComponentType": "PartDescription",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 0.0,
+                      "R": 0.0,
+                      "Type": "None"
+                    },
+                    "mass": 0.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "Roller",
+                  "Id": 0,
+                  "Type": "Tire",
+                  "Description": "One Roller for Omnie Wheel ",
+                  "Parent": "Rollers [9, RotZ, alfa=-45°, r=40mm]",
+                  "Reference": "RC-34-2321.5",
+                  "Components": []
+                }
+              ]
             }
           ]
         }
@@ -526,7 +636,7 @@
       "PositionId": "2",
       "Type": "Frame",
       "Description": "Lopkalisierung für Drive back right",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile Robot",
       "Components": [
         {
           "Properties": {},
@@ -549,24 +659,25 @@
             "unitXYZ": "mm",
             "unitRPY": "grad"
           },
-          "Name": "DC-Drive",
+          "Name": "Drive-Holder",
           "Id": 0,
           "Type": "Drive",
           "Description": "The Drive System of the Robot",
           "Parent": "Drive br",
+          "Template": "Drive-Holder",
           "Components": [
             {
               "Properties": {},
               "Number": "1",
-              "Data3D": "DC_Holder_64.stl",
+              "Data3D": "Passive_Holder_64.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -597,71 +708,24 @@
               "Name": "HolderBase",
               "Id": 0,
               "Type": "3D-Print",
-              "Description": "Base for Stepper Motor as 3D Printed Parf",
-              "Parent": "DC-Drive",
+              "Description": "Base for Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
               "Reference": "RC-34-2321",
-              "Components": []
-            },
-            {
-              "Properties": {},
-              "Number": "1",
-              "Data3D": "dc.stl",
-              "Material": {
-                "Properties": {},
-                "MaterialType": "Default",
-                "Color": {
-                  "rgba": [
-                    208,
-                    208,
-                    239,
-                    255
-                  ]
-                },
-                "ComponentType": "Materials",
-                "Name": "Material",
-                "Id": 0,
-                "Components": []
-              },
-              "ComponentType": "PartDescription",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": 0.0,
-                  "Y": 0.0,
-                  "Z": 0.0
-                },
-                "box": {
-                  "L": 50.0,
-                  "W": 45.0,
-                  "H": 64.0,
-                  "R": 0.0,
-                  "Type": "Box"
-                },
-                "mass": 140.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "DC Motor",
-              "Id": 0,
-              "Type": "motor",
-              "Description": "Complete DC-Motor for Drive System",
-              "Parent": "DC-Drive",
-              "Reference": "RC-34-2321.5",
               "Components": []
             },
             {
               "Properties": {},
               "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "MotorController.stl",
+              "Data3D": "adjusting ring.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -676,23 +740,83 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 0.0
+                  "Z": -32.0
+                },
+                "rpy": {
+                  "R": 90.0,
+                  "P": 0.0,
+                  "Y": 0.0
                 },
                 "box": {
-                  "L": 50.0,
-                  "W": 45.0,
-                  "H": 64.0,
-                  "R": 0.0,
-                  "Type": "Box"
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 60.0,
+                  "R": 3.0,
+                  "Type": "Cylinder"
                 },
-                "mass": 140.0,
+                "mass": 40.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Motor Controller",
+              "Name": "Schaft",
               "Id": 0,
-              "Type": "pcb",
-              "Parent": "DC-Drive",
+              "Type": "Standard part",
+              "Description": "Ring Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
+              "Reference": "RC-34-2321",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "IdCode": "RC-34-2321",
+              "Number": "2",
+              "Data3D": "adjusting ring.stl",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "rgba": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": -32.0
+                },
+                "rpy": {
+                  "R": 90.0,
+                  "P": 0.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 60.0,
+                  "R": 3.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 40.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "adjusting ring",
+              "Id": 0,
+              "Type": "Standard part",
+              "Description": "Ring Drive-Holder as 3D Printed Part",
+              "Parent": "Drive-Holder",
+              "Reference": "RC-34-2321",
               "Components": []
             }
           ]
@@ -704,7 +828,7 @@
             "JointType": "Continuous",
             "xyz": {
               "X": 0.0,
-              "Y": 5.0,
+              "Y": 0.0,
               "Z": 0.0
             },
             "rpy": {
@@ -715,33 +839,33 @@
             "box": {
               "L": 0.0,
               "W": 0.0,
-              "H": 40.0,
-              "R": 48.0,
+              "H": 32.0,
+              "R": 2.0,
               "Type": "Cylinder"
             },
             "mass": 120.0,
             "unitXYZ": "mm",
             "unitRPY": "grad"
           },
-          "Name": "Regular-Wheel",
+          "Name": "Mecanum-Wheel",
           "Id": 0,
           "Type": "Wheel",
           "Description": "The Wheel of the Robot",
           "Parent": "Drive br",
+          "Template": "Mecanum-Wheel",
           "Components": [
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "wheel_hub_ax.stl",
+              "Data3D": "Wheel_Hub_ax.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -756,39 +880,39 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 1.0
+                  "Z": 0.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
-                  "Type": "Cylinder"
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
                 },
-                "mass": 13.0,
+                "mass": 0.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
               "Name": "Wheel-Hub",
               "Id": 0,
               "Type": "Hub",
-              "Description": "Hub for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Description": "Hub for Mecanum-Wheel as 3D Printed Part",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "Regular_Wheel_Star_30_84.stl",
+              "Data3D": "mecanumWheel_1a_pin.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -803,39 +927,39 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 2.0
+                  "Z": 6.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
+                  "H": 32.0,
+                  "R": 2.0,
                   "Type": "Cylinder"
                 },
-                "mass": 13.0,
+                "mass": 120.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "rim-inner",
+              "Name": "rimm-inner",
               "Id": 0,
-              "Type": "Rimm",
-              "Description": "Inner Rim for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Type": "3Rimm",
+              "Description": "Flange forRegular-Wheel as 3D Printed Parf",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "Regular_Wheel_Star_24_84.stl",
+              "Data3D": "mecanumWheel_1b_pin24.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -850,29 +974,29 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 28.0
+                  "Z": 38.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
+                  "H": 32.0,
+                  "R": 2.0,
                   "Type": "Cylinder"
                 },
-                "mass": 13.0,
+                "mass": 120.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "rim-outer",
+              "Name": "rimm-outerr",
               "Id": 0,
               "Type": "Rimm",
-              "Description": "Outer Rim for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Description": "Flange forRegular-Wheel as 3D Printed Parf",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
               "Data3D": "Hub_Cup_8.stl",
               "Material": {
@@ -881,8 +1005,8 @@
                 "Color": {
                   "rgba": [
                     255,
-                    196,
-                    0,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -897,38 +1021,37 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 28.0
+                  "Z": 36.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 20.0,
-                  "R": 40.0,
+                  "H": 8.0,
+                  "R": 20.0,
                   "Type": "Cylinder"
                 },
                 "mass": 13.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Wheel-Hub-Cap",
+              "Name": "Wheel-Hub-Cup",
               "Id": 0,
               "Type": "HubCap",
-              "Description": "Hub Cup for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Description": "Hub Cup for Mecanum-Wheel as 3D Printed Part",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321.5",
-              "Number": "1",
-              "Data3D": "Wheel_92_outside.stl",
+              "Number": "9, RotZ, alfa=45°, r=40mm",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
                     255,
+                    0,
                     0,
                     255
                   ]
@@ -940,29 +1063,126 @@
               },
               "ComponentType": "PartDescription",
               "Geometry": {
-                "JointType": "Fixed",
+                "JointType": "Continuous",
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 15.0
+                  "Z": 20.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 30.0,
-                  "R": 48.0,
+                  "H": 32.0,
+                  "R": 12.0,
                   "Type": "Cylinder"
                 },
                 "mass": 13.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Tire",
+              "Name": "Rollers",
               "Id": 0,
-              "Type": "Tire",
-              "Description": "Tire for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
-              "Components": []
+              "Type": "Assembly",
+              "Description": "Complete Roller Assembly",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321.5",
+              "Components": [
+                {
+                  "Properties": {},
+                  "IdCode": "RC-34-2321.5",
+                  "Number": "1",
+                  "Data3D": "Pin_Roller.stl",
+                  "Material": {
+                    "Properties": {},
+                    "MaterialType": "Default",
+                    "Color": {
+                      "ColorName": "grey",
+                      "rgba": [
+                        128,
+                        128,
+                        128,
+                        255
+                      ]
+                    },
+                    "ComponentType": "Materials",
+                    "Name": "Material",
+                    "Id": 0,
+                    "Components": []
+                  },
+                  "ComponentType": "PartDescription",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 12.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 32.0,
+                      "R": 12.0,
+                      "Type": "Cylinder"
+                    },
+                    "mass": 13.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "RollerPin",
+                  "Id": 0,
+                  "Type": "Norm",
+                  "Description": "Complete DC-Motor for Drive System",
+                  "Parent": "Rollers [9, RotZ, alfa=45°, r=40mm]",
+                  "Components": []
+                },
+                {
+                  "Properties": {},
+                  "Number": "1",
+                  "Data3D": "Mecanum_Rolle_1.stl",
+                  "Material": {
+                    "Properties": {},
+                    "MaterialType": "Default",
+                    "Color": {
+                      "rgba": [
+                        0,
+                        0,
+                        0,
+                        255
+                      ]
+                    },
+                    "ComponentType": "Materials",
+                    "Name": "Material",
+                    "Id": 0,
+                    "Components": []
+                  },
+                  "ComponentType": "PartDescription",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 0.0,
+                      "R": 0.0,
+                      "Type": "None"
+                    },
+                    "mass": 0.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "Roller",
+                  "Id": 0,
+                  "Type": "Tire",
+                  "Description": "One Roller for Omnie Wheel ",
+                  "Parent": "Rollers [9, RotZ, alfa=45°, r=40mm]",
+                  "Reference": "RC-34-2321.5",
+                  "Components": []
+                }
+              ]
             }
           ]
         }
@@ -995,7 +1215,7 @@
       "PositionId": "3",
       "Type": "Frame",
       "Description": "Lopkalisierung für Drive front left",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile Robot",
       "Components": [
         {
           "Properties": {},
@@ -1018,24 +1238,25 @@
             "unitXYZ": "mm",
             "unitRPY": "grad"
           },
-          "Name": "DC-Drive",
+          "Name": "Stepper-Drive",
           "Id": 0,
           "Type": "Drive",
           "Description": "The Drive System of the Robot",
           "Parent": "Drive fl",
+          "Template": "Stepper-Drive",
           "Components": [
             {
               "Properties": {},
               "Number": "1",
-              "Data3D": "DC_Holder_64.stl",
+              "Data3D": "stepper_Holder_64.STL",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1054,7 +1275,7 @@
                 },
                 "box": {
                   "L": 50.0,
-                  "W": 45.0,
+                  "W": 50.0,
                   "H": 64.0,
                   "R": 0.0,
                   "Type": "Box"
@@ -1067,22 +1288,22 @@
               "Id": 0,
               "Type": "3D-Print",
               "Description": "Base for Stepper Motor as 3D Printed Parf",
-              "Parent": "DC-Drive",
+              "Parent": "Stepper-Drive",
               "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
               "Number": "1",
-              "Data3D": "dc.stl",
+              "Data3D": "Stepper.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1095,32 +1316,31 @@
               "Geometry": {
                 "JointType": "Fixed",
                 "xyz": {
-                  "X": 0.0,
+                  "X": 15.0,
                   "Y": 0.0,
                   "Z": 0.0
                 },
                 "box": {
-                  "L": 50.0,
-                  "W": 45.0,
+                  "L": 42.0,
+                  "W": 42.0,
                   "H": 64.0,
                   "R": 0.0,
                   "Type": "Box"
                 },
-                "mass": 140.0,
+                "mass": 200.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "DC Motor",
+              "Name": "Stepper Motor NEMA17",
               "Id": 0,
               "Type": "motor",
-              "Description": "Complete DC-Motor for Drive System",
-              "Parent": "DC-Drive",
+              "Description": "Complete Stepper Motor for Drive System",
+              "Parent": "Stepper-Drive",
               "Reference": "RC-34-2321.5",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
               "Data3D": "MotorController.stl",
               "Material": {
@@ -1128,9 +1348,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1143,7 +1363,7 @@
               "Geometry": {
                 "JointType": "Fixed",
                 "xyz": {
-                  "X": 0.0,
+                  "X": 15.0,
                   "Y": 0.0,
                   "Z": 0.0
                 },
@@ -1154,14 +1374,16 @@
                   "R": 0.0,
                   "Type": "Box"
                 },
-                "mass": 140.0,
+                "mass": 20.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
               "Name": "Motor Controller",
               "Id": 0,
               "Type": "pcb",
-              "Parent": "DC-Drive",
+              "Description": "Controllerfor  Stepper Motor on Drive System",
+              "Parent": "Stepper-Drive",
+              "Reference": "RC-34-2321",
               "Components": []
             }
           ]
@@ -1173,7 +1395,7 @@
             "JointType": "Continuous",
             "xyz": {
               "X": 0.0,
-              "Y": 5.0,
+              "Y": 0.0,
               "Z": 0.0
             },
             "rpy": {
@@ -1184,33 +1406,33 @@
             "box": {
               "L": 0.0,
               "W": 0.0,
-              "H": 40.0,
-              "R": 48.0,
+              "H": 32.0,
+              "R": 2.0,
               "Type": "Cylinder"
             },
             "mass": 120.0,
             "unitXYZ": "mm",
             "unitRPY": "grad"
           },
-          "Name": "Regular-Wheel",
+          "Name": "Mecanum-Wheel",
           "Id": 0,
           "Type": "Wheel",
           "Description": "The Wheel of the Robot",
           "Parent": "Drive fl",
+          "Template": "Mecanum-Wheel",
           "Components": [
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "wheel_hub_ax.stl",
+              "Data3D": "Wheel_Hub_ax.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -1225,39 +1447,39 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 1.0
+                  "Z": 0.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
-                  "Type": "Cylinder"
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
                 },
-                "mass": 13.0,
+                "mass": 0.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
               "Name": "Wheel-Hub",
               "Id": 0,
               "Type": "Hub",
-              "Description": "Hub for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Description": "Hub for Mecanum-Wheel as 3D Printed Part",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "Regular_Wheel_Star_30_84.stl",
+              "Data3D": "mecanumWheel_1a_pin.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -1272,39 +1494,39 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 2.0
+                  "Z": 6.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
+                  "H": 32.0,
+                  "R": 2.0,
                   "Type": "Cylinder"
                 },
-                "mass": 13.0,
+                "mass": 120.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "rim-inner",
+              "Name": "rimm-inner",
               "Id": 0,
-              "Type": "Rimm",
-              "Description": "Inner Rim for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Type": "3Rimm",
+              "Description": "Flange forRegular-Wheel as 3D Printed Parf",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "Regular_Wheel_Star_24_84.stl",
+              "Data3D": "mecanumWheel_1b_pin24.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -1319,29 +1541,29 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 28.0
+                  "Z": 38.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
+                  "H": 32.0,
+                  "R": 2.0,
                   "Type": "Cylinder"
                 },
-                "mass": 13.0,
+                "mass": 120.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "rim-outer",
+              "Name": "rimm-outerr",
               "Id": 0,
               "Type": "Rimm",
-              "Description": "Outer Rim for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Description": "Flange forRegular-Wheel as 3D Printed Parf",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
               "Data3D": "Hub_Cup_8.stl",
               "Material": {
@@ -1350,8 +1572,8 @@
                 "Color": {
                   "rgba": [
                     255,
-                    196,
-                    0,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1366,38 +1588,37 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 28.0
+                  "Z": 36.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 20.0,
-                  "R": 40.0,
+                  "H": 8.0,
+                  "R": 20.0,
                   "Type": "Cylinder"
                 },
                 "mass": 13.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Wheel-Hub-Cap",
+              "Name": "Wheel-Hub-Cup",
               "Id": 0,
               "Type": "HubCap",
-              "Description": "Hub Cup for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Description": "Hub Cup for Mecanum-Wheel as 3D Printed Part",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321.5",
-              "Number": "1",
-              "Data3D": "Wheel_92_outside.stl",
+              "Number": "9, RotZ, alfa=45°, r=40mm",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
                     255,
+                    0,
                     0,
                     255
                   ]
@@ -1409,29 +1630,126 @@
               },
               "ComponentType": "PartDescription",
               "Geometry": {
-                "JointType": "Fixed",
+                "JointType": "Continuous",
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 15.0
+                  "Z": 20.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 30.0,
-                  "R": 48.0,
+                  "H": 32.0,
+                  "R": 12.0,
                   "Type": "Cylinder"
                 },
                 "mass": 13.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Tire",
+              "Name": "Rollers",
               "Id": 0,
-              "Type": "Tire",
-              "Description": "Tire for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
-              "Components": []
+              "Type": "Assembly",
+              "Description": "Complete Roller Assembly",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321.5",
+              "Components": [
+                {
+                  "Properties": {},
+                  "IdCode": "RC-34-2321.5",
+                  "Number": "1",
+                  "Data3D": "Pin_Roller.stl",
+                  "Material": {
+                    "Properties": {},
+                    "MaterialType": "Default",
+                    "Color": {
+                      "ColorName": "grey",
+                      "rgba": [
+                        128,
+                        128,
+                        128,
+                        255
+                      ]
+                    },
+                    "ComponentType": "Materials",
+                    "Name": "Material",
+                    "Id": 0,
+                    "Components": []
+                  },
+                  "ComponentType": "PartDescription",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 12.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 32.0,
+                      "R": 12.0,
+                      "Type": "Cylinder"
+                    },
+                    "mass": 13.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "RollerPin",
+                  "Id": 0,
+                  "Type": "Norm",
+                  "Description": "Complete DC-Motor for Drive System",
+                  "Parent": "Rollers [9, RotZ, alfa=45°, r=40mm]",
+                  "Components": []
+                },
+                {
+                  "Properties": {},
+                  "Number": "1",
+                  "Data3D": "Mecanum_Rolle_1.stl",
+                  "Material": {
+                    "Properties": {},
+                    "MaterialType": "Default",
+                    "Color": {
+                      "rgba": [
+                        0,
+                        0,
+                        0,
+                        255
+                      ]
+                    },
+                    "ComponentType": "Materials",
+                    "Name": "Material",
+                    "Id": 0,
+                    "Components": []
+                  },
+                  "ComponentType": "PartDescription",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 0.0,
+                      "R": 0.0,
+                      "Type": "None"
+                    },
+                    "mass": 0.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "Roller",
+                  "Id": 0,
+                  "Type": "Tire",
+                  "Description": "One Roller for Omnie Wheel ",
+                  "Parent": "Rollers [9, RotZ, alfa=45°, r=40mm]",
+                  "Reference": "RC-34-2321.5",
+                  "Components": []
+                }
+              ]
             }
           ]
         }
@@ -1469,7 +1787,7 @@
       "PositionId": "4",
       "Type": "Frame",
       "Description": "Lopkalisierung für Drive front right",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile Robot",
       "Components": [
         {
           "Properties": {},
@@ -1492,24 +1810,25 @@
             "unitXYZ": "mm",
             "unitRPY": "grad"
           },
-          "Name": "DC-Drive",
+          "Name": "Stepper-Drive",
           "Id": 0,
           "Type": "Drive",
           "Description": "The Drive System of the Robot",
           "Parent": "Drive fr",
+          "Template": "Stepper-Drive",
           "Components": [
             {
               "Properties": {},
               "Number": "1",
-              "Data3D": "DC_Holder_64.stl",
+              "Data3D": "stepper_Holder_64.STL",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1528,7 +1847,7 @@
                 },
                 "box": {
                   "L": 50.0,
-                  "W": 45.0,
+                  "W": 50.0,
                   "H": 64.0,
                   "R": 0.0,
                   "Type": "Box"
@@ -1541,22 +1860,22 @@
               "Id": 0,
               "Type": "3D-Print",
               "Description": "Base for Stepper Motor as 3D Printed Parf",
-              "Parent": "DC-Drive",
+              "Parent": "Stepper-Drive",
               "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
               "Number": "1",
-              "Data3D": "dc.stl",
+              "Data3D": "Stepper.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1569,32 +1888,31 @@
               "Geometry": {
                 "JointType": "Fixed",
                 "xyz": {
-                  "X": 0.0,
+                  "X": 15.0,
                   "Y": 0.0,
                   "Z": 0.0
                 },
                 "box": {
-                  "L": 50.0,
-                  "W": 45.0,
+                  "L": 42.0,
+                  "W": 42.0,
                   "H": 64.0,
                   "R": 0.0,
                   "Type": "Box"
                 },
-                "mass": 140.0,
+                "mass": 200.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "DC Motor",
+              "Name": "Stepper Motor NEMA17",
               "Id": 0,
               "Type": "motor",
-              "Description": "Complete DC-Motor for Drive System",
-              "Parent": "DC-Drive",
+              "Description": "Complete Stepper Motor for Drive System",
+              "Parent": "Stepper-Drive",
               "Reference": "RC-34-2321.5",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
               "Data3D": "MotorController.stl",
               "Material": {
@@ -1602,9 +1920,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1617,7 +1935,7 @@
               "Geometry": {
                 "JointType": "Fixed",
                 "xyz": {
-                  "X": 0.0,
+                  "X": 15.0,
                   "Y": 0.0,
                   "Z": 0.0
                 },
@@ -1628,14 +1946,16 @@
                   "R": 0.0,
                   "Type": "Box"
                 },
-                "mass": 140.0,
+                "mass": 20.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
               "Name": "Motor Controller",
               "Id": 0,
               "Type": "pcb",
-              "Parent": "DC-Drive",
+              "Description": "Controllerfor  Stepper Motor on Drive System",
+              "Parent": "Stepper-Drive",
+              "Reference": "RC-34-2321",
               "Components": []
             }
           ]
@@ -1647,7 +1967,7 @@
             "JointType": "Continuous",
             "xyz": {
               "X": 0.0,
-              "Y": 5.0,
+              "Y": 0.0,
               "Z": 0.0
             },
             "rpy": {
@@ -1658,33 +1978,33 @@
             "box": {
               "L": 0.0,
               "W": 0.0,
-              "H": 40.0,
-              "R": 48.0,
+              "H": 32.0,
+              "R": 2.0,
               "Type": "Cylinder"
             },
             "mass": 120.0,
             "unitXYZ": "mm",
             "unitRPY": "grad"
           },
-          "Name": "Regular-Wheel",
+          "Name": "Mecanum-Wheel",
           "Id": 0,
           "Type": "Wheel",
           "Description": "The Wheel of the Robot",
           "Parent": "Drive fr",
+          "Template": "Mecanum-Wheel-left",
           "Components": [
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "wheel_hub_ax.stl",
+              "Data3D": "Wheel_Hub_ax.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    208,
-                    208,
-                    239,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -1699,39 +2019,39 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 1.0
+                  "Z": 0.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
-                  "Type": "Cylinder"
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
                 },
-                "mass": 13.0,
+                "mass": 0.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
               "Name": "Wheel-Hub",
               "Id": 0,
               "Type": "Hub",
-              "Description": "Hub for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Description": "Hub for Mecanum-Wheel as 3D Printed Part",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "Regular_Wheel_Star_30_84.stl",
+              "Data3D": "mecanumWheel_2a_pin.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -1746,39 +2066,39 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 2.0
+                  "Z": 6.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
+                  "H": 32.0,
+                  "R": 2.0,
                   "Type": "Cylinder"
                 },
-                "mass": 13.0,
+                "mass": 120.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "rim-inner",
+              "Name": "rimm-inner",
               "Id": 0,
-              "Type": "Rimm",
-              "Description": "Inner Rim for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Type": "3Rimm",
+              "Description": "Flange forRegular-Wheel as 3D Printed Parf",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
-              "Data3D": "Regular_Wheel_Star_24_84.stl",
+              "Data3D": "mecanumWheel_2b_pin24.stl",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    108,
-                    117,
-                    125,
+                    255,
+                    0,
+                    0,
                     255
                   ]
                 },
@@ -1793,29 +2113,29 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 28.0
+                  "Z": 38.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
+                  "H": 32.0,
+                  "R": 2.0,
                   "Type": "Cylinder"
                 },
-                "mass": 13.0,
+                "mass": 120.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "rim-outer",
+              "Name": "rimm-outerr",
               "Id": 0,
               "Type": "Rimm",
-              "Description": "Outer Rim for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Description": "Flange forRegular-Wheel as 3D Printed Parf",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321",
               "Number": "1",
               "Data3D": "Hub_Cup_8.stl",
               "Material": {
@@ -1824,8 +2144,8 @@
                 "Color": {
                   "rgba": [
                     255,
-                    196,
-                    0,
+                    255,
+                    255,
                     255
                   ]
                 },
@@ -1840,38 +2160,37 @@
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 28.0
+                  "Z": 36.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 20.0,
-                  "R": 40.0,
+                  "H": 8.0,
+                  "R": 20.0,
                   "Type": "Cylinder"
                 },
                 "mass": 13.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Wheel-Hub-Cap",
+              "Name": "Wheel-Hub-Cup",
               "Id": 0,
               "Type": "HubCap",
-              "Description": "Hub Cup for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
+              "Description": "Hub Cup for Mecanum-Wheel as 3D Printed Part",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321",
               "Components": []
             },
             {
               "Properties": {},
-              "IdCode": "RC-34-2321.5",
-              "Number": "1",
-              "Data3D": "Wheel_92_outside.stl",
+              "Number": "9, RotZ, alfa=-45°, r=40mm",
               "Material": {
                 "Properties": {},
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
                     255,
+                    0,
                     0,
                     255
                   ]
@@ -1883,29 +2202,126 @@
               },
               "ComponentType": "PartDescription",
               "Geometry": {
-                "JointType": "Fixed",
+                "JointType": "Continuous",
                 "xyz": {
                   "X": 0.0,
                   "Y": 0.0,
-                  "Z": 15.0
+                  "Z": 20.0
                 },
                 "box": {
                   "L": 0.0,
                   "W": 0.0,
-                  "H": 30.0,
-                  "R": 48.0,
+                  "H": 32.0,
+                  "R": 12.0,
                   "Type": "Cylinder"
                 },
                 "mass": 13.0,
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Tire",
+              "Name": "Rollers",
               "Id": 0,
-              "Type": "Tire",
-              "Description": "Tire for Regular-Wheel as 3D Printed Part",
-              "Parent": "Regular-Wheel",
-              "Components": []
+              "Type": "Assembly",
+              "Description": "Complete Roller Assembly",
+              "Parent": "Mecanum-Wheel",
+              "Reference": "RC-34-2321.5",
+              "Components": [
+                {
+                  "Properties": {},
+                  "IdCode": "RC-34-2321.5",
+                  "Number": "1",
+                  "Data3D": "Pin_Roller.stl",
+                  "Material": {
+                    "Properties": {},
+                    "MaterialType": "Default",
+                    "Color": {
+                      "ColorName": "grey",
+                      "rgba": [
+                        128,
+                        128,
+                        128,
+                        255
+                      ]
+                    },
+                    "ComponentType": "Materials",
+                    "Name": "Material",
+                    "Id": 0,
+                    "Components": []
+                  },
+                  "ComponentType": "PartDescription",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 12.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 32.0,
+                      "R": 12.0,
+                      "Type": "Cylinder"
+                    },
+                    "mass": 13.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "RollerPin",
+                  "Id": 0,
+                  "Type": "Norm",
+                  "Description": "Complete DC-Motor for Drive System",
+                  "Parent": "Rollers [9, RotZ, alfa=-45°, r=40mm]",
+                  "Components": []
+                },
+                {
+                  "Properties": {},
+                  "Number": "1",
+                  "Data3D": "Mecanum_Rolle_1.stl",
+                  "Material": {
+                    "Properties": {},
+                    "MaterialType": "Default",
+                    "Color": {
+                      "rgba": [
+                        0,
+                        0,
+                        0,
+                        255
+                      ]
+                    },
+                    "ComponentType": "Materials",
+                    "Name": "Material",
+                    "Id": 0,
+                    "Components": []
+                  },
+                  "ComponentType": "PartDescription",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 0.0,
+                      "R": 0.0,
+                      "Type": "None"
+                    },
+                    "mass": 0.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "Roller",
+                  "Id": 0,
+                  "Type": "Tire",
+                  "Description": "One Roller for Omnie Wheel ",
+                  "Parent": "Rollers [9, RotZ, alfa=-45°, r=40mm]",
+                  "Reference": "RC-34-2321.5",
+                  "Components": []
+                }
+              ]
             }
           ]
         }
@@ -1938,7 +2354,7 @@
       "PositionId": "5",
       "Type": "Frame",
       "Description": "Lopkalisierung für Sensorbox front",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile Robot",
       "Components": [
         {
           "Properties": {},
@@ -1966,6 +2382,7 @@
           "Type": "SensorBox",
           "Description": "The Sensorbox on Front of the Robot",
           "Parent": "Sensorbox front",
+          "Template": "Sensorbox curved",
           "Components": [
             {
               "Properties": {},
@@ -1975,9 +2392,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -1995,8 +2412,8 @@
                   "Z": 32.0
                 },
                 "rpy": {
-                  "R": 15.0,
-                  "P": 90.0,
+                  "R": 90.0,
+                  "P": 105.0,
                   "Y": 0.0
                 },
                 "box": {
@@ -2044,6 +2461,7 @@
                   "Type": "Sensor",
                   "Description": "The Drive System of the Robot",
                   "Parent": "Sensor 1",
+                  "Template": "LED-Light",
                   "Components": [
                     {
                       "Properties": {},
@@ -2055,9 +2473,9 @@
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -2102,9 +2520,9 @@
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -2149,9 +2567,9 @@
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -2198,9 +2616,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -2262,24 +2680,25 @@
                     "unitXYZ": "mm",
                     "unitRPY": "grad"
                   },
-                  "Name": "Lidar",
+                  "Name": "US-Sensor",
                   "Id": 2,
                   "Type": "Sensor",
                   "Description": "The Drive System of the Robot",
                   "Parent": "Sensor 2",
+                  "Template": "US-Sensor",
                   "Components": [
                     {
                       "Properties": {},
                       "Number": "1",
-                      "Data3D": "SensorBase_li.stl",
+                      "Data3D": "SensorBaseUS.stl",
                       "Material": {
                         "Properties": {},
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
                             255,
-                            196,
-                            0,
+                            255,
+                            255,
                             255
                           ]
                         },
@@ -2310,23 +2729,23 @@
                       "Name": "Base",
                       "Id": 0,
                       "Type": "3D-Print",
-                      "Description": "Sensor Base Part as 3D Printed Parf for Lidar",
-                      "Parent": "Lidar",
+                      "Description": "Sensor Base Part as 3D Printed Parf for RGB-LED",
+                      "Parent": "US-Sensor",
                       "Reference": "RC-34-2321",
                       "Components": []
                     },
                     {
                       "Properties": {},
                       "Number": "1",
-                      "Data3D": "LidarSensorpcb.stl",
+                      "Data3D": "hc_sr04pcb.stl",
                       "Material": {
                         "Properties": {},
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
                             255,
-                            196,
-                            0,
+                            255,
+                            255,
                             255
                           ]
                         },
@@ -2341,12 +2760,12 @@
                         "xyz": {
                           "X": 0.0,
                           "Y": 0.0,
-                          "Z": 10.0
+                          "Z": 0.0
                         },
                         "box": {
                           "L": 0.0,
                           "W": 0.0,
-                          "H": 10.0,
+                          "H": 30.0,
                           "R": 20.0,
                           "Type": "Cylinder"
                         },
@@ -2357,23 +2776,23 @@
                       "Name": "sensor PCB",
                       "Id": 0,
                       "Type": "pcb",
-                      "Description": "Sensor pcb for Lidar",
-                      "Parent": "Lidar",
+                      "Description": "Sensor pcb for US-Sensor",
+                      "Parent": "US-Sensor",
                       "Reference": "RC-34-2321.5",
                       "Components": []
                     },
                     {
                       "Properties": {},
                       "Number": "1",
-                      "Data3D": "SensorTop_li.stl",
+                      "Data3D": "SensorTopUS.stl",
                       "Material": {
                         "Properties": {},
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
                             255,
-                            196,
-                            0,
+                            255,
+                            255,
                             255
                           ]
                         },
@@ -2393,7 +2812,7 @@
                         "box": {
                           "L": 0.0,
                           "W": 0.0,
-                          "H": 10.0,
+                          "H": 30.0,
                           "R": 20.0,
                           "Type": "Cylinder"
                         },
@@ -2404,8 +2823,8 @@
                       "Name": "Top",
                       "Id": 0,
                       "Type": "3D-Print",
-                      "Description": "Sensor Cover for Lidar",
-                      "Parent": "Lidar",
+                      "Description": "SensorCover pcb for US-Sensor",
+                      "Parent": "US-Sensor",
                       "Reference": "RC-34-2321",
                       "Components": []
                     }
@@ -2421,9 +2840,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -2459,11 +2878,183 @@
               "Name": "Sensor 3",
               "Id": 0,
               "PositionId": "3",
-              "Status": "inactive",
+              "Status": "active",
               "Type": "Frame",
               "Description": "Lopkalisierung für Sensor 3 mitte rechts",
               "Parent": "Sensorbox curved",
-              "Components": []
+              "Components": [
+                {
+                  "Properties": {},
+                  "ComponentType": "Device",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 30.0,
+                      "R": 20.0,
+                      "Type": "Cylinder"
+                    },
+                    "mass": 120.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "US-Sensor",
+                  "Id": 3,
+                  "Type": "Sensor",
+                  "Description": "The Drive System of the Robot",
+                  "Parent": "Sensor 3",
+                  "Template": "US-Sensor",
+                  "Components": [
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "SensorBaseUS.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "rgba": [
+                            255,
+                            255,
+                            255,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 0.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 0.0,
+                          "R": 0.0,
+                          "Type": "None"
+                        },
+                        "mass": 0.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Base",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Base Part as 3D Printed Parf for RGB-LED",
+                      "Parent": "US-Sensor",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "hc_sr04pcb.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "rgba": [
+                            255,
+                            255,
+                            255,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 0.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 30.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 4.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "sensor PCB",
+                      "Id": 0,
+                      "Type": "pcb",
+                      "Description": "Sensor pcb for US-Sensor",
+                      "Parent": "US-Sensor",
+                      "Reference": "RC-34-2321.5",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "SensorTopUS.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "rgba": [
+                            255,
+                            255,
+                            255,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 20.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 30.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 4.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Top",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "SensorCover pcb for US-Sensor",
+                      "Parent": "US-Sensor",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    }
+                  ]
+                }
+              ]
             },
             {
               "Properties": {},
@@ -2473,9 +3064,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -2493,8 +3084,8 @@
                   "Z": 32.0
                 },
                 "rpy": {
-                  "R": -15.0,
-                  "P": 90.0,
+                  "R": -90.0,
+                  "P": 105.0,
                   "Y": 0.0
                 },
                 "box": {
@@ -2542,6 +3133,7 @@
                   "Type": "Sensor",
                   "Description": "The Drive System of the Robot",
                   "Parent": "Sensor 4",
+                  "Template": "LED-Light",
                   "Components": [
                     {
                       "Properties": {},
@@ -2553,9 +3145,9 @@
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -2600,9 +3192,9 @@
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -2647,9 +3239,9 @@
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -2697,9 +3289,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -2744,9 +3336,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -2781,65 +3373,6 @@
               "Parent": "Sensorbox curved",
               "Reference": "RC-34-2321.5",
               "Components": []
-            },
-            {
-              "Properties": {},
-              "ComponentType": "Device",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": 0.0,
-                  "Y": 0.0,
-                  "Z": 0.0
-                },
-                "box": {
-                  "L": 0.0,
-                  "W": 0.0,
-                  "H": 0.0,
-                  "R": 0.0,
-                  "Type": "None"
-                },
-                "mass": 0.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "ESP 32",
-              "Id": 16,
-              "Type": "Controler",
-              "Parent": "Sensorbox curved",
-              "Components": [
-                {
-                  "Properties": {},
-                  "IdCode": "RC-34-2321.5",
-                  "Number": "1",
-                  "Data3D": "IMUpcb.stl",
-                  "ComponentType": "PartDescription",
-                  "Geometry": {
-                    "JointType": "Fixed",
-                    "xyz": {
-                      "X": 0.0,
-                      "Y": 0.0,
-                      "Z": 0.0
-                    },
-                    "box": {
-                      "L": 0.0,
-                      "W": 0.0,
-                      "H": 0.0,
-                      "R": 0.0,
-                      "Type": "None"
-                    },
-                    "mass": 0.0,
-                    "unitXYZ": "mm",
-                    "unitRPY": "grad"
-                  },
-                  "Name": "Contoller PCB",
-                  "Id": 0,
-                  "Type": "pcb",
-                  "Description": "Esp 32 Controller Board",
-                  "Parent": "ESP 32",
-                  "Components": []
-                }
-              ]
             }
           ]
         }
@@ -2877,7 +3410,7 @@
       "PositionId": "6",
       "Type": "Frame",
       "Description": "Lopkalisierung für Sensorbox back",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile Robot",
       "Components": [
         {
           "Properties": {},
@@ -2905,6 +3438,7 @@
           "Type": "SensorBox",
           "Description": "The Sensorbox on Front of the Robot",
           "Parent": "Sensorbox back",
+          "Template": "Sensorbox curved",
           "Components": [
             {
               "Properties": {},
@@ -2914,9 +3448,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -2934,8 +3468,8 @@
                   "Z": 32.0
                 },
                 "rpy": {
-                  "R": 15.0,
-                  "P": 90.0,
+                  "R": 90.0,
+                  "P": 105.0,
                   "Y": 0.0
                 },
                 "box": {
@@ -2978,25 +3512,72 @@
                     "unitXYZ": "mm",
                     "unitRPY": "grad"
                   },
-                  "Name": "LED-Light",
+                  "Name": "US-Sensor",
                   "Id": 1,
                   "Type": "Sensor",
                   "Description": "The Drive System of the Robot",
                   "Parent": "Sensor 1",
+                  "Template": "US-Sensor",
                   "Components": [
                     {
                       "Properties": {},
-                      "IdCode": "RC-34-2321",
                       "Number": "1",
-                      "Data3D": "SensorBase.stl",
+                      "Data3D": "SensorBaseUS.stl",
                       "Material": {
                         "Properties": {},
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 0.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 0.0,
+                          "R": 0.0,
+                          "Type": "None"
+                        },
+                        "mass": 0.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Base",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Base Part as 3D Printed Parf for RGB-LED",
+                      "Parent": "US-Sensor",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "hc_sr04pcb.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "rgba": [
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -3020,77 +3601,30 @@
                           "R": 20.0,
                           "Type": "Cylinder"
                         },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Base",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Base Part as 3D Printed Parf for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321.5",
-                      "Number": "1",
-                      "Data3D": "Sensorpcb.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 10.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
+                        "mass": 4.0,
                         "unitXYZ": "mm",
                         "unitRPY": "grad"
                       },
                       "Name": "sensor PCB",
                       "Id": 0,
                       "Type": "pcb",
-                      "Description": "Sensor pcb for RGB-LED",
-                      "Parent": "LED-Light",
+                      "Description": "Sensor pcb for US-Sensor",
+                      "Parent": "US-Sensor",
+                      "Reference": "RC-34-2321.5",
                       "Components": []
                     },
                     {
                       "Properties": {},
-                      "IdCode": "RC-34-2321",
                       "Number": "1",
-                      "Data3D": "SensorTop_0.stl",
+                      "Data3D": "SensorTopUS.stl",
                       "Material": {
                         "Properties": {},
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -3105,7 +3639,7 @@
                         "xyz": {
                           "X": 0.0,
                           "Y": 0.0,
-                          "Z": 25.0
+                          "Z": 20.0
                         },
                         "box": {
                           "L": 0.0,
@@ -3114,15 +3648,16 @@
                           "R": 20.0,
                           "Type": "Cylinder"
                         },
-                        "mass": 20.0,
+                        "mass": 4.0,
                         "unitXYZ": "mm",
                         "unitRPY": "grad"
                       },
                       "Name": "Top",
                       "Id": 0,
                       "Type": "3D-Print",
-                      "Description": "Sensor Cover for RGB-LED",
-                      "Parent": "LED-Light",
+                      "Description": "SensorCover pcb for US-Sensor",
+                      "Parent": "US-Sensor",
+                      "Reference": "RC-34-2321",
                       "Components": []
                     }
                   ]
@@ -3137,9 +3672,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -3206,6 +3741,7 @@
                   "Type": "Sensor",
                   "Description": "The Drive System of the Robot",
                   "Parent": "Sensor 2",
+                  "Template": "Lidar",
                   "Components": [
                     {
                       "Properties": {},
@@ -3217,8 +3753,8 @@
                         "Color": {
                           "rgba": [
                             255,
-                            196,
-                            0,
+                            255,
+                            255,
                             255
                           ]
                         },
@@ -3264,8 +3800,8 @@
                         "Color": {
                           "rgba": [
                             255,
-                            196,
-                            0,
+                            255,
+                            255,
                             255
                           ]
                         },
@@ -3311,8 +3847,8 @@
                         "Color": {
                           "rgba": [
                             255,
-                            196,
-                            0,
+                            255,
+                            255,
                             255
                           ]
                         },
@@ -3360,9 +3896,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -3398,11 +3934,183 @@
               "Name": "Sensor 3",
               "Id": 0,
               "PositionId": "3",
-              "Status": "inactive",
+              "Status": "active",
               "Type": "Frame",
               "Description": "Lopkalisierung für Sensor 3 mitte rechts",
               "Parent": "Sensorbox curved",
-              "Components": []
+              "Components": [
+                {
+                  "Properties": {},
+                  "ComponentType": "Device",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 30.0,
+                      "R": 20.0,
+                      "Type": "Cylinder"
+                    },
+                    "mass": 120.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "Lidar",
+                  "Id": 3,
+                  "Type": "Sensor",
+                  "Description": "The Drive System of the Robot",
+                  "Parent": "Sensor 3",
+                  "Template": "Lidar",
+                  "Components": [
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "SensorBase_li.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "rgba": [
+                            255,
+                            255,
+                            255,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 0.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 0.0,
+                          "R": 0.0,
+                          "Type": "None"
+                        },
+                        "mass": 0.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Base",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Base Part as 3D Printed Parf for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "LidarSensorpcb.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "rgba": [
+                            255,
+                            255,
+                            255,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 10.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 10.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 4.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "sensor PCB",
+                      "Id": 0,
+                      "Type": "pcb",
+                      "Description": "Sensor pcb for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321.5",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "SensorTop_li.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "rgba": [
+                            255,
+                            255,
+                            255,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 20.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 10.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 4.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Top",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Cover for Lidar",
+                      "Parent": "Lidar",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    }
+                  ]
+                }
+              ]
             },
             {
               "Properties": {},
@@ -3412,9 +4120,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -3432,8 +4140,8 @@
                   "Z": 32.0
                 },
                 "rpy": {
-                  "R": -15.0,
-                  "P": 90.0,
+                  "R": -90.0,
+                  "P": 105.0,
                   "Y": 0.0
                 },
                 "box": {
@@ -3476,25 +4184,72 @@
                     "unitXYZ": "mm",
                     "unitRPY": "grad"
                   },
-                  "Name": "LED-Light",
+                  "Name": "US-Sensor",
                   "Id": 4,
                   "Type": "Sensor",
                   "Description": "The Drive System of the Robot",
                   "Parent": "Sensor 4",
+                  "Template": "US-Sensor",
                   "Components": [
                     {
                       "Properties": {},
-                      "IdCode": "RC-34-2321",
                       "Number": "1",
-                      "Data3D": "SensorBase.stl",
+                      "Data3D": "SensorBaseUS.stl",
                       "Material": {
                         "Properties": {},
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 0.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 0.0,
+                          "R": 0.0,
+                          "Type": "None"
+                        },
+                        "mass": 0.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Base",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Base Part as 3D Printed Parf for RGB-LED",
+                      "Parent": "US-Sensor",
+                      "Reference": "RC-34-2321",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "Number": "1",
+                      "Data3D": "hc_sr04pcb.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "rgba": [
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -3518,77 +4273,30 @@
                           "R": 20.0,
                           "Type": "Cylinder"
                         },
-                        "mass": 20.0,
-                        "unitXYZ": "mm",
-                        "unitRPY": "grad"
-                      },
-                      "Name": "Base",
-                      "Id": 0,
-                      "Type": "3D-Print",
-                      "Description": "Sensor Base Part as 3D Printed Parf for RGB-LED",
-                      "Parent": "LED-Light",
-                      "Components": []
-                    },
-                    {
-                      "Properties": {},
-                      "IdCode": "RC-34-2321.5",
-                      "Number": "1",
-                      "Data3D": "Sensorpcb.stl",
-                      "Material": {
-                        "Properties": {},
-                        "MaterialType": "Default",
-                        "Color": {
-                          "rgba": [
-                            108,
-                            117,
-                            125,
-                            255
-                          ]
-                        },
-                        "ComponentType": "Materials",
-                        "Name": "Material",
-                        "Id": 0,
-                        "Components": []
-                      },
-                      "ComponentType": "PartDescription",
-                      "Geometry": {
-                        "JointType": "Fixed",
-                        "xyz": {
-                          "X": 0.0,
-                          "Y": 0.0,
-                          "Z": 10.0
-                        },
-                        "box": {
-                          "L": 0.0,
-                          "W": 0.0,
-                          "H": 30.0,
-                          "R": 20.0,
-                          "Type": "Cylinder"
-                        },
-                        "mass": 20.0,
+                        "mass": 4.0,
                         "unitXYZ": "mm",
                         "unitRPY": "grad"
                       },
                       "Name": "sensor PCB",
                       "Id": 0,
                       "Type": "pcb",
-                      "Description": "Sensor pcb for RGB-LED",
-                      "Parent": "LED-Light",
+                      "Description": "Sensor pcb for US-Sensor",
+                      "Parent": "US-Sensor",
+                      "Reference": "RC-34-2321.5",
                       "Components": []
                     },
                     {
                       "Properties": {},
-                      "IdCode": "RC-34-2321",
                       "Number": "1",
-                      "Data3D": "SensorTop_0.stl",
+                      "Data3D": "SensorTopUS.stl",
                       "Material": {
                         "Properties": {},
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -3603,7 +4311,7 @@
                         "xyz": {
                           "X": 0.0,
                           "Y": 0.0,
-                          "Z": 25.0
+                          "Z": 20.0
                         },
                         "box": {
                           "L": 0.0,
@@ -3612,15 +4320,16 @@
                           "R": 20.0,
                           "Type": "Cylinder"
                         },
-                        "mass": 20.0,
+                        "mass": 4.0,
                         "unitXYZ": "mm",
                         "unitRPY": "grad"
                       },
                       "Name": "Top",
                       "Id": 0,
                       "Type": "3D-Print",
-                      "Description": "Sensor Cover for RGB-LED",
-                      "Parent": "LED-Light",
+                      "Description": "SensorCover pcb for US-Sensor",
+                      "Parent": "US-Sensor",
+                      "Reference": "RC-34-2321",
                       "Components": []
                     }
                   ]
@@ -3636,9 +4345,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -3683,9 +4392,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -3742,10 +4451,39 @@
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
+              "Name": "Line-Follower",
+              "Id": 5,
+              "Type": "AuxSensor",
+              "Parent": "Sensorbox curved",
+              "Template": "Line-Follower",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "ComponentType": "Device",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
+                },
+                "mass": 0.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
               "Name": "ESP 32",
               "Id": 16,
               "Type": "Controler",
               "Parent": "Sensorbox curved",
+              "Template": "ESP 32",
               "Components": [
                 {
                   "Properties": {},
@@ -3801,8 +4539,8 @@
           "Y": 180.0
         },
         "box": {
-          "L": 40.0,
-          "W": 210.0,
+          "L": 94.0,
+          "W": 40.0,
           "H": 64.0,
           "R": 0.0,
           "Type": "Box"
@@ -3816,7 +4554,7 @@
       "PositionId": "7",
       "Type": "Frame",
       "Description": "Lopkalisierung für Sensorbox center",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile Robot",
       "Components": [
         {
           "Properties": {},
@@ -3844,6 +4582,7 @@
           "Type": "SensorBox",
           "Description": "Te Sensorbox on Front of the Robot",
           "Parent": "Sensorbox center",
+          "Template": "Sensorbox center",
           "Components": [
             {
               "Properties": {},
@@ -3853,9 +4592,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -3922,6 +4661,7 @@
                   "Type": "Sensor",
                   "Description": "The Drive System of the Robot",
                   "Parent": "Sensor 1",
+                  "Template": "LED-Light",
                   "Components": [
                     {
                       "Properties": {},
@@ -3933,9 +4673,9 @@
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -3980,9 +4720,9 @@
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -4027,9 +4767,9 @@
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            0,
+                            0,
                             255
                           ]
                         },
@@ -4076,9 +4816,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -4145,6 +4885,7 @@
                   "Type": "Sensor",
                   "Description": "The Drive System of the Robot",
                   "Parent": "Sensor 2",
+                  "Template": "Lidar",
                   "Components": [
                     {
                       "Properties": {},
@@ -4156,8 +4897,8 @@
                         "Color": {
                           "rgba": [
                             255,
-                            196,
-                            0,
+                            255,
+                            255,
                             255
                           ]
                         },
@@ -4203,8 +4944,8 @@
                         "Color": {
                           "rgba": [
                             255,
-                            196,
-                            0,
+                            255,
+                            255,
                             255
                           ]
                         },
@@ -4250,8 +4991,8 @@
                         "Color": {
                           "rgba": [
                             255,
-                            196,
-                            0,
+                            255,
+                            255,
                             255
                           ]
                         },
@@ -4301,9 +5042,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -4348,9 +5089,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -4384,6 +5125,94 @@
               "Description": "Pins to Connect Sensorbox",
               "Parent": "Sensorbox center",
               "Components": []
+            },
+            {
+              "Properties": {},
+              "ComponentType": "Device",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
+                },
+                "mass": 0.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Line-Follower",
+              "Id": 5,
+              "Type": "AuxSensor",
+              "Parent": "Sensorbox center",
+              "Template": "Line-Follower",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "ComponentType": "Device",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
+                },
+                "mass": 0.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "ESP 32",
+              "Id": 16,
+              "Type": "Controler",
+              "Parent": "Sensorbox center",
+              "Template": "ESP 32",
+              "Components": [
+                {
+                  "Properties": {},
+                  "IdCode": "RC-34-2321.5",
+                  "Number": "1",
+                  "Data3D": "IMUpcb.stl",
+                  "ComponentType": "PartDescription",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 0.0,
+                      "R": 0.0,
+                      "Type": "None"
+                    },
+                    "mass": 0.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "Contoller PCB",
+                  "Id": 0,
+                  "Type": "pcb",
+                  "Description": "Esp 32 Controller Board",
+                  "Parent": "ESP 32",
+                  "Components": []
+                }
+              ]
             }
           ]
         }
@@ -4401,8 +5230,8 @@
           "Z": 0.0
         },
         "box": {
-          "L": 40.0,
-          "W": 210.0,
+          "L": 94.0,
+          "W": 40.0,
           "H": 64.0,
           "R": 0.0,
           "Type": "Box"
@@ -4416,7 +5245,7 @@
       "PositionId": "8",
       "Type": "Frame",
       "Description": "Lopkalisierung für Sensorbox Controller on the right",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile Robot",
       "Components": [
         {
           "Properties": {},
@@ -4430,7 +5259,7 @@
             },
             "box": {
               "L": 100.0,
-              "W": 404.0,
+              "W": 40.0,
               "H": 61.0,
               "R": 0.0,
               "Type": "Box"
@@ -4444,6 +5273,7 @@
           "Type": "SensorBox",
           "Description": "Te Sensorbox on Front of the Robot",
           "Parent": "Sensorbox controller",
+          "Template": "Controller",
           "Components": [
             {
               "Properties": {},
@@ -4453,9 +5283,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -4517,11 +5347,236 @@
                     "unitXYZ": "mm",
                     "unitRPY": "grad"
                   },
-                  "Name": "Lidar",
+                  "Name": "LED-Light",
                   "Id": 1,
                   "Type": "Sensor",
                   "Description": "The Drive System of the Robot",
                   "Parent": "Sensor 1",
+                  "Template": "LED-Light",
+                  "Components": [
+                    {
+                      "Properties": {},
+                      "IdCode": "RC-34-2321",
+                      "Number": "1",
+                      "Data3D": "SensorBase.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "rgba": [
+                            255,
+                            0,
+                            0,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 0.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 30.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 20.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Base",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Base Part as 3D Printed Parf for RGB-LED",
+                      "Parent": "LED-Light",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "IdCode": "RC-34-2321.5",
+                      "Number": "1",
+                      "Data3D": "Sensorpcb.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "rgba": [
+                            255,
+                            0,
+                            0,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 10.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 30.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 20.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "sensor PCB",
+                      "Id": 0,
+                      "Type": "pcb",
+                      "Description": "Sensor pcb for RGB-LED",
+                      "Parent": "LED-Light",
+                      "Components": []
+                    },
+                    {
+                      "Properties": {},
+                      "IdCode": "RC-34-2321",
+                      "Number": "1",
+                      "Data3D": "SensorTop_0.stl",
+                      "Material": {
+                        "Properties": {},
+                        "MaterialType": "Default",
+                        "Color": {
+                          "rgba": [
+                            255,
+                            0,
+                            0,
+                            255
+                          ]
+                        },
+                        "ComponentType": "Materials",
+                        "Name": "Material",
+                        "Id": 0,
+                        "Components": []
+                      },
+                      "ComponentType": "PartDescription",
+                      "Geometry": {
+                        "JointType": "Fixed",
+                        "xyz": {
+                          "X": 0.0,
+                          "Y": 0.0,
+                          "Z": 25.0
+                        },
+                        "box": {
+                          "L": 0.0,
+                          "W": 0.0,
+                          "H": 30.0,
+                          "R": 20.0,
+                          "Type": "Cylinder"
+                        },
+                        "mass": 20.0,
+                        "unitXYZ": "mm",
+                        "unitRPY": "grad"
+                      },
+                      "Name": "Top",
+                      "Id": 0,
+                      "Type": "3D-Print",
+                      "Description": "Sensor Cover for RGB-LED",
+                      "Parent": "LED-Light",
+                      "Components": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Properties": {},
+              "Number": "0",
+              "Material": {
+                "Properties": {},
+                "MaterialType": "Default",
+                "Color": {
+                  "rgba": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ]
+                },
+                "ComponentType": "Materials",
+                "Name": "Material",
+                "Id": 0,
+                "Components": []
+              },
+              "ComponentType": "PartDescription",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": -23.0,
+                  "Y": 30.0,
+                  "Z": -30.0
+                },
+                "rpy": {
+                  "R": -90.0,
+                  "P": 0.0,
+                  "Y": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 40.0,
+                  "R": 20.0,
+                  "Type": "Cylinder"
+                },
+                "mass": 120.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "Sensor 2",
+              "Id": 0,
+              "PositionId": "2",
+              "Status": "active",
+              "Type": "Frame",
+              "Description": "Lopkalisierung für Sensor 2 hintens",
+              "Parent": "Controller",
+              "Components": [
+                {
+                  "Properties": {},
+                  "ComponentType": "Device",
+                  "Geometry": {
+                    "JointType": "Fixed",
+                    "xyz": {
+                      "X": 0.0,
+                      "Y": 0.0,
+                      "Z": 0.0
+                    },
+                    "box": {
+                      "L": 0.0,
+                      "W": 0.0,
+                      "H": 30.0,
+                      "R": 20.0,
+                      "Type": "Cylinder"
+                    },
+                    "mass": 120.0,
+                    "unitXYZ": "mm",
+                    "unitRPY": "grad"
+                  },
+                  "Name": "Lidar",
+                  "Id": 2,
+                  "Type": "Sensor",
+                  "Description": "The Drive System of the Robot",
+                  "Parent": "Sensor 2",
+                  "Template": "Lidar",
                   "Components": [
                     {
                       "Properties": {},
@@ -4532,9 +5587,9 @@
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            255,
+                            255,
                             255
                           ]
                         },
@@ -4579,9 +5634,9 @@
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            255,
+                            255,
                             255
                           ]
                         },
@@ -4626,9 +5681,9 @@
                         "MaterialType": "Default",
                         "Color": {
                           "rgba": [
-                            108,
-                            117,
-                            125,
+                            255,
+                            255,
+                            255,
                             255
                           ]
                         },
@@ -4670,58 +5725,6 @@
             },
             {
               "Properties": {},
-              "Number": "0",
-              "Material": {
-                "Properties": {},
-                "MaterialType": "Default",
-                "Color": {
-                  "rgba": [
-                    0,
-                    120,
-                    212,
-                    255
-                  ]
-                },
-                "ComponentType": "Materials",
-                "Name": "Material",
-                "Id": 0,
-                "Components": []
-              },
-              "ComponentType": "PartDescription",
-              "Geometry": {
-                "JointType": "Fixed",
-                "xyz": {
-                  "X": -23.0,
-                  "Y": 30.0,
-                  "Z": -30.0
-                },
-                "rpy": {
-                  "R": -90.0,
-                  "P": 0.0,
-                  "Y": 0.0
-                },
-                "box": {
-                  "L": 0.0,
-                  "W": 0.0,
-                  "H": 40.0,
-                  "R": 20.0,
-                  "Type": "Cylinder"
-                },
-                "mass": 120.0,
-                "unitXYZ": "mm",
-                "unitRPY": "grad"
-              },
-              "Name": "Sensor 2",
-              "Id": 0,
-              "PositionId": "2",
-              "Status": "inactive",
-              "Type": "Frame",
-              "Description": "Lopkalisierung für Sensor 2 hintens",
-              "Parent": "Controller",
-              "Components": []
-            },
-            {
-              "Properties": {},
               "IdCode": "RC-34-2321.5",
               "Number": "1",
               "Data3D": "Sensorbox_small_arduino_64.stl",
@@ -4730,9 +5733,9 @@
                 "MaterialType": "Default",
                 "Color": {
                   "rgba": [
-                    0,
-                    120,
-                    212,
+                    128,
+                    128,
+                    128,
                     255
                   ]
                 },
@@ -4783,6 +5786,60 @@
               "Type": "Power",
               "Parent": "Controller",
               "ComponentType": "ComponetItem",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "ComponentType": "Device",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
+                },
+                "mass": 0.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "MQTT",
+              "Id": 0,
+              "Type": "Device",
+              "Parent": "Controller",
+              "Components": []
+            },
+            {
+              "Properties": {},
+              "ComponentType": "Device",
+              "Geometry": {
+                "JointType": "Fixed",
+                "xyz": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "box": {
+                  "L": 0.0,
+                  "W": 0.0,
+                  "H": 0.0,
+                  "R": 0.0,
+                  "Type": "None"
+                },
+                "mass": 0.0,
+                "unitXYZ": "mm",
+                "unitRPY": "grad"
+              },
+              "Name": "OPC/UA",
+              "Id": 0,
+              "Type": "Device",
+              "Parent": "Controller",
               "Components": []
             },
             {
@@ -4860,7 +5917,7 @@
                 "unitXYZ": "mm",
                 "unitRPY": "grad"
               },
-              "Name": "Sound",
+              "Name": "Main Switch",
               "Id": 0,
               "Type": "Device",
               "Parent": "Controller",
@@ -4879,9 +5936,9 @@
         "MaterialType": "Default",
         "Color": {
           "rgba": [
-            208,
-            208,
-            239,
+            255,
+            255,
+            255,
             255
           ]
         },
@@ -4913,7 +5970,7 @@
       "Id": 0,
       "Type": "Basis",
       "Description": "Base for System",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile Robot",
       "Reference": "RC-34-2321",
       "Components": []
     },
@@ -4926,9 +5983,9 @@
         "MaterialType": "Default",
         "Color": {
           "rgba": [
-            208,
-            208,
-            239,
+            255,
+            255,
+            255,
             255
           ]
         },
@@ -4961,7 +6018,7 @@
       "PositionId": "2",
       "Type": "Basis",
       "Description": "Lower Coverplate",
-      "Parent": "LCAMP Mobile Robot",
+      "Parent": "Mobile Robot",
       "Reference": "RC-34-2321.5",
       "Components": []
     }

@@ -1,5 +1,5 @@
 {
-	"Description": "PartDescription for Main Switsch",
+	"Description": "PartDescription for Main Switch",
 	"Assembly": {
 		"Type": "Device",
 		"Name": "Main Switch",

@@ -143,7 +143,7 @@ async function sendColorSchemeConfiguration() {
 async function sendToServer(msg) {
     const replyDiv = document.getElementById('reply');
     try {
-        const res = await fetch('http://localhost:7070/', {
+        const res = await fetch('http://localhost:7077/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

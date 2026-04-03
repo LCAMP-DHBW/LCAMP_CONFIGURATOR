@@ -50,6 +50,11 @@ $config_source = "..\$projektName\LCAMPConfigurator\bin\Release\net8.0-windows"
 Copy-Item -Path $config_source -Destination $config_dest -Recurse -Force
 
 
+Write-Host "Copy LCAMPConfigurator form: $projektName  Configurator"
+$config_source = "..\$projektName\LCAMPConfigurator\bin\Release\net8.0"
+Copy-Item -Path $config_source -Destination $config_dest -Recurse -Force
+
+
 
 
 # LCAMPConfigurator Daten

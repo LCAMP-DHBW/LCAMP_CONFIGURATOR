@@ -1,0 +1,46 @@
+{
+  "FileName": "D:\\Users\\kdRupp\\Source\\Repos\\LCAMP-DHBW\\Daten\\DHBW CAD-Data\\BaseFrame\\STL-Step-Dateien\\BasePlate.STL",
+  "Min": {
+    "Length": 165.5294535724685,
+    "LengthSquared": 27400,
+    "X": -150,
+    "Y": -70,
+    "Z": 0
+  },
+  "Size": {
+    "Length": 331.11327366929885,
+    "LengthSquared": 109636,
+    "X": 300,
+    "Y": 140,
+    "Z": 6
+  },
+  "Rot": {
+    "Length": 0,
+    "LengthSquared": 0,
+    "X": 0,
+    "Y": 0,
+    "Z": 0
+  },
+  "Center": {
+    "X": -0.0036777274389517022,
+    "Y": -0.005693668497864289,
+    "Z": 2.999999999999965
+  },
+  "Inertia": {
+    "X": 194234082.52776533,
+    "Y": 886606502.2653991,
+    "Z": 1081689939.8801026
+  },
+  "Volume": 235931.96859428758,
+  "MeshColor": {
+    "ColorContext": null,
+    "A": 255,
+    "R": 0,
+    "G": 128,
+    "B": 0,
+    "ScA": 1,
+    "ScR": 0,
+    "ScG": 0.21586053,
+    "ScB": 0
+  }
+}
