@@ -2,7 +2,7 @@
   "FileName": "URDF\\RobiControl.urdf",
   "URDF_Path": null,
   "DefaultRobot": "omni",
-  "SystemMode": "FileSystem",
+  "SystemMode": "ROSPackage",
   "use_defaultGeometry": false,
   "use_predefinedWheels": false,
   "gen_subSystems": false,

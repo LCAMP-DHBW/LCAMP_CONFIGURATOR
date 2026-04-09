@@ -6,7 +6,7 @@
       "Id": 0,
       "Type": "Drive",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -14,7 +14,7 @@
       "Id": 0,
       "Type": "Drive",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -22,7 +22,7 @@
       "Id": 0,
       "Type": "Drive",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     }
   ],
   "Wheels": [
@@ -32,7 +32,19 @@
       "Id": 0,
       "Type": "Wheel",
       "Description": "The Wheel of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
+    },
+    {
+      "Properties": {
+        "left": "ist anders",
+        "left Data3D": "mecanumWheel_1a_pin24.stl",
+        "right Data3D": "mecanumWheel_2a_pin24.stl"
+      },
+      "Name": "Mecanum-Wheel",
+      "Id": 0,
+      "Type": "Wheel",
+      "Description": "The Wheel of the Robot",
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -40,7 +52,7 @@
       "Id": 0,
       "Type": "Wheel",
       "Description": "The Wheel of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -48,7 +60,7 @@
       "Id": 0,
       "Type": "Wheel",
       "Description": "The Wheel of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     }
   ],
   "Sensors": [
@@ -58,7 +70,7 @@
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -66,7 +78,7 @@
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -74,7 +86,7 @@
       "Id": 0,
       "Type": "Actor",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -82,15 +94,7 @@
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
-      "Name": "US-Sensor",
-      "Id": 0,
-      "Type": "Sensor",
-      "Description": "UltraSonic Sensor",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -98,7 +102,15 @@
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
+    },
+    {
+      "Properties": {},
+      "Name": "US-Sensor",
+      "Id": 0,
+      "Type": "Sensor",
+      "Description": "The Drive System of the Robot",
+      "ComponentType": "ComponentItem"
     }
   ],
   "AuxSensors": [
@@ -107,14 +119,14 @@
       "Name": "ESP 32",
       "Id": 0,
       "Type": "AuxControler",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "Line-Follower",
       "Id": 0,
       "Type": "AuxSensor",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     }
   ],
   "SystemSensors": [
@@ -123,14 +135,14 @@
       "Name": "IMU",
       "Id": 0,
       "Type": "Device",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "Main Switch",
       "Id": 0,
       "Type": "Device",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     }
   ],
   "Controllers": [
@@ -139,51 +151,28 @@
       "Name": "Arduino Uno R4",
       "Id": 0,
       "Type": "Controler",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
-      "Name": "Arduino Uno R3",
-      "Id": 0,
-      "Type": "Controler",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
-      "Name": "Arduino Mega",
-      "Id": 0,
-      "Type": "Controler",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "ESP 32",
       "Id": 0,
       "Type": "Controler",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
-      "Name": "ESP 32",
-      "Id": 0,
-      "Type": "AuxSensor",
-      "Template": "ESP32_SB",
-      "Description": "Aux Controller for Sensorbox",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "Remote Control",
       "Id": 0,
       "Type": "Control",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "STM32 Discovery",
       "Id": 0,
       "Type": "Controler",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     }
   ],
   "PowerSystems": [
@@ -192,14 +181,14 @@
       "Name": "Akku 3300mAh",
       "Id": 0,
       "Type": "Power",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "Akku 5200mAh",
       "Id": 0,
       "Type": "Power",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     }
   ],
   "Communication": [
@@ -209,7 +198,7 @@
       "Id": 0,
       "Type": "Communication",
       "Description": "The Comunication Platform for MQTT",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -217,7 +206,7 @@
       "Id": 0,
       "Type": "Communication",
       "Description": "The Comunication Platform for OPC/UA",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -225,7 +214,7 @@
       "Id": 0,
       "Type": "Communication",
       "Description": "The Comunication Platform for Micro Ros",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     }
   ],
   "Parts": [
@@ -234,35 +223,35 @@
       "Name": "Akku 3300mAh",
       "Id": 0,
       "Type": "Power",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "Akku 5200mAh",
       "Id": 0,
       "Type": "Power",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "Arduino Uno R4",
       "Id": 0,
       "Type": "Controler",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "Bottom_Plate",
       "Id": 0,
       "Type": "Part",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "CenterPlate",
       "Id": 0,
       "Type": "MainFrame",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -270,7 +259,7 @@
       "Id": 0,
       "Type": "SensorBox",
       "Description": "Te Sensorbox on Front of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -278,7 +267,7 @@
       "Id": 0,
       "Type": "Drive",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -286,28 +275,28 @@
       "Id": 0,
       "Type": "Drive",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "ESP 32",
       "Id": 0,
       "Type": "AuxControler",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "ESP 32",
       "Id": 0,
       "Type": "Controler",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "IMU",
       "Id": 0,
       "Type": "Device",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -315,7 +304,7 @@
       "Id": 0,
       "Type": "Component",
       "Description": "The Center Core of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -323,7 +312,7 @@
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -331,14 +320,14 @@
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "Line-Follower",
       "Id": 0,
       "Type": "AuxSensor",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -346,14 +335,14 @@
       "Id": 0,
       "Type": "Component",
       "Description": "Te Sensorbox on Front of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "Main Switch",
       "Id": 0,
       "Type": "Device",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -361,22 +350,19 @@
       "Id": 0,
       "Type": "Wheel",
       "Description": "The Wheel of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
-      "Properties": {},
-      "Name": "Assembly: Mecanum-Wheel",
-      "Id": 0,
-      "Type": "Assembly",
-      "ComponentType": "ComponetItem"
-    },
-    {
-      "Properties": {},
+      "Properties": {
+        "left": "ist anders",
+        "left Data3D": "mecanumWheel_1a_pin24.stl",
+        "right Data3D": "mecanumWheel_2a_pin24.stl"
+      },
       "Name": "Mecanum-Wheel",
       "Id": 0,
       "Type": "Wheel",
       "Description": "The Wheel of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -384,7 +370,7 @@
       "Id": 0,
       "Type": "Communication",
       "Description": "The Comunication Platform for MQTT",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -392,7 +378,7 @@
       "Id": 0,
       "Type": "Wheel",
       "Description": "The Wheel of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -400,7 +386,7 @@
       "Id": 0,
       "Type": "Communication",
       "Description": "The Comunication Platform for OPC/UA",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -408,14 +394,14 @@
       "Id": 0,
       "Type": "Wheel",
       "Description": "The Wheel of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "Remote Control",
       "Id": 0,
       "Type": "Control",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -423,7 +409,7 @@
       "Id": 0,
       "Type": "Actor",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -431,7 +417,7 @@
       "Id": 0,
       "Type": "SensorBox",
       "Description": "Te Sensorbox on Front of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -439,7 +425,7 @@
       "Id": 0,
       "Type": "SensorBox",
       "Description": "The Sensorbox on Front of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -447,14 +433,14 @@
       "Id": 0,
       "Type": "Drive",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
       "Name": "STM32 Discovery",
       "Id": 0,
       "Type": "Controler",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -462,7 +448,7 @@
       "Id": 0,
       "Type": "Communication",
       "Description": "The Comunication Platform for Micro Ros",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -470,7 +456,7 @@
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -478,7 +464,7 @@
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     },
     {
       "Properties": {},
@@ -486,7 +472,7 @@
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
-      "ComponentType": "ComponetItem"
+      "ComponentType": "ComponentItem"
     }
   ]
 }
