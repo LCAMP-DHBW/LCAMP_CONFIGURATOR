@@ -19,6 +19,7 @@
           "System.Drawing.Common": "9.0.1",
           "System.Runtime.CompilerServices.Unsafe": "6.1.2",
           "System.Text.Json": "9.0.7",
+          "UserMode": "1.0.0",
           "ViewerLibary": "1.0.0"
         },
         "runtime": {
@@ -1129,6 +1130,17 @@
           }
         }
       },
+      "UserMode/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.4"
+        },
+        "runtime": {
+          "UserMode.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "ViewerLibary/1.0.0": {
         "dependencies": {
           "HelixToolkit": "2.27.3",
@@ -1941,6 +1953,11 @@
       "sha512": ""
     },
     "LCAMPConfiguratorUserInterface/1.2.3": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UserMode/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
