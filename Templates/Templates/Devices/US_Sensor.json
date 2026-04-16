@@ -50,7 +50,7 @@
 		"functionCode": []
 	},
 	"Assembly": {
-		"Name": "US-Sensor",
+		"Name": "US-Sensor Single 16",
 		"Type": "Sensor",
 		"Geometry": {
 			"JointType": "fixed",

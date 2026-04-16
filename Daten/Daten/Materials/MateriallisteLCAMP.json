@@ -25,6 +25,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "PLA_i.0ADE",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -54,6 +55,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "PLA_X.w000",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -83,6 +85,97 @@
     "Description": null,
     "Parent": null,
     "Reference": "PLA_4.wFFF",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PLA",
+    "Color": {
+      "ArgbValue": "FF88E788",
+      "ColorName": "HellGrünLight",
+      "rgba": [
+        136,
+        231,
+        136,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "3D Print",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PLA Filament  HellGrün",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PLA_4.wFFF",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PLA",
+    "Color": {
+      "ArgbValue": "FF7CA37C",
+      "ColorName": "HellGrün",
+      "rgba": [
+        124,
+        163,
+        124,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "3D Print",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PLA Filament  HellGrün",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PLA_4.wFFF",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PLA",
+    "Color": {
+      "ArgbValue": "FFFC8EAC",
+      "ColorName": "FlamigoPink",
+      "rgba": [
+        252,
+        142,
+        172,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "3D Print",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PLA Filament  Pink",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PLA_4.wFFF",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -112,6 +205,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "PLA_S.pA00",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -141,6 +235,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "PLA_m.w00A",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -170,6 +265,37 @@
     "Description": null,
     "Parent": null,
     "Reference": "PLA_V.t789",
+    "Template": null,
+    "Version": null,
+    "Components": []
+  },
+  {
+    "Properties": {},
+    "MaterialType": "PLA",
+    "Color": {
+      "ArgbValue": "FFFFEF00",
+      "ColorName": "Gelb",
+      "rgba": [
+        255,
+        239,
+        0,
+        255
+      ],
+      "Texture": null
+    },
+    "Technology": "3D Print",
+    "Center": null,
+    "Density": null,
+    "ComponentType": "Materials",
+    "Name": "PLA Filament Yellow",
+    "Id": 0,
+    "PositionId": null,
+    "Status": null,
+    "Type": null,
+    "Description": null,
+    "Parent": null,
+    "Reference": "PLA_V.t789",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -199,6 +325,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "PLA_w.sCCC",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -228,6 +355,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "PexiN.GFEB",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -256,7 +384,8 @@
     "Type": null,
     "Description": null,
     "Parent": null,
-    "Reference": "AlumW.x000",
+    "Reference": "AlumW.0000",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -285,7 +414,8 @@
     "Type": null,
     "Description": null,
     "Parent": null,
-    "Reference": "Fx__S.rCCC",
+    "Reference": "Fx__q.0CCC",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -315,6 +445,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "StahY.0888",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -344,6 +475,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Aluml.sCCC",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -373,6 +505,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Kuns1.vF00",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -402,6 +535,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "KupfE.nB73",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -431,6 +565,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "EdelB.t789",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -460,6 +595,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Titag.u789",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -489,6 +625,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Bron0.yC73",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -518,6 +655,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "CarbF.w244",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -547,6 +685,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Messi.uB61",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -576,6 +715,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Glasn.oEFF",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -605,6 +745,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "KeraM.mFFD",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -634,6 +775,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Gummz.w000",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -663,6 +805,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "PVC_I.wFFF",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -692,6 +835,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "ABS_V.z00F",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -721,6 +865,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "PC  U.p0F0",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -750,6 +895,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "PEEKy.rFEB",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -779,6 +925,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "PTFEl.yFFF",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -808,6 +955,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Holzm.pD61",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -837,6 +985,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Magn4.0ADE",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -866,6 +1015,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Zink6.t789",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -895,6 +1045,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "NickW.t875",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -924,6 +1075,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Goldu.oFD0",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -953,6 +1105,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Silbj.sCCC",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -982,6 +1135,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Platy.mEEE",
+    "Template": null,
     "Version": null,
     "Components": []
   },
@@ -1011,6 +1165,7 @@
     "Description": null,
     "Parent": null,
     "Reference": "Wolf0.z344",
+    "Template": null,
     "Version": null,
     "Components": []
   }

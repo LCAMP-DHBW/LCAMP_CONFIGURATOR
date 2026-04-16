@@ -90,7 +90,7 @@
     },
     {
       "Properties": {},
-      "Name": "US-Sensor",
+      "Name": "US-Sensor smal",
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
@@ -98,7 +98,7 @@
     },
     {
       "Properties": {},
-      "Name": "US-Sensor",
+      "Name": "US-Sensor Single 16",
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
@@ -106,7 +106,7 @@
     },
     {
       "Properties": {},
-      "Name": "US-Sensor",
+      "Name": "US-Sensor hc_sr04",
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
@@ -452,7 +452,7 @@
     },
     {
       "Properties": {},
-      "Name": "US-Sensor",
+      "Name": "US-Sensor smal",
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
@@ -460,7 +460,7 @@
     },
     {
       "Properties": {},
-      "Name": "US-Sensor",
+      "Name": "US-Sensor Single 16",
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
@@ -468,7 +468,7 @@
     },
     {
       "Properties": {},
-      "Name": "US-Sensor",
+      "Name": "US-Sensor hc_sr04",
       "Id": 0,
       "Type": "Sensor",
       "Description": "The Drive System of the Robot",
